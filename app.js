@@ -1131,14 +1131,43 @@ function openText(i){
   view("reader");
 }
 
+function speakWord(w){
+  if (!('speechSynthesis' in window)) {
+    alert('Озвучка не поддерживается этим браузером.');
+    return;
+  }
+  window.speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(w);
+  u.lang = 'sr-RS';
+  u.rate = 0.82;
+  u.pitch = 1;
+  window.speechSynthesis.speak(u);
+}
+
+function speakText(text){
+  if (!('speechSynthesis' in window)) {
+    alert('Озвучка не поддерживается этим браузером.');
+    return;
+  }
+  window.speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = 'sr-RS';
+  u.rate = 0.88;
+  window.speechSynthesis.speak(u);
+}
+
 function word(w){
   const translation = DICT[w] || 'Перевод пока не добавлен';
   const exists = saved.some(x => x.word === w);
   $('popup').innerHTML = `
     <div class="popup-title">${w}</div>
-    <div>${translation}</div>
-    <button type="button" id="add-word-button">${exists ? '✓ Уже в моих словах' : 'Добавить в мои слова'}</button>`;
+    <div class="popup-translation">${translation}</div>
+    <div class="popup-actions">
+      <button type="button" id="speak-word">🔊 Слушать</button>
+      <button type="button" id="add-word-button">${exists ? '✓ Уже в моих словах' : 'Добавить в мои слова'}</button>
+    </div>`;
   $('popup').classList.remove('hide');
+  $('speak-word').addEventListener('click', () => speakWord(w));
   const addButton = $('add-word-button');
   if (addButton && !exists) addButton.addEventListener('click', () => addWord(w));
 }
@@ -1155,25 +1184,93 @@ function words(){
   const due = getDueWords().length;
   $('saved').innerHTML = `
     <div class="card review-card">
-      <h3>Повторение</h3>
-      <p>Слова проходят 5 уровней: после правильного ответа интервал увеличивается, после ошибки слово возвращается в первую коробку. Это упрощённая цифровая версия системы Лейтнера.</p>
-      <p><b>Сегодня к повторению: ${due}</b></p>
-      <button type="button" id="start-review">${due ? 'Начать повторение' : 'Повторить слова'}</button>
-      <button type="button" id="export-words">Сохранить мои слова</button>
-      <button type="button" id="import-words">Загрузить мои слова</button>
+      <h3>Тренировки</h3>
+      <p>Здесь можно не только повторять слова по интервалам, но и активно вспоминать их.</p>
+      <p><b>К повторению сегодня: ${due}</b></p>
+      <div class="training-buttons">
+        <button type="button" id="start-review">🔁 Интервальное повторение</button>
+        <button type="button" id="start-choice">🎯 Слово → перевод</button>
+        <button type="button" id="start-reverse">🧠 Перевод → слово</button>
+      </div>
+      <hr>
+      <button type="button" id="export-words">💾 Сохранить мои слова</button>
+      <button type="button" id="import-words">📥 Загрузить мои слова</button>
       <input id="import-file" type="file" accept="application/json" class="hide">
-      <p class="muted small-note">Резервная копия нужна, если ты очищаешь данные браузера или меняешь устройство.</p>
+      <p class="muted small-note">Твои слова остаются в localStorage при обычном обновлении сайта. Резервная копия нужна на случай очистки данных браузера или смены устройства.</p>
     </div>
     <div class="card">
       <h3>Мои слова: ${saved.length}</h3>
-      ${saved.length ? saved.map((x,i) => `<div class="row"><b>${x.word}</b><span> — ${x.translation}</span><span class="box-label">Коробка ${x.box || 1}</span><button type="button" class="small remove-word" data-index="${i}">Удалить</button></div>`).join('') : `<p>Словарь пока пуст.</p>`}
+      ${saved.length ? saved.map((x,i) => `<div class="row"><b>${x.word}</b><span> — ${x.translation}</span><span class="box-label">Коробка ${x.box || 1}</span><button type="button" class="small speak-saved" data-word="${x.word}">🔊</button><button type="button" class="small remove-word" data-index="${i}">Удалить</button></div>`).join('') : `<p>Словарь пока пуст.</p>`}
     </div>`;
   view('words');
 
   $('start-review').addEventListener('click', startReview);
+  $('start-choice').addEventListener('click', () => startExercise('choice'));
+  $('start-reverse').addEventListener('click', () => startExercise('reverse'));
   $('export-words').addEventListener('click', exportWords);
   $('import-words').addEventListener('click', () => $('import-file').click());
   $('import-file').addEventListener('change', importWords);
+  document.querySelectorAll('.speak-saved').forEach(b => b.addEventListener('click', () => speakWord(b.dataset.word)));
+}
+
+let exerciseQueue = [];
+let exerciseIndex = 0;
+let exerciseType = 'choice';
+
+function shuffle(arr){
+  const a=[...arr];
+  for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; }
+  return a;
+}
+
+function startExercise(type){
+  if (saved.length < 2) {
+    alert('Для этой тренировки нужно хотя бы 2 слова в «Моих словах».');
+    return;
+  }
+  exerciseType = type;
+  exerciseQueue = shuffle(saved).slice(0, Math.min(10, saved.length)).map(x => x.word);
+  exerciseIndex = 0;
+  renderExercise();
+  view('review');
+}
+
+function renderExercise(){
+  if (exerciseIndex >= exerciseQueue.length) {
+    $('review-content').innerHTML = `<div class="card"><h2>Тренировка закончена 🎉</h2><p>Ты прошёл ${exerciseQueue.length} заданий.</p><button type="button" id="exercise-finish">Вернуться к моим словам</button></div>`;
+    $('exercise-finish').addEventListener('click', words);
+    return;
+  }
+  const item = saved.find(x => x.word === exerciseQueue[exerciseIndex]);
+  if (!item) { exerciseIndex++; renderExercise(); return; }
+  if (exerciseType === 'choice') renderChoice(item); else renderReverse(item);
+}
+
+function renderChoice(item){
+  const others = shuffle(saved.filter(x => x.word !== item.word)).slice(0,3);
+  const options = shuffle([item, ...others]);
+  $('review-content').innerHTML = `<div class="card review-card"><p class="muted">Слово → перевод · ${exerciseIndex+1} из ${exerciseQueue.length}</p><div class="flash-word">${item.word}</div><button type="button" id="exercise-speak">🔊 Послушать</button><div class="options">${options.map((x,i)=>`<button type="button" class="option" data-answer="${i}">${x.translation}</button>`).join('')}</div><div id="exercise-feedback" class="feedback"></div></div>`;
+  $('exercise-speak').addEventListener('click',()=>speakWord(item.word));
+  document.querySelectorAll('.option').forEach((b,i)=>b.addEventListener('click',()=>{
+    const chosen=options[i]; const ok=chosen.word===item.word;
+    document.querySelectorAll('.option').forEach(x=>x.disabled=true);
+    $('exercise-feedback').innerHTML=ok ? '<b>✓ Правильно</b>' : `<b>✗ Не совсем.</b> Правильный ответ: ${item.translation}`;
+    if(!ok){ item.box=1; item.nextReview=Date.now(); save(); }
+    setTimeout(()=>{exerciseIndex++; renderExercise();}, 850);
+  }));
+}
+
+function renderReverse(item){
+  const others = shuffle(saved.filter(x => x.word !== item.word)).slice(0,3);
+  const options = shuffle([item, ...others]);
+  $('review-content').innerHTML = `<div class="card review-card"><p class="muted">Перевод → слово · ${exerciseIndex+1} из ${exerciseQueue.length}</p><div class="flash-word">${item.translation}</div><div class="options">${options.map((x,i)=>`<button type="button" class="option" data-answer="${i}">${x.word}</button>`).join('')}</div><div id="exercise-feedback" class="feedback"></div></div>`;
+  document.querySelectorAll('.option').forEach((b,i)=>b.addEventListener('click',()=>{
+    const chosen=options[i]; const ok=chosen.word===item.word;
+    document.querySelectorAll('.option').forEach(x=>x.disabled=true);
+    $('exercise-feedback').innerHTML=ok ? '<b>✓ Правильно</b>' : `<b>✗ Правильный ответ: ${item.word}</b>`;
+    if(!ok){ item.box=1; item.nextReview=Date.now(); save(); }
+    setTimeout(()=>{exerciseIndex++; renderExercise();}, 850);
+  }));
 }
 
 function getDueWords(){
