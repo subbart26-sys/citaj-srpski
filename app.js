@@ -30,7 +30,508 @@ const TEXTS = [
 ];
 
 const DICT = {
-  i:"и", je:"есть / является", u:"в / на", na:"на", pod:"под", nad:"над", za:"за / для", iz:"из", od:"от / из", do:"до", sa:"с", s:"с", o:"о", po:"по", kod:"у / возле", kao:"как", ali:"но", ili:"или", da:"что / чтобы", ne:"не", se:"-ся / себя", su:"суть / являются", sam:"сам", sama:"сама", samo:"только", veoma:"очень", mnogo:"много", malo:"мало", jedan:"один", jedna:"одна", jedno:"одно", dva:"два", tri:"три", devet:"девять", prvi:"первый", druga:"вторая", drugi:"второй", treći:"третий", treće:"третье", svi:"все", sve:"всё", bio:"был", bila:"была", bili:"были", bilo:"было", ima:"имеет / есть", imao:"имел", imala:"имела", živela:"жила", živeli:"жили", živeo:"жил", želi:"хочет", želeo:"хотел", želela:"хотела", mogu:"могут", može:"может", mogao:"мог", mogla:"могла", nije:"не был / не было", rekao:"сказал", rekla:"сказала", rekli:"сказали", pitao:"спросил", pitala:"спросила", video:"увидел", videla:"увидела", došao:"пришёл", otišao:"ушёл", krenuo:"отправился", krenula:"отправилась", vratio:"вернулся", vratila:"вернулась", dan:"день", dana:"дня", jutro:"утро", jutra:"утра", veče:"вечер", večeri:"вечера", noć:"ночь", noći:"ночи", kuća:"дом", kuće:"дома", kući:"дома / в дом", grad:"город", grada:"города", gradu:"городе / в город", selo:"деревня", selu:"деревне", šuma:"лес", šumi:"лесу", vrt:"сад", vrta:"сада", voda:"вода", vode:"воды", put:"дорога / путь", puta:"дороги / пути", čovek:"человек", čoveka:"человека", ljudi:"люди", porodica:"семья", otac:"отец", oca:"отца", majka:"мать", majke:"матери", sin:"сын", sina:"сына", brat:"брат", brata:"брата", sestra:"сестра", sestre:"сёстры", devojka:"девушка", devojke:"девушки", princ:"принц", kralj:"король", kralja:"короля", kraljica:"королева", kraljice:"королевы", dečak:"мальчик", devojčica:"девочка", žena:"женщина", starac:"старик", starica:"старуха", lav:"лев", miš:"мышь", zec:"заяц", kornjača:"черепаха", lisica:"лиса", vuk:"волк", prase:"поросёнок", praseta:"поросёнка", zlatna:"золотая", zlatno:"золотое", drvo:"дерево", drvetu:"дереве", cveće:"цветы", haljina:"платье", cipela:"туфля / обувь", slama:"солома", cigla:"кирпич", cigle:"кирпичи", zid:"стена", zidovi:"стены", vrata:"дверь / двери", prozor:"окно", soba:"комната", dvorac:"замок", bal:"бал", muzika:"музыка", hrana:"еда", sto:"стол", mač:"меч", ključ:"ключ", kula:"башня", planina:"гора", reka:"река", jezero:"озеро", ostrvo:"остров", more:"море", nebo:"небо", zemlja:"земля", svetlost:"свет", priča:"история", priče:"истории", istina:"правда", tajna:"тайна", pomoć:"помощь", srećan:"счастливый", srećna:"счастливая", srećni:"счастливые", tužna:"грустная", dobar:"добрый / хороший", dobra:"добрая / хорошая", dobro:"хорошо", veliki:"большой", velika:"большая", veliko:"большое", mali:"маленький", mala:"маленькая", mladić:"юноша", mlad:"молодой", mlada:"молодая", stari:"старый", star:"старый", stara:"старая", lep:"красивый", lepa:"красивая", lepe:"красивые", miran:"спокойный", mirna:"спокойная", hrabar:"смелый", hrabrost:"смелость", vredan:"трудолюбивый", važan:"важный", važno:"важно", brzo:"быстро", dugo:"долго", rano:"рано", kasno:"поздно", zajedno:"вместе", unutra:"внутри", napolju:"снаружи", gore:"вверх / наверху", dole:"вниз / внизу", sada:"сейчас", tada:"тогда", zatim:"затем", posle:"после", pre:"до / перед", opet:"снова", često:"часто", nikada:"никогда", uvek:"всегда", odmah:"сразу", ipak:"однако / всё же", zato:"поэтому", kada:"когда", gde:"где", kako:"как", zašto:"почему", ko:"кто", šta:"что", koji:"который", čuo:"услышал", čula:"услышала", čuti:"слышать", videti:"видеть", raditi:"работать", radio:"работал", radila:"работала", čistila:"убирала", prala:"мыла", spavala:"спала", zaspao:"заснул", trčao:"бежал", trčali:"бежали", plesali:"танцевали", pomogla:"помогла", pomogne:"поможет", napravio:"сделал", napravila:"сделала", napravili:"сделали", pronašao:"нашёл", pronašla:"нашла", našao:"нашёл", otvorio:"открыл", otvorila:"открыла", zatvorio:"закрыл", zatvorila:"закрыла", ušao:"вошёл", ušla:"вошла", izašao:"вышел", sišao:"спустился", popeo:"поднялся", čekao:"ждал", čekala:"ждала", čuvao:"охранял", čuvala:"охраняла", čuvati:"охранять", pokušao:"попытался", pokušala:"попыталась", uspeo:"смог / преуспел", uspela:"смогла", ostao:"остался", ostala:"осталась", ostati:"остаться", znao:"знал", znala:"знала", znače:"означают", razumeo:"понял", razumela:"поняла", shvatio:"понял", shvatili:"поняли", pričao:"рассказывал", pričala:"рассказывала", ispričao:"рассказал", ispričala:"рассказала", zahvalio:"поблагодарил", zahvalila:"поблагодарила", oprostio:"простил", oprostila:"простила", počela:"начала", počeo:"начал", završila:"закончила", završio:"закончил", naučili:"научились", naučio:"научился", verovala:"верила", verovao:"верил", htela:"хотела", hteo:"хотел", morao:"должен был", morala:"должна была", treba:"нужно", trebalo:"нужно было", možeš:"можешь", hoće:"хочет", hoću:"хочу", neće:"не хочет", otvoren:"открыт", zatvoren:"закрыт", spremna:"готова", spremne:"готовы", umoran:"уставший", bolesna:"больная", zdrava:"здоровая", daje:"даёт", dala:"дала", donio:"принёс", donela:"принесла", poneo:"взял с собой", dobio:"получил", dobila:"получила", ostavili:"оставили", nestao:"исчез", nestala:"исчезла", tražio:"искал", tražila:"искала", tražiti:"искать", živeti:"жить", krenuti:"отправиться", vratiti:"вернуться", pomoći:"помочь", oprostiti:"простить", slušati:"слушать", učiti:"учиться", radost:"радость", život:"жизнь", vreme:"время", snaga:"сила", vetar:"ветер", vazduh:"воздух", zrak:"луч / воздух"
+
+  i:"и", je:"есть / является", u:"в / на", na:"на", pod:"под", nad:"над", za:"за / для", iz:"из", od:"от / из", do:"до", sa:"с", s:"с", o:"о", po:"по", kod:"у / возле", kao:"как", ali:"но", ili:"или", da:"что / чтобы", ne:"не", se:"-ся / себя", su:"суть / являются", sam:"сам", sama:"сама", samo:"только", veoma:"очень", mnogo:"много", malo:"мало", jedan:"один", jedna:"одна", jedno:"одно", dva:"два", tri:"три", devet:"девять", prvi:"первый", druga:"вторая", drugi:"второй", treći:"третий", treće:"третье", svi:"все", sve:"всё", bio:"был", bila:"была", bili:"были", bilo:"было", ima:"имеет / есть", imao:"имел", imala:"имела", živela:"жила", živeli:"жили", živeo:"жил", želi:"хочет", želeo:"хотел", želela:"хотела", mogu:"могут", može:"может", mogao:"мог", mogla:"могла", nije:"не был / не было", rekao:"сказал", rekla:"сказала", rekli:"сказали", pitao:"спросил", pitala:"спросила", video:"увидел", videla:"увидела", došao:"пришёл", otišao:"ушёл", krenuo:"отправился", krenula:"отправилась", vratio:"вернулся", vratila:"вернулась", dan:"день", dana:"дня", jutro:"утро", jutra:"утра", veče:"вечер", večeri:"вечера", noć:"ночь", noći:"ночи", kuća:"дом", kuće:"дома", kući:"дома / в дом", grad:"город", grada:"города", gradu:"городе / в город", selo:"деревня", selu:"деревне", šuma:"лес", šumi:"лесу", vrt:"сад", vrta:"сада", voda:"вода", vode:"воды", put:"дорога / путь", puta:"дороги / пути", čovek:"человек", čoveka:"человека", ljudi:"люди", porodica:"семья", otac:"отец", oca:"отца", majka:"мать", majke:"матери", sin:"сын", sina:"сына", brat:"брат", brata:"брата", sestra:"сестра", sestre:"сёстры", devojka:"девушка", devojke:"девушки", princ:"принц", kralj:"король", kralja:"короля", kraljica:"королева", kraljice:"королевы", dečak:"мальчик", devojčica:"девочка", žena:"женщина", starac:"старик", starica:"старуха", lav:"лев", miš:"мышь", zec:"заяц", kornjača:"черепаха", lisica:"лиса", vuk:"волк", prase:"поросёнок", praseta:"поросёнка", zlatna:"золотая", zlatno:"золотое", drvo:"дерево", drvetu:"дереве", cveće:"цветы", haljina:"платье", cipela:"туфля / обувь", slama:"солома", cigla:"кирпич", cigle:"кирпичи", zid:"стена", zidovi:"стены", vrata:"дверь / двери", prozor:"окно", soba:"комната", dvorac:"замок", bal:"бал", muzika:"музыка", hrana:"еда", sto:"стол", mač:"меч", ključ:"ключ", kula:"башня", planina:"гора", reka:"река", jezero:"озеро", ostrvo:"остров", more:"море", nebo:"небо", zemlja:"земля", svetlost:"свет", priča:"история", priče:"истории", istina:"правда", tajna:"тайна", pomoć:"помощь", srećan:"счастливый", srećna:"счастливая", srećni:"счастливые", tužna:"грустная", dobar:"добрый / хороший", dobra:"добрая / хорошая", dobro:"хорошо", veliki:"большой", velika:"большая", veliko:"большое", mali:"маленький", mala:"маленькая", mladić:"юноша", mlad:"молодой", mlada:"молодая", stari:"старый", star:"старый", stara:"старая", lep:"красивый", lepa:"красивая", lepe:"красивые", miran:"спокойный", mirna:"спокойная", hrabar:"смелый", hrabrost:"смелость", vredan:"трудолюбивый", važan:"важный", važno:"важно", brzo:"быстро", dugo:"долго", rano:"рано", kasno:"поздно", zajedno:"вместе", unutra:"внутри", napolju:"снаружи", gore:"вверх / наверху", dole:"вниз / внизу", sada:"сейчас", tada:"тогда", zatim:"затем", posle:"после", pre:"до / перед", opet:"снова", često:"часто", nikada:"никогда", uvek:"всегда", odmah:"сразу", ipak:"однако / всё же", zato:"поэтому", kada:"когда", gde:"где", kako:"как", zašto:"почему", ko:"кто", šta:"что", koji:"который", čuo:"услышал", čula:"услышала", čuti:"слышать", videti:"видеть", raditi:"работать", radio:"работал", radila:"работала", čistila:"убирала", prala:"мыла", spavala:"спала", zaspao:"заснул", trčao:"бежал", trčali:"бежали", plesali:"танцевали", pomogla:"помогла", pomogne:"поможет", napravio:"сделал", napravila:"сделала", napravili:"сделали", pronašao:"нашёл", pronašla:"нашла", našao:"нашёл", otvorio:"открыл", otvorila:"открыла", zatvorio:"закрыл", zatvorila:"закрыла", ušao:"вошёл", ušla:"вошла", izašao:"вышел", sišao:"спустился", popeo:"поднялся", čekao:"ждал", čekala:"ждала", čuvao:"охранял", čuvala:"охраняла", čuvati:"охранять", pokušao:"попытался", pokušala:"попыталась", uspeo:"смог / преуспел", uspela:"смогла", ostao:"остался", ostala:"осталась", ostati:"остаться", znao:"знал", znala:"знала", znače:"означают", razumeo:"понял", razumela:"поняла", shvatio:"понял", shvatili:"поняли", pričao:"рассказывал", pričala:"рассказывала", ispričao:"рассказал", ispričala:"рассказала", zahvalio:"поблагодарил", zahvalila:"поблагодарила", oprostio:"простил", oprostila:"простила", počela:"начала", počeo:"начал", završila:"закончила", završio:"закончил", naučili:"научились", naučio:"научился", verovala:"верила", verovao:"верил", htela:"хотела", hteo:"хотел", morao:"должен был", morala:"должна была", treba:"нужно", trebalo:"нужно было", možeš:"можешь", hoće:"хочет", hoću:"хочу", neće:"не хочет", otvoren:"открыт", zatvoren:"закрыт", spremna:"готова", spremne:"готовы", umoran:"уставший", bolesna:"больная", zdrava:"здоровая", daje:"даёт", dala:"дала", donio:"принёс", donela:"принесла", poneo:"взял с собой", dobio:"получил", dobila:"получила", ostavili:"оставили", nestao:"исчез", nestala:"исчезла", tražio:"искал", tražila:"искала", tražiti:"искать", živeti:"жить", krenuti:"отправиться", vratiti:"вернуться", pomoći:"помочь", oprostiti:"простить", slušati:"слушать", učiti:"учиться", radost:"радость", život:"жизнь", vreme:"время", snaga:"сила", vetar:"ветер", vazduh:"воздух", zrak:"луч / воздух",
+bala:"бал",
+bašti:"в саду",
+belih:"белых",
+bez:"без",
+bezbedan:"безопасный",
+bezbedna:"безопасная",
+bile:"были",
+biraju:"выбирают",
+blizu:"рядом / близко",
+braća:"братья",
+brine:"беспокоится",
+brzine:"скорости",
+brže:"быстрее",
+budan:"бодрствующий",
+celu:"всю / целую",
+cipele:"туфли / обувь",
+cipelu:"туфлю",
+crvenu:"красную",
+cveća:"цветов",
+daleko:"далеко",
+dalekoj:"далёкой",
+dao:"дал / дал ему",
+davale:"давали",
+devojci:"девушке",
+devojku:"девушку",
+dimnjak:"дымоход",
+dimnjaka:"дымохода",
+dobijali:"получали",
+događa:"происходит",
+dogodilo:"произошло",
+domu:"дому",
+doneo:"принёс",
+doneti:"принести",
+doručak:"завтрак",
+doručka:"завтрака",
+dovoljno:"достаточно",
+dozvolio:"разрешил",
+dozvolu:"разрешение",
+doći:"прийти",
+dočekali:"встретили",
+dočekao:"встретил",
+dođu:"придут / приходят",
+druge:"другие",
+drugima:"другим",
+drugo:"другое / второй",
+drugog:"второго / другой",
+drugoj:"второй / другой",
+drugom:"вторым / другом",
+drugu:"другую / другу",
+drveta:"дерева",
+dugog:"долгого",
+dugu:"долгую / долго",
+duvao:"дуть / дул",
+duže:"дольше",
+dve:"две",
+dvor:"двор",
+dvora:"двора",
+dvorcu:"дворце",
+ga:"его / ему",
+glas:"голос",
+gledala:"смотрела",
+godine:"года",
+gostima:"гостям / гостями",
+gotove:"готовы",
+gustu:"густую",
+haljine:"платья",
+haljinu:"платье",
+hodao:"шёл / ходил",
+hrane:"еды",
+hranu:"еду",
+ide:"идёт",
+igra:"игра",
+ih:"их / их (вин.)",
+im:"им",
+ime:"имя",
+ispod:"под / подо",
+istim:"тем же / тем самым",
+istinu:"правду",
+isto:"то же / одинаково",
+iza:"за / позади",
+izabrala:"выбрала",
+izabralo:"выбрало",
+izašli:"вышли",
+izgledao:"выглядел",
+iznad:"над / выше",
+iznenađen:"удивлённый",
+izvinu:"извинятся / извиниться",
+jabuka:"яблоко",
+jabuke:"яблоки",
+jabuku:"яблоко",
+jak:"сильный",
+jake:"сильные / крепкие",
+jače:"сильнее",
+jedne:"одной / одного",
+jednog:"одного / однажды",
+jednostavnu:"простую",
+jednu:"одну",
+jezera:"озера",
+jezeru:"озере",
+joj:"ей",
+još:"ещё",
+ju:"её",
+kasnije:"позже",
+koju:"которую",
+kosu:"волосы",
+kraj:"край / конец / рядом",
+kraja:"края / конца",
+kraju:"краю / конце",
+kraljevog:"королевского / короля",
+kratko:"коротко / недолго",
+krene:"отправится / начинает идти",
+krenuli:"отправились",
+krovu:"крыше",
+kroz:"через / сквозь",
+kuda:"куда",
+kuću:"дом",
+laka:"лёгкая",
+lako:"легко",
+lekciju:"урок",
+lestvica:"лестница",
+lestvicu:"лестницу",
+ležala:"лежала",
+ljubazna:"добрая / любезная",
+ljubazno:"любезно / приветливо",
+ljude:"людей",
+ljuto:"сердито",
+logor:"лагерь",
+lonac:"котёл / горшок",
+loncu:"котле / горшке",
+majku:"мать",
+malu:"маленькую",
+maćeha:"мачеха",
+maćehom:"мачехой",
+maćehu:"мачеху",
+mesec:"месяц / луна",
+mesta:"места",
+miris:"запах",
+mirni:"спокойные",
+mirno:"спокойно",
+mlade:"молодые",
+mladića:"юношу",
+mladom:"молодому / молодым",
+mnogi:"многие",
+mogli:"могли",
+moćan:"могущественный",
+mračno:"темно / мрачно",
+mu:"ему",
+najmlađi:"младший",
+najstariji:"старший",
+nalazilo:"находилось",
+naprave:"сделают / построят",
+napravi:"сделай / делает",
+napravilo:"сделало / построило",
+naslonjena:"прислонённая",
+nasmešila:"улыбнулась",
+nastavili:"продолжили",
+nastavilo:"продолжило",
+nastavio:"продолжил",
+nađe:"найдёт / найдёт себе",
+našlo:"нашло",
+nebu:"небу",
+nedostajala:"не хватало / отсутствовала",
+nedostaje:"не хватает / отсутствует",
+nego:"а / чем",
+nekoliko:"несколько",
+nema:"нет / не имеет",
+neobičan:"необычный",
+neobično:"необычно / необычное",
+nepoznata:"незнакомая",
+nepromišljenost:"необдуманность",
+nestajala:"исчезала",
+ni:"ни / даже не",
+nijedna:"ни одна",
+niko:"никто",
+nisu:"не были / не сделали",
+niz:"вниз по / вдоль",
+njega:"его / него",
+njegov:"его",
+njegova:"его / её (для ж. рода)",
+njegovoj:"его / её",
+njene:"её",
+njeni:"её / её люди",
+njeno:"её / её (ср. род)",
+njenu:"её",
+njih:"их",
+njihove:"их",
+njihovu:"их",
+njim:"им / ими",
+njima:"им / ими",
+nju:"её / неё",
+nosilo:"несло / носило",
+nosio:"нёс / носил",
+nove:"новые",
+novi:"новый",
+obalu:"берег",
+obećao:"обещал",
+obišao:"обошёл",
+objema:"обеим",
+obukla:"надела",
+obula:"надела обувь",
+ocem:"отцом",
+ocu:"отцу",
+ode:"уходит / идёт",
+odgovarajuću:"подходящую",
+odgovarala:"подошла / соответствовала",
+odletele:"улетели",
+odlučila:"решила",
+odlučili:"решили",
+odlučio:"решил",
+odustao:"сдался / отказался",
+odvedu:"отведут / уведут",
+oko:"вокруг / около",
+on:"он",
+ona:"она",
+onda:"тогда / затем",
+one:"они / те",
+ono:"оно / то",
+oporavila:"выздоровела",
+osetio:"почувствовал",
+osećala:"чувствовала",
+ostali:"остались / другие",
+ostane:"останется",
+ostrvu:"острове",
+otišla:"ушла / отправилась",
+otišle:"ушли / отправились",
+otrčala:"побежала",
+otvorena:"открытая",
+otvori:"открой / открывает",
+otvorili:"открыли",
+otvoriti:"открыть",
+ozbiljan:"серьёзный",
+para:"пар / паров",
+paunica:"павлина / павлинья птица",
+paunice:"павлины / павлиньи птицы",
+pažljiv:"внимательный",
+pažljivo:"внимательно",
+pažnja:"внимание",
+penjanja:"подъёма / лазания",
+pepeljuga:"Золушка",
+pepeljugi:"Золушке",
+pepeljugine:"Золушкины",
+pepeljugu:"Золушку",
+perje:"перья / оперение",
+plakali:"плакали",
+planine:"горы",
+planini:"горе",
+planinu:"гору",
+plavu:"синюю / голубую",
+plač:"плач",
+plesa:"танца",
+pobegao:"убежал",
+pobegla:"убежала",
+pobeglo:"убежало",
+podignu:"поднимут / поднять",
+pogledala:"посмотрела",
+pogledali:"посмотрели",
+pogledalo:"посмотрело",
+pogledao:"посмотрел",
+pojavila:"появилась",
+pojavljuju:"появляются",
+pokazala:"показала",
+poklon:"подарок",
+pokucao:"постучал",
+pokušati:"попытаться",
+pola:"половина",
+polako:"медленно",
+pomagala:"помогала",
+pomagale:"помогали",
+pomerala:"двигала / сдвигала",
+pomerila:"сдвинула / пошевелила",
+pomislio:"подумал",
+pomognu:"помогут",
+ponosan:"гордый",
+ponovo:"снова",
+ponoći:"полуночи",
+ponudio:"предложил",
+pored:"рядом / возле",
+porodici:"семье",
+porodicu:"семью",
+posla:"работы / дела",
+postale:"стали",
+postao:"стал",
+postojao:"существовал",
+postoji:"существует",
+pozdravio:"поприветствовал",
+poznavala:"знала / была знакома",
+pozvala:"позвала",
+pozvane:"приглашены",
+pozvao:"позвал / пригласил",
+počele:"начали",
+počeli:"начали",
+poželele:"захотели",
+poželeo:"захотел",
+prasci:"поросята",
+prasetu:"поросёнку",
+prati:"следовать / стирать / сопровождает",
+pravili:"делали / строили",
+pravio:"делал / строил",
+pred:"перед",
+prema:"к / по направлению к",
+previše:"слишком",
+pređe:"перейдёт / перейти",
+prešao:"перешёл",
+prijatan:"приятный",
+princu:"принцу",
+priču:"историю / рассказ",
+prišao:"подошёл",
+prišla:"подошла",
+probale:"попробовали",
+prolaz:"проход",
+pronađe:"найдёт",
+pronašli:"нашли",
+prozora:"окна",
+prošao:"прошёл",
+prva:"первая",
+prvo:"сначала / первое",
+prvoj:"первой",
+pustilo:"впустило / позволило",
+putem:"путём / по дороге",
+putovali:"путешествовали",
+putovao:"путешествовал",
+rad:"работа / труд",
+radi:"работает / делает",
+radili:"работали",
+radilo:"работало",
+radoznao:"любопытный",
+radošću:"радостью",
+rasle:"росли",
+raslo:"росло",
+rata:"войны",
+razgovarali:"разговаривали",
+razgovarao:"разговаривал",
+razočaran:"разочарованный",
+razume:"понимает",
+razumeju:"понимают",
+reci:"реке / реку (в зависимости от контекста)",
+reke:"реки",
+reklo:"сказало",
+reku:"реку",
+reči:"слова / слова́",
+roditelji:"родители",
+sakrije:"спрячет / скрывает",
+sakrio:"спрятал",
+sati:"часы / часов",
+savršeno:"идеально",
+sazna:"узнает / выяснит",
+saznaju:"узнают / выясняют",
+sebe:"себя",
+sedela:"сидела",
+sedeo:"сидел",
+sela:"села",
+seo:"сел",
+silaze:"спускаются",
+sjajno:"блестяще / великолепно",
+skinule:"сняли",
+slame:"соломы",
+slavlje:"праздник / торжество",
+sletela:"приземлилась / села",
+slušao:"слушал",
+smejala:"смеялась",
+snagom:"силой",
+snagu:"силу",
+sobi:"комнате",
+spavale:"спали",
+spavao:"спал",
+spremala:"готовила",
+sredini:"середине",
+srednji:"средний",
+sreće:"счастья / удачи",
+srećne:"счастливые",
+srećno:"счастливо",
+srušenu:"разрушенную",
+srušila:"разрушила / рухнула",
+stajala:"стояла",
+stajao:"стоял",
+starija:"старшая / пожилая",
+staro:"старое",
+stavilo:"поставило",
+stepenica:"ступенька / ступень",
+stepenice:"лестница / ступени",
+stigao:"прибыл / пришёл",
+stigla:"прибыла / пришла",
+stigli:"пришли / прибыли",
+stolu:"столе",
+straha:"страха",
+strane:"стороны",
+strani:"стороне / иностранный",
+sudove:"посуду",
+sutradan:"на следующий день",
+svaka:"каждая",
+svake:"каждой / каждой из",
+svako:"каждый",
+svađa:"ссора",
+svađe:"ссоры",
+svih:"всех",
+svirala:"играла / звучала",
+svoja:"своя",
+svoje:"своё / свои",
+svoju:"свою",
+svom:"своём / своему",
+taj:"тот / этот",
+tajni:"тайный / секретный",
+tajnu:"тайну",
+tako:"так",
+tamo:"там",
+težak:"тяжёлый",
+tiha:"тихая",
+tihi:"тихий",
+tiho:"тихо",
+to:"это / то",
+tog:"того",
+toga:"того / этого",
+tragove:"следы",
+traži:"ищет",
+trenutaka:"моментов",
+trećeg:"третьего",
+trećem:"третьем",
+ugledao:"увидел / заметил",
+ujutro:"утром",
+umorna:"уставшая",
+uplaši:"испугает / пугает",
+uplašila:"испугала / испугалась",
+uplašio:"испугал / испугался",
+uporan:"настойчивый",
+upozna:"познакомится / узнает",
+uskoro:"скоро",
+ustajala:"вставала",
+uveče:"вечером",
+uzela:"взяла",
+uzima:"берёт",
+uzimane:"берутся / забираются",
+uđe:"войдёт / войти",
+važnija:"важнее",
+važnu:"важную",
+velike:"большие / большой (ж.р.)",
+velikoj:"большой / в большой",
+velikom:"большом / большому",
+verovali:"верили",
+veselo:"весело",
+vest:"весть / новость",
+vetru:"ветру",
+veću:"большую",
+vide:"увидят / увидели",
+vidi:"видит",
+visoka:"высокая",
+visoko:"высоко",
+visokoj:"высокой",
+više:"больше / выше",
+vodile:"вели",
+vodio:"вёл",
+vodu:"воду",
+volela:"любила",
+volelo:"любило",
+vrate:"вернутся / двери (контекст)",
+vrati:"вернись / возвращает",
+vratili:"вернулись",
+vraća:"возвращается",
+vraćao:"возвращался",
+vredno:"усердно / добросовестно",
+vrtu:"саду",
+vruća:"горячая",
+zahvalna:"благодарная",
+zatresao:"затряс / встряхнул",
+zatresla:"затрясла / задрожала",
+zatvorena:"закрытая",
+začuo:"услышал",
+zemlji:"земле",
+zidove:"стены",
+zlatne:"золотые",
+zlatnih:"золотых",
+zlatnu:"золотую",
+zlato:"золото",
+zlobe:"злости / злого умысла",
+zoru:"зарю / рассвет",
+zvuk:"звук",
+će:"будет / будет делать",
+ćutala:"молчала",
+čamac:"лодка",
+čardak:"чардак / домик",
+čardaka:"чардака",
+čardaku:"чардаке",
+čarobnjak:"волшебник",
+češljala:"расчёсывала",
+čista:"чистая",
+čoveku:"человеку",
+čudnu:"странную / необычную",
+čuli:"услышали",
+čulo:"услышало / чувство",
+čuva:"охраняет",
+čuvaju:"охраняют",
+čuvar:"страж / охранник",
+čuvara:"стража / охранника",
+čvrsta:"крепкая",
+širok:"широкий",
+što:"что / который",
+šume:"леса",
+šumu:"лес",
+šuštanje:"шелест",
+želelo:"хотело",
+ženom:"женщиной"
 };
 
 let saved = [];
@@ -41,6 +542,25 @@ try {
 } catch (e) {
   saved = [];
 }
+
+
+const REVIEW_INTERVALS = [0, 1, 2, 4, 8, 16]; // дни для коробок 1–5
+
+function normalizeSavedWords(){
+  let changed = false;
+  saved = saved.map(x => {
+    const y = {...x};
+    if (!Number.isInteger(y.box) || y.box < 1 || y.box > 5) { y.box = 1; changed = true; }
+    if (!y.nextReview) { y.nextReview = Date.now(); changed = true; }
+    if (!y.translation || y.translation === 'Перевод пока не добавлен') {
+      const tr = DICT[y.word];
+      if (tr) { y.translation = tr; changed = true; }
+    }
+    return y;
+  });
+  if (changed) localStorage.setItem('citajSrpskiWords', JSON.stringify(saved));
+}
+normalizeSavedWords();
 
 const $ = id => document.getElementById(id);
 const normalize = w => w.toLowerCase().replace(/[„“”«».,!?;:()\[\]{}]/g, "").trim();
@@ -96,30 +616,150 @@ function openText(i){
 }
 
 function word(w){
-  const translation = DICT[w] || "Перевод пока не добавлен";
+  const translation = DICT[w] || 'Перевод пока не добавлен';
   const exists = saved.some(x => x.word === w);
-  $("popup").innerHTML = `
+  $('popup').innerHTML = `
     <div class="popup-title">${w}</div>
     <div>${translation}</div>
-    <button type="button" id="add-word-button">${exists ? "✓ Уже в моих словах" : "Добавить в мои слова"}</button>`;
-  $("popup").classList.remove("hide");
-  const addButton = $("add-word-button");
-  if (addButton) addButton.addEventListener("click", () => addWord(w));
+    <button type="button" id="add-word-button">${exists ? '✓ Уже в моих словах' : 'Добавить в мои слова'}</button>`;
+  $('popup').classList.remove('hide');
+  const addButton = $('add-word-button');
+  if (addButton && !exists) addButton.addEventListener('click', () => addWord(w));
 }
 
 function addWord(w){
   if (!saved.some(x => x.word === w)) {
-    saved.push({word:w, translation:DICT[w] || "Перевод пока не добавлен", added:new Date().toISOString()});
+    saved.push({word:w, translation:DICT[w] || 'Перевод пока не добавлен', added:new Date().toISOString(), box:1, nextReview:Date.now()});
     save();
   }
   word(w);
 }
 
 function words(){
-  $("saved").innerHTML = saved.length
-    ? saved.map((x,i) => `<div class="row"><b>${x.word}</b><span> — ${x.translation}</span><button type="button" class="small remove-word" data-index="${i}">Удалить</button></div>`).join("")
-    : `<div class="card">Словарь пока пуст.</div>`;
-  view("words");
+  const due = getDueWords().length;
+  $('saved').innerHTML = `
+    <div class="card review-card">
+      <h3>Повторение</h3>
+      <p>Слова проходят 5 уровней: после правильного ответа интервал увеличивается, после ошибки слово возвращается в первую коробку. Это упрощённая цифровая версия системы Лейтнера.</p>
+      <p><b>Сегодня к повторению: ${due}</b></p>
+      <button type="button" id="start-review">${due ? 'Начать повторение' : 'Повторить слова'}</button>
+      <button type="button" id="export-words">Сохранить мои слова</button>
+      <button type="button" id="import-words">Загрузить мои слова</button>
+      <input id="import-file" type="file" accept="application/json" class="hide">
+      <p class="muted small-note">Резервная копия нужна, если ты очищаешь данные браузера или меняешь устройство.</p>
+    </div>
+    <div class="card">
+      <h3>Мои слова: ${saved.length}</h3>
+      ${saved.length ? saved.map((x,i) => `<div class="row"><b>${x.word}</b><span> — ${x.translation}</span><span class="box-label">Коробка ${x.box || 1}</span><button type="button" class="small remove-word" data-index="${i}">Удалить</button></div>`).join('') : `<p>Словарь пока пуст.</p>`}
+    </div>`;
+  view('words');
+
+  $('start-review').addEventListener('click', startReview);
+  $('export-words').addEventListener('click', exportWords);
+  $('import-words').addEventListener('click', () => $('import-file').click());
+  $('import-file').addEventListener('change', importWords);
+}
+
+function getDueWords(){
+  const now = Date.now();
+  return saved.filter(x => !x.nextReview || x.nextReview <= now);
+}
+
+let reviewQueue = [];
+let reviewIndex = 0;
+let reviewRevealed = false;
+
+function startReview(){
+  reviewQueue = getDueWords().map(x => x.word);
+  reviewIndex = 0;
+  reviewRevealed = false;
+  if (!reviewQueue.length) {
+    alert('На сегодня слов для повторения нет. Добавь новые слова или возвращайся позже.');
+    return;
+  }
+  renderReviewCard();
+  view('review');
+}
+
+function renderReviewCard(){
+  if (reviewIndex >= reviewQueue.length) {
+    $('review-content').innerHTML = `<div class="card"><h2>Повторение закончено 🎉</h2><p>Ты прошёл ${reviewQueue.length} карточек.</p><button type="button" id="review-finish">Вернуться к моим словам</button></div>`;
+    $('review-finish').addEventListener('click', words);
+    return;
+  }
+  const w = reviewQueue[reviewIndex];
+  const item = saved.find(x => x.word === w);
+  if (!item) { reviewIndex++; renderReviewCard(); return; }
+  reviewRevealed = false;
+  $('review-content').innerHTML = `
+    <div class="card review-card">
+      <p class="muted">Карточка ${reviewIndex+1} из ${reviewQueue.length} · коробка ${item.box || 1}</p>
+      <div class="flash-word">${item.word}</div>
+      <div id="review-answer" class="review-answer hide">${item.translation}</div>
+      <button type="button" id="show-answer">Показать перевод</button>
+      <div id="review-actions" class="hide review-actions">
+        <button type="button" id="forgot">Не помню</button>
+        <button type="button" id="remember">Помню</button>
+      </div>
+    </div>`;
+  $('show-answer').addEventListener('click', () => {
+    reviewRevealed = true;
+    $('review-answer').classList.remove('hide');
+    $('show-answer').classList.add('hide');
+    $('review-actions').classList.remove('hide');
+  });
+  $('forgot').addEventListener('click', () => answerReview(item.word, false));
+  $('remember').addEventListener('click', () => answerReview(item.word, true));
+}
+
+function answerReview(w, correct){
+  const item = saved.find(x => x.word === w);
+  if (!item) { reviewIndex++; renderReviewCard(); return; }
+  const current = Number(item.box) || 1;
+  if (correct) {
+    item.box = Math.min(5, current + 1);
+    const days = REVIEW_INTERVALS[item.box];
+    item.nextReview = Date.now() + days * 24 * 60 * 60 * 1000;
+  } else {
+    item.box = 1;
+    item.nextReview = Date.now();
+    // Ошибочные карточки ещё раз попадут в конец текущей сессии.
+    reviewQueue.push(w);
+  }
+  save();
+  reviewIndex++;
+  renderReviewCard();
+}
+
+function exportWords(){
+  const blob = new Blob([JSON.stringify(saved, null, 2)], {type:'application/json'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'citaj-srpski-moji-slova.json';
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+function importWords(event){
+  const file = event.target.files && event.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = () => {
+    try {
+      const imported = JSON.parse(reader.result);
+      if (!Array.isArray(imported)) throw new Error('bad');
+      const clean = imported.filter(x => x && typeof x.word === 'string').map(x => ({
+        word:x.word, translation:x.translation || DICT[x.word] || 'Перевод пока не добавлен',
+        added:x.added || new Date().toISOString(), box:Number(x.box)||1, nextReview:x.nextReview || Date.now()
+      }));
+      saved = clean;
+      save();
+      words();
+      alert('Слова загружены.');
+    } catch(e) { alert('Не удалось прочитать резервную копию.'); }
+  };
+  reader.readAsText(file);
 }
 
 function removeWord(i){
