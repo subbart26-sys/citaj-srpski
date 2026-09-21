@@ -2,3 +2,19 @@
 
 .review-card{text-align:left}.flash-word{font-size:44px;font-weight:700;text-align:center;margin:35px 0}.review-answer{text-align:center;font-size:30px;margin:20px 0}.review-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}.box-label{margin-left:10px;color:#666;font-size:14px}.small-note{margin-top:14px}.review-card button{margin:5px}
 .training-buttons{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0}.training-buttons button{flex:1 1 220px}.popup-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}.popup-actions button{margin-top:0}.options{display:grid;gap:10px;margin-top:24px}.option{text-align:left;width:100%;padding:15px 18px}.option:disabled{opacity:.75}.feedback{min-height:32px;margin-top:16px;font-size:18px}.flash-word{margin-bottom:18px}.speak-saved{float:none;margin-left:8px}.review-card hr{border:0;border-top:1px solid #ddd;margin:20px 0}
+
+.verb-block{margin:14px 0;padding:12px;border:1px solid #ddd;border-radius:12px;background:#fafafa}
+.verb-title{font-weight:700;margin-bottom:10px}
+.verb-grid{display:grid;gap:8px}
+.verb-grid div{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-top:1px solid #e5e5e5}
+.verb-grid div:first-child{border-top:0}
+.verb-grid span{color:#666}
+.verb-grid b{font-weight:700;text-align:right}
+
+.verb-block{margin:14px 0;padding:12px;border:1px solid #ddd;border-radius:12px;background:#fafafa}
+.verb-title{font-weight:700;margin-bottom:10px}
+.verb-grid{display:grid;gap:8px}
+.verb-grid div{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-top:1px solid #e5e5e5}
+.verb-grid div:first-child{border-top:0}
+.verb-grid span{color:#666}
+.verb-grid b{font-weight:700;text-align:right}

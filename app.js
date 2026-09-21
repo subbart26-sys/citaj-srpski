@@ -26,64 +26,73 @@ const TEXTS = [
     "level": "A2",
     "source": "Учебная адаптация по motivima srpske narodne pripovetke Vuka Karadžića; izvorni tekst je u javnom vlasništvu.",
     "text": "Tri brata su živela sa ocem u velikoj kući. Najstariji brat je bio ozbiljan. Srednji brat je bio radoznao. Najmlađi brat je bio hrabar. Jednog dana otac im je rekao da često vidi čudnu svetlost iznad planine. Braća su odlučila da saznaju šta je to. Prvo su krenuli zajedno. Put je vodio kroz gustu šumu. Posle nekoliko sati čuli su neobičan zvuk. Pogledali su prema nebu. Iznad njih je stajao veliki čardak. Čardak je izgledao kao kuća, ali nije bio ni na nebu ni na zemlji. Braća nisu znala kako da dođu do njega. Najstariji brat je rekao da treba da se vrate. Srednji brat je želeo da ostane. Najmlađi brat je pronašao dugu lestvicu. Lestvica je bila naslonjena na staro drvo. Braća su pokušala da je podignu. Nisu uspela. Tada je najmlađi brat rekao da će pokušati sam. Popeo se visoko. Lestvica se pomerala na vetru. Ipak, on nije odustao. Posle dugog penjanja stigao je do čardaka. Vrata su bila otvorena. Ušao je unutra. U prvoj sobi našao je veliki sto. Na stolu je bilo mnogo hrane. U drugoj sobi čuo je tihi plač. Otvorio je vrata i video devojku. Devojka je bila tužna i umorna. Rekla mu je da je dugo zatvorena u čardaku. Mladić je obećao da će joj pomoći. Ali pre nego što su krenuli, začuo se jak zvuk. Čardak se zatresao. Devojka je rekla da se čuvar vraća. Mladić je zatvorio vrata i sakrio se. Posle nekoliko trenutaka ušao je veliki čovek. Nosio je težak mač. Pogledao je oko sebe. Nije pronašao mladića. Kada je čuvar izašao, mladić je otvorio vrata. Devojka mu je pokazala tajni prolaz. Prolaz je vodio do druge strane čardaka. Tamo su pronašli stepenice. Stepenice su vodile prema zemlji. Mladić i devojka su počeli da silaze. Bilo je veoma mračno. Ipak, nastavili su polako. Na pola puta čuli su glas čuvara. Čuvar ih je video. Počeo je da ih prati. Mladić je rekao devojci da ide brže. Stigli su do kraja stepenica. Najmlađi brat je zatvorio velika vrata iza sebe. Čuvar nije mogao da ih otvori. Brat i devojka su izašli iz čardaka. Ispod njih je bila visoka planina. Mladić je pronašao bezbedan put niz planinu. Posle nekoliko sati stigli su do šume. Tamo su čekala njegova dva brata. Braća su bila srećna što ga vide. Devojka im je ispričala svoju priču. Rekla je da je čardak napravio moćan čarobnjak. Čarobnjak je želeo da sakrije devojku od ljudi. Braća su odlučila da je odvedu kući. Putovali su nekoliko dana. Svake noći su pravili mali logor. Jedne noći čuli su vetar iznad šume. Na nebu se ponovo pojavila svetlost. Najstariji brat se uplašio. Srednji brat je želeo da je prati. Najmlađi brat je rekao da prvo treba da razumeju šta se događa. Ujutro su nastavili put. Stigli su do sela. Ljudi su ih dočekali sa velikom radošću. Devojka je pronašla svoju porodicu. Njeni roditelji su plakali od sreće. Braća su ostala u selu nekoliko dana. Posle toga su se vratili svom domu. Ljudi iz sela su čuli priču. Mnogi nisu verovali da je čardak postojao. Braća su znala šta su videla. Naučili su da hrabrost nije isto što i nepromišljenost. Najmlađi brat je bio hrabar, ali je pažljivo slušao druge. Od tada su braća više verovala jedan drugom."
-  },
-  {
-    "title": "Lisica i grožđe",
-    "ru": "Лиса и виноград",
-    "level": "A1",
-    "source": "Ezopova basna · javno dobro. Учебная адаптация.",
-    "text": "Jednog toplog dana, lisica je hodala šumom. Videla je visoko na drvetu zrelo grožđe. Pokušala je da dohvati grožđe, ali je bilo previsoko. Skakala je mnogo puta, ali nije uspela. Na kraju je rekla: „Grožđe je sigurno kiselo.“ I otišla je dalje kroz šumu."
-  },
-  {
-    "title": "Lav i miš",
-    "ru": "Лев и мышь",
-    "level": "A1",
-    "source": "Ezopova basna · javno dobro. Учебная адаптация.",
-    "text": "Jednog dana, lav je spavao ispod velikog drveta. Mali miš je trčao po travi i slučajno probudio lava. Lav je uhvatio miša, ali ga je pustio. Nekoliko dana kasnije, lovci su uhvatili lava u mrežu. Miš je čuo lavlju riku i brzo došao. Pregrizao je konopce svojim malim zubima i lav je bio slobodan."
-  },
-  {
-    "title": "Vrana i lisica",
-    "ru": "Ворона и лиса",
-    "level": "A1",
-    "source": "Ezopova basna · javno dobro. Учебная адаптация.",
-    "text": "Vrana je našla komad sira i sela na drvo. Lisica je videla sir i poželela da ga uzme. Rekla je vrani da ima lep glas. Vrana je otvorila kljun da zapeva. Sir je pao na zemlju. Lisica ga je uzela i pobegla."
-  },
-  {
-    "title": "Pas i njegova senka",
-    "ru": "Собака и её тень",
-    "level": "A1",
-    "source": "Ezopova basna · javno dobro. Учебная адаптация.",
-    "text": "Pas je nosio komad mesa u ustima. Prelazio je preko malog mosta. Pogledao je u vodu i video svoju senku. Pomislio je da drugi pas ima veći komad mesa. Otvorio je usta da uzme i taj komad. Njegov komad je pao u vodu i nestao."
-  },
-  {
-    "title": "Zec i kornjača",
-    "ru": "Заяц и черепаха",
-    "level": "A2",
-    "source": "Ezopova basna · javno dobro. Учебная адаптация.",
-    "text": "Zec se često hvalio da je najbrža životinja u šumi. Kornjača mu je rekla da može da se trka sa njim. Zec se nasmejao, ali je prihvatio izazov. Trka je počela rano ujutru. Zec je brzo pobegao napred i odlučio da se odmori pod drvetom. Kornjača je polako nastavila da hoda, bez zaustavljanja. Kada se zec probudio, kornjača je već bila blizu cilja. Na kraju je kornjača pobedila u trci."
-  },
-  {
-    "title": "Seoski miš i gradski miš",
-    "ru": "Деревенская мышь и городская мышь",
-    "level": "A2",
-    "source": "Ezopova basna · javno dobro. Учебная адаптация.",
-    "text": "Seoski miš je pozvao svog rođaka iz grada na večeru. Ponudio mu je jednostavan obrok od žita, voća i hleba. Gradski miš se nasmejao i rekao da u gradu ima mnogo bolje hrane. Pozvao ga je da dođe u grad. U velikoj kući našli su sto pun hrane. Ali odjednom su čuli buku i vrata su se otvorila. Oba miša su pobegla i sakrila se. Seoski miš je rekao: „Više volim svoju skromnu kuću i miran život.“"
-  },
-  {
-    "title": "Vuk i jagnje",
-    "ru": "Волк и ягнёнок",
-    "level": "A2",
-    "source": "Ezopova basna · javno dobro. Учебная адаптация.",
-    "text": "Jagnje je pilo vodu na potoku. Vuk je došao i optužio jagnje da mu muti vodu. Jagnje je odgovorilo da stoji niže nizvodno. Vuk je zatim rekao da je jagnje prošle godine govorilo loše o njemu. Jagnje je reklo da tada još nije bilo rođeno. Vuk je ipak našao novi izgovor i odveo jagnje."
-  },
-  {
-    "title": "Mrav i cvrčak",
-    "ru": "Муравей и сверчок",
-    "level": "A2",
-    "source": "Ezopova basna · javno dobro. Учебная адаптация.",
-    "text": "Tokom leta mrav je vredno skupljao hranu. Cvrčak je pevao i odmarao se na suncu. Pitao je mrava zašto toliko radi. Mrav mu je rekao da će doći zima. Kada je stigla zima, cvrčak nije imao dovoljno hrane. Mrav je imao punu ostavu i bio je spreman za hladne dane."
   }
 ];
+
+// Первая версия блока «Времена» для часто встречающихся глаголов.
+const VERB_FORMS = {
+  "živela": {lemma:"živeti", translation:"жить", past:"živeo / živela", present:"živi", future:"će živeti"},
+  "živeli": {lemma:"živeti", translation:"жить", past:"živeo / živela", present:"živi", future:"će živeti"},
+  "radila": {lemma:"raditi", translation:"работать", past:"radio / radila", present:"radi", future:"će raditi"},
+  "ustajala": {lemma:"ustajati", translation:"вставать", past:"ustajao / ustajala", present:"ustaje", future:"će ustajati"},
+  "čistila": {lemma:"čistiti", translation:"чистить, убирать", past:"čistio / čistila", present:"čisti", future:"će čistiti"},
+  "spremala": {lemma:"spremati", translation:"готовить", past:"spremao / spremala", present:"sprema", future:"će spremati"},
+  "prala": {lemma:"prati", translation:"мыть, стирать", past:"prao / prala", present:"pere", future:"će prati"},
+  "pomagala": {lemma:"pomagati", translation:"помогать", past:"pomagao / pomagala", present:"pomaže", future:"će pomagati"},
+  "imala": {lemma:"imati", translation:"иметь", past:"imao / imala", present:"ima", future:"će imati"},
+  "volela": {lemma:"voleti", translation:"любить", past:"voleo / volela", present:"voli", future:"će voleti"},
+  "gledala": {lemma:"gledati", translation:"смотреть", past:"gledao / gledala", present:"gleda", future:"će gledati"},
+  "stigla": {lemma:"stići", translation:"прибыть, прийти", past:"stigao / stigla", present:"stiže", future:"će stići"},
+  "počele": {lemma:"početi", translation:"начать", past:"počeo / počela", present:"počinje", future:"će početi"},
+  "izabrala": {lemma:"izabrati", translation:"выбрать", past:"izabrao / izabrala", present:"bira", future:"će izabrati"},
+  "češljala": {lemma:"češljati", translation:"расчёсывать", past:"češljao / češljala", present:"češlja", future:"će češljati"},
+  "otišle": {lemma:"otići", translation:"уйти", past:"otišao / otišla", present:"odlazi", future:"će otići"},
+  "čula": {lemma:"čuti", translation:"слышать", past:"čuo / čula", present:"čuje", future:"će čuti"},
+  "pogledala": {lemma:"pogledati", translation:"посмотреть", past:"pogledao / pogledala", present:"gleda", future:"će pogledati"},
+  "ispričala": {lemma:"ispričati", translation:"рассказать", past:"ispričao / ispričala", present:"priča", future:"će ispričati"},
+  "rekla": {lemma:"reći", translation:"сказать", past:"rekao / rekla", present:"kaže", future:"će reći"},
+  "pomogla": {lemma:"pomoći", translation:"помочь", past:"pomogao / pomogla", present:"pomaže", future:"će pomoći"},
+  "napravila": {lemma:"napraviti", translation:"сделать", past:"napravio / napravila", present:"pravi", future:"će napraviti"},
+  "obukla": {lemma:"obući", translation:"надеть", past:"obukao / obukla", present:"oblači", future:"će obući"},
+  "plesali": {lemma:"plesati", translation:"танцевать", past:"plesao / plesala", present:"pleše", future:"će plesati"},
+  "osećala": {lemma:"osećati se", translation:"чувствовать себя", past:"osećao / osećala", present:"oseća se", future:"će se osećati"},
+  "razgovarali": {lemma:"razgovarati", translation:"разговаривать", past:"razgovarao / razgovarala", present:"razgovara", future:"će razgovarati"},
+  "morala": {lemma:"morati", translation:"быть вынужденным", past:"morao / morala", present:"mora", future:"će morati"},
+  "zahvalila": {lemma:"zahvaliti", translation:"поблагодарить", past:"zahvalio / zahvalila", present:"zahvaljuje", future:"će zahvaliti"},
+  "krenula": {lemma:"krenuti", translation:"отправиться", past:"krenuo / krenula", present:"kreće", future:"će krenuti"},
+  "želeo": {lemma:"želeti", translation:"хотеть", past:"želeo / želela", present:"želi", future:"će želeti"},
+  "odlučio": {lemma:"odlučiti", translation:"решить", past:"odlučio / odlučila", present:"odlučuje", future:"će odlučiti"},
+  "pronašao": {lemma:"pronaći", translation:"найти", past:"pronašao / pronašla", present:"pronalazi", future:"će pronaći"},
+  "probale": {lemma:"probati", translation:"пробовать", past:"probao / probala", present:"proba", future:"će probati"},
+  "odgovarala": {lemma:"odgovarati", translation:"подходить", past:"odgovarao / odgovarala", present:"odgovara", future:"će odgovarati"},
+  "obula": {lemma:"obući", translation:"обуть", past:"obuo / obula", present:"obuva", future:"će obući"},
+  "oprostila": {lemma:"oprostiti", translation:"простить", past:"oprostio / oprostila", present:"oprašta", future:"će oprostiti"},
+  "pravio": {lemma:"praviti", translation:"делать, устраивать", past:"pravio / pravila", present:"pravi", future:"će praviti"},
+  "spavale": {lemma:"spavati", translation:"спать", past:"spavao / spavala", present:"spava", future:"će spavati"},
+  "nastavio": {lemma:"nastaviti", translation:"продолжить", past:"nastavio / nastavila", present:"nastavlja", future:"će nastaviti"},
+  "rasle": {lemma:"rasti", translation:"расти", past:"rastao / rasla", present:"raste", future:"će rasti"},
+  "nestajala": {lemma:"nestajati", translation:"исчезать", past:"nestajao / nestajala", present:"nestaje", future:"će nestajati"},
+  "čuvao": {lemma:"čuvati", translation:"охранять, беречь", past:"čuvao / čuvala", present:"čuva", future:"će čuvati"},
+  "zaspao": {lemma:"zaspati", translation:"заснуть", past:"zaspao / zaspala", present:"spava", future:"će zaspati"},
+  "nedostajala": {lemma:"nedostajati", translation:"недоставать", past:"nedostajao / nedostajala", present:"nedostaje", future:"će nedostajati"},
+  "video": {lemma:"videti", translation:"видеть", past:"video / videla", present:"vidi", future:"će videti"},
+  "uzeo": {lemma:"uzeti", translation:"взять", past:"uzeo / uzela", present:"uzima", future:"će uzeti"},
+  "odletele": {lemma:"odleteti", translation:"улететь", past:"odleteo / odletela", present:"odlazi", future:"će odleteti"},
+  "putovao": {lemma:"putovati", translation:"путешествовать", past:"putovao / putovala", present:"putuje", future:"će putovati"},
+  "stigao": {lemma:"stići", translation:"прибыть", past:"stigao / stigla", present:"stiže", future:"će stići"},
+  "pokazala": {lemma:"pokazati", translation:"показать", past:"pokazao / pokazala", present:"pokazuje", future:"će pokazati"},
+  "donela": {lemma:"doneti", translation:"принести", past:"doneo / donela", present:"donosi", future:"će doneti"},
+  "oporavila": {lemma:"oporaviti se", translation:"выздороветь", past:"oporavio / oporavila se", present:"oporavlja se", future:"će se oporaviti"},
+  "vratio": {lemma:"vratiti se", translation:"вернуться", past:"vratio / vratila se", present:"vraća se", future:"vratiće se"},
+  "dočekao": {lemma:"dočekati", translation:"встретить", past:"dočekao / dočekala", present:"dočekuje", future:"će dočekati"},
+  "shvatio": {lemma:"shvatiti", translation:"понять", past:"shvatio / shvatila", present:"shvata", future:"će shvatiti"},
+  "otvorio": {lemma:"otvoriti", translation:"открыть", past:"otvorio / otvorila", present:"otvara", future:"će otvoriti"},
+  "naučili": {lemma:"naučiti", translation:"научиться, выучить", past:"naučio / naučila", present:"uči", future:"će naučiti"},
+  "pravili": {lemma:"praviti", translation:"строить, делать", past:"pravio / pravila", present:"pravi", future:"će praviti"},
+  "odlučili": {lemma:"odlučiti", translation:"решить", past:"odlučio / odlučila", present:"odlučuje", future:"će odlučiti"},
+  "hodala": {lemma:"hodati", translation:"ходить", past:"hodao / hodala", present:"hoda", future:"će hodati"},
+  "pobedio": {lemma:"pobediti", translation:"победить", past:"pobedio / pobedila", present:"pobeđuje", future:"će pobediti"}
+};
 
 const DICT = {
   "lisica": "лиса",
@@ -1159,9 +1168,20 @@ function speakText(text){
 function word(w){
   const translation = DICT[w] || 'Перевод пока не добавлен';
   const exists = saved.some(x => x.word === w);
+  const verb = VERB_FORMS[w];
+  const verbBlock = verb ? `
+    <div class="verb-block">
+      <div class="verb-title">Глагол · ${verb.lemma}</div>
+      <div class="verb-grid">
+        <div><span>Прошедшее</span><b>${verb.past}</b></div>
+        <div><span>Настоящее</span><b>${verb.present}</b></div>
+        <div><span>Будущее</span><b>${verb.future}</b></div>
+      </div>
+    </div>` : '';
   $('popup').innerHTML = `
     <div class="popup-title">${w}</div>
     <div class="popup-translation">${translation}</div>
+    ${verbBlock}
     <div class="popup-actions">
       <button type="button" id="speak-word">🔊 Слушать</button>
       <button type="button" id="add-word-button">${exists ? '✓ Уже в моих словах' : 'Добавить в мои слова'}</button>
