@@ -26,14 +26,66 @@ const TEXTS = [
     "level": "A2",
     "source": "Учебная адаптация по motivima srpske narodne pripovetke Vuka Karadžića; izvorni tekst je u javnom vlasništvu.",
     "text": "Tri brata su živela sa ocem u velikoj kući. Najstariji brat je bio ozbiljan. Srednji brat je bio radoznao. Najmlađi brat je bio hrabar. Jednog dana otac im je rekao da često vidi čudnu svetlost iznad planine. Braća su odlučila da saznaju šta je to. Prvo su krenuli zajedno. Put je vodio kroz gustu šumu. Posle nekoliko sati čuli su neobičan zvuk. Pogledali su prema nebu. Iznad njih je stajao veliki čardak. Čardak je izgledao kao kuća, ali nije bio ni na nebu ni na zemlji. Braća nisu znala kako da dođu do njega. Najstariji brat je rekao da treba da se vrate. Srednji brat je želeo da ostane. Najmlađi brat je pronašao dugu lestvicu. Lestvica je bila naslonjena na staro drvo. Braća su pokušala da je podignu. Nisu uspela. Tada je najmlađi brat rekao da će pokušati sam. Popeo se visoko. Lestvica se pomerala na vetru. Ipak, on nije odustao. Posle dugog penjanja stigao je do čardaka. Vrata su bila otvorena. Ušao je unutra. U prvoj sobi našao je veliki sto. Na stolu je bilo mnogo hrane. U drugoj sobi čuo je tihi plač. Otvorio je vrata i video devojku. Devojka je bila tužna i umorna. Rekla mu je da je dugo zatvorena u čardaku. Mladić je obećao da će joj pomoći. Ali pre nego što su krenuli, začuo se jak zvuk. Čardak se zatresao. Devojka je rekla da se čuvar vraća. Mladić je zatvorio vrata i sakrio se. Posle nekoliko trenutaka ušao je veliki čovek. Nosio je težak mač. Pogledao je oko sebe. Nije pronašao mladića. Kada je čuvar izašao, mladić je otvorio vrata. Devojka mu je pokazala tajni prolaz. Prolaz je vodio do druge strane čardaka. Tamo su pronašli stepenice. Stepenice su vodile prema zemlji. Mladić i devojka su počeli da silaze. Bilo je veoma mračno. Ipak, nastavili su polako. Na pola puta čuli su glas čuvara. Čuvar ih je video. Počeo je da ih prati. Mladić je rekao devojci da ide brže. Stigli su do kraja stepenica. Najmlađi brat je zatvorio velika vrata iza sebe. Čuvar nije mogao da ih otvori. Brat i devojka su izašli iz čardaka. Ispod njih je bila visoka planina. Mladić je pronašao bezbedan put niz planinu. Posle nekoliko sati stigli su do šume. Tamo su čekala njegova dva brata. Braća su bila srećna što ga vide. Devojka im je ispričala svoju priču. Rekla je da je čardak napravio moćan čarobnjak. Čarobnjak je želeo da sakrije devojku od ljudi. Braća su odlučila da je odvedu kući. Putovali su nekoliko dana. Svake noći su pravili mali logor. Jedne noći čuli su vetar iznad šume. Na nebu se ponovo pojavila svetlost. Najstariji brat se uplašio. Srednji brat je želeo da je prati. Najmlađi brat je rekao da prvo treba da razumeju šta se događa. Ujutro su nastavili put. Stigli su do sela. Ljudi su ih dočekali sa velikom radošću. Devojka je pronašla svoju porodicu. Njeni roditelji su plakali od sreće. Braća su ostala u selu nekoliko dana. Posle toga su se vratili svom domu. Ljudi iz sela su čuli priču. Mnogi nisu verovali da je čardak postojao. Braća su znala šta su videla. Naučili su da hrabrost nije isto što i nepromišljenost. Najmlađi brat je bio hrabar, ali je pažljivo slušao druge. Od tada su braća više verovala jedan drugom."
+  },
+
+  {
+    "title": "Učenje u školi",
+    "ru": "Учёба в школе",
+    "level": "A2 · Учёба",
+    "source": "Оригинальный учебный текст для сайта Čitaj srpski. Текст написан для тренировки современного сербского языка.",
+    "text": "Ana ide u srednju školu u svom gradu. Svakog jutra ustaje u sedam sati. Brzo doručkuje sa porodicom. Zatim proverava ranac. U rancu ima knjige, sveske i olovke. Ponekad ponese i mali sendvič. Do škole ide peške. Put traje oko petnaest minuta. Na putu često sretne drugaricu Milicu. Njih dve zajedno ulaze u školu. Prvi čas počinje u osam sati. Danas imaju srpski jezik. Nastavnica donosi nekoliko novih tekstova. Ana pažljivo sluša objašnjenje. Zatim učenici čitaju tekst naglas. Ana ne razume jednu reč. Ona pita nastavnicu za objašnjenje. Nastavnica ponavlja značenje reči. Ana zapisuje novu reč u svesku. Posle časa pravi malu listu za ponavljanje. Drugi čas je matematika. Matematika joj je ponekad teška. Ipak, Ana voli kada rešava zadatke. Nastavnik prvo pokazuje primer na tabli. Učenici zatim rade sličan zadatak. Ana pokušava sama. Prvi odgovor nije tačan. Ona ponovo čita zadatak. Posle drugog pokušaja nalazi grešku. Nastavnik joj kaže da je dobro proverila rad. Na odmoru učenici izlaze u hodnik. Ana i Milica razgovaraju o domaćem zadatku. Milica kaže da joj treba pomoć. Ana joj pokazuje kako je ona rešila prvi deo. Zatim zajedno proveravaju odgovore. Posle odmora imaju istoriju. Tema je život u starom gradu. Nastavnik pokazuje fotografije na ekranu. Učenici postavljaju mnogo pitanja. Ana voli istoriju jer priče lako pamti. Posle istorije imaju kratku pauzu. Neki učenici idu u školsku biblioteku. Ana takođe odlazi tamo. Bibliotekarka joj pokazuje policu sa knjigama na srpskom. Ana bira jednu knjigu sa kratkim pričama. Knjigu ne želi odmah da pozajmi. Prvo čita nekoliko stranica. Neke rečenice su joj lake. Druge rečenice su malo teže. Ona zapisuje reči koje ne poznaje. Bibliotekarka joj preporučuje da čita svaki dan. Ana prihvata savet. Poslednji čas je biologija. Učenici danas uče o biljkama. Nastavnik donosi nekoliko listova i cvetova. Učenici posmatraju razlike između biljaka. Ana pravi crtež u svesci. Posle časa svi spremaju stvari. Ana proverava da li je uzela sve knjige. Zatim izlazi iz škole sa Milicom. Na putu razgovaraju o planovima za vikend. Milica želi da ide u bioskop. Ana želi da ostane kod kuće i uči. Ima važan test sledeće nedelje. Ipak, odlučuje da u subotu uči samo ujutru. Popodne će izaći sa prijateljima. Kod kuće prvo ruča sa roditeljima. Posle ručka odmara dvadesetak minuta. Zatim stavlja telefon sa strane. Otvara svesku iz matematike. Prvo ponavlja stare zadatke. Posle toga radi nove zadatke. Kada ne razume nešto, označi pitanje zvezdicom. Kasnije može da pita nastavnika. Zatim prelazi na srpski jezik. Čita nekoliko stranica iz knjige. Nove reči upisuje u svoju listu. Pored svake reči piše prevod. Posle čitanja pokušava da prepriča tekst. U početku joj je teško. Posle nekoliko minuta govori sigurnije. Majka ulazi u sobu i pita kako ide učenje. Ana kaže da ide dobro. Majka joj donosi čaj. Ana pravi kratku pauzu. Posle pauze završava poslednji zadatak. Na kraju proverava sve odgovore. Neke greške sama pronalazi. Druge ostavlja za nastavnika. Uveče sprema ranac za sledeći dan. Pogleda raspored časova. Zatim stavlja odeću pored kreveta. Pre spavanja čita još deset minuta. Ana voli ovaj mali večernji običaj. On joj pomaže da mirno završi dan. Sledećeg jutra oseća se spremnije. Na času nastavnik pita ko je vežbao. Ana podiže ruku. Ona objašnjava kako je učila. Nastavnik kaže da je dobar plan važniji od dugog sedenja. Ana zapamti taj savet. Od tada pokušava da uči malo svaki dan. Tako joj škola postaje lakša."
+  },
+  {
+    "title": "Šetnja kroz grad",
+    "ru": "Прогулка по городу",
+    "level": "A2 · Город и прогулки",
+    "source": "Оригинальный учебный текст для сайта Čitaj srpski. Текст написан для тренировки современного сербского языка.",
+    "text": "Marko živi blizu centra grada. Subotom ujutru voli da šeta bez žurbe. Tog jutra vreme je prijatno i sunčano. Marko oblači laganu jaknu. Uzima telefon i malu flašu vode. Zatim izlazi iz stana. Na ulici već ima mnogo ljudi. Neki idu na pijacu. Drugi sede ispred kafića. Marko prvo odlazi do glavnog trga. Na trgu vidi nekoliko uličnih muzičara. Jedan čovek svira gitaru. Druga osoba peva staru pesmu. Ljudi zastaju i slušaju. Marko ostaje nekoliko minuta. Zatim nastavlja prema pijaci. Na pijaci prodavci već rade. Na stolovima su voće i povrće. Marko kupuje jabuke i paradajz. Prodavac mu pokazuje sveže krastavce. Marko uzima i malo njih. Zatim pita koliko sve košta. Plaća i stavlja namirnice u torbu. Na izlazu sreće komšiju. Komšija ide po hleb. Oni kratko razgovaraju o vremenu. Marko zatim prelazi ulicu. Ide prema starom delu grada. Tamo su ulice uže. Kuće su starije. Neke fasade su nedavno obnovljene. Druge još čekaju popravku. Marko voli da gleda stare prozore. Ponekad fotografiše zanimljive detalje. Na uglu vidi malu knjižaru. Ulazi unutra jer počinje lagana kiša. U knjižari je mirno. Vlasnica slaže nove knjige. Marko gleda policu sa putopisima. Pronađe knjigu o Srbiji. Knjiga ima mnogo fotografija. On je kratko prelistava. Posle nekoliko minuta kiša prestaje. Marko zahvaljuje vlasnici i izlazi. Na ulici sada miriše mokar kamen. Vazduh je svežiji. Marko ide prema parku. Park je pun drveća. Na stazi trče ljudi. Neki roditelji šetaju sa decom. Stariji ljudi sede na klupama. Marko pronalazi slobodnu klupu. Sedi nekoliko minuta i pije vodu. Pored njega prolazi devojka sa psom. Pas je mali i veoma miran. Marko se nasmeši jer ga pas pogleda. Zatim ustaje i nastavlja šetnju. U parku postoji mali kafić. Marko naručuje kafu. Sedi napolju pod velikim suncobranom. Konobar donosi kafu brzo. Marko posmatra ljude oko sebe. Čuje različite jezike. Neki gosti govore srpski. Drugi govore engleski ili nemački. Marko razmišlja koliko je grad raznolik. Posle kafe odlazi do reke. Do reke vodi duga staza. Na stazi ima mnogo biciklista. Marko pažljivo ide desnom stranom. Pored reke vidi mali čamac. Nekoliko ljudi ulazi u njega. U blizini se nalazi most. Marko prelazi most peške. Sa mosta vidi ceo deo grada. Na jednoj strani su stare zgrade. Na drugoj strani su novi stanovi. Marko fotografiše pogled. Zatim se vraća preko mosta. Na putu čuje zvono bicikla. Pomera se u stranu i propušta biciklistu. Biciklista mu zahvaljuje. Marko nastavlja prema muzeju. Danas muzej ima novu izložbu. Marko kupuje kartu na ulazu. U prvoj sali vidi stare fotografije grada. Na fotografijama ljudi nose drugačiju odeću. Automobili su mnogo stariji. Ulice izgledaju mirnije. Marko pažljivo čita kratke opise. Jedna priča mu je posebno zanimljiva. Ona govori o životu jedne porodice pre mnogo godina. Marko zastaje ispred fotografije porodice. Razmišlja kako se grad promenio. Posle muzeja izlazi napolje. Sunce se ponovo pojavilo. Marko seda na stepenice ispred zgrade. Pogleda vreme na telefonu. Prošlo je skoro četiri sata. Nije planirao tako dugu šetnju. Ipak, veoma je zadovoljan. U torbi ima namirnice sa pijace. U telefonu ima nekoliko novih fotografija. U glavi ima mnogo novih utisaka. Polako kreće kući. Na putu ponovo prolazi kroz trg. Muzičari još sviraju. Marko ih kratko sluša. Zatim nastavlja prema svom kraju. Kada stigne kući, pravi ručak. Dok kuva, razmišlja o danu. Shvata da poznaje grad bolje nego ranije. Odlučuje da sledeće subote istraži drugi deo grada."
+  },
+  {
+    "title": "Dan kulture u gradu",
+    "ru": "День культуры в городе",
+    "level": "A2 · Культура",
+    "source": "Оригинальный учебный текст для сайта Čitaj srpski. Текст написан для тренировки современного сербского языка.",
+    "text": "U gradu se ovog meseca održava veliki dan kulture. Program traje ceo vikend. Ana i Petar žele da posete nekoliko događaja. U petak uveče prvo idu u biblioteku. Tamo počinje razgovor o savremenoj književnosti. Sala je skoro puna. Pisac razgovara sa posetiocima o svojim knjigama. Ana sluša veoma pažljivo. Petar postavlja pitanje o likovima u priči. Pisac govori mirno i jednostavno. Posle razgovora posetioci mogu da kupe knjigu. Ana kupuje jednu malu zbirku priča. Petar uzima knjigu o istoriji grada. Zatim oboje izlaze u dvorište biblioteke. Tamo nekoliko muzičara svira tradicionalnu muziku. Ljudi stoje oko njih i slušaju. Neki čak i igraju. Ana prepoznaje jednu staru melodiju. Njena baka ju je često pevala kod kuće. Petar snima kratki deo muzike telefonom. Kasnije odluče da odu kući. Sledećeg jutra ustaju rano. Doručkuju zajedno u malom kafiću. Posle doručka idu u gradski muzej. Na ulazu dobijaju program izložbe. Prva izložba govori o istoriji grada. U velikoj sali nalaze se stare mape. Na jednoj mapi vide ulicu u kojoj Petar sada živi. Ana pronalazi staru fotografiju glavnog trga. Na fotografiji nema modernih zgrada. Ljudi nose duge kapute i šešire. Ana pokušava da zamisli kako je tada izgledao grad. Vodič priča o važnim promenama. Objašnjava kako su se širile ulice. Govori i o starim zanatima. Posetioci mogu da vide alat koji su majstori koristili. Petar posebno gleda stare predmete za izradu cipela. Njegov deda je nekada radio kao obućar. Petar zbog toga dugo razgovara sa vodičem. Vodič mu pokazuje još nekoliko predmeta. Posle istorijske izložbe prelaze u drugu salu. Tamo je izložena savremena umetnost. Zidovi su puni slika. Neke slike su veoma šarene. Druge su jednostavne i mirne. Ana pokušava da objasni šta oseća dok ih gleda. Petar kaže da svako može da vidi nešto drugo. Oboje se slažu da umetnost ne mora uvek da ima jedan odgovor. Posle muzeja odlaze u kulturni centar. Tamo počinje radionica keramike. Svaki učesnik dobija malo gline. Instruktor pokazuje kako da naprave malu posudu. Ana pažljivo prati svaki korak. Petar pravi oblik koji više liči na šolju. Njegova posuda nije savršena. Ipak, svi se smeju i uživaju. Posle radionice njihove posude ostaju u centru da se osuše. Instruktor kaže da će ih kasnije ispeći. Uveče na trgu počinje filmska projekcija. Postavljen je veliki ekran. Ljudi donose stolice i ćebad. Ana i Petar pronalaze mesto blizu sredine. Film govori o jednoj porodici iz malog grada. Priča je jednostavna, ali emotivna. Ana tokom filma zapisuje nekoliko novih izraza. Petar više obraća pažnju na muziku. Kada se film završi, publika razgovara o njemu. Neki ljudi imaju različita mišljenja. Jedna žena kaže da joj se kraj posebno dopao. Drugi gledalac misli da je kraj previše otvoren. Ana kaže da joj se baš zato film dopao. Posle projekcije svira mali bend. Ljudi ostaju na trgu još dugo. U nedelju ujutru Ana odlazi sama na izložbu fotografija. Fotografije prikazuju svakodnevni život u Srbiji. Na njima su pijace, škole, porodice i ulice. Ana najduže gleda fotografije ljudi. Zanimljivo joj je kako mali detalji pričaju priču. Na jednoj fotografiji žena nosi korpu sa hlebom. Na drugoj deca čekaju autobus. Na trećoj čovek popravlja bicikl ispred kuće. Ana shvata da kultura nije samo umetnost u muzeju. Kultura je i način na koji ljudi žive. Posle izložbe vraća se kući. Petar je čeka sa knjigom koju je kupio. Razgovaraju o celom vikendu. Oboje kažu da su naučili nešto novo. Ana želi da ponovo poseti biblioteku. Petar želi da ide na još jednu izložbu. Dogovaraju se da sledećeg meseca zajedno posete drugi kulturni centar. Tako jedan običan vikend postaje zanimljivo iskustvo. Sledeće nedelje Ana ponovo odlazi u biblioteku. Ovog puta želi da pozajmi još jednu knjigu. Petar joj obećava da će joj se pridružiti. Zajedno žele da naprave mali spisak kulturnih događaja. Planiraju da svakog meseca posete bar jedan novi događaj. Tako žele da bolje upoznaju svoj grad. Takođe žele da upoznaju nove ljude. Ana kaže da je kultura najbolja kada se deli sa drugima. Petar se slaže sa njom. Oboje već planiraju sledeći vikend. Njihov kulturni vikend tako postaje nova navika."
+  },
+  {
+    "title": "Izlet u prirodu",
+    "ru": "Поездка на природу",
+    "level": "A2 · Природа и путешествия",
+    "source": "Оригинальный учебный текст для сайта Čitaj srpski. Текст написан для тренировки современного сербского языка.",
+    "text": "Milan i njegova sestra Jelena vole da provode vreme u prirodi. Jedne subote odluče da odu na izlet. Planiraju da posete jezero blizu njihovog grada. Ustaju rano jer žele da izbegnu gužvu. Milan pravi sendviče za put. Jelena pakuje voće i vodu. Zajedno proveravaju vremensku prognozu. Vreme će biti sunčano, ali će uveče biti hladnije. Milan zato uzima dodatnu jaknu. Jelena stavlja malu kišnu kabanicu u ranac. Do jezera putuju autobusom. Put traje oko četrdeset minuta. Autobus prolazi kroz nekoliko sela. Posle sela počinje šuma. Milan gleda kroz prozor. Vidi visoka stabla i male kuće. Jelena fotografiše pejzaž. Kada stignu, vazduh je mnogo svežiji nego u gradu. Ispred njih se nalazi veliko jezero. Voda je mirna. Na obali nema mnogo ljudi. Oni pronalaze mesto blizu jedne velike bukve. Ostavljaju rančeve i kratko odmaraju. Zatim odlučuju da prvo prošetaju oko jezera. Staza je široka i laka. Na početku sreću grupu planinara. Planinari im kažu da je staza bezbedna. Milan pita koliko traje ceo krug. Jedan čovek kaže da treba oko dva sata. Jelena želi da krenu. Hodaju polako i razgovaraju. Pored staze rastu različite biljke. Jelena pokušava da prepozna nekoliko cvetova. Milan ne zna njihova imena. Zato fotografiše cvetove da ih kasnije potraži. Posle pola sata stižu do malog mosta. Ispod mosta teče hladan potok. Voda je veoma čista. Milan stavlja ruku u vodu. Odmah kaže da je hladna. Jelena se smeje i kaže da nije iznenađena. Nastavljaju dalje. U daljini čuju ptice. Ponekad vide vevericu kako prelazi stazu. Jednom pored njih proleti veliki leptir. Oboje zastanu da ga posmatraju. Posle još dvadesetak minuta staza postaje malo strmija. Milan ide prvi. Jelena prati njegov korak. Na jednom mestu kamenje je mokro. Milan upozorava sestru da bude pažljiva. Ona polako prelazi preko tog dela. Ubrzo stižu do vidikovca. Sa vidikovca se vidi skoro celo jezero. Na drugoj strani vide malu plažu. Iza plaže nalazi se šuma. Na nebu nema mnogo oblaka. Sunce se presijava na vodi. Milan kaže da je pogled prelep. Jelena pravi nekoliko fotografija. Posle toga sede na klupu. Vade sendviče iz ranca. Ručaju na svežem vazduhu. Hrana im posle šetnje posebno prija. Nakon ručka ostaju još deset minuta. Zatim nastavljaju stazom. U jednom delu šume vide staru drvenu tablu. Na tabli piše ime izvora. Odlučuju da ga potraže. Put do izvora je kratak. Izvor se nalazi između velikih kamenova. Voda iz njega polako teče. Jelena puni praznu flašu. Milan proverava da li je voda namenjena za piće. Na tabli pored izvora piše da jeste. Oni popiju malo vode. Zatim se vraćaju na glavnu stazu. Nebo se polako menja. Pojavljuju se tamni oblaci. Jelena se seti kabanice u rancu. Milan kaže da možda neće biti potrebna. Ipak, ubrzavaju korak. Posle nekoliko minuta počinje lagana kiša. Oni oblače jakne i nastavljaju. Kiša nije jaka. Drveće ih delimično štiti. Posle petnaest minuta kiša prestaje. Sunce ponovo izlazi. Vazduh miriše na mokru zemlju. Staza je sada tamnija i klizavija. Oni pažljivo nastavljaju. Uskoro ponovo vide jezero. Shvataju da su završili veliki deo kruga. Kada stignu do bukve, osećaju umor. Sede na travi i odmaraju. Milan proverava vreme autobusa. Sledeći autobus polazi za trideset minuta. Oni imaju dovoljno vremena. Jelena odlazi do obale da još jednom pogleda jezero. Milan ostaje kod rančeva. Posle nekoliko minuta sestra se vraća. Zajedno skupljaju smeće koje su doneli. Proveravaju da ništa ne ostane na zemlji. Zatim polako idu prema stanici. Na stanici već čeka nekoliko ljudi. Jedan stariji čovek govori o vremenu. Kaže da je leto ove godine neobično promenljivo. Milan se slaže. Autobus stiže na vreme. Oni ulaze i pronalaze slobodna mesta. Tokom povratka skoro ništa ne govore. Oboje gledaju kroz prozor. Milan razmišlja da bi uskoro ponovo došao. Jelena kaže da bi sledeći put želela da ponese fotoaparat. Kada stignu kući, pregledaju fotografije. Mnoge su veoma lepe. Jednu fotografiju odmah pošalju roditeljima. Roditelji pitaju kako je bilo. Milan odgovara da je bilo mirno i zanimljivo. Jelena dodaje da su mnogo hodali. Oboje se slažu da su se dobro odmorili. Pre spavanja planiraju sledeći izlet."
   }
+,
+
+  {
+    "title": "Međedović",
+    "ru": "Меджедович",
+    "level": "A2+ · Исторический текст",
+    "source": "Vuk Stefanović Karadžić, Srpske narodne pripovijetke (1870), str. 1–7. Текст общественного достояния; источник — Викизворник.",
+    "url": "https://sr.wikisource.org/sr-el/Међедовић",
+    "text": "U nekakom selu pođu žene u planinu da traže divljega broća, i tako vrljajući po planini, jedna od nji zađe i dođe pred jednu pećinu iz koje iziđe međed, te je uvati i odvede unutra; i nođe živjeći š njime, žena zatrudni i rodi muško dijete. Pošto dijete malo poodraste, žena se nekako ukrade i uteče u selo kući svojoj. Međed je jednako koješta donosio i dijete ranio, kao mu prije i mater. Kad dijete naraste poveliko, ono navali da ide iz pećine u svijet. Međed ga stane od toga odvraćati, govoreći mu da je on jošte mlad i nejak, a u svijetu ima zli zvjerova koji se zovu ljudi, pak će ga ubiti. I tako se dijete malo poumiri i ostane u pećini. Poslije nekoga vremena dijete opet navali da ide u svijet, i kad ga međed drukčije nije mogao odvratiti, a on ga izvede pred pećinu pod jednu bukvu, pa mu reče: „Ako tu bukvu možeš iščupati iz zemlje, onda ću te puštiti da ideš u svijet, ako li ne možeš, još valja da šjediš kod mene.“ Dijete spopadne bukvu, pa povuci tamo, povuci amo, ali ne može da je iščupa; onda se opet vrati s ocem u pećinu. Kad poslije nekoga vremena dijete opet navali da ide u svijet, međed ga izvede pred pećinu i kaže mu da ogleda može li sade iščupati bukvu iz zemlje. Dijete bukvu spopadne i iščupa. Međed mu onda reče da joj okreše grane, pa zametnuvši je na rame kao kijaču da ide u svijet. Dijete posluša oca, i idući tako po svijetu dođe u jedno polje đe se nekoliko stotina plugova bilo sastalo, te orali spaiji. Kad dođe k ratarima, zapita i eda bi imali što da mu daju za jelo. Oni mu odgovore da pričeka malo, sade će se njima donijeti ručak, pa šta ručaju oni onoliki, ručaće i on. Dok su oni još to govorili, a to se pomole kola i konji i mazge i magarci s ručkom. Kad se ručak donese, Međedović reče da će on to sve sam pojesti. Ratari se začude i reknu mu kako će on pojesti toliko jelo što je doneseno za toliko stotina ljudi! On opet reče da oće, i okladi se š njima: ako ne pojede da im da svoju kijaču, ako li pojede, da oni njemu daju sve što je gvozdeno na njiovijem plugovima. Ručak se postavi, i Međedović se naklopi te pojede sve, i još da je bilo. Onda mu oni skupe s plugova sve što je gvozdeno na jednu gomilu, a on usuče nekolike breze, pa sve poveže i natakne na svoju kijaču, pa zametnuvši je na rame otide nekakvome kovaču i reče mu da on od onoga gvožđa skuje buzdovan na onu kijaču. Kovač se primi toga posla, ali mu se učini da je gvožđa mnogo, pa ga sakrije gotovo pola, a od ostaloga buzdovan slupa kojekako. Međedoviću se učini buzdovan mali prema onolikome gvožđu, a i ono što ga je, da nije načinjen kao što bi trebalo. Zato, kad buzdovan nasade na kijaču, Međedović, da bi ga ogledao je li dobar, baci ga u nebo pak se poda nj načetvoronoži, te ga dočeka u leđa. Buzdovan nesrećom kovačevom prsne, onda Međedović razmane kijačom te kovača ubije, pa otide u njegovu kuću i nađe svo sakriveno gvožđe, i odnese ga s onijem komadima od buzdovana drugome kovaču, i kaže mu da mu skuje buzdovan na kijaču, ali mu reče da se ne šali nego od svoga gvožđa dobar buzdovan da skuje, ako nije rad proći kao i onaj prije što ga je kovao. Kovač, čuvši još prije šta je bilo od onoga kovača, skupi sve svoje momke, pa ono gvožđe sastave ujedno i skuju buzdovan vrlo dobar koliko se igda moglo. Kad nasade buzdovan na kijaču, Međedović opet da bi ga ogledao, baci ga u nebo, i načetvoronoži se poda nj, ali se buzdovan ne razbije, nego odskoči od leđa. Ispravivši se, Međedović rekne: „Sade je buzdovan dobar“, pa ga zametne na rame i pođe dalje. Idući tako, nađe u polju jednoga čovjeka đe je upregao u ralicu dva vola te ore, i došavši k njemu, zapita ga da li ima što za jelo. Čovjek mu odgovori: „Sade će moja kći donijeti mene ručak, pa ćemo podijeliti što je Bog dao.“ Međedović mu stane kazivati kako je on pojeo sve što je bilo pripravljeno za nekoliko stotina ratara, i zapita: „A šta će sade u jednome ručku biti mene, šta li će tebe?“ U tom ete ti đevojke s ručkom. Kako đevojka ručak postavi, Međedović se odma rukom vati da jede, a čovjek mu ne dadne, nego mu reče: „Ne dok se ne prekrstiš vako kao i ja!“ Međedović, gladan, ne imajući kud, prekrsti se, pa onda počnu jesti, i najedu se obojica, i još im preteče. Međedović, gledajući u ručkonošu, koja je bila krupna i zdrava i lijepa đevojka, omili mu, i reče ocu njezinu: „Oćeš li mi dati ovu svoju šćer da se ženim njome?“ Čovjek mu odgovori: „Ja bi ti je rado dao, ali sam je obećao Brku.“ Međedović na to rekne: „More šta marim ja za Brka? Ja ću Brka ovijem buzdovanom.“ A čovjek mu rekne: „More i Brko je neki: sade ćeš ga viđeti.“ U tom stane uka s jedne strane, dok se iza brda pomoli jedan brk i u njemu trista i šezdeset i pet tičiji gnijezda. Malo-pomalo pomoli se i drugi brk; ete i Brka. Kako dođe k njima, a on legne ničice đevojci glavom na krilo, i reče joj da ga pobište. Đevojka ga stane bištati, a Međedović, ustavši polagano, raspali svojijem buzdovanom Brka u glavu; a Brko prstom na ono mjesto govoreći đevojci: „Eve vođe me nešto ujede.“ A Međedović opet buzdovanom na drugo mjesto, a Brko opet prstom na ono mjesto: „Eve vođe me opet nešto ujede.“ Kad ga udari treći put, Brko se opet pipne nođe i srdito poviče: „Ta zar si slijepa? Eve vođe me nešto kolje.“ Onda mu đevojka kaže: „Ne kolje tebe tu ništa, nego teve čovjek bije.“ Kad Brko to čuje, on se trgne i skoči na noge, a Međedović već bacio svoj buzdovan, pa bježi preko polja, i Brko se naturi za njim. Međedović, polakši, poizmakne pred Brkom, ali Brko nikako neće da ga se mane. Međedović, bježeći tako, dođe na jednu vodu, i nađe kod nje ljude na guvnu đe viju šenicu, i poviče im: „Pomagajte, braćo, zaboga! Eve me ćera Brko! Šta ću sade? Kako ću preći preko ove vode?“ A jedan od onije ljudi pruži mu lopatu govoreći: „Šjedi na lopatu da te prebacim.“ Međedović šjedne na lopatu, a čovjek razmane njome i prebaci ga na drugu stranu, a on bježi dalje. Malo zatim ete ti na guvno i Brka, pa zapita ljude: „Prođe li ovuda taki i taki čovjek?“ A oni mu kažu da prođe. Brko i zapita: „Kako pređe preko ove vode?“ A oni mu odgovore: „Preskoči!“ Onda se Brko zaleti, pa op preko vode na drugu stranu, pa poćeraj za Međedovićem. Međedović, bježeći uz jedno brdo, vrlo sustane, a kad iziđe na brdo, nađe čovjeka na uzoranoj njivi koji je u torbi o vratu imao šjeme, pa po jedanput zagrabi šakom te sije, a po drugi put u usta te jede. Ovome čovjeku poviče on: “Pomagaj, brate, zaboga! Ćera me Brko, i eve ga sade će me stići! Nego što ću činiti? Sakrij me neđe!“ A čovjek odgovori: „Bome, Brko, nije šala. Ali ne znam đe ću te sakriti; nego odi vođe u moju torbu u šjeme.“ I tako ga uzme u torbu. Kad Brko potom dođe, i zapita ga za Međedovića, on mu kaže da je on odavno onuda prošao, i dosad bogzna kud je otišao. Onda se Brko vrati natrag. Čovjek onaj, sijući žito, zaboravi za Međedovića, i uzme ga ujedanput sa žitom u šaku, te metne u usta. Međedović se poplaši da ga ne proguta, te po ustima vamo namo, dok srećom nađe jedan krnjav zub, te se u njemu ustavi i prićuti. Kad sijač uveče dođe kući, on poviče na snaje: „Dajdete, đeco, one moje zubne čačkalice, nešto me žulja u onome mome pokvarenom zubu.“ Snaje donesu dva velika gvozdena ražnja, pa pošto on zine, poduvre jedna s jedne, druga s druge strane, dok Međedović iskoči iz zuba. Onda se sijač tek opomene, i rekne mu: „A žlje te sakrio! Umalo te nisam prožderao!“ Iza toga, pošto večeraju i stanu se o svačemu razgovarati, zapita Međedović domaćina šta mu je bilo onome zubu te je nako mimo sve ostale pokvaren. A domaćin mu stane vako pripovijedati: „Jednom pođemo nas desetak s trideset konja u Dubrovnik po so. Idući tako, nađemo jednu đevojku kod ovaca, pa nas zapita kuda ćemo, a mi joj kažemo da idemo u Dubrovnik po so; a ona reče: 'Šta da se mučite tako daleko? Eve ima u mojoj pletivači nešto soli što je preteklo kad sam mrsila ovce, mislim da će vi svima biti dosta!' I tako nođe pogodivši se š njome, ona skine s ruke svoju pletivaču, a mi s konja svoje vreće, pa puni i mjeri, dok napunismo vreće za sve trideset konja. Pošto se nođe š njome namirimo, vratimo se natrag. Ovo bješe u jesen, i vrijeme bješe dosta lijepo; ali jedan dan pred noć kad bismo na vr Čemerna, nešto se naoblači, pa okrene snijeg sa šjeverom, da se pometemo i mi i konji. U to se još na veću našu nesreću smrkne sasvim, i tako tumarajući vamo namo, dok jedan od nas srećom nabasa na jednu pećinu i poviče: 'Vamote, braćo! Eve suote!' Onda mi jedan po jedan namo, dok svi uđemo i uvedemo svo tridesetero konja, pa konje rastovarimo i naložimo vatru, te prenoćimo kao u kući. Kad šjutradan svane, a to imaš šta viđeti: mi svi u jednoj ljudskoj glavi koja stajaše izmeđ nekakije vinograda. Dok se mi tome još čuđasmo i konje tovarismo, ne lezi vraže, ete ti pudara od onije vinograda, pa uzme onu glavu s nama te metne u praću, pa okrenuvši je nekoliko puta sebi iznad glave, baci je preko vinograda da plaši čvorke, i kad padnemo na jednome brdu, onda ja pokvarim ovaj zub.“ I na čast vi laž!"
+  },
+  {
+    "title": "Aždaja i carev sin",
+    "ru": "Аждая и царевич",
+    "level": "A2+ · Исторический текст",
+    "source": "Vuk Stefanović Karadžić, Srpske narodne pripovijetke (1870), str. 43–51. Текст общественного достояния; источник — Викизворник.",
+    "url": "https://sr.wikisource.org/sr-el/Аждаја_и_царев_син",
+    "text": "Bio jedan car pa imao tri sina. Jednom najstariji sin pođe u lov, pa kako iziđe iza grada, skoči zec iza grma a on za njim, te ovamo te onamo dok uteče zec u jednu rekavicu (vodenicu), a carev sin za njim, kad tamo, a to ne bio zec nego aždaja, pa dočeka careva sina te ga proždere. Kad posle toga prođe nekoliko dana a carev sin ne dolazi kuhi, stanu se čuditi šta bi to bilo da ga nema. Onda pođe srednji sin u lov, pa kako iziđe iza grada, a zec skoči iza grma a carev sin za njim, te ovamo te onamo dok uteče zec u onu rekavicu, a carev sin za njim, kad tamo, a to ne bio zec nego aždaja, pa ga dočeka te proždere. Kad posle toga prođe nekoliko dana a carevi sinovi ne dolaze natrag nijedan, zabrine se sav dvor. Onda i treći sin pođe u lov, ne bi li i braću našao. Kako iziđe iza grada, opet skoči zec iza grma, a carev sin za njim, te ovamo te onamo dok uteče zec u onu rekavicu. A carev sin ne htedne ići za njim, nego pođe da traži drugoga lova govoreći u sebi: „Kad se vratim, naći ću ja tebe.“ Potom hodajući dugo po planini, ne nađe ništa, pa se onda vrati u onu rekavicu, kad tamo, ali u rekavici jedna baba. Carev sin joj nazove Boga: „Pomozi bog, bako!“ A baba mu prihvati: „Bog ti pomogao, sinko!“ Onda je zapita carev sin: „Gde je, bako, moj zec?“ A ona mu odgovori: „Moj sinko, nije ono zec, nego je ono aždaja. Toliki svet pomori i zatomi.“ Čujući to carev sin, malo se zabrine, pa reče babi: „Šta ćemo sad? Tu su valjda i moja dva brata propala.“ Baba mu odgovori: „Jesu bogme; ali nije fajde, nego, sinko, idi kući, dok nisi i ti za njima.“ Onda joj on reče: „Bako, znaš li šta je? Ja znam da si i ti rada da se oprostiš te napasti.“ A babamu se uteče u reč: „O, moj sinko, kako ne bih! I mene je tako uhvatila, ali sad se nema kud.“ Onda on nastavi: „Slušaj dobro što ću ti kazati. Kad dođe aždaja, pitaj je kuda ide i gde je njezina snaga, pa sve ljubi ono mesto gde ti kaže da joj je snaga, kao od miline, dokle je iskušaš, pa ćeš mi posle kazati kad dođem.“ Posle carev sin otide u dvor, a baba ostane u rekavici. Kad dođe aždaja, stane je baba pitati: „Ta gde si zaboga? Kuda tako daleko ideš? Nikad nećeš da mi kažeš kuda ideš.“ A aždaja joj odgovori: „E, moja bako, daleko ja idem.“ Onda joj se baba stane umiljavati: „A zašto tako daleko ideš? Kaži mi gde je tvoja snaga. Ja da znam gde je tvoja snaga, ja ne znam šta bih radila od miline, sve bih ono mesto ljubila.“ Na to se aždaja nasmeje pa joj reče: „Onde je moja snaga u onom ognjištu.“ Onda baba pritisne grliti i lubiti ognjište, a aždaja kad to vidi, udari u smeh pa joj reče: „Luda ženo, nije tu moja snaga. Moja je snaga u onom drvetu pred kućom.“ Onda baba opet pritisne grliti i ljubiti drvo, a aždaja opet u smeh pa joj reče: „Prođi se, luda ženo, nije tu moja snaga.“ Onda baba zapita: „Da gde je?“ A aždaja stane kazivati: „Moja je snaga daleko, ne možeš ti tamo otići. Čak u drugome carstvu kod careva grada ima jedno jezero, u onom jezeru ima jedna aždaja, a u aždaji vepar, a u vepru zec, a u zecu golub, a u golubu vrabac, u onome je vrapcu moja snaga.“ Baba kad to čuje, reče aždaji: „To je bogme daleko, to ja ne mogu ljubiti.“ Sutradan kad aždaja otide iz rekavice, carev sin dođe k babi, pa mu baba kaže sve što je čula od aždaje. Onda on otide kući, pa se preruši: obuče pastirske haljine i uzme pastirski štap u ruke, te se načini pastir pa pođe u svet. Idući tako od sela do sela i od grada do grada najposle dođe u drugo carstvo i u carev grad, pod kojim je u jezeru bila aždaja. Došavši u onaj grad stane raspitivati kome treba pastir. Građani mu kažu da treba caru. Onda on upravo k caru. Pošto ga prijave, pusti ga car preda se, pa ga zapita: „Hoćeš li čuvati ovce?“ A on odgovori: „Hoću, svetla kruno!“ Onda ga car primi i stane ga svetovati i učiti: „Ima ovde jedno jezero, i pokraj jezera vrlo lepa paša, pa kako izjaviš ovce, one odmah idu onamo te se razvale oko jezera, ali koji god čoban tamo otide, onaj se više ne vraća natrag; zato, sinko, kažem ti, nedaj ovcama na volju kud one hoće, nego drži kuda ti hoćeš.“ Carev sin zahvali caru, pa se opravi i izjavi ovce, i uzme sa sobom još dva hrta što mogu zeca u polju stići, i jednoga sokola što može svaku ticu uhvatiti, i ponese gajde. Kako on izjavi ovce, odmah ih pusti k jezeru, a ovce kako dođu na jezero, odmah se razvale oko jezera, a carev sin metne sokola na jednu kladu a hrte i gajde pod kladu, pa zasuče gaće i rukave te zagazi u jezero pa stane vikati: „O, aždajo, o, aždajo, ta iziđi mi danas na mejdan da se ogledamo, ako žena nisi!“ Aždaja se odzove: „Sad ću, carev sine, sad.“ Maločas, eto ti aždaje: velika je, strašna je, gadna je! Kako aždaja iziđe, uhvati se s njim popojaske, pa se ponesi letni dan do podne. A kad podne prigreje, onda reče aždaja: „Ta pusti me, carev sine, da zamočim svoju pustu glavu u jezero, pa da te bacim u nebeske visine.“ A carev joj sin odgovori: „Bre, aždajo, ne kopaj trica; da je meni careva devojka da me poljubi u čelo, još bih te više bacio.“ Aždaja se na to odmah otpusti od njega i otide u jezero. Kad bude pred veče, on se lepo umije i opravi, sokola metne na rame a hrte uza se a gajde pod pazuho pa krene ovce i pođe u grad svirajućiu gajde. Kad dođe u grad, sav se grad slegne kao na čudo gde on dođe a pre nijedan čoban nije mogao doći s onoga jezera. Sutradan carev sin opravi se opet, i pođe s ovcama upravo k jezeru. A car pošlje za njim dva konjanika da idu kradom da vide šta on radi, te se oni popnu na jednu visoku planinu otkuda će dobro videti. A čoban kako dođe, metne hrte i gajde pod kladu onu, a sokola na nju, pa zasuče gaće i rukave te zagazi u jezero pa poviče: „O, aždajo, o, aždajo, iziđi mi na mejdan da se još ogledamo, ako žena nisi.“ Aždaja mu se odzove: „Sad ću, carev sine, sad.“ Maločas, eto ti aždaje: velika je, strašna je, gadna je! Pa se uhvate popojaske te se ponesi letni dan do podne. A kad podne prigreje, onda reče aždaja: „Ta pusti me, carev sine, da zamočim svoju pustu glavu u jezero, pa da te bacim u nebeske visine.“ A carev joj sin odgovori: „Bre, aždajo, ne kopaj trica; da je meni careva devojka da me poljubi u čelo, još bih te više bacio.“ Aždaja se na to odmah otpusti od njega i otide u jezero. Kad bude pred noć, carev sin krene ovce kao i pre, pa kući svirajući u gajde. Kad uđe u grad, sav se grad uskoleba i stane se čuditi gde čoban dolazi kući svako veče, što pre nijedan nije mogao. Ona dva konjika još su pre od carevoga sina bila došla u dvor i pripovedila caru sve po redu šta su čuli i videli. Sad kad car vide čobana gde se vrati kući, odmah dozove k sebi svoju kćer i kaže joj sve šta je i kako je. „Nego,“ veli, „sutra da ideš s čobaninom na jezero, da ga poljubiš u čelo.“ Ona kad to čuje, brizne plakati i stane se moliti ocu: „Nigde nikoga nemaš do mene jedinu pa i za mene ne mariš da poginem.“ Tada je otac uzme sloboditi i hrabriti: „Ne boj se, kćeri moja, vidiš, mi promenismo tolike čobane, pa koji god iziđe na jezero, ni jedan se ne vrati, a on evo dva dana kako se s aždajom bori, pa mu ništa ne naudi. Ja se uzdam u boga da on može tu aždaju svladati, samo idi sutra s njime, e da bi nas oprostio te napasti što toliki svet pomori.“ Kad ujutru beo dan osvanu, dan osvanu i sunce ogranu, usta čoban, usta i devojka, pa se staše opremati na jezero. Čobanin je veseo, veseliji nego igda, a devojka careva tužna, suze proliva, pa je čoban teši: „Gospođo seko, ja te molim nemoj plakati, samo učini što rečem, kad bude vreme, ti pritrči i mene poljubi pa se ne boj.“ Kad pođoše i kretoše ovce, čoban putem jednako veseo, svirau gajde veselo, a devojka ide pokraj njega pa jednako plače, a on ka što pusti dulac pa se okrene njojzi: „Ne plači, zato, ne boj se ništa.“ Kad dođu na jezero, ovce se odmah razvale oko jezera, a carev sin metne sokola na kladu a hrte i gajde poda nju, pa zasuče gaće i rukave pa zagazi u vodu i poviče: „O, aždajo, o, aždajo, iziđi mi na mejdan da se još ogledamo, ako žena nisi!“ Aždaja se odzove: „Sad ću, carev sine, sad.“ Maločas, eto ti aždaje, velika je, strašna je, gadna je! Kako iziđe, uhvate se popojaske pa se ponesi letni dan do podne. A kad podne prigreje, tada besedi aždaja: „Ta pusti me, carev sine, da zamočim svoju pustu glavu u jezero, pa da te bacim u nebeske visine.“ A carev joj sin odgovori: „Bre, aždajo, ne kopaj trica; da je meni careva devojka da me poljubi u čelo, još bih te više bacio.“ Kako on to reče, a careva devojka pritrči i poljubi ga u obraz, u oko i u čelo. Onda on mahne aždajom i baci je u nebeske visine, te aždaja kad padne na zemlju sva se na komade razbije, a kako se ona na komade razbije, skoči iz nje divlji vepar, pa nagne begati, a carev sin vikne na čobanske pse: „Drži! Ne daj!“ A psi skoče te za njim, pa ga stignu, i odmah ga rastrgnu, ali iz vepra skoči zec, pa nagne preko polja, a carev sin pusti hrte: „Drži! Ne daj!“ A hrti za zecom te ga uhvate i odmah rastrgnu, ali iz zeca poleti golub, a carev sin pusti sokola te soko uhvati goluba i donese carevome sinu u ruke. Carev sin uzme goluba te ga raspori, a to u golubu vrabac, a on drž vrapca. Kad uhvati vrapca, reče mu: „Sad da mi kažeš gde su moja braća.“ A vrabac mu odgovori: „Hoću, samo mi nemoj ništa učiniti. Odmah iza grada tvojega oca ima jedna rekavica, i u onoj rekavici imaju tri šibljike; podseci one tri šibljike, pa udri njima po korenu; odmah će ce otvoriti gvozdena vrata od velikoga podruma, u onome podrumu ima toliko ljudi i starih i mladih, i bogatih i siromaha, i malih i velikih, i žena i devojaka, da možeš naseliti čitavo carstvo; onde su i tvoja braća.“ Kad vrabac to sve iskaže, carev ga sin odmah za vrat te udavi. Car glavom bijaše izišao i popeo se na onu planinu otkuda su oni konjanici gledali čobana, te i on gledao sve što je bilo. Pošto čoban tako dođe glave aždaji, počne se i suton hvatati, i on se lepo umije, uzme sokola na rame a hrte uza se, a gajde pod pazuho, pa svirajući krene ovce i pođe dvoru carevu, a devojka pored njega još u strahu. Kad dođu u grad, sav se grad slegne kao na čudo. Car koji je sve njegovo junaštvo gledao s planine, dozove ga preda se pa mu da svoju kćer, te s mesta u crkvu pa ih venčaju i učine veselje za nedelju dana. Potom se carev sin kaže ko je on i otkud je, a car se onda i sav grad još većma obraduje, pa pošto carev sin navali da ide svojoj kući, car mu da mnoge pratioce i opravi ga na put. Kad budu kod one rekavice, carev sin zaustavi sve pratioce pa uđe unutra te podseče one tri šibljike, i udari njima po korenu, a gvozdena se vrata odmah otvore, kad tamo, a to u podrumu svet božji. Onda carev sin zapovedi da svi izlaze jedan po jedan i da idu kud je kome drago, a on stane na vrata. Izlazeći tako jedan za drugim, eto ti i braće njegove; on se s njima zagrli i ižljubi. Kad već sav narod iziđe, zahvale mu što ih je popuštao i izbavio i otidu svaki svojoj kući. A on sa svojom braćom i mladom otide kući svome ocu, i onde je živeo i carovao do svoga veka."
+  },
+  {
+    "title": "Dobra djela ne propadaju",
+    "ru": "Добрые дела не пропадают",
+    "level": "A2+ · Исторический текст",
+    "source": "Vuk Stefanović Karadžić, Srpske narodne pripovijetke (1870), str. 246–255. Текст общественного достояния; источник — Викизворник.",
+    "url": "https://sr.wikisource.org/sr-el/Добра_дјела_не_пропадају",
+    "text": "Bio je muž i žena, i imali su jednoga sina. Kad im sin poodraste, dadu ga na nauku, koja će mu u neko vrijeme i pomoći. On je bio dobar i miran, i za najviše pun straha Božijega. Pošto svrši nauku, otac mu da brod i u njemu trgovinu, da kroz prostrani svijet ide i da se trudi, ne bi li u starost roditeljima svojijema od pomoći bio. On se s brodom naveze, i ploveći po moru, sretne brod Turski i čuje, gdje u njemu veliki plač stoji, te zapita mornare na Turskome brodu: „Molim vas, šta se ta plač u brodu vašem čuje?“ A oni mu odgovore: „Vozimo roblje, što smo kroz svijet zarobili, i to oni vezani plaču.“ Onda on reče: „Molim vas, braćo, upitajte kapetana vašeg, bi li ih na otkupe za gotove novce dao.“ Oni ga odmah veselo poslušaju, potrče i zovnu kapetana. Kapetan iziđe, i oni se odmah pogode, on kapetanu brod i trgovinu a kapetan njemu vezane robove. On ih prizove k sebi i počne ih pitati, oklen je koji, pa svakome reče da ide na svoju postojbinu, i tako redom jedno po jedno, dok najposlije dođe do jedne starice, koja je držala do sebe prekrasnu đevojku. Kad njih zapita, otkuda su, baba mu plačući odgovori: „Ja sam izdaleka, babica od dvora careva; a ova đevojčica, ovo je jedina šćer careva, koju sam ja od malena gojila; pa po nesreći svojoj otide u bašču, podaleko od dvora. Prokleti Turci opaze je i uhvate, ona počne vikati, a ja opet po nesreći svojoj namjerim se blizu, pritrčim na glas, a oni uhvate i mene, i povedu obadvoje na brod.“ Potom one ne umijući kuđ hoditi, a i nemajući su što tražiti kuće svoje, zamole se njemu, da ih on uzme sobom. On ih uzme, đevojku vjenča sebi za ženu, i ode natrag svojoj kući. Kad dođe kući, otac ga zapita, đe mu je brod i trgovina. A on mu pripovjedi sve šta je bilo, kako je otkupio roblje i otpuštao kućama, „a ova“ reče „đevojka jest šćer careva, a ova starica, ovo je careva kutnja babica; one ne umijući kud, a i nemajući su šta tražiti svoje kuće, ostadoše u mene, i ja uzeh sebi đevojku ovu za ženu.“ Otac mu se na to ražljuti: „Nesretni sine, što učini! Za što li izgubi moje blago bez i kake nesreće i bez i kake napasti?“ pa ga išćera od sebe. On potom sa svojom ženom i s ovom staricom življaše dugo vremena u istome selu, ali u tuđoj kući, preporučujući se materi svojoj i ostalim prijateljima, ne bi li kakogod oca sklonili da ga jopet k sebi primi, i da mu druga brod napravi, obećavajući se da će unaprijed bolju pamet imati. Poslije toliko vremena otac mu se smiluje i primi ga k sebi sa ženom i s onom starcem, i dade mu drugi brod viši i ljepši od prvoga, pun trgovine svake, da ide jopet trgovati. On otplovi, a žena mu i ona starica ostanu kod njegovijeh roditelja. Kad doplovi u jedan grad, vidi gdje vojnici nesretne seljane po gradu hvataju i u tamnicu meću. On ih zapita: „Za što to činite, braćo? te siromaš u tamnicu mećete?“ A oni mu odgovore: „Za to, za što nijesu carevine caru platili.“ Onda on pođe k vlasniku i zapita: „Koliko, molim te, ima oni narod pohvatani carevine da plati?“ Vlasnik mu reče koliko i toliko. Onda on opet proda svoj brod i trgovinu, i otkupi sve pohvatane seljake, pa se opet vrati kući bez ništa, i padnuvši ocu pod noge kaže sve šta mu se dogodilo, i plačući počne ga moliti za oproštenje. Otac mu se još više ražljuti, i oćera ga jopet od sebe. Kako će sad nesretni sin, na koju li će stranu? kod bogatijeh roditelja sad prosi? Dok nakon toliko vremena opet prijatelji okolo njegova oca nagovarajući, da ga opet k sebi primi, obećavajući mu se oni, da više ne će biti onakov kakov i do sad, već da ga je nevolja na bolju pamet naučila. Već na sve duge jade otac mu se opet skloni, primi ga k sebi i dade mu brod još višlji i još ljepši od prvijeh. On ispiše na krmu od broda iznutra svoju ženu a na provu onu staricu: pozdravi se s ocem i s materom, sa ženom i sa svima u kući, i otisne se ploviti. Ploveći tako dođe pod jedan veliki grad, u kom je car živio, ispustivši svoja sidra stane grad topovima pozdravljati. Svi se građani začude, a i sam car, ne znajući ko je i što je. Kad bude pred noć, pošlje car k njemu svoga ministra da vidi, ko je i što je, i da mu reče, da će sjutra na devet ura ujutru car doći na njegov brod. Ministar pođe, gdje će viđeti čuda? ugleda na krmi od ovoga broda ispisanu njegovu vjerenicu a carevu šćer, koju mu je car još iz malena obećao bio, a na provu dvora careva babicu, koju su zajedno s njom Turci zarobili bili, ali od radosti nije mogao sam sebi vjerovati, niti je i kome za to što kazivao. Dok sjutradan, devet ura zazvoni, evo cara sa svojim ministrima na brod, počne se razgovarati, ko je i oklen je, i šetajući se s prove na krmu upazi đevojku ispisanu na krmi i staricu jednu na provu od broda, i on pozna svoju jedinu šćer i nje babicu, što su im Turci zarobili, ali ni on od velike radosti nije mogao uvjeriti, već pozove kapetana dvije ure poslijed podne, da pođe u njegov dvor da ga iskuša, jeli istinito što mu srce kaže. Po tom se pozdravi s njim i otide. Kad su dvije zazvonile, kapetan otide na zapovijest carsku. Car ga počne ispitivati poizdaleka, što mu dolazi ona mladica ispisana na krmi od njegova broda i ona starica na provi! Spazi se on odmah, da je ovo žene njegove roditelj, i počne mu sve žitije svoje redom kazivati, kako je ploveći po moru srio Turski brod, pun robova, i kako ih je svijeh otkupio, i svakoga domu otpustio, „a ova đevojka“ reče, „i s njom ona starica, ne umijući kuđ hoditi a i neimajući su što tražiti svoje postojbine, jer im je daleko bilo, ostanu u mene, i ja đevojku vjenčam za svoju ženu.“ Kad par to čuje, povikne: „To je moja jedina šćer, koju su prokleti Turci zarobili; a ta starica, to je od moga dvora babica, koja je nju još izmalena gojila i čuvala; a ti – ti ćeš biti krune moje našljednik, već trči natrag svojoj kući, i dovedi mi šćer moju, a ženu tvoju, da je viđu još jednom prijed nego li umrem, i dovedi oca svoga i mater svoju i svu familju svoju, i prodaj sve imanje svoje; tvoj otac biće moj brat, a tvoja mati moja sestra, a ti ćeš biti moj sin i krune moje našljednik, i svi ćemo življeti u jednome dvoru.“ Potom zovne ženu svoju caricu i sve ministre i kaže im, što se zbilo sa šćeri njegovom. Onda se počnu svi radovati i veliko veselje činiti. Potom car mu da svoj veliki i prekrasni brod, a on svoj ostavi onđe, ali reče caru: „Svijetla kruno! ne će mene kod doma mog vjerovati, ako mi ne daš jednoga od svojijeh ministara.“ Car mu da ministra, baš onoga kom je šćer svoju obećao bio. I tako se oni otisnu i stanu ploviti. Kad doma dođe, otac mu se začudi, oklen tako ubrzo doma se vrati, i brod ljepši i viši dobavi. On mu kaže sve šta je i kako, i materi svojoj i ženi i onoj starici objavi radosni glas, i „evo“ veli, „ako ne vjerujete, evo vam carskog ministra, koga je car sa mnom poslao da se bolje uvjerite.“ Kad žena njegova ugleda ministra, povikne od radosti svekru svome i svekrvi: „Jest istina, dragi oče, ovo je ministar oca moga, a moj nesuđeni zaručnik.“ Oni onda prodadu sve svoje imanje, i otisnu se ploviti. Ministar ovi gledao je svakojako mladog našljednika careva a vjerenice svoje muža da ubije, ne bi li se on s njome vjenčao, kako mu je od nje roditelja obećano bilo, da bi onda on našljednik carski ostao. Kad su već bili na neki dio puta, zovne on njega notnjo, kad su svi pospali, da iziđe na kuvijertu da se s njim nešto dogovori. On prave misli bez i kakvog straha iziđe gore, a ovi ga onda uhvati i preko broda u more baci. Brod je jedrio, i on se već nije mogao njega uhvatiti. Onda ministar otide opet spavati. Mladoga našljednika carskog iznese sreća na jednu seku podaleko od kraja, ali pod jednu pustinju, đe nikome tuda prolazak ne bijaše, da bi ga izbavio. Kad ujutru svane, vide oni u brodu da njega nema, pa počnu plakati i jaukati sudeći, da se notnjo sam nehotice utopio, i nikako se nijesu mogli utješiti i za najviše njegova žena, jer su se premnogo pazili. Kad dođu kod cara, jave mu nesreću, koja im se u putu dogodila. Tada nastane tuga i plač u carskom dvoru za mnogo, i nigda se utješiti nijesu mogli. Njegove roditelje car primi i kod sebe ih uzdrži kao što je obećao bio. Nesretni zet carev sjedeći na ploči morskoj življaše o travici, koja bješe pri ploči prirasla, vas bješe već pocrnio, aljine na njemu izagnjile, da se ne mogaše poznati i ni od kuda žive duše, koja bi ga izbavila, dok srećom njegovom poslije petnaest dana i petnaest noći eto ti jednog starca na štapu pokraj mora đe ribu lovi. On ga odmah stane vikati i moliti, da ga na suho prenese. Starac mu se obeća: „Hoću“ reče „ali da mi platiš.“ „Od kud ću ti platiti“ odgovori mu on, „kad ni haljine na sebi nemam.“ „Ništa za to“ starac odgovori; „evo ja imam pri sebi kalamar i pero, ako umiješ pisati da mi se potpišeš, od svega svoga, što bi i gda imao, da ćeš mi polovicu dati.“ On na to pristane sa svim srcem. Starac onda zagazi i dođe do njega, on mu se potpiše, a starac njega na suho prenese. Onda on od kuće do kuće, od sela do sela, go, bos, crn i gladan, dade mu neko gaće a neko košulju, samo što tijelo pokrije. Nakom trideset dana donese ga sreća u carev grad i pred carev dvor, te sjedne sa štapom u ruci pokraj vrata od dvora, a prsten vjenčani s imenom njegovijem i njegove žene a careve šćere još mu je na ruci stajao. U veče sluge careve prime ga u dvor i dadu mu što je iza njih ostalo da jede. Sjutridan pođe i sjedne ukraj vrata od carske bašče; ali dođe baščovan te ga otole oćera govoreći mu, da će sad car tuda proći sa svojom familjom. On se otole makne i opet sjedne u jedan kraj od bašče, dok evo ti cara gdje šeta s njegovom materom, a otac njegov sa caricom, a žena njegova s krvnikom njegovim, ministrom. Onim se još nije hotio otkriti, već oni šetajući prođu pokraj njega i dadu mu nekoliko novaca; ali na onoj ruci kojom je novce prihvatao, prsten je stajao, žena ga njegova ugleda, i ne mogući ni pomisliti daje on nje muž, reče mu: „Nu, daj mi ruku, da viđu prsten taj kakav je.“ Ministar, koji je do nje stajao, malo se ka i prepane i reče joj: „Odmakni se“ veli „kako bi s ovom odrpanicom govorila?“ Ali ga ona ne ćedne ni slušati, već uzme prsten i pozna ime nje i nje muža. Kako se njoj tada učinilo, kako li se srce bilo okamenilo, kad prsten ovaj viđe; ali se opet ustrpi i premuči. Kad dođu u dvor, kaže ona ocu svom, kako je prsten nje pokojnog muža poznala u prosjaka onoga što u bašči sjeđaše, „nego pošlji“ reče „neka ga zovnu, da ga ispitamo, od kud je prsten oni u ruke njegove došao.“ Car odmah pošlje sluge, te prosjaka dovedu. Onda ga car počne ispitivati, od kud je, i kako se zove, i kako je prsten taj u ruke njegove došao. On se više ne mogaše uzdržavati da im se ne otkrije, već počne im redom kazivati, kako ga je ministar oni kad su bili u putu, preko broda u more bacio, i kako ga je sreća na jednu ploču blizu kraja nanijela, na kojoj je petnaest dana i petnaest noći živio o travi, koja je pri ploči prirasla bila, i nakom ovoliko dana kako ga je starac jedan otlen izbavio, „i evo“ reče „Bog i moja pravica donese me opet mojim roditeljima i mojoj ljubi.“ Oni kad ovo čuše, onijeme od radosti, a pošto se malo razabraše, skoči car i zovne oca njegova i mater i kaže im, što se dogodilo od sina njihovoga. Ko bi sad mogao iskazati radost ovu, koja ih obuze, kad su se poznali, kako li veselje u tome dvoru postade! Odmah mu donesoše svijetlo i novo ođelo, izmiše ga p obukoše. Za toliko dana trajala je radost i veselje ne samo u njihovom dvoru, već po cijelom gradu, pjevalo se i veselilo, i njega za mladog cara okruniše. Car odmah zapovjedi, te onoga ministra uhvate i da ga zetu na volju da mu sudi. On mu sve oprosti, ne dade ga ni ubiti ni objesiti, već samo oćera ga izvan njihovog carstva, da više pod vlast njihovu ne pripada. Novi car počne carovati, kad nakom malo dana njegova vladanja, evo ti mu onoga starca, koji ga je iz mora izbavio, nosi oni potpis što mu je potpisao, da će mu kad god bi što imao, od svega polovinu dati. Došavši starac u dvor, zamoli sluge da ga pred cara puste. Sluge uljezu k caru i kažu mu, da jedan starac želi k njemu uljesti. Car dopusti, i starac uljezavši pokloni mu se i poljubi mu ruku i metne mu kartu na koljeno. Car uzme i pročativši je reče mu: „Dobro, starče moj, sjedi, ja sam danas car, ali da sam i prosjak, ja ću riječ moju i potpis moj potvrditi; već pričekaj, da počnemo dijeliti.“ Car iznese knjigu i počnu prvo gradove dijeliti: „Ovaj“ reče „meni, ovaj tebi“ pišući sve na kartu, doklen sve podijele od najvišega grada do najmanje kućerice. Starac uzme svoju polovinu zapisanu svu u karti, i pokloni je opet caru govoreći: „Na, nijesam ja starac, čoek zemaljski; već sam ja anđeo Božij, kojino sam poslan bio od Boga, da tebe iz mora izbavim za tvoja dobra đela, koja si do sad pred Bogom učinio. Već caruj i uživaj, da ti bude dugovječno.“ Anđela nestane, a on ostane sretno vladajući."
+  }
+
 ];
 
-const REAL_SOURCES = [
-  {title:"Međedović", ru:"Меджедович", level:"A2+ · Исторический текст", page:"Međedović", source:"Vuk Stefanović Karadžić, Srpske narodne pripovijetke (1870). Текст в общественном достоянии; источник — Викизворник.", url:"https://sr.wikisource.org/sr-el/Međedović"},
-  {title:"Aždaja i carev sin", ru:"Аждая и царевич", level:"A2+ · Исторический текст", page:"Aždaja i carev sin", source:"Vuk Stefanović Karadžić, Srpske narodne pripovijetke (1870), str. 43–51. Текст в общественном достоянии; источник — Викизворник.", url:"https://sr.wikisource.org/sr-el/Aždaja_i_carev_sin"},
-  {title:"Dobra djela ne propadaju", ru:"Добрые дела не пропадают", level:"A2+ · Исторический текст", page:"Dobra djela ne propadaju", source:"Vuk Stefanović Karadžić, Srpske narodne pripovijetke (1870), str. 246–255. Текст в общественном достоянии; источник — Викизворник.", url:"https://sr.wikisource.org/sr-el/Dobra_djela_ne_propadaju"}
-];
+const REAL_SOURCES = [];
 
 // Первая версия блока «Времена» для часто встречающихся глаголов.
 const VERB_FORMS = {
@@ -1092,6 +1144,333 @@ const DICT = {
   "zemlju": "землю",
   "zubima": "зубами"
 };
+
+
+// Дополнительные формы и слова новых учебных текстов.
+Object.assign(DICT, {
+  "ana": "Ана (имя)",
+  "marko": "Марко (имя)",
+  "milan": "Милан (имя)",
+  "petar": "Петар (имя)",
+  "jelena": "Елена (имя)",
+  "milica": "Милица (имя)",
+  "kaže": "говорит / говорит, что",
+  "minuta": "минуты / минут",
+  "počinje": "начинается",
+  "učenici": "ученики",
+  "pravi": "делает",
+  "pokazuje": "показывает",
+  "govori": "говорит",
+  "oni": "они",
+  "oboje": "оба",
+  "pita": "спрашивает",
+  "nastavnik": "учитель",
+  "pokušava": "пытается",
+  "čita": "читает",
+  "fotografije": "фотографии",
+  "neki": "некоторые",
+  "odlazi": "уходит / отправляется",
+  "knjigu": "книгу",
+  "stare": "старые",
+  "gleda": "смотрит",
+  "proverava": "проверяет",
+  "imaju": "имеют",
+  "voli": "любит",
+  "nalazi": "находит / находится",
+  "razgovaraju": "разговаривают",
+  "deo": "часть",
+  "idu": "идут",
+  "izlazi": "выходит",
+  "stavlja": "кладёт / ставит",
+  "prelazi": "переходит",
+  "sledeći": "следующий",
+  "ispred": "перед",
+  "kiša": "дождь",
+  "staza": "тропа / дорожка",
+  "žele": "хотят",
+  "knjige": "книги",
+  "ponekad": "иногда",
+  "traje": "длится",
+  "putu": "дороге / пути",
+  "donosi": "приносит",
+  "novih": "новых",
+  "reči": "слова",
+  "biblioteku": "библиотеку",
+  "neke": "некоторые",
+  "svaki": "каждый",
+  "pogleda": "смотрит / взглянет",
+  "postaje": "становится",
+  "sede": "сидят",
+  "staru": "старую",
+  "nastavlja": "продолжает",
+  "ulice": "улицы",
+  "fotografiše": "фотографирует",
+  "fotografija": "фотография",
+  "razmišlja": "думает / размышляет",
+  "jednoj": "одной",
+  "posebno": "особенно",
+  "skoro": "почти",
+  "posete": "посетят / посещают",
+  "autobus": "автобус",
+  "planiraju": "планируют",
+  "nastavljaju": "продолжают",
+  "jednom": "однажды / один раз",
+  "ranac": "рюкзак",
+  "škole": "школы",
+  "čas": "урок",
+  "danas": "сегодня",
+  "srpski": "сербский язык / сербский",
+  "sluša": "слушает",
+  "zapisuje": "записывает",
+  "zadatke": "задания",
+  "tabli": "доске",
+  "zadatak": "задание",
+  "proveravaju": "проверяют",
+  "uči": "учится / учит",
+  "sledeće": "следующее",
+  "piše": "пишет",
+  "ulazi": "входит",
+  "pronalazi": "находит",
+  "trgu": "площади",
+  "svira": "играет (на инструменте)",
+  "kupuje": "покупает",
+  "koliko": "сколько",
+  "slaže": "соглашается / укладывает",
+  "stariji": "пожилой / старший",
+  "prolazi": "проходит",
+  "govore": "говорят",
+  "ceo": "целый / весь",
+  "izložbu": "выставку",
+  "porodice": "семьи",
+  "sunce": "солнце",
+  "sata": "часа",
+  "meseca": "месяца",
+  "razgovara": "разговаривает",
+  "izložbe": "выставки",
+  "umetnost": "искусство",
+  "kulturni": "культурный",
+  "korak": "шаг",
+  "ostaju": "остаются",
+  "pronalaze": "находят",
+  "film": "фильм",
+  "zanimljivo": "интересно / интересный",
+  "kultura": "культура",
+  "biti": "быть",
+  "stignu": "приходят / прибывают",
+  "izvora": "источника",
+  "školu": "школу",
+  "svakog": "каждого",
+  "ustaje": "встаёт",
+  "rancu": "рюкзаке",
+  "ponese": "берёт с собой",
+  "peške": "пешком",
+  "petnaest": "пятнадцать",
+  "ulaze": "входят",
+  "jezik": "язык",
+  "nastavnica": "учительница",
+  "objašnjenje": "объяснение",
+  "tekst": "текст",
+  "reč": "слово",
+  "ponavlja": "повторяет",
+  "novu": "новую",
+  "svesku": "тетрадь",
+  "časa": "урока / часа",
+  "listu": "список",
+  "matematika": "математика",
+  "rade": "делают / работают",
+  "odgovor": "ответ",
+  "izlaze": "выходят",
+  "odgovore": "ответы",
+  "istoriju": "историю",
+  "starom": "старом",
+  "kratku": "короткую",
+  "pauzu": "паузу",
+  "takođe": "также",
+  "bibliotekarka": "библиотекарь (женщина)",
+  "policu": "полку",
+  "knjigama": "книгами / книгах",
+  "pozajmi": "возьмёт напрокат / одолжит",
+  "stranica": "страница",
+  "rečenice": "предложения",
+  "koje": "которые",
+  "poznaje": "знает / знаком с",
+  "savet": "совет",
+  "poslednji": "последний",
+  "cvetova": "цветов",
+  "posmatraju": "наблюдают / рассматривают",
+  "između": "между",
+  "li": "ли",
+  "nedelje": "недели",
+  "odlučuje": "решает",
+  "roditeljima": "родителям",
+  "ručka": "обеда",
+  "dvadesetak": "около двадцати",
+  "telefon": "телефон",
+  "pitanje": "вопрос",
+  "nastavnika": "учителя",
+  "početku": "начале",
+  "odeću": "одежду",
+  "spavanja": "сна",
+  "deset": "десять",
+  "završi": "заканчивает",
+  "oseća": "чувствует",
+  "ruku": "руку",
+  "objašnjava": "объясняет",
+  "živi": "живёт",
+  "sunčano": "солнечно",
+  "jaknu": "куртку",
+  "flašu": "бутылку",
+  "ulici": "улице",
+  "glavnog": "главного",
+  "trga": "площади",
+  "muzičara": "музыкантов",
+  "slušaju": "слушают",
+  "ostaje": "остаётся",
+  "pijaci": "рынке",
+  "voće": "фрукты",
+  "namirnice": "продукты",
+  "vremenu": "погоде / времени",
+  "ulicu": "улицу",
+  "delu": "части",
+  "čekaju": "ждут",
+  "lagana": "лёгкая",
+  "srbiji": "Сербии",
+  "prestaje": "прекращается",
+  "zahvaljuje": "благодарит",
+  "miriše": "пахнет",
+  "svežiji": "свежее / более свежий",
+  "parku": "парке",
+  "klupu": "скамейку",
+  "sedi": "сидит",
+  "šetnju": "прогулку",
+  "kafu": "кофе",
+  "čuje": "слышит",
+  "različite": "различные",
+  "vodi": "ведёт",
+  "biciklista": "велосипедист",
+  "zgrade": "здания",
+  "pogled": "вид / взгляд",
+  "muzeju": "музее",
+  "muzej": "музей",
+  "ulazu": "входе",
+  "sali": "зале",
+  "nose": "носят",
+  "muzeja": "музея",
+  "telefonu": "телефоне",
+  "pijace": "рынка",
+  "dok": "пока / в то время как",
+  "shvata": "понимает",
+  "subote": "субботы",
+  "ovog": "этого",
+  "program": "программа",
+  "događaja": "событий",
+  "biblioteke": "библиотеки",
+  "pisac": "писатель",
+  "posetiocima": "посетителям",
+  "likovima": "персонажами",
+  "priče": "истории / рассказа",
+  "kupiti": "купить",
+  "zbirku": "сборник",
+  "istoriji": "истории",
+  "mape": "карты",
+  "fotografiju": "фотографию",
+  "zgradama": "зданиями / зданиях",
+  "kapute": "пальто",
+  "promenama": "изменениях",
+  "zanatima": "ремёслах",
+  "alate": "инструменты",
+  "majstori": "мастера",
+  "obućar": "сапожник",
+  "predmeti": "предметы",
+  "savremena": "современная",
+  "zidovi": "стены",
+  "slike": "картины",
+  "šarene": "разноцветные",
+  "jednostavne": "простые",
+  "mirne": "спокойные",
+  "učesnik": "участник",
+  "glinu": "глину",
+  "instruktor": "инструктор",
+  "posudu": "сосуд / миску",
+  "oblik": "форма",
+  "šolja": "чашка",
+  "savršena": "идеальная",
+  "osušiti": "высушить",
+  "ispeći": "обжечь / испечь",
+  "projekcija": "показ / проекция",
+  "ekran": "экран",
+  "ćebad": "пледы",
+  "sredine": "середины",
+  "kraj": "конец",
+  "otvoren": "открытый",
+  "muziku": "музыку",
+  "svakodnevni": "повседневный",
+  "način": "способ / образ",
+  "detalji": "детали",
+  "korpa": "корзина",
+  "hleb": "хлеб",
+  "popravlja": "ремонтирует",
+  "navika": "привычка",
+  "sledećeg": "следующего",
+  "iskustvo": "опыт",
+  "izlet": "поездка / экскурсия",
+  "jezera": "озера",
+  "prognozu": "прогноз",
+  "hladnije": "холоднее",
+  "dodatnu": "дополнительную",
+  "kabanicu": "дождевик",
+  "autobusom": "на автобусе",
+  "šuma": "лес",
+  "pejzaž": "пейзаж",
+  "vazduh": "воздух",
+  "obala": "берег",
+  "bukva": "бук",
+  "odmaraju": "отдыхают",
+  "planinara": "туристов / альпинистов",
+  "bezbedna": "безопасная",
+  "krug": "круг",
+  "biljke": "растения",
+  "cvetove": "цветы",
+  "imena": "имена / названия",
+  "mosta": "моста",
+  "potok": "ручей",
+  "čista": "чистая",
+  "daljini": "дали",
+  "ptice": "птицы",
+  "vevericu": "белку",
+  "leptir": "бабочка",
+  "strmija": "более крутой",
+  "kamenje": "камни",
+  "mokro": "мокрое",
+  "upozorava": "предупреждает",
+  "vidikovca": "смотровой площадки",
+  "prelep": "прекрасный",
+  "ruča": "обедает",
+  "izvor": "источник",
+  "izvoru": "источнику / источнике",
+  "praznu": "пустую",
+  "namenjena": "предназначена",
+  "tamni": "тёмные",
+  "oblaci": "облака",
+  "ubrzavaju": "ускоряют",
+  "oblače": "надевают",
+  "zemlja": "земля",
+  "klizavija": "более скользкая",
+  "umor": "усталость",
+  "polaze": "отправляются",
+  "smeće": "мусор",
+  "skupljaju": "собирают",
+  "ostane": "останется",
+  "stanici": "остановке",
+  "promenljivo": "переменчиво",
+  "povratka": "возвращения",
+  "gledaju": "смотрят",
+  "odmorili": "отдохнули",
+  "fotoaparat": "фотоаппарат",
+  "ljude": "людей",
+  "žive": "живут",
+  "deli": "делит"
+});
 
 const VOCAB_BLOCKS = [
   {
@@ -3133,7 +3512,825 @@ const VOCAB_BLOCKS = [
         "translation": "светлый"
       }
     ]
+  },
+
+  {
+    "id": "a1-shopping-clothes",
+    "level": "A1",
+    "title": "Покупки и одежда",
+    "description": "Базовые слова для магазина, одежды, размеров, цен и покупок.",
+    "words": [
+      {
+        "word": "prodavnica",
+        "translation": "магазин"
+      },
+      {
+        "word": "kupovina",
+        "translation": "покупка"
+      },
+      {
+        "word": "kupac",
+        "translation": "покупатель"
+      },
+      {
+        "word": "prodavac",
+        "translation": "продавец"
+      },
+      {
+        "word": "cena",
+        "translation": "цена"
+      },
+      {
+        "word": "novac",
+        "translation": "деньги"
+      },
+      {
+        "word": "račun",
+        "translation": "счёт, чек"
+      },
+      {
+        "word": "kasa",
+        "translation": "касса"
+      },
+      {
+        "word": "popust",
+        "translation": "скидка"
+      },
+      {
+        "word": "akcija",
+        "translation": "акция, распродажа"
+      },
+      {
+        "word": "skup",
+        "translation": "дорогой"
+      },
+      {
+        "word": "jeftin",
+        "translation": "дешёвый"
+      },
+      {
+        "word": "besplatan",
+        "translation": "бесплатный"
+      },
+      {
+        "word": "platiti",
+        "translation": "платить"
+      },
+      {
+        "word": "kupiti",
+        "translation": "купить"
+      },
+      {
+        "word": "prodati",
+        "translation": "продать"
+      },
+      {
+        "word": "koštati",
+        "translation": "стоить"
+      },
+      {
+        "word": "tražiti",
+        "translation": "искать, просить"
+      },
+      {
+        "word": "naći",
+        "translation": "найти"
+      },
+      {
+        "word": "izabrati",
+        "translation": "выбрать"
+      },
+      {
+        "word": "probati",
+        "translation": "примерить, попробовать"
+      },
+      {
+        "word": "veličina",
+        "translation": "размер"
+      },
+      {
+        "word": "mali",
+        "translation": "маленький"
+      },
+      {
+        "word": "veliki",
+        "translation": "большой"
+      },
+      {
+        "word": "srednji",
+        "translation": "средний"
+      },
+      {
+        "word": "boja",
+        "translation": "цвет"
+      },
+      {
+        "word": "crven",
+        "translation": "красный"
+      },
+      {
+        "word": "plav",
+        "translation": "синий"
+      },
+      {
+        "word": "zelen",
+        "translation": "зелёный"
+      },
+      {
+        "word": "žut",
+        "translation": "жёлтый"
+      },
+      {
+        "word": "crn",
+        "translation": "чёрный"
+      },
+      {
+        "word": "beo",
+        "translation": "белый"
+      },
+      {
+        "word": "siv",
+        "translation": "серый"
+      },
+      {
+        "word": "braon",
+        "translation": "коричневый"
+      },
+      {
+        "word": "roze",
+        "translation": "розовый"
+      },
+      {
+        "word": "odeća",
+        "translation": "одежда"
+      },
+      {
+        "word": "majica",
+        "translation": "футболка"
+      },
+      {
+        "word": "košulja",
+        "translation": "рубашка"
+      },
+      {
+        "word": "pantalone",
+        "translation": "брюки"
+      },
+      {
+        "word": "farmerke",
+        "translation": "джинсы"
+      },
+      {
+        "word": "suknja",
+        "translation": "юбка"
+      },
+      {
+        "word": "haljina",
+        "translation": "платье"
+      },
+      {
+        "word": "jakna",
+        "translation": "куртка"
+      },
+      {
+        "word": "kaput",
+        "translation": "пальто"
+      },
+      {
+        "word": "džemper",
+        "translation": "свитер"
+      },
+      {
+        "word": "dukserica",
+        "translation": "толстовка"
+      },
+      {
+        "word": "cipele",
+        "translation": "обувь, туфли"
+      },
+      {
+        "word": "patike",
+        "translation": "кроссовки"
+      },
+      {
+        "word": "čizme",
+        "translation": "сапоги"
+      },
+      {
+        "word": "čarape",
+        "translation": "носки"
+      },
+      {
+        "word": "šešir",
+        "translation": "шляпа"
+      },
+      {
+        "word": "kapa",
+        "translation": "шапка"
+      },
+      {
+        "word": "šal",
+        "translation": "шарф"
+      },
+      {
+        "word": "rukavice",
+        "translation": "перчатки"
+      },
+      {
+        "word": "kaiš",
+        "translation": "ремень"
+      },
+      {
+        "word": "torba",
+        "translation": "сумка"
+      },
+      {
+        "word": "ranac",
+        "translation": "рюкзак"
+      },
+      {
+        "word": "nov",
+        "translation": "новый"
+      },
+      {
+        "word": "star",
+        "translation": "старый"
+      },
+      {
+        "word": "lep",
+        "translation": "красивый"
+      },
+      {
+        "word": "udoban",
+        "translation": "удобный"
+      },
+      {
+        "word": "čist",
+        "translation": "чистый"
+      },
+      {
+        "word": "prljav",
+        "translation": "грязный"
+      },
+      {
+        "word": "suv",
+        "translation": "сухой"
+      },
+      {
+        "word": "mokar",
+        "translation": "мокрый"
+      },
+      {
+        "word": "širok",
+        "translation": "широкий"
+      },
+      {
+        "word": "uzak",
+        "translation": "узкий"
+      },
+      {
+        "word": "dug",
+        "translation": "длинный"
+      },
+      {
+        "word": "kratak",
+        "translation": "короткий"
+      },
+      {
+        "word": "debeo",
+        "translation": "толстый"
+      },
+      {
+        "word": "tanak",
+        "translation": "тонкий"
+      },
+      {
+        "word": "topao",
+        "translation": "тёплый"
+      },
+      {
+        "word": "hladan",
+        "translation": "холодный"
+      },
+      {
+        "word": "veliki broj",
+        "translation": "большой размер"
+      },
+      {
+        "word": "mala veličina",
+        "translation": "маленький размер"
+      },
+      {
+        "word": "svila",
+        "translation": "шёлк"
+      },
+      {
+        "word": "pamuk",
+        "translation": "хлопок"
+      },
+      {
+        "word": "vuna",
+        "translation": "шерсть"
+      },
+      {
+        "word": "materijal",
+        "translation": "материал"
+      },
+      {
+        "word": "džep",
+        "translation": "карман"
+      },
+      {
+        "word": "dugme",
+        "translation": "пуговица"
+      },
+      {
+        "word": "rajfešlus",
+        "translation": "молния"
+      },
+      {
+        "word": "rukav",
+        "translation": "рукав"
+      },
+      {
+        "word": "kragna",
+        "translation": "воротник"
+      },
+      {
+        "word": "ogledalo",
+        "translation": "зеркало"
+      },
+      {
+        "word": "polica",
+        "translation": "полка"
+      },
+      {
+        "word": "izlog",
+        "translation": "витрина"
+      },
+      {
+        "word": "torba za kupovinu",
+        "translation": "пакет, сумка для покупок"
+      },
+      {
+        "word": "tržni centar",
+        "translation": "торговый центр"
+      },
+      {
+        "word": "pijaca",
+        "translation": "рынок"
+      },
+      {
+        "word": "tezga",
+        "translation": "прилавок"
+      },
+      {
+        "word": "marka",
+        "translation": "марка, бренд"
+      },
+      {
+        "word": "model",
+        "translation": "модель"
+      },
+      {
+        "word": "poklon",
+        "translation": "подарок"
+      },
+      {
+        "word": "pokloniti",
+        "translation": "подарить"
+      },
+      {
+        "word": "menjati",
+        "translation": "менять"
+      },
+      {
+        "word": "vratiti",
+        "translation": "вернуть"
+      },
+      {
+        "word": "otvoreno",
+        "translation": "открыто"
+      },
+      {
+        "word": "zatvoreno",
+        "translation": "закрыто"
+      },
+      {
+        "word": "kvalitet",
+        "translation": "качество"
+      }
+    ]
+  },
+  {
+    "id": "a2-communication-plans",
+    "level": "A2",
+    "title": "Общение, планы и отношения",
+    "description": "Слова для разговоров, договорённостей, мнений, планов и общения с людьми.",
+    "words": [
+      {
+        "word": "razgovor",
+        "translation": "разговор"
+      },
+      {
+        "word": "razgovarati",
+        "translation": "разговаривать"
+      },
+      {
+        "word": "pričati",
+        "translation": "рассказывать, говорить"
+      },
+      {
+        "word": "pitati",
+        "translation": "спрашивать"
+      },
+      {
+        "word": "odgovoriti",
+        "translation": "ответить"
+      },
+      {
+        "word": "objasniti",
+        "translation": "объяснить"
+      },
+      {
+        "word": "slušati",
+        "translation": "слушать"
+      },
+      {
+        "word": "čuti",
+        "translation": "слышать"
+      },
+      {
+        "word": "razumeti",
+        "translation": "понимать"
+      },
+      {
+        "word": "ponoviti",
+        "translation": "повторить"
+      },
+      {
+        "word": "dogovor",
+        "translation": "договорённость"
+      },
+      {
+        "word": "dogovoriti se",
+        "translation": "договориться"
+      },
+      {
+        "word": "plan",
+        "translation": "план"
+      },
+      {
+        "word": "planirati",
+        "translation": "планировать"
+      },
+      {
+        "word": "odlučiti",
+        "translation": "решить"
+      },
+      {
+        "word": "odluka",
+        "translation": "решение"
+      },
+      {
+        "word": "pokušati",
+        "translation": "попытаться"
+      },
+      {
+        "word": "uspeti",
+        "translation": "успеть, суметь"
+      },
+      {
+        "word": "morati",
+        "translation": "быть вынужденным"
+      },
+      {
+        "word": "moći",
+        "translation": "мочь"
+      },
+      {
+        "word": "želeti",
+        "translation": "хотеть"
+      },
+      {
+        "word": "nadati se",
+        "translation": "надеяться"
+      },
+      {
+        "word": "misliti",
+        "translation": "думать"
+      },
+      {
+        "word": "verovati",
+        "translation": "верить"
+      },
+      {
+        "word": "sumnjati",
+        "translation": "сомневаться"
+      },
+      {
+        "word": "znati",
+        "translation": "знать"
+      },
+      {
+        "word": "sećati se",
+        "translation": "вспоминать"
+      },
+      {
+        "word": "zaboraviti",
+        "translation": "забыть"
+      },
+      {
+        "word": "savet",
+        "translation": "совет"
+      },
+      {
+        "word": "savetovati",
+        "translation": "советовать"
+      },
+      {
+        "word": "pomoć",
+        "translation": "помощь"
+      },
+      {
+        "word": "pomoći",
+        "translation": "помочь"
+      },
+      {
+        "word": "problem",
+        "translation": "проблема"
+      },
+      {
+        "word": "rešenje",
+        "translation": "решение"
+      },
+      {
+        "word": "pitanje",
+        "translation": "вопрос"
+      },
+      {
+        "word": "odgovor",
+        "translation": "ответ"
+      },
+      {
+        "word": "ideja",
+        "translation": "идея"
+      },
+      {
+        "word": "primer",
+        "translation": "пример"
+      },
+      {
+        "word": "razlog",
+        "translation": "причина"
+      },
+      {
+        "word": "mogućnost",
+        "translation": "возможность"
+      },
+      {
+        "word": "potreba",
+        "translation": "потребность"
+      },
+      {
+        "word": "želja",
+        "translation": "желание"
+      },
+      {
+        "word": "cilj",
+        "translation": "цель"
+      },
+      {
+        "word": "uspeh",
+        "translation": "успех"
+      },
+      {
+        "word": "greška",
+        "translation": "ошибка"
+      },
+      {
+        "word": "iskustvo",
+        "translation": "опыт"
+      },
+      {
+        "word": "poruka",
+        "translation": "сообщение"
+      },
+      {
+        "word": "poziv",
+        "translation": "звонок, приглашение"
+      },
+      {
+        "word": "pozvati",
+        "translation": "позвать, пригласить"
+      },
+      {
+        "word": "javiti se",
+        "translation": "связаться, дать знать"
+      },
+      {
+        "word": "poslati",
+        "translation": "послать"
+      },
+      {
+        "word": "dobiti",
+        "translation": "получить"
+      },
+      {
+        "word": "održati",
+        "translation": "провести, поддержать"
+      },
+      {
+        "word": "sastanak",
+        "translation": "встреча"
+      },
+      {
+        "word": "susret",
+        "translation": "встреча"
+      },
+      {
+        "word": "prijateljstvo",
+        "translation": "дружба"
+      },
+      {
+        "word": "prijatelj",
+        "translation": "друг"
+      },
+      {
+        "word": "prijateljica",
+        "translation": "подруга"
+      },
+      {
+        "word": "komšija",
+        "translation": "сосед"
+      },
+      {
+        "word": "kolega",
+        "translation": "коллега"
+      },
+      {
+        "word": "koleginica",
+        "translation": "коллега, женщина"
+      },
+      {
+        "word": "poznanik",
+        "translation": "знакомый"
+      },
+      {
+        "word": "porodica",
+        "translation": "семья"
+      },
+      {
+        "word": "odnos",
+        "translation": "отношение"
+      },
+      {
+        "word": "veza",
+        "translation": "связь, отношения"
+      },
+      {
+        "word": "poverenje",
+        "translation": "доверие"
+      },
+      {
+        "word": "poštovanje",
+        "translation": "уважение"
+      },
+      {
+        "word": "paziti",
+        "translation": "заботиться, быть внимательным"
+      },
+      {
+        "word": "brinuti",
+        "translation": "беспокоиться, заботиться"
+      },
+      {
+        "word": "složiti se",
+        "translation": "согласиться"
+      },
+      {
+        "word": "slagati se",
+        "translation": "соглашаться"
+      },
+      {
+        "word": "svideti se",
+        "translation": "понравиться"
+      },
+      {
+        "word": "voleti",
+        "translation": "любить"
+      },
+      {
+        "word": "mrzeti",
+        "translation": "ненавидеть"
+      },
+      {
+        "word": "smejati se",
+        "translation": "смеяться"
+      },
+      {
+        "word": "šaliti se",
+        "translation": "шутить"
+      },
+      {
+        "word": "izvinuti se",
+        "translation": "извиниться"
+      },
+      {
+        "word": "zahvaliti se",
+        "translation": "поблагодарить"
+      },
+      {
+        "word": "čestitati",
+        "translation": "поздравить"
+      },
+      {
+        "word": "pozdraviti",
+        "translation": "поприветствовать"
+      },
+      {
+        "word": "pozdrav",
+        "translation": "приветствие"
+      },
+      {
+        "word": "zajedno",
+        "translation": "вместе"
+      },
+      {
+        "word": "sam",
+        "translation": "сам"
+      },
+      {
+        "word": "zajednički",
+        "translation": "общий"
+      },
+      {
+        "word": "važan",
+        "translation": "важный"
+      },
+      {
+        "word": "iskren",
+        "translation": "искренний"
+      },
+      {
+        "word": "ljubazan",
+        "translation": "вежливый, добрый"
+      },
+      {
+        "word": "strpljiv",
+        "translation": "терпеливый"
+      },
+      {
+        "word": "siguran",
+        "translation": "уверенный, безопасный"
+      },
+      {
+        "word": "slobodan",
+        "translation": "свободный"
+      },
+      {
+        "word": "zauzet",
+        "translation": "занятый"
+      },
+      {
+        "word": "spreman",
+        "translation": "готовый"
+      },
+      {
+        "word": "miran",
+        "translation": "спокойный"
+      },
+      {
+        "word": "ozbiljan",
+        "translation": "серьёзный"
+      },
+      {
+        "word": "moguć",
+        "translation": "возможный"
+      },
+      {
+        "word": "nemoguć",
+        "translation": "невозможный"
+      },
+      {
+        "word": "uskoro",
+        "translation": "скоро"
+      },
+      {
+        "word": "kasnije",
+        "translation": "позже"
+      },
+      {
+        "word": "odmah",
+        "translation": "сразу"
+      },
+      {
+        "word": "tema",
+        "translation": "тема"
+      }
+    ]
   }
+
 ];
 
 Object.assign(DICT, Object.fromEntries(VOCAB_BLOCKS.flatMap(b => b.words.map(x => [x.word, x.translation]))));
@@ -3148,13 +4345,13 @@ try {
 }
 
 
-const REVIEW_INTERVALS = [0, 1, 2, 4, 8, 16]; // дни для коробок 1–5
+const REVIEW_INTERVALS = [0, 1, 2, 4, 7, 14, 30]; // дни для коробок 1–6
 
 function normalizeSavedWords(){
   let changed = false;
   saved = saved.map(x => {
     const y = {...x};
-    if (!Number.isInteger(y.box) || y.box < 1 || y.box > 5) { y.box = 1; changed = true; }
+    if (!Number.isInteger(y.box) || y.box < 1 || y.box > 6) { y.box = 1; changed = true; }
     if (!y.nextReview) { y.nextReview = Date.now(); changed = true; }
     if (!y.translation || y.translation === 'Перевод пока не добавлен') {
       const tr = DICT[y.word];
@@ -3172,6 +4369,31 @@ normalizeSavedWords();
 
 const $ = id => document.getElementById(id);
 const normalize = w => w.toLowerCase().replace(/[„“”«».,!?;:()\[\]{}]/g, "").trim();
+
+function findVerbInfo(w){
+  const n=normalize(w);
+  if(VERB_FORMS[n]) return VERB_FORMS[n];
+  for(const v of Object.values(VERB_FORMS)){
+    const forms=[v.lemma,v.past,v.present,v.future].filter(Boolean).join(' ').split(/\s+/).map(normalize);
+    if(forms.includes(n)) return v;
+  }
+  return null;
+}
+
+function getTranslation(w){
+  const n=normalize(w);
+  if(DICT[n]) return DICT[n];
+  const verb=findVerbInfo(n);
+  if(verb) return verb.translation;
+  const candidates=[];
+  const suffixes=['ovima','evima','ama','ima','anje','enje','u','om','em','og','oj','im','om','as','os','es','us','a','e','i','o','y'];
+  for(const suffix of suffixes){
+    if(n.length>suffix.length+2 && n.endsWith(suffix)) candidates.push(n.slice(0,-suffix.length));
+  }
+  for(const c of candidates){ if(DICT[c]) return `${DICT[c]} (форма слова «${n}»)`; }
+  return 'Перевод пока не добавлен';
+}
+
 
 function save(){
   localStorage.setItem("citajSrpskiWords", JSON.stringify(saved));
@@ -3238,27 +4460,36 @@ function vocab(){
 }
 
 function texts(){
-  const local = TEXTS.map((t,i) => `
-    <div class="card">
+  const local = TEXTS.filter(t => !t.level.includes('Исторический')).map((t,i) => {
+    const realIndex = TEXTS.indexOf(t);
+    const n=t.text.split(/[.!?]+/).filter(Boolean).length;
+    return `<div class="card">
       <div class="tag">${t.level}</div>
       <h3>${t.title}</h3>
       <p>${t.ru}</p>
-      <p class="muted">Большой учебный текст · около ${t.text.split(/[.!?]+/).filter(Boolean).length} предложений</p>
-      <button type="button" class="read-text" data-index="${i}">Читать</button>
-    </div>`).join("");
-  const real = REAL_SOURCES.map((t,i) => `
-    <div class="card real-source-card">
+      <p class="muted">Большой учебный текст · ${n} предложений</p>
+      <button type="button" class="read-text" data-index="${realIndex}">Читать</button>
+    </div>`;
+  }).join('');
+  const historical = TEXTS.filter(t => t.level.includes('Исторический')).map(t => {
+    const realIndex = TEXTS.indexOf(t);
+    const n=t.text.split(/[.!?]+/).filter(Boolean).length;
+    return `<div class="card real-source-card">
       <div class="tag">${t.level}</div>
       <h3>${t.title}</h3>
       <p>${t.ru}</p>
-      <p class="muted">Оригинал с Викизворника. Открываем источник напрямую, чтобы не зависеть от ограничений браузера.</p>
-      <button type="button" class="read-source" data-source-index="${i}">Открыть оригинал</button>
-      <a class="source-link" href="${t.url}" target="_blank" rel="noopener">Открыть источник ↗</a>
-    </div>`).join("");
+      <p class="muted">Оригинал уже встроен в сайт: можно читать здесь, нажимать на каждое слово, смотреть перевод и сохранять слова.</p>
+      <p class="source">${t.source}</p>
+      <p class="muted">${n} предложений</p>
+      <button type="button" class="read-text" data-index="${realIndex}">📖 Читать на сайте</button>
+      <a class="source-link" href="${t.url}" target="_blank" rel="noopener">Открыть первоисточник ↗</a>
+    </div>`;
+  }).join('');
   $("list").innerHTML = `
-    <h3 class="library-heading">Учебные тексты</h3>${local}
-    <h3 class="library-heading">Реальные тексты из открытых источников</h3>
-    <p class="muted">Здесь мы не выдаём AI-текст за настоящий: оригинал загружается с Викизворника и остаётся исходным.</p>${real}`;
+    <h3 class="library-heading">Учебные тематические тексты A2</h3>
+    <p class="muted">Новые длинные тексты: учёба, прогулки по городу, культура и поездки на природу. Каждый содержит больше 100 предложений.</p>${local}
+    <h3 class="library-heading">Реальные исторические тексты</h3>
+    <p class="muted">Это оригинальные тексты Вука Караджича из Викизворника. Они встроены локально, поэтому больше не требуют загрузки страницы с другого сайта.</p>${historical}`;
 }
 
 function openRealSource(i){
@@ -3329,17 +4560,17 @@ function speakText(text){
 }
 
 function word(w){
-  const translation = DICT[w] || 'Перевод пока не добавлен';
+  const translation = getTranslation(w);
   const exists = saved.some(x => x.word === w);
-  const verb = VERB_FORMS[w] || VERB_FORMS[normalize(w)];
+  const verb = findVerbInfo(w);
   const verbBlock = verb ? `
     <div class="verb-block">
       <div class="verb-title">Глагол: <b>${verb.lemma}</b> · ${verb.translation}</div>
       <div class="verb-grid">
-        <div><span>Инфинитив</span><b>${verb.lemma}</b></div>
-        <div><span>Прошедшее время</span><b>${verb.past}</b></div>
-        <div><span>Настоящее время</span><b>${verb.present}</b></div>
-        <div><span>Будущее время</span><b>${verb.future}</b></div>
+        <div><span>Инфинитив</span><b>${verb.lemma} <small>— ${verb.translation}</small></b></div>
+        <div><span>Прошедшее</span><b>${verb.past}</b></div>
+        <div><span>Настоящее</span><b>${verb.present}</b></div>
+        <div><span>Будущее</span><b>${verb.future}</b></div>
       </div>
       ${verb.note ? `<div class="verb-note">${verb.note}</div>` : ''}
     </div>` : '';
@@ -3360,7 +4591,7 @@ function word(w){
 function addWord(w){
   if (!saved.some(x => x.word === w)) {
     const sourceBlock = VOCAB_BLOCKS.find(b => b.words.some(x => x.word === w));
-    saved.push({word:w, translation:DICT[w] || 'Перевод пока не добавлен', added:new Date().toISOString(), box:1, nextReview:Date.now(), blockId:sourceBlock ? sourceBlock.id : undefined});
+    saved.push({word:w, translation:getTranslation(w), added:new Date().toISOString(), box:1, nextReview:Date.now(), blockId:sourceBlock ? sourceBlock.id : undefined});
     save();
   }
   word(w);
@@ -3375,10 +4606,15 @@ function words(){
       <p>Здесь можно не только повторять слова по интервалам, но и активно вспоминать их.</p>
       <p><b>К повторению сегодня: ${due}</b></p>
       <div class="training-buttons">
-        <button type="button" id="start-review">🔁 Интервальное повторение</button>
+        <button type="button" id="start-review">🔁 Повторить по интервалам</button>
+        <button type="button" id="start-difficult">🔥 Повторить трудные</button>
+        <button type="button" id="start-learning">🟡 Повторить изучаемые</button>
         <button type="button" id="start-choice">🎯 Слово → перевод</button>
         <button type="button" id="start-reverse">🧠 Перевод → слово</button>
       </div>
+      <h4>Как запоминаются слова</h4>
+      <p class="muted">Каждое правильное повторение переводит слово дальше: 1 → 2 → 4 → 7 → 14 → 30 дней. Ошибка возвращает его в первую коробку.</p>
+      <div class="memory-stats"><span>🆕 Новые: <b>${saved.filter(x=>(Number(x.box)||1)===1).length}</b></span><span>🟡 Закрепляются: <b>${saved.filter(x=>(Number(x.box)||1)>=3 && (Number(x.box)||1)<=5).length}</b></span><span>🟢 Выучены: <b>${saved.filter(x=>(Number(x.box)||1)===6).length}</b></span></div>
       <h4>Повторение по блокам</h4>
       <p class="muted">Теперь можно не гонять весь словарь сразу. Выбирай один блок из 100 слов.</p>
       <div class="block-buttons">${blockCounts.length ? blockCounts.map(b=>`<button type="button" class="saved-block-review" data-block="${b.id}">${b.level} · ${b.title} (${b.count}/100)</button>`).join('') : '<span class="muted">Пока нет сохранённых блоков.</span>'}</div>
@@ -3395,6 +4631,8 @@ function words(){
   view('words');
 
   $('start-review').addEventListener('click', startReview);
+  $('start-difficult').addEventListener('click', startDifficultReview);
+  $('start-learning').addEventListener('click', startLearningReview);
   $('start-choice').addEventListener('click', () => startExercise('choice'));
   $('start-reverse').addEventListener('click', () => startExercise('reverse'));
   document.querySelectorAll('.saved-block-review').forEach(b=>b.addEventListener('click',()=>startBlockReview(b.dataset.block,'review')));
@@ -3477,16 +4715,25 @@ let reviewQueue = [];
 let reviewIndex = 0;
 let reviewRevealed = false;
 
-function startReview(){
-  reviewQueue = getDueWords().map(x => x.word);
+function startReviewWithList(list, emptyMessage='Подходящих слов для этой тренировки пока нет.') {
+  reviewQueue = shuffle(list).slice(0, Math.min(30, list.length)).map(x => x.word);
   reviewIndex = 0;
   reviewRevealed = false;
-  if (!reviewQueue.length) {
-    alert('На сегодня слов для повторения нет. Добавь новые слова или возвращайся позже.');
-    return;
-  }
+  if (!reviewQueue.length) { alert(emptyMessage); return; }
   renderReviewCard();
   view('review');
+}
+
+function startReview(){
+  startReviewWithList(getDueWords(), 'На сегодня слов для повторения нет. Добавь новые слова или возвращайся позже.');
+}
+
+function startDifficultReview(){
+  startReviewWithList(saved.filter(x => (Number(x.box)||1) <= 2), 'Сейчас нет слов в первых двух коробках.');
+}
+
+function startLearningReview(){
+  startReviewWithList(saved.filter(x => (Number(x.box)||1) >= 3 && (Number(x.box)||1) <= 5), 'Сейчас нет слов в стадии закрепления.');
 }
 
 function renderReviewCard(){
@@ -3525,7 +4772,7 @@ function answerReview(w, correct){
   if (!item) { reviewIndex++; renderReviewCard(); return; }
   const current = Number(item.box) || 1;
   if (correct) {
-    item.box = Math.min(5, current + 1);
+    item.box = Math.min(6, current + 1);
     const days = REVIEW_INTERVALS[item.box];
     item.nextReview = Date.now() + days * 24 * 60 * 60 * 1000;
   } else {
@@ -3558,8 +4805,9 @@ function importWords(event){
       const imported = JSON.parse(reader.result);
       if (!Array.isArray(imported)) throw new Error('bad');
       const clean = imported.filter(x => x && typeof x.word === 'string').map(x => ({
-        word:x.word, translation:x.translation || DICT[x.word] || 'Перевод пока не добавлен',
-        added:x.added || new Date().toISOString(), box:Number(x.box)||1, nextReview:x.nextReview || Date.now()
+        word:x.word, translation:x.translation || getTranslation(x.word),
+        added:x.added || new Date().toISOString(), box:Math.min(6,Math.max(1,Number(x.box)||1)), nextReview:x.nextReview || Date.now(),
+        blockId:x.blockId || (VOCAB_BLOCKS.find(b=>b.words.some(v=>v.word===x.word))?.id)
       }));
       saved = clean;
       save();
