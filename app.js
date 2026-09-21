@@ -1351,7 +1351,7 @@ function texts(){
     const n=t.text.split(/[.!?]+/).filter(Boolean).length;
     return `<div class="card real-source-card"><div class="tag">${t.level}</div><h3>${t.title}</h3><p>${t.ru}</p><p class="muted"><b>${n} предложений.</b> Полный оригинальный текст встроен в сайт и доступен для чтения здесь.</p><p class="source">${t.source}</p><div class="vocab-actions"><button type="button" class="read-text" data-index="${realIndex}">📖 Читать оригинал на сайте</button><a class="source-link" href="${t.url}" target="_blank" rel="noopener">Первоисточник ↗</a></div></div>`;
   }).join('');
-  $('list').innerHTML=`<div class="card library-summary"><h3>Библиотека</h3><p>Сейчас доступно <b>${local.length} учебных текстов</b> и <b>${historical.length} исторических оригиналов</b>.</p><p class="muted">Все тексты открываются внутри нашего сайта. Нажимай на слова, чтобы смотреть перевод и сохранять их в «Мои слова».</p></div><h3 class="library-heading">📚 Учебные тематические тексты A1/A2</h3>${local}<h3 class="library-heading">📜 Исторические оригинальные тексты</h3><p class="muted">Эти произведения взяты из открытого источника Викизворник и встроены локально. Они не требуют загрузки внешней страницы.</p>${historical}`;
+  $('list').innerHTML=`<div class="card library-summary"><h3>Библиотека</h3><p>Сейчас доступно <b>${local.length} учебных текстов</b> и <b>${historical.length} исторических оригиналов</b>.</p><p class="muted">Все тексты открываются внутри нашего сайта. Нажимай на слова, чтобы смотреть перевод и сохранять их в «Мои слова».</p><p><b>Новые A2 в этой версии:</b> Dan na fakultetu · Subota u gradu · Mala izložba u kulturnom centru · Priprema putovanja vozom · Mali tim na poslu · Nedelja bez žurbe.</p></div><h3 class="library-heading">📚 Учебные тематические тексты A1/A2</h3>${local}<h3 class="library-heading">📜 Исторические оригинальные тексты</h3><p class="muted">Эти произведения встроены локально и открываются прямо в нашем режиме чтения.</p>${historical}`;
 }
 
 function openRealSource(i){
@@ -1685,46 +1685,59 @@ function removeWord(i){
   words();
 }
 
-// Навигация — без inline onclick, чтобы сайт одинаково работал на GitHub Pages и мобильном Chrome.
-document.addEventListener("click", event => {
+// Надёжная навигация для мобильного Chrome и компьютера.
+function handleAppAction(event){
+  const target = event.target;
   const popup=$('popup');
-  if(!popup.classList.contains('hide') && !event.target.closest('.popup') && !event.target.closest('.word')){
+  if(popup && !popup.classList.contains('hide') && !target.closest('.popup') && !target.closest('.word')){
     popup.classList.add('hide');
   }
 
-  const sourceButton=event.target.closest('.read-source');
-  if(sourceButton){
-    openRealSource(Number(sourceButton.dataset.sourceIndex));
+  const sourceButton=target.closest('.read-source');
+  if(sourceButton){ openRealSource(Number(sourceButton.dataset.sourceIndex)); return; }
+
+  const nav = target.closest("[data-v]");
+  if(nav){
+    const v=nav.dataset.v;
+    if(v==='texts') texts();
+    else if(v==='vocab') vocab();
+    else if(v==='words') words();
+    else view(v);
     return;
   }
 
-  const nav = event.target.closest("[data-v]");
-  if (nav) {
-    const v = nav.dataset.v;
-    if (v === "texts") texts();
-    if (v === "vocab") vocab();
-    if (v === "words") words();
-    view(v);
-    return;
-  }
+  const readerButton=target.closest('.read-text');
+  if(readerButton){ openText(Number(readerButton.dataset.index)); return; }
 
-  const readerButton = event.target.closest(".read-text");
-  if (readerButton) {
-    openText(Number(readerButton.dataset.index));
-    return;
-  }
+  const wordButton=target.closest('.word');
+  if(wordButton){ word(wordButton.dataset.word); return; }
 
-  const wordButton = event.target.closest(".word");
-  if (wordButton) {
-    word(wordButton.dataset.word);
-    return;
-  }
+  const removeButton=target.closest('.remove-word');
+  if(removeButton){ removeWord(Number(removeButton.dataset.index)); return; }
+}
 
-  const removeButton = event.target.closest(".remove-word");
-  if (removeButton) {
-    removeWord(Number(removeButton.dataset.index));
-  }
+// click — обычный путь; pointerup/touchend — страховка для мобильных браузеров.
+document.addEventListener('click', handleAppAction);
+document.addEventListener('pointerup', event => {
+  if(event.pointerType==='touch') handleAppAction(event);
 });
+
+// На статических кнопках также ставим прямой обработчик, чтобы навигация не зависела от bubbling.
+function bindStaticNav(){
+  document.querySelectorAll('[data-v]').forEach(btn=>{
+    if(btn.dataset.bound==='1') return;
+    btn.dataset.bound='1';
+    const go=()=>{
+      const v=btn.dataset.v;
+      if(v==='texts') texts();
+      else if(v==='vocab') vocab();
+      else if(v==='words') words();
+      else view(v);
+    };
+    btn.addEventListener('click', go);
+  });
+}
+bindStaticNav();
 
 save();
 texts();
