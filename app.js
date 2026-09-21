@@ -5677,9 +5677,25 @@ function sentenceActive(item){
   const st=sentenceSourceStats[item.id];
   return !st || (Number(st.successes)||0)<3;
 }
-function sentencePrompt(item){
-  return `Собери сербское предложение №${item.number} из текста «${item.source}». Это предложение уже есть в библиотеке — собери его точно так, как оно написано в тексте.`;
+const sentenceRuCache = JSON.parse(localStorage.getItem('citajSrpskiSentenceRuCacheV1')||'{}');
+function saveSentenceRuCache(){try{localStorage.setItem('citajSrpskiSentenceRuCacheV1',JSON.stringify(sentenceRuCache));}catch(e){}}
+async function getSentenceRu(item){
+  const key=item.sr;
+  if(sentenceRuCache[key]) return sentenceRuCache[key];
+  try{
+    const url='https://api.mymemory.translated.net/get?q='+encodeURIComponent(item.sr)+'&langpair=sr|ru';
+    const res=await fetch(url,{headers:{'Accept':'application/json'}});
+    const data=await res.json();
+    const tr=data && data.responseData && data.responseData.translatedText;
+    if(tr){
+      sentenceRuCache[key]=tr;
+      saveSentenceRuCache();
+      return tr;
+    }
+  }catch(e){}
+  return 'Перевод этого предложения пока недоступен.';
 }
+
 function markSourceSentence(item,correct){
   const st=sentenceSourceStats[item.id]||{successes:0,attempts:0,wrong:0,dueAt:0};
   st.attempts=(Number(st.attempts)||0)+1;
@@ -5735,7 +5751,8 @@ function renderSentenceAssembly(){
   const item=sentenceExerciseQueue[sentenceExerciseIndex]; sentenceExerciseCurrent=item;
   const words=sentenceTokens(item.sr); const shuffled=shuffle(words.map((word,i)=>({word,originalIndex:i})));
   const st=sentenceSourceStats[item.id]||{successes:0};
-  $('review-content').innerHTML=`<div class="card review-card"><p class="muted">Собрать сербское предложение · ${sentenceExerciseIndex+1} из ${sentenceExerciseQueue.length} · ${escapeHtml(item.source)} · предложение ${item.number}</p><h3>${escapeHtml(sentencePrompt(item))}</h3><p class="muted small-note">Используется только исходное предложение из текста. Никаких придуманных вариантов.</p><p class="muted small-note">Успешных повторений: ${Number(st.successes)||0} из 3.</p><div id="assembled" class="assembled-sentence"></div><div id="word-bank" class="word-bank">${shuffled.map((x,i)=>`<button type="button" class="assemble-word" data-i="${i}">${escapeHtml(x.word)}</button>`).join('')}</div><div class="vocab-actions"><button type="button" id="assembly-undo">↩ Убрать последнее</button><button type="button" id="assembly-clear">Очистить</button><button type="button" id="assembly-check" disabled>Проверить</button><button type="button" id="assembly-speak">🔊 Послушать</button></div><div id="assembly-feedback" class="feedback"></div><div id="assembly-next-wrap" class="vocab-actions hide"><button type="button" id="assembly-next">Следующее предложение →</button></div></div>`;
+  $('review-content').innerHTML=`<div class="card review-card"><p class="muted">Собрать сербское предложение · ${sentenceExerciseIndex+1} из ${sentenceExerciseQueue.length}</p><div id="sentence-ru-prompt" class="sentence-ru-prompt"><span class="muted">Загрузка русского варианта…</span></div><p class="muted small-note">Сербский вариант взят целиком из одного из текстов библиотеки сайта.</p><p class="muted small-note">Успешных повторений: ${Number(st.successes)||0} из 3.</p><div id="assembled" class="assembled-sentence"></div><div id="word-bank" class="word-bank">${shuffled.map((x,i)=>`<button type="button" class="assemble-word" data-i="${i}">${escapeHtml(x.word)}</button>`).join('')}</div><div class="vocab-actions"><button type="button" id="assembly-undo">↩ Убрать последнее</button><button type="button" id="assembly-clear">Очистить</button><button type="button" id="assembly-check" disabled>Проверить</button><button type="button" id="assembly-speak">🔊 Послушать</button></div><div id="assembly-feedback" class="feedback"></div><div id="assembly-next-wrap" class="vocab-actions hide"><button type="button" id="assembly-next">Следующее предложение →</button></div></div>`;
+  getSentenceRu(item).then(ru=>{const el=$('sentence-ru-prompt'); if(el) el.innerHTML=`<h3>${escapeHtml(ru)}</h3>`;});
   const chosen=[]; let checked=false;
   const renderChosen=()=>{
     $('assembled').innerHTML=chosen.map((x,i)=>`<button type="button" class="chosen-word" data-choice="${i}" title="Убрать это слово">${escapeHtml(x.word)}</button>`).join(' ');
