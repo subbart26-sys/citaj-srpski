@@ -5561,7 +5561,7 @@ async function word(w){
 
 function addWord(w){
   if (!saved.some(x => x.word === w)) {
-    saved.push({word:w, translation:getTranslation(w), added:new Date().toISOString(), box:1, nextReview:Date.now()});
+    saved.push({word:w, translation:getTranslation(w), added:new Date().toISOString(), box:1, nextReview:Date.now(), mistakes:0, hard:false});
     save();
   }
   word(w);
@@ -5584,8 +5584,8 @@ function words(){
         <button type="button" id="start-assembly">🧩 Русское предложение → собрать сербское</button>
       </div>
       <h4>Как запоминаются слова</h4>
-      <p class="muted">Каждое правильное повторение переводит слово дальше: 1 → 2 → 4 → 7 → 14 → 30 дней. Ошибка возвращает его в первую коробку.</p>
-      <div class="memory-stats"><span>🆕 Новые: <b>${saved.filter(x=>(Number(x.box)||1)===1).length}</b></span><span>🟡 Закрепляются: <b>${saved.filter(x=>(Number(x.box)||1)>=3 && (Number(x.box)||1)<=5).length}</b></span><span>🟢 Выучены: <b>${saved.filter(x=>(Number(x.box)||1)===6).length}</b></span></div>
+      <p class="muted">После «Помню» слово поднимается по интервалам: 1 → 2 → 4 → 7 → 14 → 30 дней. После первого «Не помню» оно считается изучаемым и остаётся на повторении. Если одно и то же слово снова забыто, оно помечается как трудное и попадает в отдельную тренировку «Повторить трудные». После устойчивых правильных ответов слово доходит до «Выучены».</p>
+      <div class="memory-stats"><span>🆕 Новые: <b>${saved.filter(x=>(Number(x.box)||1)===1 && !x.hard && !(Number(x.mistakes)||0)).length}</b></span><span>🟡 Изучаемые: <b>${saved.filter(x=>!x.hard && ((Number(x.mistakes)||0)>0 || (Number(x.box)||1)>=2) && (Number(x.box)||1)<6).length}</b></span><span>🔥 Трудные: <b>${saved.filter(x=>x.hard===true).length}</b></span><span>🟢 Выучены: <b>${saved.filter(x=>(Number(x.box)||1)===6 && !x.hard).length}</b></span></div>
       <h4>Учебные блоки — отдельно от «Моих слов»</h4>
       <p class="muted">Слова из тематических блоков не входят в «Мои слова». Они хранятся отдельно и повторяются только внутри выбранного блока.</p>
       <div class="block-buttons">${blockCounts.length ? blockCounts.map(b=>`<button type="button" class="saved-block-review" data-block="${b.id}">${b.level} · ${b.title} (${b.count}/${b.words.length})</button>`).join('') : '<span class="muted">Пока нет сохранённых блоков.</span>'}</div>
@@ -5626,41 +5626,133 @@ function shuffle(arr){
 }
 
 const SENTENCE_TRAINING = [
-  {ru:'Сегодня холодно.',sr:'Danas je hladno.'},
-  {ru:'Я жду автобус в городе.',sr:'Čekam autobus u gradu.'},
-  {ru:'Девушка читает книгу в библиотеке.',sr:'Devojka čita knjigu u biblioteci.'},
-  {ru:'Водитель едет через туннель.',sr:'Vozač vozi kroz tunel.'},
-  {ru:'В кафе я пью чай.',sr:'U kafiću pijem čaj.'},
-  {ru:'Дети играют в парке.',sr:'Deca se igraju u parku.'},
-  {ru:'Ветер сильный, но погода тёплая.',sr:'Vetar je jak, ali je vreme toplo.'},
-  {ru:'Путник несёт рюкзак.',sr:'Putnik nosi ruksak.'},
-  {ru:'Хозяин предложил ужин.',sr:'Domaćin je ponudio večeru.'},
-  {ru:'Ученик сдаёт экзамен.',sr:'Učenik ima ispit.'},
-  {ru:'На столе лежит карта.',sr:'Na stolu je karta.'},
-  {ru:'Люди хотят мира.',sr:'Ljudi žele mir.'},
-  {ru:'Она любопытная и искренняя.',sr:'Ona je radoznala i iskrena.'},
-  {ru:'Работы начинаются весной.',sr:'Radovi počinju na proleće.'},
-  {ru:'Поезд проходит через туннель.',sr:'Voz prolazi kroz tunel.'},
-  {ru:'Девушка надела свитер и капюшон.',sr:'Devojka je obukla džemper i kapuljaču.'},
-  {ru:'Мы гуляем по улице.',sr:'Šetamo kroz ulicu.'},
-  {ru:'Моя сестра любит музыку и скрипку.',sr:'Moja sestra voli muziku i violinu.'},
-  {ru:'Путешествие начинается рано.',sr:'Putovanje počinje rano.'},
-  {ru:'Он решил принять предложение.',sr:'On je odlučio da prihvati ponudu.'}
+  {id:'s1',source:'Učenje u školi',ru:'Сегодня холодно.',sr:'Danas je hladno.'},
+  {id:'s2',source:'Šetnja kroz grad',ru:'Я жду автобус в городе.',sr:'Čekam autobus u gradu.'},
+  {id:'s3',source:'Učenje u školi',ru:'Девушка читает книгу в библиотеке.',sr:'Devojka čita knjigu u biblioteci.'},
+  {id:'s4',source:'Subota u gradu',ru:'Водитель едет через туннель.',sr:'Vozač vozi kroz tunel.'},
+  {id:'s5',source:'Učenje u školi',ru:'В кафе я пью чай.',sr:'U kafiću pijem čaj.'},
+  {id:'s6',source:'Učenje u školi',ru:'Дети играют в парке.',sr:'Deca se igraju u parku.'},
+  {id:'s7',source:'Izlet u prirodu',ru:'Ветер сильный, но погода тёплая.',sr:'Vetar je jak, ali je vreme toplo.'},
+  {id:'s8',source:'Priprema putovanja vozom',ru:'Путник несёт рюкзак.',sr:'Putnik nosi ruksak.'},
+  {id:'s9',source:'Učenje u školi',ru:'Хозяин предложил ужин.',sr:'Domaćin je ponudio večeru.'},
+  {id:'s10',source:'Učenje u školi',ru:'Ученик сдаёт экзамен.',sr:'Učenik ima ispit.'},
+  {id:'s11',source:'Priprema putovanja vozom',ru:'На столе лежит карта.',sr:'Na stolu je karta.'},
+  {id:'s12',source:'Zlatna jabuka i devet paunica',ru:'Люди хотят мира.',sr:'Ljudi žele mir.'},
+  {id:'s13',source:'Učenje u školi',ru:'Она любопытная и искренняя.',sr:'Ona je radoznala i iskrena.'},
+  {id:'s14',source:'Izlet u prirodu',ru:'Работы начинаются весной.',sr:'Radovi počinju na proleće.'},
+  {id:'s15',source:'Priprema putovanja vozom',ru:'Поезд проходит через туннель.',sr:'Voz prolazi kroz tunel.'},
+  {id:'s16',source:'Učenje u školi',ru:'Девушка надела свитер и капюшон.',sr:'Devojka je obukla džemper i kapuljaču.'},
+  {id:'s17',source:'Šetnja kroz grad',ru:'Мы гуляем по улице.',sr:'Šetamo kroz ulicu.'},
+  {id:'s18',source:'Učenje u školi',ru:'Моя сестра любит музыку и скрипку.',sr:'Moja sestra voli muziku i violinu.'},
+  {id:'s19',source:'Priprema putovanja vozom',ru:'Путешествие начинается рано.',sr:'Putovanje počinje rano.'},
+  {id:'s20',source:'Mali tim na poslu',ru:'Он решил принять предложение.',sr:'On je odlučio da prihvati ponudu.'}
 ];
+
+// Статистика помогает постепенно выбирать менее повторявшиеся предложения и слова.
+const SENTENCE_STATS_KEY='citajSrpskiSentenceTrainingStats';
+function loadSentenceStats(){try{return JSON.parse(localStorage.getItem(SENTENCE_STATS_KEY)||'{}')||{};}catch(e){return {};}}
+let sentenceStats=loadSentenceStats();
+function saveSentenceStats(){try{localStorage.setItem(SENTENCE_STATS_KEY,JSON.stringify(sentenceStats));}catch(e){}}
+function sentenceTokens(sr){return String(sr||'').trim().split(/\s+/).filter(Boolean);}
+function textWordSet(){
+  const set=new Set();
+  TEXTS.forEach(t=>sentenceTokens(String(t.text||'').toLowerCase()).forEach(token=>{
+    const clean=token.toLowerCase().replace(/^[^a-zčćđšž]+|[^a-zčćđšž]+$/gi,'');
+    if(clean)set.add(clean);
+  }));
+  return set;
+}
+function eligibleSentenceTraining(){
+  const vocabulary=textWordSet();
+  const external=[];
+  TEXTS.forEach(t=>{
+    (t.trainingSentences||[]).forEach((x,i)=>external.push({id:`${t.title}-${i}`,source:t.title,ru:x.ru,sr:x.sr}));
+  });
+  const all=[...SENTENCE_TRAINING,...external];
+  const seen=new Set();
+  return all.filter(item=>{
+    if(!item?.ru||!item?.sr||seen.has(item.id))return false;
+    const ok=sentenceTokens(item.sr).every(token=>vocabulary.has(token.toLowerCase().replace(/^[^a-zčćđšž]+|[^a-zčćđšž]+$/gi,'')));
+    if(!ok)return false;
+    seen.add(item.id); return true;
+  });
+}
+function markSentenceUsed(item,correct){
+  const st=sentenceStats[item.id]||{attempts:0,correct:0,wordUsage:{}};
+  st.attempts++;
+  if(correct)st.correct++;
+  sentenceTokens(item.sr).forEach(token=>{
+    const w=token.toLowerCase().replace(/^[^a-zčćđšž]+|[^a-zčćđšž]+$/gi,'');
+    if(w)st.wordUsage[w]=(st.wordUsage[w]||0)+1;
+  });
+  sentenceStats[item.id]=st;
+  sentenceStats._wordUsage=sentenceStats._wordUsage||{};
+  sentenceTokens(item.sr).forEach(token=>{const w=token.toLowerCase().replace(/^[^a-zčćđšž]+|[^a-zčćđšž]+$/gi,'');if(w)sentenceStats._wordUsage[w]=(sentenceStats._wordUsage[w]||0)+1;});
+  sentenceStats._recent=Array.isArray(sentenceStats._recent)?sentenceStats._recent:[];
+  sentenceStats._recent=[item.id,...sentenceStats._recent.filter(x=>x!==item.id)].slice(0,5);
+  saveSentenceStats();
+}
+function chooseSentenceQueue(limit=10){
+  const pool=eligibleSentenceTraining();
+  const usage=sentenceStats._wordUsage||{};
+  const recent=sentenceStats._recent||[];
+  const scored=pool.map(item=>{
+    const words=[...new Set(sentenceTokens(item.sr).map(x=>x.toLowerCase().replace(/^[^a-zčćđšž]+|[^a-zčćđšž]+$/gi,'')))];
+    const wordNovelty=words.reduce((sum,w)=>sum+1/(1+(usage[w]||0)),0)/Math.max(1,words.length);
+    const attempts=sentenceStats[item.id]?.attempts||0;
+    const recency=recent.includes(item.id)?-2:0;
+    return {item,score:wordNovelty*3+1/(1+attempts)+recency+Math.random()*0.9};
+  }).sort((a,b)=>b.score-a.score);
+  const selected=[]; const sourceCounts={};
+  for(const x of scored){
+    if(selected.length>=limit)break;
+    const source=x.item.source||'Общее';
+    const penalty=(sourceCounts[source]||0)>=3;
+    if(penalty && scored.length-selected.length>limit-selected.length)continue;
+    selected.push(x.item); sourceCounts[source]=(sourceCounts[source]||0)+1;
+  }
+  return shuffle(selected);
+}
 let sentenceExerciseQueue=[];
 let sentenceExerciseIndex=0;
 let sentenceExerciseCurrent=null;
 function startSentenceAssembly(){
-  sentenceExerciseQueue=shuffle(SENTENCE_TRAINING).slice(0,10); sentenceExerciseIndex=0; renderSentenceAssembly(); view('review');
+  sentenceExerciseQueue=chooseSentenceQueue(10);
+  if(!sentenceExerciseQueue.length){alert('Пока нет предложений для этой тренировки.');return;}
+  sentenceExerciseIndex=0; renderSentenceAssembly(); view('review');
 }
 function renderSentenceAssembly(){
-  if(sentenceExerciseIndex>=sentenceExerciseQueue.length){ $('review-content').innerHTML=`<div class="card"><h2>Тренировка закончена 🎉</h2><p>Ты собрал ${sentenceExerciseQueue.length} предложений.</p><button type="button" id="sentence-finish">Вернуться к моим словам</button></div>`; $('sentence-finish').addEventListener('click',words); return; }
+  if(sentenceExerciseIndex>=sentenceExerciseQueue.length){
+    $('review-content').innerHTML=`<div class="card"><h2>Тренировка закончена 🎉</h2><p>Ты прошёл ${sentenceExerciseQueue.length} предложений.</p><p class="muted">В следующем раунде алгоритм постарается дать другие предложения и слова, которые встречались реже.</p><button type="button" id="sentence-finish">Вернуться к тренировкам</button></div>`;
+    $('sentence-finish').addEventListener('click',training); return;
+  }
   const item=sentenceExerciseQueue[sentenceExerciseIndex]; sentenceExerciseCurrent=item;
-  const words=item.sr.split(/\s+/); const shuffled=shuffle(words);
-  $('review-content').innerHTML=`<div class="card review-card"><p class="muted">Русское предложение → собери сербское · ${sentenceExerciseIndex+1} из ${sentenceExerciseQueue.length}</p><h3>${escapeHtml(item.ru)}</h3><div id="assembled" class="assembled-sentence"></div><div id="word-bank" class="word-bank">${shuffled.map((w,i)=>`<button type="button" class="assemble-word" data-i="${i}">${escapeHtml(w)}</button>`).join('')}</div><div class="vocab-actions"><button type="button" id="assembly-check">Проверить</button><button type="button" id="assembly-speak">🔊 Послушать</button></div><div id="assembly-feedback" class="feedback"></div></div>`;
-  const chosen=[]; const used=new Set();
-  document.querySelectorAll('.assemble-word').forEach(btn=>btn.addEventListener('click',()=>{const i=Number(btn.dataset.i); if(used.has(i)) return; used.add(i); chosen.push(shuffled[i]); btn.disabled=true; $('assembled').textContent=chosen.join(' ');}));
-  $('assembly-check').addEventListener('click',()=>{const ok=chosen.join(' ')===item.sr; $('assembly-feedback').innerHTML=ok?'<b>✓ Правильно!</b>':`<b>✗ Порядок пока неверный.</b><br>Правильный вариант: ${escapeHtml(item.sr)}`; if(ok) setTimeout(()=>{sentenceExerciseIndex++;renderSentenceAssembly();},1000);});
+  const words=sentenceTokens(item.sr); const shuffled=shuffle(words.map((word,i)=>({word,originalIndex:i})));
+  $('review-content').innerHTML=`<div class="card review-card"><p class="muted">Русское предложение → собери сербское · ${sentenceExerciseIndex+1} из ${sentenceExerciseQueue.length}${item.source?` · ${escapeHtml(item.source)}`:''}</p><h3>${escapeHtml(item.ru)}</h3><p class="muted small-note">Нажимай на слова. Уже выбранное слово можно убрать прямо из собранного предложения.</p><div id="assembled" class="assembled-sentence"></div><div id="word-bank" class="word-bank">${shuffled.map((x,i)=>`<button type="button" class="assemble-word" data-i="${i}">${escapeHtml(x.word)}</button>`).join('')}</div><div class="vocab-actions"><button type="button" id="assembly-undo">↩ Убрать последнее</button><button type="button" id="assembly-clear">Очистить</button><button type="button" id="assembly-check">Проверить</button><button type="button" id="assembly-speak">🔊 Послушать</button></div><div id="assembly-feedback" class="feedback"></div><div id="assembly-next-wrap" class="vocab-actions hide"><button type="button" id="assembly-next">Следующее предложение →</button></div></div>`;
+  const chosen=[];
+  const renderChosen=()=>{
+    $('assembled').innerHTML=chosen.map((x,i)=>`<button type="button" class="chosen-word" data-choice="${i}" title="Убрать это слово">${escapeHtml(x.word)}</button>`).join(' ');
+    document.querySelectorAll('.chosen-word').forEach(btn=>btn.addEventListener('click',()=>{
+      const i=Number(btn.dataset.choice); const removed=chosen.splice(i,1)[0];
+      const bankBtn=document.querySelector(`.assemble-word[data-i="${removed.bankIndex}"]`); if(bankBtn)bankBtn.disabled=false;
+      renderChosen();
+    }));
+  };
+  document.querySelectorAll('.assemble-word').forEach(btn=>btn.addEventListener('click',()=>{
+    const i=Number(btn.dataset.i); if(chosen.some(x=>x.bankIndex===i))return;
+    chosen.push({word:shuffled[i].word,bankIndex:i}); btn.disabled=true; renderChosen();
+  }));
+  $('assembly-undo').addEventListener('click',()=>{if(!chosen.length)return; const removed=chosen.pop(); const bankBtn=document.querySelector(`.assemble-word[data-i="${removed.bankIndex}"]`); if(bankBtn)bankBtn.disabled=false; renderChosen();});
+  $('assembly-clear').addEventListener('click',()=>{chosen.splice(0);document.querySelectorAll('.assemble-word').forEach(b=>b.disabled=false);renderChosen();$('assembly-feedback').innerHTML='';$('assembly-next-wrap').classList.add('hide');});
+  $('assembly-check').addEventListener('click',()=>{
+    const answer=chosen.map(x=>x.word).join(' ');
+    const ok=answer===item.sr;
+    markSentenceUsed(item,ok);
+    $('assembly-feedback').innerHTML=ok?'<b>✓ Правильно!</b>':'<b>✗ Порядок пока неверный.</b><br>Можешь убрать отдельные слова, очистить всё и собрать заново. Если хочешь пропустить задание, нажми «Следующее предложение».<br><b>Правильный вариант:</b> '+escapeHtml(item.sr);
+    $('assembly-next-wrap').classList.remove('hide');
+    $('assembly-check').disabled=true;
+  });
+  $('assembly-next').addEventListener('click',()=>{sentenceExerciseIndex++;renderSentenceAssembly();});
   $('assembly-speak').addEventListener('click',()=>speakText(item.sr));
 }
 
@@ -5749,11 +5841,11 @@ function startReview(){
 }
 
 function startDifficultReview(){
-  startReviewWithList(saved.filter(x => (Number(x.box)||1) <= 2), 'Сейчас нет слов в первых двух коробках.');
+  startReviewWithList(saved.filter(x => x.hard === true), 'Пока нет трудных слов. Если ошибиться с одним и тем же словом два раза, оно попадёт сюда автоматически.');
 }
 
 function startLearningReview(){
-  startReviewWithList(saved.filter(x => (Number(x.box)||1) >= 3 && (Number(x.box)||1) <= 5), 'Сейчас нет слов в стадии закрепления.');
+  startReviewWithList(saved.filter(x => x.hard !== true && (Number(x.box)||1) >= 1 && (Number(x.box)||1) <= 5), 'Пока нет изучаемых слов. После первого «Не помню» слово попадёт сюда.');
 }
 
 function renderReviewCard(){
@@ -5768,7 +5860,7 @@ function renderReviewCard(){
   reviewRevealed = false;
   $('review-content').innerHTML = `
     <div class="card review-card">
-      <p class="muted">Карточка ${reviewIndex+1} из ${reviewQueue.length} · коробка ${item.box || 1}</p>
+      <p class="muted">Карточка ${reviewIndex+1} из ${reviewQueue.length} · коробка ${item.box || 1}${item.hard ? ' · 🔥 трудное слово' : ((Number(item.mistakes)||0)>0 ? ' · 🟡 изучаемое' : '')}</p>
       <div class="flash-word">${item.word}</div>
       <div id="review-answer" class="review-answer hide">${item.translation}</div>
       <button type="button" id="show-answer">Показать перевод</button>
@@ -5791,14 +5883,20 @@ function answerReview(w, correct){
   const item = saved.find(x => x.word === w);
   if (!item) { reviewIndex++; renderReviewCard(); return; }
   const current = Number(item.box) || 1;
+  item.mistakes = Math.max(0, Number(item.mistakes) || 0);
+  item.hard = Boolean(item.hard);
   if (correct) {
+    item.mistakes = 0;
+    item.hard = false;
     item.box = Math.min(6, current + 1);
     const days = REVIEW_INTERVALS[item.box];
     item.nextReview = Date.now() + days * 24 * 60 * 60 * 1000;
   } else {
-    item.box = 1;
+    item.mistakes += 1;
+    item.box = Math.min(current, 2);
     item.nextReview = Date.now();
-    // Ошибочные карточки ещё раз попадут в конец текущей сессии.
+    if (item.mistakes >= 2) item.hard = true;
+    // Ошибочная карточка возвращается в конец текущей сессии, чтобы можно было попробовать ещё раз.
     reviewQueue.push(w);
   }
   save();
