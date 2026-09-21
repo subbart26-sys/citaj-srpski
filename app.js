@@ -5330,6 +5330,29 @@ function view(id){
 }
 
 
+function training(){
+  $('training-content').innerHTML = `
+    <h2>Тренировка</h2>
+    <p class="muted">Тренируем память в двух направлениях: узнавание слова и активное воспроизведение.</p>
+    <div class="card">
+      <h3>🧩 Русское предложение → собрать сербское</h3>
+      <p>Прочитай русское предложение и собери сербский вариант из перемешанных слов.</p>
+      <button type="button" id="open-sentence-training">Начать тренировку</button>
+    </div>
+    <div class="card">
+      <h3>📚 Другие тренировки</h3>
+      <p class="muted">Тренировки твоих сохранённых слов находятся во вкладке «Мои слова», а тематических блоков — внутри «Слова по темам».</p>
+      <div class="training-buttons">
+        <button type="button" id="open-my-words-training">Мои слова</button>
+        <button type="button" id="open-vocab-training">Слова по темам</button>
+      </div>
+    </div>`;
+  view('training');
+  $('open-sentence-training').addEventListener('click', startSentenceAssembly);
+  $('open-my-words-training').addEventListener('click', words);
+  $('open-vocab-training').addEventListener('click', vocab);
+}
+
 function vocabBlock(id){ return VOCAB_BLOCKS.find(b=>b.id===id); }
 function blockProgress(id){ return vocabProgress.filter(x=>x.blockId===id); }
 function saveVocabProgress(){ localStorage.setItem('citajSrpskiVocabProgress',JSON.stringify(vocabProgress)); }
@@ -5344,7 +5367,7 @@ function addWholeBlock(id){
   b.words.forEach(x=>addVocabWord(x,id));
   saveVocabProgress(); vocab();
 }
-function startBlockReview(id){
+function startBlockReview(id, mode="choice"){
   const b=vocabBlock(id); if(!b) return;
   let list=blockProgress(id);
   if(!list.length){
@@ -5357,7 +5380,7 @@ function startBlockReview(id){
     const source=b.words.find(x=>x.word===p.word);
     return source ? {...p, translation:source.translation} : p;
   }).filter(x=>x && x.translation);
-  exerciseType='choice';
+  exerciseType=mode==='reverse'?'reverse':'choice';
   exercisePool=list;
   exerciseQueue=shuffle(list).slice(0,Math.min(20,list.length)).map(x=>x.word);
   exerciseIndex=0;
@@ -5374,7 +5397,8 @@ function vocab(){
       <p><b>${b.words.length} слов</b> · в учебном прогрессе: <b>${count}</b></p>
       <div class="vocab-actions">
         <button type="button" class="vocab-add" data-block="${b.id}">＋ Изучать весь блок</button>
-        <button type="button" class="vocab-review" data-block="${b.id}">🔁 Повторять только этот блок</button>
+        <button type="button" class="vocab-review" data-block="${b.id}" data-mode="choice">🔁 Сербское → русский</button>
+        <button type="button" class="vocab-review" data-block="${b.id}" data-mode="reverse">🔄 Русское → сербское</button>
       </div>
       <details><summary>Показать слова</summary><div class="vocab-list">${b.words.map((x,i)=>{
         const active=blockProgress(b.id).some(s=>s.word===x.word);
@@ -5384,7 +5408,7 @@ function vocab(){
   }).join('');
   view('vocab');
   document.querySelectorAll('.vocab-add').forEach(btn=>btn.addEventListener('click',()=>addWholeBlock(btn.dataset.block)));
-  document.querySelectorAll('.vocab-review').forEach(btn=>btn.addEventListener('click',()=>startBlockReview(btn.dataset.block)));
+  document.querySelectorAll('.vocab-review').forEach(btn=>btn.addEventListener('click',()=>startBlockReview(btn.dataset.block, btn.dataset.mode || 'choice')));
   document.querySelectorAll('.vocab-one').forEach(btn=>btn.addEventListener('click',()=>{
     const b=vocabBlock(btn.dataset.block); const item=b?.words.find(x=>x.word===btn.dataset.word);
     if(item){addVocabWord(item,b.id);vocab();}
@@ -5602,21 +5626,26 @@ function shuffle(arr){
 }
 
 const SENTENCE_TRAINING = [
-  {ru:'Danas je hladno.',sr:'Danas je hladno.'},
-  {ru:'Čekam autobus u gradu.',sr:'Čekam autobus u gradu.'},
-  {ru:'Devojka čita knjigu u biblioteci.',sr:'Devojka čita knjigu u biblioteci.'},
-  {ru:'Vozač vozi kroz tunel.',sr:'Vozač vozi kroz tunel.'},
-  {ru:'U kafiću pijem čaj.',sr:'U kafiću pijem čaj.'},
-  {ru:'Deca se igraju u parku.',sr:'Deca se igraju u parku.'},
-  {ru:'Vetar je jak, ali je vreme toplo.',sr:'Vetar je jak, ali je vreme toplo.'},
-  {ru:'Putnik nosi ruksak.',sr:'Putnik nosi ruksak.'},
-  {ru:'Domaćin je ponudio večeru.',sr:'Domaćin je ponudio večeru.'},
-  {ru:'Učenik ima ispit.',sr:'Učenik ima ispit.'},
-  {ru:'Na stolu je karta.',sr:'Na stolu je karta.'},
-  {ru:'Ljudi žele mir.',sr:'Ljudi žele mir.'},
-  {ru:'Ona je radoznala i iskrena.',sr:'Ona je radoznala i iskrena.'},
-  {ru:'Radovi počinju na proleće.',sr:'Radovi počinju na proleće.'},
-  {ru:'Voz prolazi kroz tunel.',sr:'Voz prolazi kroz tunel.'}
+  {ru:'Сегодня холодно.',sr:'Danas je hladno.'},
+  {ru:'Я жду автобус в городе.',sr:'Čekam autobus u gradu.'},
+  {ru:'Девушка читает книгу в библиотеке.',sr:'Devojka čita knjigu u biblioteci.'},
+  {ru:'Водитель едет через туннель.',sr:'Vozač vozi kroz tunel.'},
+  {ru:'В кафе я пью чай.',sr:'U kafiću pijem čaj.'},
+  {ru:'Дети играют в парке.',sr:'Deca se igraju u parku.'},
+  {ru:'Ветер сильный, но погода тёплая.',sr:'Vetar je jak, ali je vreme toplo.'},
+  {ru:'Путник несёт рюкзак.',sr:'Putnik nosi ruksak.'},
+  {ru:'Хозяин предложил ужин.',sr:'Domaćin je ponudio večeru.'},
+  {ru:'Ученик сдаёт экзамен.',sr:'Učenik ima ispit.'},
+  {ru:'На столе лежит карта.',sr:'Na stolu je karta.'},
+  {ru:'Люди хотят мира.',sr:'Ljudi žele mir.'},
+  {ru:'Она любопытная и искренняя.',sr:'Ona je radoznala i iskrena.'},
+  {ru:'Работы начинаются весной.',sr:'Radovi počinju na proleće.'},
+  {ru:'Поезд проходит через туннель.',sr:'Voz prolazi kroz tunel.'},
+  {ru:'Девушка надела свитер и капюшон.',sr:'Devojka je obukla džemper i kapuljaču.'},
+  {ru:'Мы гуляем по улице.',sr:'Šetamo kroz ulicu.'},
+  {ru:'Моя сестра любит музыку и скрипку.',sr:'Moja sestra voli muziku i violinu.'},
+  {ru:'Путешествие начинается рано.',sr:'Putovanje počinje rano.'},
+  {ru:'Он решил принять предложение.',sr:'On je odlučio da prihvati ponudu.'}
 ];
 let sentenceExerciseQueue=[];
 let sentenceExerciseIndex=0;
@@ -5676,6 +5705,7 @@ function renderChoice(item){
     const chosen=options[i]; const ok=chosen.word===item.word;
     document.querySelectorAll('.option').forEach(x=>x.disabled=true);
     $('exercise-feedback').innerHTML=ok ? '<b>✓ Правильно</b>' : `<b>✗ Не совсем.</b> Правильный ответ: ${item.translation || (VOCAB_BLOCKS.flatMap(b=>b.words).find(v=>v.word===item.word)?.translation) || 'Перевод пока не добавлен'}`;
+    if(ok){ item.box=Math.min(6,(Number(item.box)||1)+1); item.nextReview=Date.now()+REVIEW_INTERVALS[item.box]*24*60*60*1000; if(item.blockId) saveVocabProgress(); else save(); }
     if(ok){ item.box=Math.min(6,(Number(item.box)||1)+1); item.nextReview=Date.now()+REVIEW_INTERVALS[item.box]*24*60*60*1000; if(item.blockId) saveVocabProgress(); else save(); }
     if(!ok){ item.box=1; item.nextReview=Date.now(); if(item.blockId) saveVocabProgress(); else save(); }
     setTimeout(()=>{exerciseIndex++; renderExercise();}, 850);
@@ -5832,6 +5862,7 @@ document.addEventListener("click", event => {
     if (v === "texts") texts();
     if (v === "vocab") vocab();
     if (v === "words") words();
+    if (v === "training") training();
     view(v);
     return;
   }
