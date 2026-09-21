@@ -5753,21 +5753,20 @@ function renderSentenceAssembly(){
   const item=sentenceExerciseQueue[sentenceExerciseIndex]; sentenceExerciseCurrent=item;
   const words=sentenceTokens(item.sr); const shuffled=shuffle(words.map((word,i)=>({word,originalIndex:i})));
   const st=sentenceSourceStats[item.id]||{successes:0};
-  $('review-content').innerHTML=`<div class="card review-card"><p class="muted">Собери сербское предложение · ${sentenceExerciseIndex+1} из ${sentenceExerciseQueue.length}</p><div id="sentence-ru-prompt" class="sentence-ru-prompt"><span class="muted">Загрузка русского варианта…</span></div><div id="assembled" class="assembled-sentence"></div><div id="word-bank" class="word-bank">${shuffled.map((x,i)=>`<button type="button" class="assemble-word" data-i="${i}">${escapeHtml(x.word)}</button>`).join('')}</div><div class="vocab-actions"><button type="button" id="assembly-undo">↩ Убрать последнее</button><button type="button" id="assembly-clear">Очистить</button><button type="button" id="assembly-check" disabled>Проверить</button><button type="button" id="assembly-speak">🔊 Послушать</button><button type="button" id="assembly-show">👁 Показать правильный</button><button type="button" id="assembly-skip">⏭ Пропустить</button></div><div id="assembly-feedback" class="feedback"></div><div id="assembly-next-wrap" class="vocab-actions hide"><button type="button" id="assembly-next">Следующее предложение →</button></div></div>`;
+  $('review-content').innerHTML=`<div class="card review-card"><p class="muted">Собери сербское предложение · ${sentenceExerciseIndex+1} из ${sentenceExerciseQueue.length}</p><div id="sentence-ru-prompt" class="sentence-ru-prompt"><span class="muted">Загрузка русского варианта…</span></div><div id="assembled" class="assembled-sentence"></div><div id="word-bank" class="word-bank">${shuffled.map((x,i)=>`<button type="button" class="assemble-word" data-i="${i}">${escapeHtml(x.word)}</button>`).join('')}</div><div class="vocab-actions sentence-actions"><button type="button" id="assembly-speak">🔊 Послушать</button><button type="button" id="assembly-show">👁 Показать правильный</button><button type="button" id="assembly-skip">⏭ Пропустить</button></div><div id="assembly-feedback" class="feedback"></div><div id="assembly-next-wrap" class="vocab-actions hide"><button type="button" id="assembly-next">Следующее предложение →</button></div></div>`;
   getSentenceRu(item).then(ru=>{const el=$('sentence-ru-prompt'); if(el) el.innerHTML=`<h3>${escapeHtml(ru)}</h3>`;});
   const chosen=[]; let checked=false;
   const renderChosen=()=>{
     $('assembled').innerHTML=chosen.map((x,i)=>`<button type="button" class="chosen-word" data-choice="${i}" title="Убрать это слово">${escapeHtml(x.word)}</button>`).join(' ');
     document.querySelectorAll('.chosen-word').forEach(btn=>btn.addEventListener('click',()=>{
       if(checked)return; const i=Number(btn.dataset.choice); const removed=chosen.splice(i,1)[0];
-      const bankBtn=document.querySelector(`.assemble-word[data-i="${removed.bankIndex}"]`); if(bankBtn)bankBtn.disabled=false; renderChosen(); updateCheckState();
+      const bankBtn=document.querySelector(`.assemble-word[data-i="${removed.bankIndex}"]`); if(bankBtn)bankBtn.disabled=false; renderChosen();
     }));
   };
-  const updateCheckState=()=>{$('assembly-check').disabled=checked||chosen.length!==shuffled.length;};
   const finishAnswer=(ok,shown=false)=>{
     if(checked)return; checked=true; markSourceSentence(item,ok);
     $('assembly-feedback').innerHTML=ok?'<b>✓ Правильно!</b>':'<b>Правильный вариант:</b> '+escapeHtml(item.sr);
-    $('assembly-check').disabled=true; document.querySelectorAll('.assemble-word').forEach(b=>b.disabled=true);
+    document.querySelectorAll('.assemble-word').forEach(b=>b.disabled=true);
     $('assembly-next-wrap').classList.remove('hide');
   };
   const checkAnswer=()=>{
@@ -5777,15 +5776,11 @@ function renderSentenceAssembly(){
   };
   document.querySelectorAll('.assemble-word').forEach(btn=>btn.addEventListener('click',()=>{
     if(checked)return; const i=Number(btn.dataset.i); if(chosen.some(x=>x.bankIndex===i))return;
-    chosen.push({word:shuffled[i].word,bankIndex:i}); btn.disabled=true; renderChosen(); updateCheckState(); if(chosen.length===shuffled.length)checkAnswer();
+    chosen.push({word:shuffled[i].word,bankIndex:i}); btn.disabled=true; renderChosen(); if(chosen.length===shuffled.length)checkAnswer();
   }));
-  $('assembly-undo').addEventListener('click',()=>{if(checked||!chosen.length)return;const removed=chosen.pop();const bankBtn=document.querySelector(`.assemble-word[data-i="${removed.bankIndex}"]`);if(bankBtn)bankBtn.disabled=false;renderChosen();updateCheckState();});
-  $('assembly-clear').addEventListener('click',()=>{if(checked)return;chosen.splice(0);document.querySelectorAll('.assemble-word').forEach(b=>b.disabled=false);renderChosen();updateCheckState();$('assembly-feedback').innerHTML='';});
-  $('assembly-check').addEventListener('click',checkAnswer);
   $('assembly-show').addEventListener('click',()=>finishAnswer(false,true));
   $('assembly-skip').addEventListener('click',()=>finishAnswer(false,false));
   $('assembly-next').addEventListener('click',()=>{sentenceExerciseIndex++;renderSentenceAssembly();});
-  $('assembly-speak').addEventListener('click',()=>speakText(item.sr)); updateCheckState();
 }
 
 function startTextTraining(text){
@@ -6025,3 +6020,4 @@ document.addEventListener("click", event => {
 
 save();
 texts();
+  $('assembly-speak').addEventListener('click',()=>speakText(item.sr));
