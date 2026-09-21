@@ -1093,6 +1093,2051 @@ const DICT = {
   "zubima": "зубами"
 };
 
+const VOCAB_BLOCKS = [
+  {
+    "id": "a1-01",
+    "level": "A1",
+    "title": "Повседневная жизнь",
+    "description": "Самые нужные слова для обычного дня",
+    "words": [
+      {
+        "word": "ja",
+        "translation": "я"
+      },
+      {
+        "word": "mi",
+        "translation": "мы"
+      },
+      {
+        "word": "ti",
+        "translation": "ты"
+      },
+      {
+        "word": "vi",
+        "translation": "вы"
+      },
+      {
+        "word": "on",
+        "translation": "он"
+      },
+      {
+        "word": "ona",
+        "translation": "она"
+      },
+      {
+        "word": "ono",
+        "translation": "оно"
+      },
+      {
+        "word": "oni",
+        "translation": "они"
+      },
+      {
+        "word": "ovaj",
+        "translation": "этот"
+      },
+      {
+        "word": "ova",
+        "translation": "эта"
+      },
+      {
+        "word": "ovo",
+        "translation": "это"
+      },
+      {
+        "word": "moj",
+        "translation": "мой"
+      },
+      {
+        "word": "moja",
+        "translation": "моя"
+      },
+      {
+        "word": "moje",
+        "translation": "моё"
+      },
+      {
+        "word": "naš",
+        "translation": "наш"
+      },
+      {
+        "word": "naša",
+        "translation": "наша"
+      },
+      {
+        "word": "vaš",
+        "translation": "ваш"
+      },
+      {
+        "word": "vaša",
+        "translation": "ваша"
+      },
+      {
+        "word": "ime",
+        "translation": "имя"
+      },
+      {
+        "word": "čovek",
+        "translation": "человек"
+      },
+      {
+        "word": "žena",
+        "translation": "женщина"
+      },
+      {
+        "word": "muškarac",
+        "translation": "мужчина"
+      },
+      {
+        "word": "dete",
+        "translation": "ребёнок"
+      },
+      {
+        "word": "devojka",
+        "translation": "девушка"
+      },
+      {
+        "word": "momak",
+        "translation": "парень"
+      },
+      {
+        "word": "prijatelj",
+        "translation": "друг"
+      },
+      {
+        "word": "prijateljica",
+        "translation": "подруга"
+      },
+      {
+        "word": "ljudi",
+        "translation": "люди"
+      },
+      {
+        "word": "porodica",
+        "translation": "семья"
+      },
+      {
+        "word": "majka",
+        "translation": "мать"
+      },
+      {
+        "word": "otac",
+        "translation": "отец"
+      },
+      {
+        "word": "brat",
+        "translation": "брат"
+      },
+      {
+        "word": "sestra",
+        "translation": "сестра"
+      },
+      {
+        "word": "sin",
+        "translation": "сын"
+      },
+      {
+        "word": "ćerka",
+        "translation": "дочь"
+      },
+      {
+        "word": "roditelji",
+        "translation": "родители"
+      },
+      {
+        "word": "jutro",
+        "translation": "утро"
+      },
+      {
+        "word": "dan",
+        "translation": "день"
+      },
+      {
+        "word": "veče",
+        "translation": "вечер"
+      },
+      {
+        "word": "noć",
+        "translation": "ночь"
+      },
+      {
+        "word": "danas",
+        "translation": "сегодня"
+      },
+      {
+        "word": "juče",
+        "translation": "вчера"
+      },
+      {
+        "word": "sutra",
+        "translation": "завтра"
+      },
+      {
+        "word": "sada",
+        "translation": "сейчас"
+      },
+      {
+        "word": "onda",
+        "translation": "тогда"
+      },
+      {
+        "word": "rano",
+        "translation": "рано"
+      },
+      {
+        "word": "kasno",
+        "translation": "поздно"
+      },
+      {
+        "word": "uvek",
+        "translation": "всегда"
+      },
+      {
+        "word": "nikad",
+        "translation": "никогда"
+      },
+      {
+        "word": "često",
+        "translation": "часто"
+      },
+      {
+        "word": "ponekad",
+        "translation": "иногда"
+      },
+      {
+        "word": "ovde",
+        "translation": "здесь"
+      },
+      {
+        "word": "tamo",
+        "translation": "там"
+      },
+      {
+        "word": "kod",
+        "translation": "у, возле"
+      },
+      {
+        "word": "blizu",
+        "translation": "близко"
+      },
+      {
+        "word": "daleko",
+        "translation": "далеко"
+      },
+      {
+        "word": "sadašnji",
+        "translation": "нынешний"
+      },
+      {
+        "word": "pre",
+        "translation": "до, раньше"
+      },
+      {
+        "word": "posle",
+        "translation": "после"
+      },
+      {
+        "word": "prvo",
+        "translation": "сначала, первый"
+      },
+      {
+        "word": "zatim",
+        "translation": "затем"
+      },
+      {
+        "word": "opet",
+        "translation": "снова"
+      },
+      {
+        "word": "već",
+        "translation": "уже"
+      },
+      {
+        "word": "još",
+        "translation": "ещё"
+      },
+      {
+        "word": "samo",
+        "translation": "только"
+      },
+      {
+        "word": "mnogo",
+        "translation": "много"
+      },
+      {
+        "word": "malo",
+        "translation": "мало"
+      },
+      {
+        "word": "više",
+        "translation": "больше"
+      },
+      {
+        "word": "manje",
+        "translation": "меньше"
+      },
+      {
+        "word": "sve",
+        "translation": "всё"
+      },
+      {
+        "word": "ništa",
+        "translation": "ничего"
+      },
+      {
+        "word": "nešto",
+        "translation": "что-то"
+      },
+      {
+        "word": "svako",
+        "translation": "каждый"
+      },
+      {
+        "word": "svaki",
+        "translation": "каждый"
+      },
+      {
+        "word": "zajedno",
+        "translation": "вместе"
+      },
+      {
+        "word": "sam",
+        "translation": "сам"
+      },
+      {
+        "word": "sama",
+        "translation": "сама"
+      },
+      {
+        "word": "spreman",
+        "translation": "готовый"
+      },
+      {
+        "word": "umoran",
+        "translation": "уставший"
+      },
+      {
+        "word": "srećan",
+        "translation": "счастливый"
+      },
+      {
+        "word": "tužan",
+        "translation": "грустный"
+      },
+      {
+        "word": "dobar",
+        "translation": "хороший"
+      },
+      {
+        "word": "loš",
+        "translation": "плохой"
+      },
+      {
+        "word": "velik",
+        "translation": "большой"
+      },
+      {
+        "word": "mali",
+        "translation": "маленький"
+      },
+      {
+        "word": "nov",
+        "translation": "новый"
+      },
+      {
+        "word": "star",
+        "translation": "старый"
+      },
+      {
+        "word": "lep",
+        "translation": "красивый"
+      },
+      {
+        "word": "važan",
+        "translation": "важный"
+      },
+      {
+        "word": "lak",
+        "translation": "лёгкий"
+      },
+      {
+        "word": "težak",
+        "translation": "трудный"
+      },
+      {
+        "word": "brz",
+        "translation": "быстрый"
+      },
+      {
+        "word": "spor",
+        "translation": "медленный"
+      },
+      {
+        "word": "raditi",
+        "translation": "работать"
+      },
+      {
+        "word": "živeti",
+        "translation": "жить"
+      },
+      {
+        "word": "imati",
+        "translation": "иметь"
+      },
+      {
+        "word": "biti",
+        "translation": "быть"
+      },
+      {
+        "word": "hteti",
+        "translation": "хотеть"
+      },
+      {
+        "word": "moći",
+        "translation": "мочь"
+      },
+      {
+        "word": "znati",
+        "translation": "знать"
+      }
+    ]
+  },
+  {
+    "id": "a1-02",
+    "level": "A1",
+    "title": "Дом, семья и еда",
+    "description": "Быт, квартира, покупки и основные продукты",
+    "words": [
+      {
+        "word": "kuća",
+        "translation": "дом"
+      },
+      {
+        "word": "stan",
+        "translation": "квартира"
+      },
+      {
+        "word": "soba",
+        "translation": "комната"
+      },
+      {
+        "word": "kuhinja",
+        "translation": "кухня"
+      },
+      {
+        "word": "kupatilo",
+        "translation": "ванная комната"
+      },
+      {
+        "word": "hodnik",
+        "translation": "коридор"
+      },
+      {
+        "word": "vrata",
+        "translation": "дверь"
+      },
+      {
+        "word": "prozor",
+        "translation": "окно"
+      },
+      {
+        "word": "zid",
+        "translation": "стена"
+      },
+      {
+        "word": "pod",
+        "translation": "пол"
+      },
+      {
+        "word": "plafon",
+        "translation": "потолок"
+      },
+      {
+        "word": "sto",
+        "translation": "стол"
+      },
+      {
+        "word": "stolica",
+        "translation": "стул"
+      },
+      {
+        "word": "krevet",
+        "translation": "кровать"
+      },
+      {
+        "word": "ormar",
+        "translation": "шкаф"
+      },
+      {
+        "word": "polica",
+        "translation": "полка"
+      },
+      {
+        "word": "lampa",
+        "translation": "лампа"
+      },
+      {
+        "word": "ključ",
+        "translation": "ключ"
+      },
+      {
+        "word": "telefon",
+        "translation": "телефон"
+      },
+      {
+        "word": "četka",
+        "translation": "щётка"
+      },
+      {
+        "word": "računar",
+        "translation": "компьютер"
+      },
+      {
+        "word": "televizor",
+        "translation": "телевизор"
+      },
+      {
+        "word": "sat",
+        "translation": "часы"
+      },
+      {
+        "word": "odeća",
+        "translation": "одежда"
+      },
+      {
+        "word": "majica",
+        "translation": "футболка"
+      },
+      {
+        "word": "košulja",
+        "translation": "рубашка"
+      },
+      {
+        "word": "jakna",
+        "translation": "куртка"
+      },
+      {
+        "word": "pantalone",
+        "translation": "брюки"
+      },
+      {
+        "word": "cipele",
+        "translation": "обувь, туфли"
+      },
+      {
+        "word": "čarape",
+        "translation": "носки"
+      },
+      {
+        "word": "torba",
+        "translation": "сумка"
+      },
+      {
+        "word": "novac",
+        "translation": "деньги"
+      },
+      {
+        "word": "prodavnica",
+        "translation": "магазин"
+      },
+      {
+        "word": "pijaca",
+        "translation": "рынок"
+      },
+      {
+        "word": "cena",
+        "translation": "цена"
+      },
+      {
+        "word": "račun",
+        "translation": "счёт, чек"
+      },
+      {
+        "word": "kupi",
+        "translation": "купи"
+      },
+      {
+        "word": "kupiti",
+        "translation": "купить"
+      },
+      {
+        "word": "prodati",
+        "translation": "продать"
+      },
+      {
+        "word": "platiti",
+        "translation": "заплатить"
+      },
+      {
+        "word": "skupo",
+        "translation": "дорого"
+      },
+      {
+        "word": "jeftino",
+        "translation": "дёшево"
+      },
+      {
+        "word": "hrana",
+        "translation": "еда"
+      },
+      {
+        "word": "piće",
+        "translation": "напиток"
+      },
+      {
+        "word": "voda",
+        "translation": "вода"
+      },
+      {
+        "word": "mleko",
+        "translation": "молоко"
+      },
+      {
+        "word": "hleb",
+        "translation": "хлеб"
+      },
+      {
+        "word": "sir",
+        "translation": "сыр"
+      },
+      {
+        "word": "meso",
+        "translation": "мясо"
+      },
+      {
+        "word": "riba",
+        "translation": "рыба"
+      },
+      {
+        "word": "jaje",
+        "translation": "яйцо"
+      },
+      {
+        "word": "jaja",
+        "translation": "яйца"
+      },
+      {
+        "word": "supа",
+        "translation": "суп"
+      },
+      {
+        "word": "salata",
+        "translation": "салат"
+      },
+      {
+        "word": "pirinač",
+        "translation": "рис"
+      },
+      {
+        "word": "krompir",
+        "translation": "картофель"
+      },
+      {
+        "word": "paradajz",
+        "translation": "помидор"
+      },
+      {
+        "word": "krastavac",
+        "translation": "огурец"
+      },
+      {
+        "word": "luk",
+        "translation": "лук"
+      },
+      {
+        "word": "jabuka",
+        "translation": "яблоко"
+      },
+      {
+        "word": "banana",
+        "translation": "банан"
+      },
+      {
+        "word": "pomorandža",
+        "translation": "апельсин"
+      },
+      {
+        "word": "voće",
+        "translation": "фрукты"
+      },
+      {
+        "word": "povrće",
+        "translation": "овощи"
+      },
+      {
+        "word": "so",
+        "translation": "соль"
+      },
+      {
+        "word": "šećer",
+        "translation": "сахар"
+      },
+      {
+        "word": "ulje",
+        "translation": "масло, растительное масло"
+      },
+      {
+        "word": "med",
+        "translation": "мёд"
+      },
+      {
+        "word": "sočivo",
+        "translation": "чечевица"
+      },
+      {
+        "word": "pasulj",
+        "translation": "фасоль"
+      },
+      {
+        "word": "testo",
+        "translation": "тесто"
+      },
+      {
+        "word": "brašno",
+        "translation": "мука"
+      },
+      {
+        "word": "čokolada",
+        "translation": "шоколад"
+      },
+      {
+        "word": "voćni",
+        "translation": "фруктовый"
+      },
+      {
+        "word": "mesni",
+        "translation": "мясной"
+      },
+      {
+        "word": "sladak",
+        "translation": "сладкий"
+      },
+      {
+        "word": "slan",
+        "translation": "солёный"
+      },
+      {
+        "word": "kafa",
+        "translation": "кофе"
+      },
+      {
+        "word": "čaj",
+        "translation": "чай"
+      },
+      {
+        "word": "sok",
+        "translation": "сок"
+      },
+      {
+        "word": "doručak",
+        "translation": "завтрак"
+      },
+      {
+        "word": "ručak",
+        "translation": "обед"
+      },
+      {
+        "word": "večera",
+        "translation": "ужин"
+      },
+      {
+        "word": "obrok",
+        "translation": "приём пищи"
+      },
+      {
+        "word": "kuvati",
+        "translation": "готовить, варить"
+      },
+      {
+        "word": "peći",
+        "translation": "печь, запекать"
+      },
+      {
+        "word": "prati",
+        "translation": "мыть, стирать"
+      },
+      {
+        "word": "čistiti",
+        "translation": "чистить, убирать"
+      },
+      {
+        "word": "spremati",
+        "translation": "готовить, приводить в порядок"
+      },
+      {
+        "word": "otvoriti",
+        "translation": "открыть"
+      },
+      {
+        "word": "zatvoriti",
+        "translation": "закрыть"
+      },
+      {
+        "word": "staviti",
+        "translation": "положить"
+      },
+      {
+        "word": "uzeti",
+        "translation": "взять"
+      },
+      {
+        "word": "dati",
+        "translation": "дать"
+      },
+      {
+        "word": "doneti",
+        "translation": "принести"
+      },
+      {
+        "word": "nositi",
+        "translation": "носить"
+      },
+      {
+        "word": "sedeti",
+        "translation": "сидеть"
+      },
+      {
+        "word": "stajati",
+        "translation": "стоять"
+      },
+      {
+        "word": "spavati",
+        "translation": "спать"
+      },
+      {
+        "word": "ustati",
+        "translation": "встать"
+      }
+    ]
+  },
+  {
+    "id": "a2-01",
+    "level": "A2",
+    "title": "Город, транспорт и путешествия",
+    "description": "Слова для города, дороги, поездок и путешествий",
+    "words": [
+      {
+        "word": "grad",
+        "translation": "город"
+      },
+      {
+        "word": "selo",
+        "translation": "деревня"
+      },
+      {
+        "word": "ulica",
+        "translation": "улица"
+      },
+      {
+        "word": "trg",
+        "translation": "площадь"
+      },
+      {
+        "word": "centar",
+        "translation": "центр"
+      },
+      {
+        "word": "kvart",
+        "translation": "район"
+      },
+      {
+        "word": "zgrada",
+        "translation": "здание"
+      },
+      {
+        "word": "most",
+        "translation": "мост"
+      },
+      {
+        "word": "park",
+        "translation": "парк"
+      },
+      {
+        "word": "reka",
+        "translation": "река"
+      },
+      {
+        "word": "jezero",
+        "translation": "озеро"
+      },
+      {
+        "word": "more",
+        "translation": "море"
+      },
+      {
+        "word": "plaža",
+        "translation": "пляж"
+      },
+      {
+        "word": "planina",
+        "translation": "гора"
+      },
+      {
+        "word": "šuma",
+        "translation": "лес"
+      },
+      {
+        "word": "put",
+        "translation": "дорога, путь"
+      },
+      {
+        "word": "stanica",
+        "translation": "станция, остановка"
+      },
+      {
+        "word": "autobus",
+        "translation": "автобус"
+      },
+      {
+        "word": "voz",
+        "translation": "поезд"
+      },
+      {
+        "word": "tramvaj",
+        "translation": "трамвай"
+      },
+      {
+        "word": "taksi",
+        "translation": "такси"
+      },
+      {
+        "word": "automobil",
+        "translation": "автомобиль"
+      },
+      {
+        "word": "bicikl",
+        "translation": "велосипед"
+      },
+      {
+        "word": "avion",
+        "translation": "самолёт"
+      },
+      {
+        "word": "aerodrom",
+        "translation": "аэропорт"
+      },
+      {
+        "word": "železnička",
+        "translation": "железнодорожная"
+      },
+      {
+        "word": "karta",
+        "translation": "билет, карта"
+      },
+      {
+        "word": "pasoš",
+        "translation": "паспорт"
+      },
+      {
+        "word": "prtljag",
+        "translation": "багаж"
+      },
+      {
+        "word": "rezervacija",
+        "translation": "бронирование"
+      },
+      {
+        "word": "kofer",
+        "translation": "чемодан"
+      },
+      {
+        "word": "putovanje",
+        "translation": "путешествие"
+      },
+      {
+        "word": "putnik",
+        "translation": "пассажир, путешественник"
+      },
+      {
+        "word": "vozač",
+        "translation": "водитель"
+      },
+      {
+        "word": "let",
+        "translation": "полёт"
+      },
+      {
+        "word": "polazak",
+        "translation": "отправление"
+      },
+      {
+        "word": "odlazak",
+        "translation": "уход, отъезд"
+      },
+      {
+        "word": "dolazak",
+        "translation": "приход, прибытие"
+      },
+      {
+        "word": "smer",
+        "translation": "направление"
+      },
+      {
+        "word": "levo",
+        "translation": "налево, левый"
+      },
+      {
+        "word": "desno",
+        "translation": "направо, правый"
+      },
+      {
+        "word": "pravo",
+        "translation": "прямо"
+      },
+      {
+        "word": "napred",
+        "translation": "вперёд"
+      },
+      {
+        "word": "nazad",
+        "translation": "назад"
+      },
+      {
+        "word": "preko",
+        "translation": "через"
+      },
+      {
+        "word": "između",
+        "translation": "между"
+      },
+      {
+        "word": "pored",
+        "translation": "рядом с"
+      },
+      {
+        "word": "ispred",
+        "translation": "перед"
+      },
+      {
+        "word": "iza",
+        "translation": "за"
+      },
+      {
+        "word": "iznad",
+        "translation": "над"
+      },
+      {
+        "word": "ispod",
+        "translation": "под"
+      },
+      {
+        "word": "unutra",
+        "translation": "внутри"
+      },
+      {
+        "word": "napolju",
+        "translation": "снаружи"
+      },
+      {
+        "word": "putovati",
+        "translation": "путешествовать"
+      },
+      {
+        "word": "krenuti",
+        "translation": "отправиться"
+      },
+      {
+        "word": "stići",
+        "translation": "прибыть, успеть"
+      },
+      {
+        "word": "otići",
+        "translation": "уйти, уехать"
+      },
+      {
+        "word": "vratiti",
+        "translation": "вернуть"
+      },
+      {
+        "word": "vratiti se",
+        "translation": "вернуться"
+      },
+      {
+        "word": "preći",
+        "translation": "перейти, пересечь"
+      },
+      {
+        "word": "voziti",
+        "translation": "водить, ехать"
+      },
+      {
+        "word": "voziti se",
+        "translation": "ехать"
+      },
+      {
+        "word": "hodati",
+        "translation": "ходить"
+      },
+      {
+        "word": "trčati",
+        "translation": "бегать"
+      },
+      {
+        "word": "šetati",
+        "translation": "гулять"
+      },
+      {
+        "word": "tražiti",
+        "translation": "искать"
+      },
+      {
+        "word": "pronaći",
+        "translation": "найти"
+      },
+      {
+        "word": "izgubiti",
+        "translation": "потерять"
+      },
+      {
+        "word": "čekati",
+        "translation": "ждать"
+      },
+      {
+        "word": "kasniti",
+        "translation": "опаздывать"
+      },
+      {
+        "word": "požuriti",
+        "translation": "поторопиться"
+      },
+      {
+        "word": "rezervisati",
+        "translation": "забронировать"
+      },
+      {
+        "word": "smeštaj",
+        "translation": "жильё, размещение"
+      },
+      {
+        "word": "hotel",
+        "translation": "отель"
+      },
+      {
+        "word": "apartman",
+        "translation": "апартаменты, квартира"
+      },
+      {
+        "word": "recepcija",
+        "translation": "ресепшен"
+      },
+      {
+        "word": "adresa",
+        "translation": "адрес"
+      },
+      {
+        "word": "odmor",
+        "translation": "отдых"
+      },
+      {
+        "word": "odmoriti se",
+        "translation": "отдохнуть"
+      },
+      {
+        "word": "plan",
+        "translation": "план"
+      },
+      {
+        "word": "mapa",
+        "translation": "карта"
+      },
+      {
+        "word": "ruta",
+        "translation": "маршрут"
+      },
+      {
+        "word": "vodič",
+        "translation": "гид, путеводитель"
+      },
+      {
+        "word": "razgledati",
+        "translation": "осматривать"
+      },
+      {
+        "word": "posetiti",
+        "translation": "посетить"
+      },
+      {
+        "word": "muzej",
+        "translation": "музей"
+      },
+      {
+        "word": "pozorište",
+        "translation": "театр"
+      },
+      {
+        "word": "bioskop",
+        "translation": "кинотеатр"
+      },
+      {
+        "word": "restoran",
+        "translation": "ресторан"
+      },
+      {
+        "word": "kafić",
+        "translation": "кафе"
+      },
+      {
+        "word": "suvenirnica",
+        "translation": "сувенирный магазин"
+      },
+      {
+        "word": "apoteka",
+        "translation": "аптека"
+      },
+      {
+        "word": "bolnica",
+        "translation": "больница"
+      },
+      {
+        "word": "pošta",
+        "translation": "почта"
+      },
+      {
+        "word": "banka",
+        "translation": "банк"
+      },
+      {
+        "word": "policija",
+        "translation": "полиция"
+      },
+      {
+        "word": "crkva",
+        "translation": "церковь"
+      },
+      {
+        "word": "tržnica",
+        "translation": "рынок"
+      },
+      {
+        "word": "ulaz",
+        "translation": "вход"
+      },
+      {
+        "word": "izlaz",
+        "translation": "выход"
+      }
+    ]
+  },
+  {
+    "id": "a2-02",
+    "level": "A2",
+    "title": "Работа и учёба",
+    "description": "Учёба, профессия, офис и общение",
+    "words": [
+      {
+        "word": "škola",
+        "translation": "школа"
+      },
+      {
+        "word": "fakultet",
+        "translation": "университет, факультет"
+      },
+      {
+        "word": "student",
+        "translation": "студент"
+      },
+      {
+        "word": "učenik",
+        "translation": "ученик"
+      },
+      {
+        "word": "profesor",
+        "translation": "преподаватель"
+      },
+      {
+        "word": "učitelj",
+        "translation": "учитель"
+      },
+      {
+        "word": "nastavnik",
+        "translation": "учитель, преподаватель"
+      },
+      {
+        "word": "čas",
+        "translation": "урок, час"
+      },
+      {
+        "word": "predmet",
+        "translation": "предмет"
+      },
+      {
+        "word": "lekcija",
+        "translation": "урок, лекция"
+      },
+      {
+        "word": "domaći",
+        "translation": "домашний"
+      },
+      {
+        "word": "zadatak",
+        "translation": "задание"
+      },
+      {
+        "word": "pitanje",
+        "translation": "вопрос"
+      },
+      {
+        "word": "odgovor",
+        "translation": "ответ"
+      },
+      {
+        "word": "greška",
+        "translation": "ошибка"
+      },
+      {
+        "word": "primer",
+        "translation": "пример"
+      },
+      {
+        "word": "knjiga",
+        "translation": "книга"
+      },
+      {
+        "word": "sveska",
+        "translation": "тетрадь"
+      },
+      {
+        "word": "olovka",
+        "translation": "ручка, карандаш"
+      },
+      {
+        "word": "papir",
+        "translation": "бумага"
+      },
+      {
+        "word": "tekst",
+        "translation": "текст"
+      },
+      {
+        "word": "reč",
+        "translation": "слово"
+      },
+      {
+        "word": "rečenica",
+        "translation": "предложение"
+      },
+      {
+        "word": "jezik",
+        "translation": "язык"
+      },
+      {
+        "word": "govoriti",
+        "translation": "говорить"
+      },
+      {
+        "word": "čitati",
+        "translation": "читать"
+      },
+      {
+        "word": "pisati",
+        "translation": "писать"
+      },
+      {
+        "word": "učiti",
+        "translation": "учить, изучать"
+      },
+      {
+        "word": "naučiti",
+        "translation": "выучить, научиться"
+      },
+      {
+        "word": "razumeti",
+        "translation": "понимать"
+      },
+      {
+        "word": "objasniti",
+        "translation": "объяснить"
+      },
+      {
+        "word": "ponoviti",
+        "translation": "повторить"
+      },
+      {
+        "word": "vežbati",
+        "translation": "тренироваться, упражняться"
+      },
+      {
+        "word": "pitati",
+        "translation": "спрашивать"
+      },
+      {
+        "word": "odgovoriti",
+        "translation": "ответить"
+      },
+      {
+        "word": "prevesti",
+        "translation": "перевести"
+      },
+      {
+        "word": "prevod",
+        "translation": "перевод"
+      },
+      {
+        "word": "značenje",
+        "translation": "значение"
+      },
+      {
+        "word": "posao",
+        "translation": "работа"
+      },
+      {
+        "word": "rad",
+        "translation": "работа, труд"
+      },
+      {
+        "word": "firma",
+        "translation": "фирма"
+      },
+      {
+        "word": "kompanija",
+        "translation": "компания"
+      },
+      {
+        "word": "kancelarija",
+        "translation": "офис"
+      },
+      {
+        "word": "sastanak",
+        "translation": "встреча, совещание"
+      },
+      {
+        "word": "kolega",
+        "translation": "коллега"
+      },
+      {
+        "word": "šef",
+        "translation": "начальник"
+      },
+      {
+        "word": "klijent",
+        "translation": "клиент"
+      },
+      {
+        "word": "radnik",
+        "translation": "работник"
+      },
+      {
+        "word": "profesija",
+        "translation": "профессия"
+      },
+      {
+        "word": "iskustvo",
+        "translation": "опыт"
+      },
+      {
+        "word": "plata",
+        "translation": "зарплата"
+      },
+      {
+        "word": "ugovor",
+        "translation": "договор"
+      },
+      {
+        "word": "projekat",
+        "translation": "проект"
+      },
+      {
+        "word": "rok",
+        "translation": "срок"
+      },
+      {
+        "word": "tim",
+        "translation": "команда"
+      },
+      {
+        "word": "sastaviti",
+        "translation": "составить"
+      },
+      {
+        "word": "dogovoriti",
+        "translation": "договориться"
+      },
+      {
+        "word": "organizovati",
+        "translation": "организовать"
+      },
+      {
+        "word": "planirati",
+        "translation": "планировать"
+      },
+      {
+        "word": "početi",
+        "translation": "начать"
+      },
+      {
+        "word": "završiti",
+        "translation": "закончить"
+      },
+      {
+        "word": "nastaviti",
+        "translation": "продолжить"
+      },
+      {
+        "word": "promeniti",
+        "translation": "изменить"
+      },
+      {
+        "word": "poboljšati",
+        "translation": "улучшить"
+      },
+      {
+        "word": "proveriti",
+        "translation": "проверить"
+      },
+      {
+        "word": "poslati",
+        "translation": "послать"
+      },
+      {
+        "word": "primiti",
+        "translation": "получить, принять"
+      },
+      {
+        "word": "pozvati",
+        "translation": "пригласить, позвонить"
+      },
+      {
+        "word": "javiti se",
+        "translation": "связаться, дать знать"
+      },
+      {
+        "word": "objaviti",
+        "translation": "опубликовать"
+      },
+      {
+        "word": "saznati",
+        "translation": "узнать"
+      },
+      {
+        "word": "odlučiti",
+        "translation": "решить"
+      },
+      {
+        "word": "pokušati",
+        "translation": "попытаться"
+      },
+      {
+        "word": "uspeti",
+        "translation": "успеть, добиться"
+      },
+      {
+        "word": "uspeh",
+        "translation": "успех"
+      },
+      {
+        "word": "problem",
+        "translation": "проблема"
+      },
+      {
+        "word": "rešenje",
+        "translation": "решение"
+      },
+      {
+        "word": "ideja",
+        "translation": "идея"
+      },
+      {
+        "word": "prioritet",
+        "translation": "приоритет"
+      },
+      {
+        "word": "cilj",
+        "translation": "цель"
+      },
+      {
+        "word": "potreba",
+        "translation": "потребность"
+      },
+      {
+        "word": "mogućnost",
+        "translation": "возможность"
+      },
+      {
+        "word": "potrebno",
+        "translation": "необходимо"
+      },
+      {
+        "word": "moguće",
+        "translation": "возможно"
+      },
+      {
+        "word": "važno",
+        "translation": "важно"
+      },
+      {
+        "word": "zanimljivo",
+        "translation": "интересно"
+      },
+      {
+        "word": "korisno",
+        "translation": "полезно"
+      },
+      {
+        "word": "teško",
+        "translation": "трудно"
+      },
+      {
+        "word": "lako",
+        "translation": "легко"
+      },
+      {
+        "word": "sigurno",
+        "translation": "безопасно, точно"
+      },
+      {
+        "word": "verovatno",
+        "translation": "вероятно"
+      },
+      {
+        "word": "možda",
+        "translation": "может быть"
+      },
+      {
+        "word": "zato",
+        "translation": "поэтому"
+      },
+      {
+        "word": "zbog",
+        "translation": "из-за, благодаря"
+      },
+      {
+        "word": "ako",
+        "translation": "если"
+      },
+      {
+        "word": "ali",
+        "translation": "но"
+      },
+      {
+        "word": "zato što",
+        "translation": "потому что"
+      },
+      {
+        "word": "međutim",
+        "translation": "однако"
+      },
+      {
+        "word": "prema",
+        "translation": "по направлению к, согласно"
+      },
+      {
+        "word": "izbor",
+        "translation": "выбор"
+      }
+    ]
+  },
+  {
+    "id": "a2-03",
+    "level": "A2",
+    "title": "Природа, погода и чувства",
+    "description": "Природа, состояние человека и более абстрактная лексика",
+    "words": [
+      {
+        "word": "priroda",
+        "translation": "природа"
+      },
+      {
+        "word": "vreme",
+        "translation": "погода; время"
+      },
+      {
+        "word": "sunce",
+        "translation": "солнце"
+      },
+      {
+        "word": "mesec",
+        "translation": "луна; месяц"
+      },
+      {
+        "word": "zvezda",
+        "translation": "звезда"
+      },
+      {
+        "word": "nebo",
+        "translation": "небо"
+      },
+      {
+        "word": "oblak",
+        "translation": "облако"
+      },
+      {
+        "word": "kiša",
+        "translation": "дождь"
+      },
+      {
+        "word": "sneg",
+        "translation": "снег"
+      },
+      {
+        "word": "vetar",
+        "translation": "ветер"
+      },
+      {
+        "word": "oluja",
+        "translation": "буря, шторм"
+      },
+      {
+        "word": "magla",
+        "translation": "туман"
+      },
+      {
+        "word": "toplota",
+        "translation": "тепло, жара"
+      },
+      {
+        "word": "hladnoća",
+        "translation": "холод"
+      },
+      {
+        "word": "proleće",
+        "translation": "весна"
+      },
+      {
+        "word": "leto",
+        "translation": "лето"
+      },
+      {
+        "word": "jesen",
+        "translation": "осень"
+      },
+      {
+        "word": "zima",
+        "translation": "зима"
+      },
+      {
+        "word": "država",
+        "translation": "государство, страна"
+      },
+      {
+        "word": "zemlja",
+        "translation": "земля, страна"
+      },
+      {
+        "word": "svet",
+        "translation": "мир, свет"
+      },
+      {
+        "word": "život",
+        "translation": "жизнь"
+      },
+      {
+        "word": "prirodan",
+        "translation": "естественный"
+      },
+      {
+        "word": "zelen",
+        "translation": "зелёный"
+      },
+      {
+        "word": "plav",
+        "translation": "синий"
+      },
+      {
+        "word": "crven",
+        "translation": "красный"
+      },
+      {
+        "word": "žut",
+        "translation": "жёлтый"
+      },
+      {
+        "word": "bela",
+        "translation": "белая"
+      },
+      {
+        "word": "crn",
+        "translation": "чёрный"
+      },
+      {
+        "word": "boja",
+        "translation": "цвет, окраска"
+      },
+      {
+        "word": "cvet",
+        "translation": "цветок"
+      },
+      {
+        "word": "trava",
+        "translation": "трава"
+      },
+      {
+        "word": "držvo",
+        "translation": "дерево"
+      },
+      {
+        "word": "drvо",
+        "translation": "дерево"
+      },
+      {
+        "word": "list",
+        "translation": "лист"
+      },
+      {
+        "word": "grana",
+        "translation": "ветка"
+      },
+      {
+        "word": "kamen",
+        "translation": "камень"
+      },
+      {
+        "word": "izvor",
+        "translation": "источник, родник"
+      },
+      {
+        "word": "vatra",
+        "translation": "огонь"
+      },
+      {
+        "word": "životinja",
+        "translation": "животное"
+      },
+      {
+        "word": "pas",
+        "translation": "собака"
+      },
+      {
+        "word": "mačka",
+        "translation": "кошка"
+      },
+      {
+        "word": "ptica",
+        "translation": "птица"
+      },
+      {
+        "word": "konj",
+        "translation": "лошадь"
+      },
+      {
+        "word": "krava",
+        "translation": "корова"
+      },
+      {
+        "word": "ribnjak",
+        "translation": "пруд"
+      },
+      {
+        "word": "medved",
+        "translation": "медведь"
+      },
+      {
+        "word": "vuk",
+        "translation": "волк"
+      },
+      {
+        "word": "osećati",
+        "translation": "чувствовать"
+      },
+      {
+        "word": "osećati se",
+        "translation": "чувствовать себя"
+      },
+      {
+        "word": "voleti",
+        "translation": "любить"
+      },
+      {
+        "word": "mrzeti",
+        "translation": "ненавидеть"
+      },
+      {
+        "word": "brinuti",
+        "translation": "заботиться, беспокоиться"
+      },
+      {
+        "word": "bojati se",
+        "translation": "бояться"
+      },
+      {
+        "word": "nadati se",
+        "translation": "надеяться"
+      },
+      {
+        "word": "verovati",
+        "translation": "верить"
+      },
+      {
+        "word": "sećati se",
+        "translation": "помнить"
+      },
+      {
+        "word": "zaboraviti",
+        "translation": "забыть"
+      },
+      {
+        "word": "razmišljati",
+        "translation": "думать, размышлять"
+      },
+      {
+        "word": "misliti",
+        "translation": "думать"
+      },
+      {
+        "word": "smejati se",
+        "translation": "смеяться"
+      },
+      {
+        "word": "plakati",
+        "translation": "плакать"
+      },
+      {
+        "word": "smešiti se",
+        "translation": "улыбаться"
+      },
+      {
+        "word": "radovati se",
+        "translation": "радоваться"
+      },
+      {
+        "word": "ljubav",
+        "translation": "любовь"
+      },
+      {
+        "word": "strah",
+        "translation": "страх"
+      },
+      {
+        "word": "sreća",
+        "translation": "счастье, удача"
+      },
+      {
+        "word": "tuga",
+        "translation": "грусть"
+      },
+      {
+        "word": "radost",
+        "translation": "радость"
+      },
+      {
+        "word": "mir",
+        "translation": "мир, спокойствие"
+      },
+      {
+        "word": "briga",
+        "translation": "забота, беспокойство"
+      },
+      {
+        "word": "nada",
+        "translation": "надежда"
+      },
+      {
+        "word": "želja",
+        "translation": "желание"
+      },
+      {
+        "word": "osećaj",
+        "translation": "чувство"
+      },
+      {
+        "word": "razlog",
+        "translation": "причина"
+      },
+      {
+        "word": "stvar",
+        "translation": "вещь, дело"
+      },
+      {
+        "word": "način",
+        "translation": "способ"
+      },
+      {
+        "word": "trenutak",
+        "translation": "момент"
+      },
+      {
+        "word": "priča",
+        "translation": "история, рассказ"
+      },
+      {
+        "word": "slučaj",
+        "translation": "случай"
+      },
+      {
+        "word": "istina",
+        "translation": "правда"
+      },
+      {
+        "word": "laž",
+        "translation": "ложь"
+      },
+      {
+        "word": "razlika",
+        "translation": "разница"
+      },
+      {
+        "word": "sličan",
+        "translation": "похожий"
+      },
+      {
+        "word": "različit",
+        "translation": "разный"
+      },
+      {
+        "word": "poseban",
+        "translation": "особенный"
+      },
+      {
+        "word": "običan",
+        "translation": "обычный"
+      },
+      {
+        "word": "potreban",
+        "translation": "необходимый"
+      },
+      {
+        "word": "miran",
+        "translation": "спокойный"
+      },
+      {
+        "word": "nervozan",
+        "translation": "нервный"
+      },
+      {
+        "word": "zdrav",
+        "translation": "здоровый"
+      },
+      {
+        "word": "bolestan",
+        "translation": "больной"
+      },
+      {
+        "word": "jak",
+        "translation": "сильный"
+      },
+      {
+        "word": "slab",
+        "translation": "слабый"
+      },
+      {
+        "word": "visok",
+        "translation": "высокий"
+      },
+      {
+        "word": "nizak",
+        "translation": "низкий"
+      },
+      {
+        "word": "tih",
+        "translation": "тихий"
+      },
+      {
+        "word": "glasan",
+        "translation": "громкий"
+      },
+      {
+        "word": "taman",
+        "translation": "тёмный"
+      },
+      {
+        "word": "svetao",
+        "translation": "светлый"
+      }
+    ]
+  }
+];
+
+Object.assign(DICT, Object.fromEntries(VOCAB_BLOCKS.flatMap(b => b.words.map(x => [x.word, x.translation]))));
+
 let saved = [];
 try {
   const raw = localStorage.getItem("citajSrpskiWords");
@@ -1114,6 +3159,10 @@ function normalizeSavedWords(){
     if (!y.translation || y.translation === 'Перевод пока не добавлен') {
       const tr = DICT[y.word];
       if (tr) { y.translation = tr; changed = true; }
+    }
+    if (!y.blockId) {
+      const b = VOCAB_BLOCKS.find(block => block.words.some(v => v.word === y.word));
+      if (b) { y.blockId = b.id; changed = true; }
     }
     return y;
   });
@@ -1137,6 +3186,57 @@ function view(id){
   window.scrollTo(0,0);
 }
 
+
+function vocabBlock(id){ return VOCAB_BLOCKS.find(b => b.id === id); }
+function blockSavedWords(id){ return saved.filter(x => x.blockId === id); }
+function addVocabWord(item, blockId){
+  const existing=saved.find(x => x.word===item.word);
+  if(existing){ if(!existing.blockId) existing.blockId=blockId; if(!existing.translation || existing.translation==='Перевод пока не добавлен') existing.translation=item.translation; return; }
+  saved.push({word:item.word,translation:item.translation,added:new Date().toISOString(),box:1,nextReview:Date.now(),blockId});
+}
+function addWholeBlock(id){
+  const b=vocabBlock(id); if(!b) return;
+  b.words.forEach(x=>addVocabWord(x,id));
+  save(); vocab();
+}
+function startBlockReview(id, mode='review'){
+  const b=vocabBlock(id); if(!b) return;
+  const list=blockSavedWords(id);
+  if(!list.length){
+    if(confirm('В этом блоке пока нет сохранённых слов. Добавить все 100 слов в «Мои слова»?')) addWholeBlock(id);
+    return;
+  }
+  if(list.length < 2){ alert('В блоке пока меньше двух сохранённых слов. Добавь ещё слова или весь блок.'); return; }
+  exerciseType=mode==='reverse'?'reverse':'choice';
+  exercisePool=list;
+  exerciseQueue=shuffle(list).slice(0, Math.min(20, list.length)).map(x=>x.word);
+  exerciseIndex=0;
+  renderExercise();
+  view('review');
+}
+function vocab(){
+  $('vocab-list').innerHTML = VOCAB_BLOCKS.map(b=>{
+    const savedCount=blockSavedWords(b.id).length;
+    return `<div class="card vocab-card">
+      <div class="tag">${b.level}</div>
+      <h3>${b.title}</h3>
+      <p class="muted">${b.description}</p>
+      <p><b>100 слов</b> · сохранено у тебя: <b>${savedCount}</b></p>
+      <div class="vocab-actions">
+        <button type="button" class="vocab-add" data-block="${b.id}">＋ Добавить весь блок</button>
+        <button type="button" class="vocab-review" data-block="${b.id}">🔁 Повторять блок</button>
+      </div>
+      <details><summary>Показать слова</summary><div class="vocab-list">${b.words.map((x,i)=>`<div class="vocab-row"><span>${i+1}. <b>${x.word}</b></span><span>${x.translation}</span><button type="button" class="vocab-one" data-block="${b.id}" data-word="${x.word}">${saved.some(s=>s.word===x.word)?'✓':'＋'}</button></div>`).join('')}</div></details>
+    </div>`;
+  }).join('');
+  view('vocab');
+  document.querySelectorAll('.vocab-add').forEach(btn=>btn.addEventListener('click',()=>addWholeBlock(btn.dataset.block)));
+  document.querySelectorAll('.vocab-review').forEach(btn=>btn.addEventListener('click',()=>startBlockReview(btn.dataset.block,'review')));
+  document.querySelectorAll('.vocab-one').forEach(btn=>btn.addEventListener('click',()=>{
+    const b=vocabBlock(btn.dataset.block); const item=b?.words.find(x=>x.word===btn.dataset.word); if(item){addVocabWord(item,b.id);save();vocab();}
+  }));
+}
+
 function texts(){
   const local = TEXTS.map((t,i) => `
     <div class="card">
@@ -1151,8 +3251,8 @@ function texts(){
       <div class="tag">${t.level}</div>
       <h3>${t.title}</h3>
       <p>${t.ru}</p>
-      <p class="muted">Реальный текст из открытого источника. Загружается с Викизворника прямо при открытии.</p>
-      <button type="button" class="read-source" data-source-index="${i}">Читать оригинал</button>
+      <p class="muted">Оригинал с Викизворника. Открываем источник напрямую, чтобы не зависеть от ограничений браузера.</p>
+      <button type="button" class="read-source" data-source-index="${i}">Открыть оригинал</button>
       <a class="source-link" href="${t.url}" target="_blank" rel="noopener">Открыть источник ↗</a>
     </div>`).join("");
   $("list").innerHTML = `
@@ -1161,30 +3261,9 @@ function texts(){
     <p class="muted">Здесь мы не выдаём AI-текст за настоящий: оригинал загружается с Викизворника и остаётся исходным.</p>${real}`;
 }
 
-async function openRealSource(i){
+function openRealSource(i){
   const t=REAL_SOURCES[i];
-  $("title").textContent=t.title;
-  $("level").textContent=t.level+" · "+t.ru;
-  $("source").textContent=t.source;
-  $("text").innerHTML='<p class="muted">Загружаю оригинальный текст…</p>';
-  $("popup").classList.add("hide");
-  view("reader");
-  try{
-    const api='https://sr.wikisource.org/w/api.php?action=parse&page='+encodeURIComponent(t.page)+'&prop=text&format=json&origin=*';
-    const res=await fetch(api);
-    if(!res.ok) throw new Error('HTTP '+res.status);
-    const data=await res.json();
-    const html=data?.parse?.text?.['*'];
-    if(!html) throw new Error('Нет текста');
-    const doc=new DOMParser().parseFromString(html,'text/html');
-    doc.querySelectorAll('style,script,table,.mw-editsection,.reference,.reflist,.navbox').forEach(x=>x.remove());
-    const parts=[...doc.querySelectorAll('p')].map(p=>p.textContent.trim()).filter(Boolean);
-    const text=parts.join(' ');
-    if(!text) throw new Error('Пустой текст');
-    renderText(text);
-  }catch(err){
-    $("text").innerHTML=`<p>Не удалось загрузить оригинал автоматически.</p><p class="muted">Можно открыть источник напрямую:</p><p><a class="source-link" href="${t.url}" target="_blank" rel="noopener">${t.url}</a></p>`;
-  }
+  window.open(t.url,'_blank','noopener');
 }
 
 function tokenize(text){ return text.split(/(\s+)/); }
@@ -1252,7 +3331,7 @@ function speakText(text){
 function word(w){
   const translation = DICT[w] || 'Перевод пока не добавлен';
   const exists = saved.some(x => x.word === w);
-  const verb = VERB_FORMS[w];
+  const verb = VERB_FORMS[w] || VERB_FORMS[normalize(w)];
   const verbBlock = verb ? `
     <div class="verb-block">
       <div class="verb-title">Глагол: <b>${verb.lemma}</b> · ${verb.translation}</div>
@@ -1280,7 +3359,8 @@ function word(w){
 
 function addWord(w){
   if (!saved.some(x => x.word === w)) {
-    saved.push({word:w, translation:DICT[w] || 'Перевод пока не добавлен', added:new Date().toISOString(), box:1, nextReview:Date.now()});
+    const sourceBlock = VOCAB_BLOCKS.find(b => b.words.some(x => x.word === w));
+    saved.push({word:w, translation:DICT[w] || 'Перевод пока не добавлен', added:new Date().toISOString(), box:1, nextReview:Date.now(), blockId:sourceBlock ? sourceBlock.id : undefined});
     save();
   }
   word(w);
@@ -1288,6 +3368,7 @@ function addWord(w){
 
 function words(){
   const due = getDueWords().length;
+  const blockCounts = VOCAB_BLOCKS.map(b => ({...b, count:blockSavedWords(b.id).length})).filter(b => b.count);
   $('saved').innerHTML = `
     <div class="card review-card">
       <h3>Тренировки</h3>
@@ -1298,6 +3379,9 @@ function words(){
         <button type="button" id="start-choice">🎯 Слово → перевод</button>
         <button type="button" id="start-reverse">🧠 Перевод → слово</button>
       </div>
+      <h4>Повторение по блокам</h4>
+      <p class="muted">Теперь можно не гонять весь словарь сразу. Выбирай один блок из 100 слов.</p>
+      <div class="block-buttons">${blockCounts.length ? blockCounts.map(b=>`<button type="button" class="saved-block-review" data-block="${b.id}">${b.level} · ${b.title} (${b.count}/100)</button>`).join('') : '<span class="muted">Пока нет сохранённых блоков.</span>'}</div>
       <hr>
       <button type="button" id="export-words">💾 Сохранить мои слова</button>
       <button type="button" id="import-words">📥 Загрузить мои слова</button>
@@ -1306,13 +3390,14 @@ function words(){
     </div>
     <div class="card">
       <h3>Мои слова: ${saved.length}</h3>
-      ${saved.length ? saved.map((x,i) => `<div class="row"><b>${x.word}</b><span> — ${x.translation}</span><span class="box-label">Коробка ${x.box || 1}</span><button type="button" class="small speak-saved" data-word="${x.word}">🔊</button><button type="button" class="small remove-word" data-index="${i}">Удалить</button></div>`).join('') : `<p>Словарь пока пуст.</p>`}
+      ${saved.length ? saved.map((x,i) => `<div class="row"><b>${x.word}</b><span> — ${x.translation}</span><span class="box-label">Коробка ${x.box || 1}${x.blockId ? ' · '+(vocabBlock(x.blockId)?.id || x.blockId) : ''}</span><button type="button" class="small speak-saved" data-word="${x.word}">🔊</button><button type="button" class="small remove-word" data-index="${i}">Удалить</button></div>`).join('') : `<p>Словарь пока пуст.</p>`}
     </div>`;
   view('words');
 
   $('start-review').addEventListener('click', startReview);
   $('start-choice').addEventListener('click', () => startExercise('choice'));
   $('start-reverse').addEventListener('click', () => startExercise('reverse'));
+  document.querySelectorAll('.saved-block-review').forEach(b=>b.addEventListener('click',()=>startBlockReview(b.dataset.block,'review')));
   $('export-words').addEventListener('click', exportWords);
   $('import-words').addEventListener('click', () => $('import-file').click());
   $('import-file').addEventListener('change', importWords);
@@ -1322,6 +3407,7 @@ function words(){
 let exerciseQueue = [];
 let exerciseIndex = 0;
 let exerciseType = 'choice';
+let exercisePool = null;
 
 function shuffle(arr){
   const a=[...arr];
@@ -1335,7 +3421,8 @@ function startExercise(type){
     return;
   }
   exerciseType = type;
-  exerciseQueue = shuffle(saved).slice(0, Math.min(10, saved.length)).map(x => x.word);
+  exercisePool = saved;
+  exerciseQueue = shuffle(saved).slice(0, Math.min(20, saved.length)).map(x => x.word);
   exerciseIndex = 0;
   renderExercise();
   view('review');
@@ -1344,7 +3431,7 @@ function startExercise(type){
 function renderExercise(){
   if (exerciseIndex >= exerciseQueue.length) {
     $('review-content').innerHTML = `<div class="card"><h2>Тренировка закончена 🎉</h2><p>Ты прошёл ${exerciseQueue.length} заданий.</p><button type="button" id="exercise-finish">Вернуться к моим словам</button></div>`;
-    $('exercise-finish').addEventListener('click', words);
+    $('exercise-finish').addEventListener('click', () => { exercisePool=null; words(); });
     return;
   }
   const item = saved.find(x => x.word === exerciseQueue[exerciseIndex]);
@@ -1353,7 +3440,8 @@ function renderExercise(){
 }
 
 function renderChoice(item){
-  const others = shuffle(saved.filter(x => x.word !== item.word)).slice(0,3);
+  const pool = exercisePool || saved;
+  const others = shuffle(pool.filter(x => x.word !== item.word)).slice(0,3);
   const options = shuffle([item, ...others]);
   $('review-content').innerHTML = `<div class="card review-card"><p class="muted">Слово → перевод · ${exerciseIndex+1} из ${exerciseQueue.length}</p><div class="flash-word">${item.word}</div><button type="button" id="exercise-speak">🔊 Послушать</button><div class="options">${options.map((x,i)=>`<button type="button" class="option" data-answer="${i}">${x.translation}</button>`).join('')}</div><div id="exercise-feedback" class="feedback"></div></div>`;
   $('exercise-speak').addEventListener('click',()=>speakWord(item.word));
@@ -1367,7 +3455,8 @@ function renderChoice(item){
 }
 
 function renderReverse(item){
-  const others = shuffle(saved.filter(x => x.word !== item.word)).slice(0,3);
+  const pool = exercisePool || saved;
+  const others = shuffle(pool.filter(x => x.word !== item.word)).slice(0,3);
   const options = shuffle([item, ...others]);
   $('review-content').innerHTML = `<div class="card review-card"><p class="muted">Перевод → слово · ${exerciseIndex+1} из ${exerciseQueue.length}</p><div class="flash-word">${item.translation}</div><div class="options">${options.map((x,i)=>`<button type="button" class="option" data-answer="${i}">${x.word}</button>`).join('')}</div><div id="exercise-feedback" class="feedback"></div></div>`;
   document.querySelectorAll('.option').forEach((b,i)=>b.addEventListener('click',()=>{
@@ -1504,6 +3593,7 @@ document.addEventListener("click", event => {
   if (nav) {
     const v = nav.dataset.v;
     if (v === "texts") texts();
+    if (v === "vocab") vocab();
     if (v === "words") words();
     view(v);
     return;
