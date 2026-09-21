@@ -5692,7 +5692,7 @@ function markSentenceUsed(item,correct){
   sentenceStats._recent=[item.id,...sentenceStats._recent.filter(x=>x!==item.id)].slice(0,5);
   saveSentenceStats();
 }
-function chooseSentenceQueue(limit=10){
+function chooseSentenceQueue(limit=20){
   const pool=eligibleSentenceTraining();
   const usage=sentenceStats._wordUsage||{};
   const recent=sentenceStats._recent||[];
@@ -5717,8 +5717,17 @@ let sentenceExerciseQueue=[];
 let sentenceExerciseIndex=0;
 let sentenceExerciseCurrent=null;
 function startSentenceAssembly(){
-  sentenceExerciseQueue=chooseSentenceQueue(10);
+  sentenceExerciseQueue=chooseSentenceQueue(20);
   if(!sentenceExerciseQueue.length){alert('Пока нет предложений для этой тренировки.');return;}
+  // Минимум 20 заданий за занятие. Если база меньше 20, добираем с повторениями.
+  while(sentenceExerciseQueue.length<20){
+    const pool=chooseSentenceQueue(20);
+    if(!pool.length) break;
+    for(const item of pool){
+      sentenceExerciseQueue.push(item);
+      if(sentenceExerciseQueue.length>=20) break;
+    }
+  }
   sentenceExerciseIndex=0; renderSentenceAssembly(); view('review');
 }
 function renderSentenceAssembly(){
@@ -5728,32 +5737,42 @@ function renderSentenceAssembly(){
   }
   const item=sentenceExerciseQueue[sentenceExerciseIndex]; sentenceExerciseCurrent=item;
   const words=sentenceTokens(item.sr); const shuffled=shuffle(words.map((word,i)=>({word,originalIndex:i})));
-  $('review-content').innerHTML=`<div class="card review-card"><p class="muted">Русское предложение → собери сербское · ${sentenceExerciseIndex+1} из ${sentenceExerciseQueue.length}${item.source?` · ${escapeHtml(item.source)}`:''}</p><h3>${escapeHtml(item.ru)}</h3><p class="muted small-note">Нажимай на слова. Уже выбранное слово можно убрать прямо из собранного предложения.</p><div id="assembled" class="assembled-sentence"></div><div id="word-bank" class="word-bank">${shuffled.map((x,i)=>`<button type="button" class="assemble-word" data-i="${i}">${escapeHtml(x.word)}</button>`).join('')}</div><div class="vocab-actions"><button type="button" id="assembly-undo">↩ Убрать последнее</button><button type="button" id="assembly-clear">Очистить</button><button type="button" id="assembly-check">Проверить</button><button type="button" id="assembly-speak">🔊 Послушать</button></div><div id="assembly-feedback" class="feedback"></div><div id="assembly-next-wrap" class="vocab-actions hide"><button type="button" id="assembly-next">Следующее предложение →</button></div></div>`;
+  $('review-content').innerHTML=`<div class="card review-card"><p class="muted">Русское предложение → собери сербское · ${sentenceExerciseIndex+1} из ${sentenceExerciseQueue.length}${item.source?` · ${escapeHtml(item.source)}`:''}</p><h3>${escapeHtml(item.ru)}</h3><p class="muted small-note">Нажимай на слова. Уже выбранное слово можно убрать прямо из собранного предложения.</p><div id="assembled" class="assembled-sentence"></div><div id="word-bank" class="word-bank">${shuffled.map((x,i)=>`<button type="button" class="assemble-word" data-i="${i}">${escapeHtml(x.word)}</button>`).join('')}</div><div class="vocab-actions"><button type="button" id="assembly-undo">↩ Убрать последнее</button><button type="button" id="assembly-clear">Очистить</button><button type="button" id="assembly-check" disabled>Проверить</button><button type="button" id="assembly-speak">🔊 Послушать</button></div><div id="assembly-feedback" class="feedback"></div><div id="assembly-next-wrap" class="vocab-actions hide"><button type="button" id="assembly-next">Следующее предложение →</button></div></div>`;
   const chosen=[];
+  let checked=false;
   const renderChosen=()=>{
     $('assembled').innerHTML=chosen.map((x,i)=>`<button type="button" class="chosen-word" data-choice="${i}" title="Убрать это слово">${escapeHtml(x.word)}</button>`).join(' ');
     document.querySelectorAll('.chosen-word').forEach(btn=>btn.addEventListener('click',()=>{
+      if(checked)return;
       const i=Number(btn.dataset.choice); const removed=chosen.splice(i,1)[0];
       const bankBtn=document.querySelector(`.assemble-word[data-i="${removed.bankIndex}"]`); if(bankBtn)bankBtn.disabled=false;
-      renderChosen();
+      renderChosen(); updateCheckState();
     }));
   };
-  document.querySelectorAll('.assemble-word').forEach(btn=>btn.addEventListener('click',()=>{
-    const i=Number(btn.dataset.i); if(chosen.some(x=>x.bankIndex===i))return;
-    chosen.push({word:shuffled[i].word,bankIndex:i}); btn.disabled=true; renderChosen();
-  }));
-  $('assembly-undo').addEventListener('click',()=>{if(!chosen.length)return; const removed=chosen.pop(); const bankBtn=document.querySelector(`.assemble-word[data-i="${removed.bankIndex}"]`); if(bankBtn)bankBtn.disabled=false; renderChosen();});
-  $('assembly-clear').addEventListener('click',()=>{chosen.splice(0);document.querySelectorAll('.assemble-word').forEach(b=>b.disabled=false);renderChosen();$('assembly-feedback').innerHTML='';$('assembly-next-wrap').classList.add('hide');});
-  $('assembly-check').addEventListener('click',()=>{
+  const updateCheckState=()=>{ $('assembly-check').disabled = checked || chosen.length!==shuffled.length; };
+  const checkAnswer=()=>{
+    if(checked || chosen.length!==shuffled.length)return;
+    checked=true;
     const answer=chosen.map(x=>x.word).join(' ');
     const ok=answer===item.sr;
     markSentenceUsed(item,ok);
-    $('assembly-feedback').innerHTML=ok?'<b>✓ Правильно!</b>':'<b>✗ Порядок пока неверный.</b><br>Можешь убрать отдельные слова, очистить всё и собрать заново. Если хочешь пропустить задание, нажми «Следующее предложение».<br><b>Правильный вариант:</b> '+escapeHtml(item.sr);
-    $('assembly-next-wrap').classList.remove('hide');
+    $('assembly-feedback').innerHTML=ok?'<b>✓ Правильно!</b>':'<b>✗ Порядок пока неверный.</b><br><b>Правильный вариант:</b> '+escapeHtml(item.sr);
     $('assembly-check').disabled=true;
-  });
+    $('assembly-next-wrap').classList.remove('hide');
+  };
+  document.querySelectorAll('.assemble-word').forEach(btn=>btn.addEventListener('click',()=>{
+    if(checked)return;
+    const i=Number(btn.dataset.i); if(chosen.some(x=>x.bankIndex===i))return;
+    chosen.push({word:shuffled[i].word,bankIndex:i}); btn.disabled=true; renderChosen(); updateCheckState();
+    // Когда все слова собраны, проверяем автоматически.
+    if(chosen.length===shuffled.length) checkAnswer();
+  }));
+  $('assembly-undo').addEventListener('click',()=>{if(checked||!chosen.length)return; const removed=chosen.pop(); const bankBtn=document.querySelector(`.assemble-word[data-i="${removed.bankIndex}"]`); if(bankBtn)bankBtn.disabled=false; renderChosen(); updateCheckState();});
+  $('assembly-clear').addEventListener('click',()=>{if(checked)return;chosen.splice(0);document.querySelectorAll('.assemble-word').forEach(b=>b.disabled=false);renderChosen();updateCheckState();$('assembly-feedback').innerHTML='';});
+  $('assembly-check').addEventListener('click',checkAnswer);
   $('assembly-next').addEventListener('click',()=>{sentenceExerciseIndex++;renderSentenceAssembly();});
   $('assembly-speak').addEventListener('click',()=>speakText(item.sr));
+  updateCheckState();
 }
 
 function startTextTraining(text){
@@ -5837,7 +5856,9 @@ function startReviewWithList(list, emptyMessage='Подходящих слов �
 }
 
 function startReview(){
-  startReviewWithList(getDueWords(), 'На сегодня слов для повторения нет. Добавь новые слова или возвращайся позже.');
+  // Повторение по интервалам можно запускать в любое время: показываем весь личный словарь,
+  // а не только слова, которым формально пришёл срок.
+  startReviewWithList(saved, 'В «Мои слова» пока нет слов для повторения.');
 }
 
 function startDifficultReview(){
@@ -5893,15 +5914,21 @@ function answerReview(w, correct){
     item.nextReview = Date.now() + days * 24 * 60 * 60 * 1000;
   } else {
     item.mistakes += 1;
-    item.box = Math.min(current, 2);
+    item.box = 1;
     item.nextReview = Date.now();
     if (item.mistakes >= 2) item.hard = true;
-    // Ошибочная карточка возвращается в конец текущей сессии, чтобы можно было попробовать ещё раз.
     reviewQueue.push(w);
   }
   save();
-  reviewIndex++;
-  renderReviewCard();
+  // Сразу показываем перевод/результат, затем автоматически переходим к следующей карточке.
+  const card = document.querySelector('.review-card');
+  if(card){
+    const ans=document.getElementById('review-answer');
+    if(ans){ ans.classList.remove('hide'); ans.textContent=item.translation || getTranslation(item.word); }
+    const actions=document.getElementById('review-actions'); if(actions) actions.classList.add('hide');
+    const show=document.getElementById('show-answer'); if(show) show.classList.add('hide');
+  }
+  setTimeout(()=>{reviewIndex++; renderReviewCard();}, 650);
 }
 
 function exportWords(){
