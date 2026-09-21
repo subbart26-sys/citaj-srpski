@@ -4106,8 +4106,48 @@ normalizeSavedWords();
 const $ = id => document.getElementById(id);
 const normalize = w => w.toLowerCase().replace(/[„“”«».,!?;:()\[\]{}]/g, "").trim();
 
+// Индекс глаголов строится из известных форм и инфинитивов учебной библиотеки.
+// Это позволяет не зависеть только от вручную перечисленных форм.
+const VERB_INDEX = {};
+function addVerbIndex(info, extraForms=[]){
+  if(!info || !info.lemma) return;
+  const forms = [info.lemma, info.present, ...(info.past||'').split('/'), ...(info.future||'').split(/\s+/), ...extraForms];
+  forms.map(normalize).filter(Boolean).forEach(f=>VERB_INDEX[f]=info);
+}
+Object.values(VERB_FORMS).forEach(v=>addVerbIndex(v));
+
+function makeRegularVerb(lemma){
+  const l=normalize(lemma);
+  if(!/(ati|iti|eti)$/.test(l)) return null;
+  let past='', present='';
+  if(l.endsWith('ati')){
+    const stem=l.slice(0,-3); past=`${stem}ao / ${stem}ala`; present=`${stem}a`;
+  } else if(l.endsWith('iti')){
+    const stem=l.slice(0,-3); past=`${stem}io / ${stem}ila`; present=`${stem}i`;
+  } else {
+    const stem=l.slice(0,-3); past=`${stem}eo / ${stem}ela`; present=`${stem}e`;
+  }
+  return {lemma:l, translation:DICT[l]||'', past, present, future:`će ${l}`, generated:true};
+}
+
+// Берём инфинитивы прямо из текстов. Для регулярных глаголов создаём формы
+// 3-го лица и прошедшее время; исключения уже находятся в VERB_FORMS.
+try{
+  const sourceWords = new Set();
+  TEXTS.forEach(t => String(t.text||'').toLowerCase().match(/[a-zčćđšž]+/g)?.forEach(x=>sourceWords.add(x)));
+  sourceWords.forEach(x=>{
+    if(/(ati|iti|eti)$/.test(x) && x.length>4 && !VERB_INDEX[x]){
+      const v=makeRegularVerb(x);
+      if(v){
+        addVerbIndex(v,[v.past.split(' / ')[0],v.past.split(' / ')[1],v.present]);
+      }
+    }
+  });
+}catch(e){}
+
 function findVerbInfo(w){
   const n=normalize(w);
+  if(VERB_INDEX[n]) return VERB_INDEX[n];
   if(VERB_FORMS[n]) return VERB_FORMS[n];
   for(const v of Object.values(VERB_FORMS)){
     const forms=[v.lemma,v.past,v.present,v.future].filter(Boolean).join(' ').split(/\s+/).map(normalize);
@@ -4116,18 +4156,55 @@ function findVerbInfo(w){
   return null;
 }
 
+const REMOTE_TRANSLATION_CACHE = (()=>{
+  try{return JSON.parse(localStorage.getItem('citajSrpskiRemoteTranslations')||'{}')||{};}catch(e){return {};}
+})();
+function saveRemoteTranslationCache(){
+  try{localStorage.setItem('citajSrpskiRemoteTranslations',JSON.stringify(REMOTE_TRANSLATION_CACHE));}catch(e){}
+}
+
 function getTranslation(w){
   const n=normalize(w);
   if(DICT[n]) return DICT[n];
   const verb=findVerbInfo(n);
-  if(verb) return verb.translation;
+  if(verb && verb.translation) return verb.translation;
+  if(REMOTE_TRANSLATION_CACHE[n]) return REMOTE_TRANSLATION_CACHE[n];
   const candidates=[];
-  const suffixes=['ovima','evima','ama','ima','anje','enje','u','om','em','og','oj','im','om','as','os','es','us','a','e','i','o','y'];
+  const suffixes=['ovima','evima','ama','ima','anje','enje','u','om','em','og','oj','im','as','os','es','us','a','e','i','o','y'];
   for(const suffix of suffixes){
     if(n.length>suffix.length+2 && n.endsWith(suffix)) candidates.push(n.slice(0,-suffix.length));
   }
   for(const c of candidates){ if(DICT[c]) return `${DICT[c]} (форма слова «${n}»)`; }
-  return 'Перевод пока не добавлен';
+  return 'Перевод загружается…';
+}
+
+let translationRequestId=0;
+async function remoteTranslateWord(w){
+  const n=normalize(w);
+  if(!n || DICT[n] || REMOTE_TRANSLATION_CACHE[n]) return getTranslation(n);
+  const urls=[
+    {url:`https://api.mymemory.translated.net/get?q=${encodeURIComponent(n)}&langpair=sr|ru`, type:'mymemory'},
+    {url:`https://api.mymemory.translated.net/get?q=${encodeURIComponent(n)}&langpair=sr-Latn|ru`, type:'mymemory'},
+    {url:`https://translate.googleapis.com/translate_a/single?client=gtx&sl=sr&tl=ru&dt=t&q=${encodeURIComponent(n)}`, type:'google'}
+  ];
+  for(const item of urls){
+    try{
+      const r=await fetch(item.url,{headers:{Accept:'application/json'}});
+      if(!r.ok) continue;
+      const j=await r.json();
+      const tr=item.type==='google' ? String(j?.[0]?.[0]?.[0]||'').trim() : String(j?.responseData?.translatedText||'').trim();
+      if(tr && !/INVALID TARGET LANGUAGE|MYMEMORY|quota|error/i.test(tr)){
+        REMOTE_TRANSLATION_CACHE[n]=tr;
+        saveRemoteTranslationCache();
+        return tr;
+      }
+    }catch(e){}
+  }
+  return getTranslation(n);
+}
+
+function escapeHtml(s){
+  return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 }
 
 
@@ -4282,33 +4359,47 @@ function speakText(text){
   window.speechSynthesis.speak(u);
 }
 
-function word(w){
+async function word(w){
+  const requestId=++translationRequestId;
   const translation = getTranslation(w);
   const exists = saved.some(x => x.word === w);
   const verb = findVerbInfo(w);
-  const verbBlock = verb ? `
-    <div class="verb-block">
-      <div class="verb-title">Глагол: <b>${verb.lemma}</b> · ${verb.translation}</div>
-      <div class="verb-grid">
-        <div><span>Инфинитив</span><b>${verb.lemma} <small>— ${verb.translation}</small></b></div>
-        <div><span>Прошедшее</span><b>${verb.past}</b></div>
-        <div><span>Настоящее</span><b>${verb.present}</b></div>
-        <div><span>Будущее</span><b>${verb.future}</b></div>
-      </div>
-      ${verb.note ? `<div class="verb-note">${verb.note}</div>` : ''}
-    </div>` : '';
-  $('popup').innerHTML = `
-    <div class="popup-title">${w}</div>
-    <div class="popup-translation">${translation}</div>
-    ${verbBlock}
-    <div class="popup-actions">
-      <button type="button" id="speak-word">🔊 Слушать</button>
-      <button type="button" id="add-word-button">${exists ? '✓ Уже в моих словах' : 'Добавить в мои слова'}</button>
-    </div>`;
-  $('popup').classList.remove('hide');
-  $('speak-word').addEventListener('click', () => speakWord(w));
-  const addButton = $('add-word-button');
-  if (addButton && !exists) addButton.addEventListener('click', () => addWord(w));
+  const render = (tr, v=verb) => {
+    if(requestId!==translationRequestId) return;
+    const verbBlock = v ? `
+      <div class="verb-block">
+        <div class="verb-title">Глагол: <b>${escapeHtml(v.lemma)}</b> · ${escapeHtml(v.translation||tr)}</div>
+        <div class="verb-grid">
+          <div><span>Инфинитив</span><b>${escapeHtml(v.lemma)} <small>— ${escapeHtml(v.translation||tr)}</small></b></div>
+          <div><span>Прошедшее</span><b>${escapeHtml(v.past||'—')}</b></div>
+          <div><span>Настоящее</span><b>${escapeHtml(v.present||'—')}</b></div>
+          <div><span>Будущее</span><b>${escapeHtml(v.future||('će '+v.lemma))}</b></div>
+        </div>
+        ${v.generated ? '<div class="verb-note">Формы построены для регулярного глагола. Для неправильных глаголов используются отдельные формы.</div>' : ''}
+      </div>` : '';
+    $('popup').innerHTML = `
+      <div class="popup-title">${escapeHtml(w)}</div>
+      <div class="popup-translation">${escapeHtml(tr)}</div>
+      ${verbBlock}
+      <div class="popup-actions">
+        <button type="button" id="speak-word">🔊 Слушать</button>
+        <button type="button" id="add-word-button">${exists ? '✓ Уже в моих словах' : 'Добавить в мои слова'}</button>
+      </div>`;
+    $('popup').classList.remove('hide');
+    $('speak-word').addEventListener('click', () => speakWord(w));
+    const addButton = $('add-word-button');
+    if(addButton && !exists) addButton.addEventListener('click', () => addWord(w));
+  };
+  render(translation);
+  if(translation === 'Перевод загружается…'){
+    const tr=await remoteTranslateWord(w);
+    let v=verb;
+    if(v && !v.translation) v={...v,translation:tr};
+    render(tr,v);
+  } else if(verb && !verb.translation){
+    const tr=await remoteTranslateWord(verb.lemma);
+    render(translation,{...verb,translation:tr});
+  }
 }
 
 function addWord(w){
