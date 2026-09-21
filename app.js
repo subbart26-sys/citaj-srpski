@@ -4046,12 +4046,10 @@ const VOCAB_BLOCKS = [
 ];
 
 // Дополнительные формы и слова новых учебных текстов.
-TEXTS.push({"title": "275 слов: дорога домой", "ru": "Учебный рассказ по списку из 275 слов", "level": "A1–A2 · Мои 275 слов", "source": "Авторский учебный материал, созданный для тренировки слов из списка пользователя; не является оригинальным литературным произведением.", "text": "U malom gradu živeo je preduzimljiv čovek koji je voleo da popravlja alat. Njegov dom bio je pored starog ambara, a iza njega se nalazila njiva. Na krovu je stajao krovopokrivač i proveravao crep posle jakog vetra. Ispod krova je stolar pravio mekan jastuk za malu sobu. U dvorištu su bile košnica, stoka i vreća sa krmivom. Domaćin je svako jutro proveravao zdravlje životinja i donosio svež obrok. Jednog jutra magla je prekrila dolinu, a kroz nju se čuo grom. Bilo je hladno, pa je domaćin navukao džemper i kapuljaču. Na putu prema gradu čekala ga je devojka sa velikim koferom. Ona je bila radoznala i načitana, ali pomalo nepoverljiva. Ispričala mu je da putuje na prijemni ispit i da traži biblioteku. Čovek joj je pružio kartu i pokazao put prema školi. Učenici su izlazili iz škole, a jedan đak je nosio težak ruksak. Nedaleko od škole nalazili su se park, trg i fontana. Na trgu je bila bina na kojoj je talentovan muzičar svirao gitaru. Pored njega je dirigent vodio mali orkestar sa flautom, violinom i klavirom. Publika je slušala melodiju i počela da pljeska posle svake pesme. Posle koncerta čuli su bubanj i glasnu, bučnu muziku sa druge strane trga. Jedan čovek je rekao da takva zabava nije njegov izbor. Drugi je odgovorio da je život kratak i da treba imati radost. U kafiću su naručili čaj, pastu i laganu večeru. Domaćin je doneo račun, ali je gost imao problem sa novcem. Kvar na telefonu mu je pokvario planove za putovanje. Ipak, njegov drug je pokazao razumevanje i ponudio rezervni telefon. Tada je među njima nastao osećaj poverenja i iskrenog poštovanja. Na zidu kafića visila je šarena slika sa motivima mora i planine. Devojka je rekla da joj je more najlepša uspomena iz detinjstva. Njena majka je kao iseljenik dugo živela daleko od zavičaja. U njenom sećanju ostali su most, reka i mali potok. Jednom je preko tog mosta prelazila rikša, dok je spor voz prolazio kroz tunel. Vozač je bio hitar, ali je morao da smanji brzinu zbog radova. Na putu je stajao prolaznik koji je upozoravao na blato. Putarina je bila mala, pa putnik nije imao razlog da se žali. Na obali su se videli tragovi u pesku i veliki talasi. Vetar je bio jak, ali je bilo toplo na suncu. Neko je rekao da će prema večeri vreme postati hladno. Na drugoj strani zaliva nalazio se stari hram. Pored hrama je stajao čovek u dugom ogrtaču, ozbiljan i hrabar. On je čuvao sklonište za ljude koji se izgube u planini. U skloništu je jedna žena skupljala drva za vatru. Ona je bila strpljiva, spretna i veoma preduzimljiva. Njena ćerka je bila stidljiva i pomalo plašljiva. U sobi su imale svilu, nakit i stari zlatan venac. Na stolu je bila zagonetka koju niko nije umeo da reši. Devojka je pokušala da je reši, ali je bila neodlučna. Njena majka joj je rekla da razum pomaže više od žurbe. Tada su začule čudan zvuk iz šume. Mislile su da je to majmun, ali se pojavio veliki tigar. Žena je ostala mirna, dok je devojka bila uznemirena. Životinja je ipak samo prešla stazu i nestala među granama. Posle toga su se obe nasmejale i nastavile šetnju. U šumi su pronašle drvo sa širokim granama i hladom. Na vrhu brda video se grad, a iza njega visoka planina. U dolini su se čuli talasi i zvuk vode iz izvora. Pored izvora je stajao čovek koji je crtao pejzaž. Bio je edukovan i talentovan za likovnu umetnost. Njegov izbor boja bio je lep, ali njegov prijatelj je smatrao da je previše naivan. Njihov razgovor je bio interesantan, jer su imali različit pogled na umetnost. Na kraju su napravili kompromis i zajedno završili crtež. Uveče su otišli na slavlje povodom jednog važnog događaja. Na slavlju su bili delegacija iz susednog grada i domaćin sa svojom ženom. Domaćin je gostima poželeo dobrodošlicu i ponudio večeru. Jedna žena je donela nakit od svile i mali buket. Druga je pričala o svadbi koja je trajala ceo dan. Muzika je bila vesela, a publika je pevala i pljeskala. Jedan gost je bio glup i pohlepan, pa je pokušao da uzme tuđi nakit. Domaćin ga je zaustavio bez sukoba i zamolio ga da prestane. Gost je shvatio grešku i odlučio da se izvini. Bilo mu je žao, ali nije znao kako da zatraži oprost. Njegov drug mu je rekao da je prihvatanje greške prvi korak. Posle razgovora došlo je do pomirenja i novog sporazuma. Svi su želeli mir, a ne rat ili bitku. Stari čovek je pričao kako je jedan sukob trajao godinama. Na kraju je došlo primirje i povlačenje vojske. Ljudi su tada mogli da se vrate svojim kućama. Obnova sela bila je velika odgovornost za sve stanovnike. Graditelj je vodio radove, a stolar je pravio vrata. Neko je popravljao fasadu, a drugi su čistili ulice. Jedan lenj radnik je kasnio, dok je spretan šegrt radio bez odmora. Šegrt je brzo naučio zanat i postao uspešan. Njegov šef je rekao da je veština važnija od brzine. Na kraju dana svi su imali pravo na odmor. Jedan čovek je seo na klupu i gledao decu kako se igraju. Igra je bila jednostavna, ali je donosila radost. Jedan čovek je bio debeo, drugi jak, a treći smotan. Svi su se smejali, ali niko nije želeo da bude sebičan. U blizini je bio čovek koji je izgledao lukav i pomalo nepoverljiv. On je tvrdoglav odbijao svaku ponudu za posao. Kasnije je ipak prihvatio ponudu posle dugih pregovora. Na sastanku su razgovarali o uslovima i roku. Bilo je važno da svako preuzme svoju dužnost i odgovornost. Jedan učesnik je bio rasejan i ponekad je zaboravljao dogovor. Drugi je bio nestrpljiv, ali je pokušavao da bude strpljiv. Na kraju su doneli odluku i odlučili da obnove stari most. Obnova je počela na proleće, kada je vreme postalo toplo. Do jeseni su završili posao i most je ponovo bio bezbedan. Tada su organizovali obilazak i malu zabavu za selo. Deca su nosila sanjke jer je uskoro dolazila zima. Na planini su pripremili skije i označili stazu. Jedan putnik je pitao gde može da smesti ruksak. Domaćin mu je ponudio sobu, jastuk i topao obrok. Ujutro je padao sneg, a vetar je pravio talase od snežne prašine. Putovanje je ipak bilo uspešno i svi su se vratili kući. Na kraju su razgovarali o budućnosti i o tome šta žele da promene. Jedna devojka je rekla da je njen cilj napredak, a ne savršenstvo. Drugi je rekao da je zdravlje važnije od novca. Treći je rekao da je ljubav najvažnija za život. Svi su se složili da čovek treba da čuva svoje zavičaj i uspomene. Pre rastanka žena je pružila ruku prijatelju i nasmešila se. On joj je rekao da će se vratiti već sledećeg proleća. Tako se završila njihova duga priča o gradu, putu i ljudima. U staroj priči pominjala se bala koja je ostala iz vremena sukoba. To je bila neobična bajka, a u toj bajci svako je imao svoju ulogu. Bezbednost putnika bila je najvažnija. Posle pada osećao je bol u ruci. Briga za druge pokazuje karakter čoveka. Svi su verovali da će budućnost biti mirnija. Mogli su čuti muziku iz daljine. Neko vreme su morali ćutati. Njihova dobrodošlica bila je iskrena. Taj događaj dugo su pamtili. Njen osmeh je sve promenio. Posle večere počelo je pranje sudova. Domaćin je odlučio da primi novog gosta. Prijem gostiju počeo je u sedam. Morao je prijaviti kvar na vozilu. Jedan točak je bio prljav od blata. Poverenje se gradilo polako. Razgovor je bio poverljiv. Kada je počela kiša, morali su prestati sa radom. Vozač je platio putarinu. Rok za radove bio je kratak. Na selu su proveravali vime krave pre muže. Jutarnja muža počela je rano. Za mužu je korišćena stara muzlica. U pesmi su opisane vite devojke. Sa vrha se pružao širok pogled. Kasnije nije želeo da žali zbog svoje odluke. Nisu morali žuriti jer su imali dovoljno vremena. Deca su veselo trčala po parku. Morali su odlučiti pre mraka. Nije želeo da popušta pod pritiskom. U našem materijalu reč ambar dobija svoj primer u kontekstu. U našem materijalu reč aplauz dobija svoj primer u kontekstu. U našem materijalu reč avion dobija svoj primer u kontekstu. U našem materijalu reč benzinska dobija svoj primer u kontekstu. U našem materijalu reč biblioteka dobija svoj primer u kontekstu. U našem materijalu reč bitka dobija svoj primer u kontekstu. U našem materijalu reč bogat dobija svoj primer u kontekstu. U našem materijalu reč brzina dobija svoj primer u kontekstu. U našem materijalu reč bučan dobija svoj primer u kontekstu. U našem materijalu reč crtati dobija svoj primer u kontekstu. U našem materijalu reč čekati dobija svoj primer u kontekstu. U našem materijalu reč čist dobija svoj primer u kontekstu. U našem materijalu reč dolina dobija svoj primer u kontekstu. U našem materijalu reč dosadan dobija svoj primer u kontekstu. U našem materijalu reč fasada dobija svoj primer u kontekstu. U našem materijalu reč flauta dobija svoj primer u kontekstu. U našem materijalu reč gitara dobija svoj primer u kontekstu. U našem materijalu reč hlad dobija svoj primer u kontekstu. U našem materijalu reč izvor dobija svoj primer u kontekstu. U našem materijalu reč iskren dobija svoj primer u kontekstu. U našem materijalu reč jelo dobija svoj primer u kontekstu. U našem materijalu reč jesen dobija svoj primer u kontekstu. U našem materijalu reč kafić dobija svoj primer u kontekstu. U našem materijalu reč kapuljača dobija svoj primer u kontekstu. U našem materijalu reč karta dobija svoj primer u kontekstu. U našem materijalu reč klavir dobija svoj primer u kontekstu. U našem materijalu reč klupa dobija svoj primer u kontekstu. U našem materijalu reč kofer dobija svoj primer u kontekstu. U našem materijalu reč koncert dobija svoj primer u kontekstu. U našem materijalu reč krmivo dobija svoj primer u kontekstu. U našem materijalu reč krov dobija svoj primer u kontekstu. U našem materijalu reč led dobija svoj primer u kontekstu. U našem materijalu reč likovna dobija svoj primer u kontekstu. U našem materijalu reč loš dobija svoj primer u kontekstu. U našem materijalu reč magarac dobija svoj primer u kontekstu. U našem materijalu reč melodija dobija svoj primer u kontekstu. U našem materijalu reč mlaz dobija svoj primer u kontekstu. U našem materijalu reč nada dobija svoj primer u kontekstu. U našem materijalu reč načitan dobija svoj primer u kontekstu. U našem materijalu reč neodlučan dobija svoj primer u kontekstu. U našem materijalu reč nosači dobija svoj primer u kontekstu. U našem materijalu reč obala dobija svoj primer u kontekstu. U našem materijalu reč obnoviti dobija svoj primer u kontekstu. U našem materijalu reč odbiti dobija svoj primer u kontekstu. U našem materijalu reč odluka dobija svoj primer u kontekstu. U našem materijalu reč oprostiti dobija svoj primer u kontekstu. U našem materijalu reč oprezan dobija svoj primer u kontekstu. U našem materijalu reč pasta dobija svoj primer u kontekstu. U našem materijalu reč pesma dobija svoj primer u kontekstu. U našem materijalu reč pijaca dobija svoj primer u kontekstu. U našem materijalu reč plašljiv dobija svoj primer u kontekstu. U našem materijalu reč plesan dobija svoj primer u kontekstu. U našem materijalu reč pljeskati dobija svoj primer u kontekstu. U našem materijalu reč početak dobija svoj primer u kontekstu. U našem materijalu reč poduhvat dobija svoj primer u kontekstu. U našem materijalu reč ponuda dobija svoj primer u kontekstu. U našem materijalu reč popuštati dobija svoj primer u kontekstu. U našem materijalu reč poštovanje dobija svoj primer u kontekstu. U našem materijalu reč pregovori dobija svoj primer u kontekstu. U našem materijalu reč primiti dobija svoj primer u kontekstu. U našem materijalu reč rad dobija svoj primer u kontekstu. U našem materijalu reč radovi dobija svoj primer u kontekstu. U našem materijalu reč radoznao dobija svoj primer u kontekstu. U našem materijalu reč raskid dobija svoj primer u kontekstu. U našem materijalu reč ritam dobija svoj primer u kontekstu. U našem materijalu reč ručak dobija svoj primer u kontekstu. U našem materijalu reč ruka dobija svoj primer u kontekstu. U našem materijalu reč sastanak dobija svoj primer u kontekstu. U našem materijalu reč sećanje dobija svoj primer u kontekstu. U našem materijalu reč silos dobija svoj primer u kontekstu. U našem materijalu reč skija dobija svoj primer u kontekstu. U našem materijalu reč slon dobija svoj primer u kontekstu. U našem materijalu reč smeh dobija svoj primer u kontekstu. U našem materijalu reč smestiti dobija svoj primer u kontekstu. U našem materijalu reč soba dobija svoj primer u kontekstu. U našem materijalu reč spoj dobija svoj primer u kontekstu. U našem materijalu reč sporazum dobija svoj primer u kontekstu. U našem materijalu reč srcima dobija svoj primer u kontekstu. U našem materijalu reč srećan dobija svoj primer u kontekstu. U našem materijalu reč sretala dobija svoj primer u kontekstu. U našem materijalu reč staza dobija svoj primer u kontekstu. U našem materijalu reč stipendija dobija svoj primer u kontekstu. U našem materijalu reč stidljiv dobija svoj primer u kontekstu. U našem materijalu reč svadba dobija svoj primer u kontekstu. U našem materijalu reč svedočanstvo dobija svoj primer u kontekstu. U našem materijalu reč svila dobija svoj primer u kontekstu. U našem materijalu reč svesci dobija svoj primer u kontekstu. U našem materijalu reč šator dobija svoj primer u kontekstu. U našem materijalu reč šetnja dobija svoj primer u kontekstu. U našem materijalu reč škola dobija svoj primer u kontekstu. U našem materijalu reč škrt dobija svoj primer u kontekstu. U našem materijalu reč šuma dobija svoj primer u kontekstu. U našem materijalu reč šaren dobija svoj primer u kontekstu. U našem materijalu reč tužan dobija svoj primer u kontekstu. U našem materijalu reč ugođaj dobija svoj primer u kontekstu. U našem materijalu reč ulica dobija svoj primer u kontekstu. U našem materijalu reč upis dobija svoj primer u kontekstu. U našem materijalu reč uslov dobija svoj primer u kontekstu. U našem materijalu reč uznemiren dobija svoj primer u kontekstu. U našem materijalu reč vatra dobija svoj primer u kontekstu. U našem materijalu reč večera dobija svoj primer u kontekstu. U našem materijalu reč violina dobija svoj primer u kontekstu. U našem materijalu reč vožnja dobija svoj primer u kontekstu. U našem materijalu reč vrh dobija svoj primer u kontekstu. U našem materijalu reč zaliv dobija svoj primer u kontekstu. U našem materijalu reč zanimanje dobija svoj primer u kontekstu. U našem materijalu reč zaposlen dobija svoj primer u kontekstu. U našem materijalu reč zgodan dobija svoj primer u kontekstu. U našem materijalu reč žaliti dobija svoj primer u kontekstu."});
-
 VOCAB_BLOCKS.push({
   "id": "my-275",
   "level": "A1–A2",
-  "title": "Мои 275 слов — учебный блок",
+  "title": "Импортированные слова — 275",
   "description": "Отдельный учебный блок по списку пользователя; не смешивается с «Моими словами». Переводы проверяются отдельно.",
   "words": [
     {
@@ -5394,17 +5392,12 @@ function vocab(){
 }
 
 function texts(){
-  const local = TEXTS.filter(t=>!t.level.includes('Исторический')).map(t=>{
-    const realIndex=TEXTS.indexOf(t);
-    const n=t.text.split(/[.!?]+/).filter(Boolean).length;
-    return `<div class="card"><div class="tag">${t.level}</div><h3>${t.title}</h3><p>${t.ru}</p><p class="muted">Большой учебный текст · ${n} предложений</p><button type="button" class="read-text" data-index="${realIndex}">📖 Читать на сайте</button></div>`;
-  }).join('');
-  const historical=TEXTS.filter(t=>t.level.includes('Исторический')).map(t=>{
-    const realIndex=TEXTS.indexOf(t);
-    const n=t.text.split(/[.!?]+/).filter(Boolean).length;
-    return `<div class="card real-source-card"><div class="tag">${t.level}</div><h3>${t.title}</h3><p>${t.ru}</p><p class="muted"><b>${n} предложений.</b> Полный оригинальный текст встроен в сайт и доступен для чтения здесь.</p><p class="source">${t.source}</p><div class="vocab-actions"><button type="button" class="read-text" data-index="${realIndex}">📖 Читать оригинал на сайте</button><a class="source-link" href="${t.url}" target="_blank" rel="noopener">Первоисточник ↗</a></div></div>`;
-  }).join('');
-  $('list').innerHTML=`<div class="card library-summary"><h3>Библиотека</h3><p>Сейчас доступно <b>${local.length} учебных текстов</b> и <b>${historical.length} исторических оригиналов</b>.</p><p class="muted">Все тексты открываются внутри нашего сайта. Нажимай на слова, чтобы смотреть перевод и сохранять их в «Мои слова».</p><p><b>Новые A2 в этой версии:</b> Dan na fakultetu · Subota u gradu · Mala izložba u kulturnom centru · Priprema putovanja vozom · Mali tim na poslu · Nedelja bez žurbe.</p></div><h3 class="library-heading">📚 Учебные тематические тексты A1/A2</h3>${local}<h3 class="library-heading">📜 Исторические оригинальные тексты</h3><p class="muted">Эти произведения встроены локально и открываются прямо в нашем режиме чтения.</p>${historical}`;
+  const local=TEXTS.filter(t=>!t.level.includes('Исторический'));
+  const historical=TEXTS.filter(t=>t.level.includes('Исторический'));
+  const card=t=>{const i=TEXTS.indexOf(t),n=splitSentences(t.text).length;return `<div class="card"><div class="tag">${t.level}</div><h3>${t.title}</h3><p>${t.ru}</p><p class="muted">Большой учебный текст · ${n} предложений</p><button type="button" class="read-text" data-index="${i}">📖 Читать на сайте</button></div>`};
+  const hcard=t=>{const i=TEXTS.indexOf(t),n=splitSentences(t.text).length;return `<div class="card real-source-card"><div class="tag">${t.level}</div><h3>${t.title}</h3><p>${t.ru}</p><p class="muted"><b>${n} предложений.</b> Полный оригинальный текст встроен в сайт.</p><p class="source">${t.source}</p><div class="vocab-actions"><button type="button" class="read-text" data-index="${i}">📖 Читать оригинал</button><a class="source-link" href="${t.url}" target="_blank" rel="noopener">Первоисточник ↗</a></div></div>`};
+  $('list').innerHTML=`<div class="card library-summary"><h3>Библиотека</h3><p>На сайте сейчас <b>${local.length} учебных текстов</b> и <b>${historical.length} исторических оригиналов</b>.</p><p class="muted">Это количество текстов, уже встроенных в сайт, а не внешний каталог возможных источников.</p><div class="library-filters"><button type="button" class="library-filter active" data-filter="all">Все</button><button type="button" class="library-filter" data-filter="A1">A1</button><button type="button" class="library-filter" data-filter="A2">A2</button><button type="button" class="library-filter" data-filter="Исторический">Исторические</button></div></div><h3 class="library-heading">📚 Учебные тексты A1/A2</h3><div id="library-local">${local.map(card).join('')}</div><h3 class="library-heading">📜 Исторические оригинальные тексты</h3><p class="muted">Эти произведения встроены локально и открываются прямо в режиме чтения.</p><div id="library-historical">${historical.map(hcard).join('')}</div>`;
+  document.querySelectorAll('.library-filter').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.library-filter').forEach(x=>x.classList.remove('active'));btn.classList.add('active');const f=btn.dataset.filter;document.querySelectorAll('#library-local .card').forEach(c=>c.style.display=(f==='all'||c.querySelector('.tag')?.textContent.includes(f))?'':'none');document.querySelector('#library-historical').style.display=(f==='all'||f==='Исторический')?'':'none';}));
 }
 
 function openRealSource(i){
@@ -5413,6 +5406,23 @@ function openRealSource(i){
 }
 
 function tokenize(text){ return text.split(/(\s+)/); }
+
+function splitSentences(text){
+  return String(text||'').match(/[^.!?]+[.!?]+|[^.!?]+$/g)?.map(x=>x.trim()).filter(Boolean) || [];
+}
+
+function speakSentenceList(sentences, rate=0.86){
+  if(!('speechSynthesis' in window)){ alert('Озвучка не поддерживается этим браузером.'); return; }
+  const voice=getSerbianVoice();
+  if(!voice){ alert('На этом устройстве не найден сербский голос. Включи сербский голос в настройках синтеза речи Android.'); return; }
+  window.speechSynthesis.cancel(); let i=0;
+  const next=()=>{ if(i>=sentences.length) return; const u=new SpeechSynthesisUtterance(sentences[i++]); u.voice=voice; u.lang=voice.lang||'sr-RS'; u.rate=rate; u.pitch=1; u.onend=()=>setTimeout(next,180); window.speechSynthesis.speak(u); }; next();
+}
+
+function readerSentenceControls(text){
+  const sentences=splitSentences(text);
+  return `<div class="reader-audio card"><div class="vocab-actions"><button type="button" id="speak-full-text">🔊 Озвучить весь текст</button><button type="button" id="speak-sentences">▶ Озвучить по предложениям</button><button type="button" id="speak-slow">🐢 Медленно</button><button type="button" id="stop-speech">⏹ Остановить</button><button type="button" id="text-training">🎯 Тренировать слова этого текста</button></div><p class="muted small-note">Каждое предложение можно прослушать отдельно.</p><div class="sentence-audio-list">${sentences.map((x,i)=>`<div class="sentence-row"><span>${i+1}. ${escapeHtml(x)}</span><button type="button" class="speak-sentence" data-sentence="${encodeURIComponent(x)}">🔊</button></div>`).join('')}</div></div>`;
+}
 
 function renderText(text){
   $("text").innerHTML = tokenize(text).map(part => {
@@ -5434,7 +5444,15 @@ function openText(i){
   $("level").textContent = `${t.level} · ${t.ru}`;
   $("source").textContent = t.source;
   renderText(t.text);
+  document.querySelectorAll('.reader-audio').forEach(x=>x.remove());
+  $("text").insertAdjacentHTML("afterend", readerSentenceControls(t.text));
   $("popup").classList.add("hide");
+  $("speak-full-text").addEventListener("click",()=>speakText(t.text));
+  $("speak-sentences").addEventListener("click",()=>speakSentenceList(splitSentences(t.text),0.86));
+  $("speak-slow").addEventListener("click",()=>speakSentenceList(splitSentences(t.text),0.62));
+  $("stop-speech").addEventListener("click",()=>window.speechSynthesis?.cancel());
+  $("text-training").addEventListener("click",()=>startTextTraining(t.text));
+  document.querySelectorAll(".speak-sentence").forEach(b=>b.addEventListener("click",()=>speakText(decodeURIComponent(b.dataset.sentence))));
   view("reader");
 }
 
@@ -5539,13 +5557,14 @@ function words(){
         <button type="button" id="start-learning">🟡 Повторить изучаемые</button>
         <button type="button" id="start-choice">🎯 Слово → перевод</button>
         <button type="button" id="start-reverse">🧠 Перевод → слово</button>
+        <button type="button" id="start-assembly">🧩 Русское предложение → собрать сербское</button>
       </div>
       <h4>Как запоминаются слова</h4>
       <p class="muted">Каждое правильное повторение переводит слово дальше: 1 → 2 → 4 → 7 → 14 → 30 дней. Ошибка возвращает его в первую коробку.</p>
       <div class="memory-stats"><span>🆕 Новые: <b>${saved.filter(x=>(Number(x.box)||1)===1).length}</b></span><span>🟡 Закрепляются: <b>${saved.filter(x=>(Number(x.box)||1)>=3 && (Number(x.box)||1)<=5).length}</b></span><span>🟢 Выучены: <b>${saved.filter(x=>(Number(x.box)||1)===6).length}</b></span></div>
       <h4>Учебные блоки — отдельно от «Моих слов»</h4>
       <p class="muted">Слова из тематических блоков не входят в «Мои слова». Они хранятся отдельно и повторяются только внутри выбранного блока.</p>
-      <div class="block-buttons">${blockCounts.length ? blockCounts.map(b=>`<button type="button" class="saved-block-review" data-block="${b.id}">${b.level} · ${b.title} (${b.count}/100)</button>`).join('') : '<span class="muted">Пока нет сохранённых блоков.</span>'}</div>
+      <div class="block-buttons">${blockCounts.length ? blockCounts.map(b=>`<button type="button" class="saved-block-review" data-block="${b.id}">${b.level} · ${b.title} (${b.count}/${b.words.length})</button>`).join('') : '<span class="muted">Пока нет сохранённых блоков.</span>'}</div>
       <hr>
       <button type="button" id="export-words">💾 Сохранить мои слова</button>
       <button type="button" id="import-words">📥 Загрузить мои слова</button>
@@ -5563,6 +5582,7 @@ function words(){
   $('start-learning').addEventListener('click', startLearningReview);
   $('start-choice').addEventListener('click', () => startExercise('choice'));
   $('start-reverse').addEventListener('click', () => startExercise('reverse'));
+  $('start-assembly').addEventListener('click', startSentenceAssembly);
   document.querySelectorAll('.saved-block-review').forEach(b=>b.addEventListener('click',()=>startBlockReview(b.dataset.block,'review')));
   $('export-words').addEventListener('click', exportWords);
   $('import-words').addEventListener('click', () => $('import-file').click());
@@ -5579,6 +5599,47 @@ function shuffle(arr){
   const a=[...arr];
   for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; }
   return a;
+}
+
+const SENTENCE_TRAINING = [
+  {ru:'Danas je hladno.',sr:'Danas je hladno.'},
+  {ru:'Čekam autobus u gradu.',sr:'Čekam autobus u gradu.'},
+  {ru:'Devojka čita knjigu u biblioteci.',sr:'Devojka čita knjigu u biblioteci.'},
+  {ru:'Vozač vozi kroz tunel.',sr:'Vozač vozi kroz tunel.'},
+  {ru:'U kafiću pijem čaj.',sr:'U kafiću pijem čaj.'},
+  {ru:'Deca se igraju u parku.',sr:'Deca se igraju u parku.'},
+  {ru:'Vetar je jak, ali je vreme toplo.',sr:'Vetar je jak, ali je vreme toplo.'},
+  {ru:'Putnik nosi ruksak.',sr:'Putnik nosi ruksak.'},
+  {ru:'Domaćin je ponudio večeru.',sr:'Domaćin je ponudio večeru.'},
+  {ru:'Učenik ima ispit.',sr:'Učenik ima ispit.'},
+  {ru:'Na stolu je karta.',sr:'Na stolu je karta.'},
+  {ru:'Ljudi žele mir.',sr:'Ljudi žele mir.'},
+  {ru:'Ona je radoznala i iskrena.',sr:'Ona je radoznala i iskrena.'},
+  {ru:'Radovi počinju na proleće.',sr:'Radovi počinju na proleće.'},
+  {ru:'Voz prolazi kroz tunel.',sr:'Voz prolazi kroz tunel.'}
+];
+let sentenceExerciseQueue=[];
+let sentenceExerciseIndex=0;
+let sentenceExerciseCurrent=null;
+function startSentenceAssembly(){
+  sentenceExerciseQueue=shuffle(SENTENCE_TRAINING).slice(0,10); sentenceExerciseIndex=0; renderSentenceAssembly(); view('review');
+}
+function renderSentenceAssembly(){
+  if(sentenceExerciseIndex>=sentenceExerciseQueue.length){ $('review-content').innerHTML=`<div class="card"><h2>Тренировка закончена 🎉</h2><p>Ты собрал ${sentenceExerciseQueue.length} предложений.</p><button type="button" id="sentence-finish">Вернуться к моим словам</button></div>`; $('sentence-finish').addEventListener('click',words); return; }
+  const item=sentenceExerciseQueue[sentenceExerciseIndex]; sentenceExerciseCurrent=item;
+  const words=item.sr.split(/\s+/); const shuffled=shuffle(words);
+  $('review-content').innerHTML=`<div class="card review-card"><p class="muted">Русское предложение → собери сербское · ${sentenceExerciseIndex+1} из ${sentenceExerciseQueue.length}</p><h3>${escapeHtml(item.ru)}</h3><div id="assembled" class="assembled-sentence"></div><div id="word-bank" class="word-bank">${shuffled.map((w,i)=>`<button type="button" class="assemble-word" data-i="${i}">${escapeHtml(w)}</button>`).join('')}</div><div class="vocab-actions"><button type="button" id="assembly-check">Проверить</button><button type="button" id="assembly-speak">🔊 Послушать</button></div><div id="assembly-feedback" class="feedback"></div></div>`;
+  const chosen=[]; const used=new Set();
+  document.querySelectorAll('.assemble-word').forEach(btn=>btn.addEventListener('click',()=>{const i=Number(btn.dataset.i); if(used.has(i)) return; used.add(i); chosen.push(shuffled[i]); btn.disabled=true; $('assembled').textContent=chosen.join(' ');}));
+  $('assembly-check').addEventListener('click',()=>{const ok=chosen.join(' ')===item.sr; $('assembly-feedback').innerHTML=ok?'<b>✓ Правильно!</b>':`<b>✗ Порядок пока неверный.</b><br>Правильный вариант: ${escapeHtml(item.sr)}`; if(ok) setTimeout(()=>{sentenceExerciseIndex++;renderSentenceAssembly();},1000);});
+  $('assembly-speak').addEventListener('click',()=>speakText(item.sr));
+}
+
+function startTextTraining(text){
+  const seen=new Set(); const pool=[];
+  String(text||'').toLowerCase().match(/[a-zčćđšž]+/g)?.forEach(w=>{ if(!seen.has(w)){const tr=getTranslation(w); if(tr && tr!=='Перевод пока не добавлен' && tr!=='Перевод загружается…'){seen.add(w);pool.push({word:w,translation:tr,box:1,nextReview:Date.now()});}} });
+  if(pool.length<4){alert('Для тренировки этого текста пока недостаточно слов с переводом.');return;}
+  exerciseType='choice'; exercisePool=pool; exerciseQueue=shuffle(pool).slice(0,Math.min(20,pool.length)).map(x=>x.word); exerciseIndex=0; renderExercise(); view('review');
 }
 
 function startExercise(type){

@@ -66,3 +66,4 @@
 button, a, .word, summary{touch-action:manipulation;-webkit-tap-highlight-color:rgba(0,0,0,.08)}
 nav button{position:relative;z-index:2}
 @media(max-width:600px){header{position:relative;z-index:5}nav{position:relative;z-index:6}.reading{overflow-wrap:anywhere}.popup{z-index:50}}
+.reader-audio{padding:18px;margin-top:14px}.sentence-audio-list{display:flex;flex-direction:column;gap:8px;max-height:420px;overflow:auto}.sentence-row{display:flex;gap:10px;align-items:center;padding:9px 10px;border-radius:12px;background:#f6f7f8}.sentence-row span{flex:1}.sentence-row button{padding:7px 10px}.library-filters{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.library-filter.active{font-weight:bold}.assembled-sentence{min-height:58px;border:2px dashed #aaa;border-radius:14px;padding:14px;margin:16px 0;font-size:22px}.word-bank{display:flex;gap:8px;flex-wrap:wrap}.assemble-word:disabled{opacity:.45}.feedback{margin-top:14px;line-height:1.5}
