@@ -5445,7 +5445,7 @@ function speakSentenceList(sentences, rate=0.86){
 
 function readerSentenceControls(text){
   const sentences=splitSentences(text);
-  return `<div class="reader-audio card"><div class="vocab-actions"><button type="button" id="speak-full-text">🔊 Озвучить весь текст</button><button type="button" id="speak-sentences">▶ Озвучить по предложениям</button><button type="button" id="speak-slow">🐢 Медленно</button><button type="button" id="stop-speech">⏹ Остановить</button><button type="button" id="text-training">🎯 Тренировать слова этого текста</button></div><p class="muted small-note">Каждое предложение можно прослушать отдельно.</p><div class="sentence-audio-list">${sentences.map((x,i)=>`<div class="sentence-row"><span>${i+1}. ${escapeHtml(x)}</span><button type="button" class="speak-sentence" data-sentence="${encodeURIComponent(x)}">🔊</button></div>`).join('')}</div></div>`;
+  return `<div class="reader-audio card"><div class="vocab-actions"><button type="button" id="speak-full-text">🔊 Озвучить весь текст</button><button type="button" id="speak-sentences">▶ Озвучить по предложениям</button><button type="button" id="speak-slow">🐢 Медленно</button><button type="button" id="stop-speech">⏹ Остановить</button><button type="button" id="text-training">🎯 Тренировать слова этого текста</button></div><p class="muted small-note">Используется установленный сербский голос (sr-RS). Ударение зависит от движка озвучки.</p><div class="sentence-audio-list">${sentences.map((x,i)=>`<div class="sentence-row"><span>${i+1}. ${escapeHtml(x)}</span><button type="button" class="speak-sentence" data-sentence="${encodeURIComponent(x)}">🔊</button></div>`).join('')}</div></div>`;
 }
 
 function renderText(text){
@@ -5509,10 +5509,17 @@ function speakText(text){
     alert('Озвучка не поддерживается этим браузером.');
     return;
   }
+  const voice=getSerbianVoice();
+  if(!voice){
+    alert('На этом устройстве не найден сербский голос. Я не буду подставлять другой язык, чтобы не искажать произношение. Включи сербский голос в настройках синтеза речи Android.');
+    return;
+  }
   window.speechSynthesis.cancel();
   const u = new SpeechSynthesisUtterance(text);
-  u.lang = 'sr-RS';
+  u.voice=voice;
+  u.lang = voice.lang || 'sr-RS';
   u.rate = 0.88;
+  u.pitch = 1;
   window.speechSynthesis.speak(u);
 }
 
@@ -5625,33 +5632,11 @@ function shuffle(arr){
   return a;
 }
 
-const SENTENCE_TRAINING = [
-  {id:'s1',source:'Učenje u školi',ru:'Сегодня холодно.',sr:'Danas je hladno.'},
-  {id:'s2',source:'Šetnja kroz grad',ru:'Я жду автобус в городе.',sr:'Čekam autobus u gradu.'},
-  {id:'s3',source:'Učenje u školi',ru:'Девушка читает книгу в библиотеке.',sr:'Devojka čita knjigu u biblioteci.'},
-  {id:'s4',source:'Subota u gradu',ru:'Водитель едет через туннель.',sr:'Vozač vozi kroz tunel.'},
-  {id:'s5',source:'Učenje u školi',ru:'В кафе я пью чай.',sr:'U kafiću pijem čaj.'},
-  {id:'s6',source:'Učenje u školi',ru:'Дети играют в парке.',sr:'Deca se igraju u parku.'},
-  {id:'s7',source:'Izlet u prirodu',ru:'Ветер сильный, но погода тёплая.',sr:'Vetar je jak, ali je vreme toplo.'},
-  {id:'s8',source:'Priprema putovanja vozom',ru:'Путник несёт рюкзак.',sr:'Putnik nosi ruksak.'},
-  {id:'s9',source:'Učenje u školi',ru:'Хозяин предложил ужин.',sr:'Domaćin je ponudio večeru.'},
-  {id:'s10',source:'Učenje u školi',ru:'Ученик сдаёт экзамен.',sr:'Učenik ima ispit.'},
-  {id:'s11',source:'Priprema putovanja vozom',ru:'На столе лежит карта.',sr:'Na stolu je karta.'},
-  {id:'s12',source:'Zlatna jabuka i devet paunica',ru:'Люди хотят мира.',sr:'Ljudi žele mir.'},
-  {id:'s13',source:'Učenje u školi',ru:'Она любопытная и искренняя.',sr:'Ona je radoznala i iskrena.'},
-  {id:'s14',source:'Izlet u prirodu',ru:'Работы начинаются весной.',sr:'Radovi počinju na proleće.'},
-  {id:'s15',source:'Priprema putovanja vozom',ru:'Поезд проходит через туннель.',sr:'Voz prolazi kroz tunel.'},
-  {id:'s16',source:'Učenje u školi',ru:'Девушка надела свитер и капюшон.',sr:'Devojka je obukla džemper i kapuljaču.'},
-  {id:'s17',source:'Šetnja kroz grad',ru:'Мы гуляем по улице.',sr:'Šetamo kroz ulicu.'},
-  {id:'s18',source:'Učenje u školi',ru:'Моя сестра любит музыку и скрипку.',sr:'Moja sestra voli muziku i violinu.'},
-  {id:'s19',source:'Priprema putovanja vozom',ru:'Путешествие начинается рано.',sr:'Putovanje počinje rano.'},
-  {id:'s20',source:'Mali tim na poslu',ru:'Он решил принять предложение.',sr:'On je odlučio da prihvati ponudu.'}
-];
-
 // Тренировка предложений: используются только целые предложения из текстов библиотеки.
 // Никаких придуманных предложений. Каждое предложение проходит 3 успешных повторения
 // через интервалы и после третьего успешного ответа выходит из активного пула.
 const SENTENCE_SOURCE_STATS_KEY='citajSrpskiSentenceSourceStatsV2';
+let sentenceSessionStats={total:0,correct:0,wrong:0,hints:0,skipped:0};
 function loadSentenceSourceStats(){try{return JSON.parse(localStorage.getItem(SENTENCE_SOURCE_STATS_KEY)||'{}')||{};}catch(e){return {};}}
 let sentenceSourceStats=loadSentenceSourceStats();
 function saveSentenceSourceStats(){try{localStorage.setItem(SENTENCE_SOURCE_STATS_KEY,JSON.stringify(sentenceSourceStats));}catch(e){}}
@@ -5698,19 +5683,28 @@ async function getSentenceRu(item){
   return 'Перевод этого предложения пока недоступен.';
 }
 
-function markSourceSentence(item,correct){
-  const st=sentenceSourceStats[item.id]||{successes:0,attempts:0,wrong:0,dueAt:0};
+function markSourceSentence(item,outcome){
+  const st=sentenceSourceStats[item.id]||{successes:0,attempts:0,wrong:0,hints:0,skipped:0,dueAt:0};
   st.attempts=(Number(st.attempts)||0)+1;
-  if(correct){
+  if(outcome==='correct'){
     st.successes=Math.min(3,(Number(st.successes)||0)+1);
     const intervals=[1,3,7];
     st.dueAt=st.successes>=3 ? 0 : Date.now()+intervals[st.successes-1]*86400000;
+    sentenceSessionStats.correct++;
+  }else if(outcome==='hint'){
+    st.hints=(Number(st.hints)||0)+1;
+    st.dueAt=Date.now()+10*60*1000;
+    sentenceSessionStats.hints++;
+  }else if(outcome==='skipped'){
+    st.skipped=(Number(st.skipped)||0)+1;
+    st.dueAt=Date.now()+10*60*1000;
+    sentenceSessionStats.skipped++;
   }else{
     st.wrong=(Number(st.wrong)||0)+1;
-    // Ошибочное предложение остаётся активным и может быть повторено в ближайшем занятии,
-    // но успешный интервал не засчитывается.
     st.dueAt=Date.now()+10*60*1000;
+    sentenceSessionStats.wrong++;
   }
+  sentenceSessionStats.total++;
   sentenceSourceStats[item.id]=st;
   saveSentenceSourceStats();
 }
@@ -5741,13 +5735,16 @@ let sentenceExerciseQueue=[];
 let sentenceExerciseIndex=0;
 let sentenceExerciseCurrent=null;
 function startSentenceAssembly(){
+  sentenceSessionStats={total:0,correct:0,wrong:0,hints:0,skipped:0};
   sentenceExerciseQueue=chooseSourceSentenceQueue(20);
   if(!sentenceExerciseQueue.length){alert('Все доступные предложения сейчас пройдены. Вернись позже — интервальное повторение подготовит новые.');return;}
   sentenceExerciseIndex=0; renderSentenceAssembly(); view('review');
 }
 function renderSentenceAssembly(){
   if(sentenceExerciseIndex>=sentenceExerciseQueue.length){
-    $('review-content').innerHTML=`<div class="card"><h2>Занятие закончено 🎉</h2><p>Ты прошёл ${sentenceExerciseQueue.length} разных предложений из текстов сайта.</p><p class="muted">Предложения не повторяются внутри занятия. Каждое предложение может пройти до трёх успешных повторений через интервалы.</p><button type="button" id="sentence-finish">Вернуться к тренировкам</button></div>`;
+    const st=sentenceSessionStats;
+    const percent=st.total ? Math.round(st.correct/st.total*100) : 0;
+    $('review-content').innerHTML=`<div class="card"><h2>Итог занятия 🎉</h2><div class="session-result"><p><b>Предложений:</b> ${st.total}</p><p><b>Правильно с первого раза:</b> ${st.correct}</p><p><b>Ошибок:</b> ${st.wrong}</p><p><b>С подсказкой:</b> ${st.hints}</p><p><b>Пропущено:</b> ${st.skipped}</p><p><b>Результат:</b> ${percent}%</p></div><p class="muted">Предложения не повторяются внутри занятия. Правильный ответ засчитывает один успешный проход; для закрепления нужно 3 успешных прохода через интервалы.</p><button type="button" id="sentence-finish">Вернуться к тренировкам</button></div>`;
     $('sentence-finish').addEventListener('click',training); return;
   }
   const item=sentenceExerciseQueue[sentenceExerciseIndex]; sentenceExerciseCurrent=item;
@@ -5763,23 +5760,26 @@ function renderSentenceAssembly(){
       const bankBtn=document.querySelector(`.assemble-word[data-i="${removed.bankIndex}"]`); if(bankBtn)bankBtn.disabled=false; renderChosen();
     }));
   };
-  const finishAnswer=(ok,shown=false)=>{
-    if(checked)return; checked=true; markSourceSentence(item,ok);
-    $('assembly-feedback').innerHTML=ok?'<b>✓ Правильно!</b>':'<b>Правильный вариант:</b> '+escapeHtml(item.sr);
+  const finishAnswer=(outcome)=>{
+    if(checked)return; checked=true; markSourceSentence(item,outcome);
+    if(outcome==='correct') $('assembly-feedback').innerHTML='<b>✓ Правильно!</b>';
+    else if(outcome==='hint') $('assembly-feedback').innerHTML='<b>👁 Правильный вариант:</b> '+escapeHtml(item.sr)+'<br><span class="muted">Проход отмечен как подсказка.</span>';
+    else if(outcome==='skipped') $('assembly-feedback').innerHTML='<b>⏭ Пропущено.</b> Правильный вариант: '+escapeHtml(item.sr);
+    else $('assembly-feedback').innerHTML='<b>✗ Ошибка.</b> Правильный вариант: '+escapeHtml(item.sr);
     document.querySelectorAll('.assemble-word').forEach(b=>b.disabled=true);
     $('assembly-next-wrap').classList.remove('hide');
   };
   const checkAnswer=()=>{
     if(checked||chosen.length!==shuffled.length)return;
     const answer=chosen.map(x=>x.word).join(' '); const ok=answer===item.sr;
-    finishAnswer(ok);
+    finishAnswer(ok?'correct':'wrong');
   };
   document.querySelectorAll('.assemble-word').forEach(btn=>btn.addEventListener('click',()=>{
     if(checked)return; const i=Number(btn.dataset.i); if(chosen.some(x=>x.bankIndex===i))return;
     chosen.push({word:shuffled[i].word,bankIndex:i}); btn.disabled=true; renderChosen(); if(chosen.length===shuffled.length)checkAnswer();
   }));
-  $('assembly-show').addEventListener('click',()=>finishAnswer(false,true));
-  $('assembly-skip').addEventListener('click',()=>finishAnswer(false,false));
+  $('assembly-show').addEventListener('click',()=>finishAnswer('hint'));
+  $('assembly-skip').addEventListener('click',()=>finishAnswer('skipped'));
   $('assembly-next').addEventListener('click',()=>{sentenceExerciseIndex++;renderSentenceAssembly();});
 }
 
@@ -5824,7 +5824,6 @@ function renderChoice(item){
     const chosen=options[i]; const ok=chosen.word===item.word;
     document.querySelectorAll('.option').forEach(x=>x.disabled=true);
     $('exercise-feedback').innerHTML=ok ? '<b>✓ Правильно</b>' : `<b>✗ Не совсем.</b> Правильный ответ: ${item.translation || (VOCAB_BLOCKS.flatMap(b=>b.words).find(v=>v.word===item.word)?.translation) || 'Перевод пока не добавлен'}`;
-    if(ok){ item.box=Math.min(6,(Number(item.box)||1)+1); item.nextReview=Date.now()+REVIEW_INTERVALS[item.box]*24*60*60*1000; if(item.blockId) saveVocabProgress(); else save(); }
     if(ok){ item.box=Math.min(6,(Number(item.box)||1)+1); item.nextReview=Date.now()+REVIEW_INTERVALS[item.box]*24*60*60*1000; if(item.blockId) saveVocabProgress(); else save(); }
     if(!ok){ item.box=1; item.nextReview=Date.now(); if(item.blockId) saveVocabProgress(); else save(); }
     setTimeout(()=>{exerciseIndex++; renderExercise();}, 850);
