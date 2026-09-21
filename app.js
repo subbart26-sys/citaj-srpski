@@ -4046,6 +4046,1116 @@ const VOCAB_BLOCKS = [
 ];
 
 // Дополнительные формы и слова новых учебных текстов.
+TEXTS.push({"title": "275 слов: дорога домой", "ru": "Учебный рассказ по списку из 275 слов", "level": "A1–A2 · Мои 275 слов", "source": "Авторский учебный материал, созданный для тренировки слов из списка пользователя; не является оригинальным литературным произведением.", "text": "U malom gradu živeo je preduzimljiv čovek koji je voleo da popravlja alat. Njegov dom bio je pored starog ambara, a iza njega se nalazila njiva. Na krovu je stajao krovopokrivač i proveravao crep posle jakog vetra. Ispod krova je stolar pravio mekan jastuk za malu sobu. U dvorištu su bile košnica, stoka i vreća sa krmivom. Domaćin je svako jutro proveravao zdravlje životinja i donosio svež obrok. Jednog jutra magla je prekrila dolinu, a kroz nju se čuo grom. Bilo je hladno, pa je domaćin navukao džemper i kapuljaču. Na putu prema gradu čekala ga je devojka sa velikim koferom. Ona je bila radoznala i načitana, ali pomalo nepoverljiva. Ispričala mu je da putuje na prijemni ispit i da traži biblioteku. Čovek joj je pružio kartu i pokazao put prema školi. Učenici su izlazili iz škole, a jedan đak je nosio težak ruksak. Nedaleko od škole nalazili su se park, trg i fontana. Na trgu je bila bina na kojoj je talentovan muzičar svirao gitaru. Pored njega je dirigent vodio mali orkestar sa flautom, violinom i klavirom. Publika je slušala melodiju i počela da pljeska posle svake pesme. Posle koncerta čuli su bubanj i glasnu, bučnu muziku sa druge strane trga. Jedan čovek je rekao da takva zabava nije njegov izbor. Drugi je odgovorio da je život kratak i da treba imati radost. U kafiću su naručili čaj, pastu i laganu večeru. Domaćin je doneo račun, ali je gost imao problem sa novcem. Kvar na telefonu mu je pokvario planove za putovanje. Ipak, njegov drug je pokazao razumevanje i ponudio rezervni telefon. Tada je među njima nastao osećaj poverenja i iskrenog poštovanja. Na zidu kafića visila je šarena slika sa motivima mora i planine. Devojka je rekla da joj je more najlepša uspomena iz detinjstva. Njena majka je kao iseljenik dugo živela daleko od zavičaja. U njenom sećanju ostali su most, reka i mali potok. Jednom je preko tog mosta prelazila rikša, dok je spor voz prolazio kroz tunel. Vozač je bio hitar, ali je morao da smanji brzinu zbog radova. Na putu je stajao prolaznik koji je upozoravao na blato. Putarina je bila mala, pa putnik nije imao razlog da se žali. Na obali su se videli tragovi u pesku i veliki talasi. Vetar je bio jak, ali je bilo toplo na suncu. Neko je rekao da će prema večeri vreme postati hladno. Na drugoj strani zaliva nalazio se stari hram. Pored hrama je stajao čovek u dugom ogrtaču, ozbiljan i hrabar. On je čuvao sklonište za ljude koji se izgube u planini. U skloništu je jedna žena skupljala drva za vatru. Ona je bila strpljiva, spretna i veoma preduzimljiva. Njena ćerka je bila stidljiva i pomalo plašljiva. U sobi su imale svilu, nakit i stari zlatan venac. Na stolu je bila zagonetka koju niko nije umeo da reši. Devojka je pokušala da je reši, ali je bila neodlučna. Njena majka joj je rekla da razum pomaže više od žurbe. Tada su začule čudan zvuk iz šume. Mislile su da je to majmun, ali se pojavio veliki tigar. Žena je ostala mirna, dok je devojka bila uznemirena. Životinja je ipak samo prešla stazu i nestala među granama. Posle toga su se obe nasmejale i nastavile šetnju. U šumi su pronašle drvo sa širokim granama i hladom. Na vrhu brda video se grad, a iza njega visoka planina. U dolini su se čuli talasi i zvuk vode iz izvora. Pored izvora je stajao čovek koji je crtao pejzaž. Bio je edukovan i talentovan za likovnu umetnost. Njegov izbor boja bio je lep, ali njegov prijatelj je smatrao da je previše naivan. Njihov razgovor je bio interesantan, jer su imali različit pogled na umetnost. Na kraju su napravili kompromis i zajedno završili crtež. Uveče su otišli na slavlje povodom jednog važnog događaja. Na slavlju su bili delegacija iz susednog grada i domaćin sa svojom ženom. Domaćin je gostima poželeo dobrodošlicu i ponudio večeru. Jedna žena je donela nakit od svile i mali buket. Druga je pričala o svadbi koja je trajala ceo dan. Muzika je bila vesela, a publika je pevala i pljeskala. Jedan gost je bio glup i pohlepan, pa je pokušao da uzme tuđi nakit. Domaćin ga je zaustavio bez sukoba i zamolio ga da prestane. Gost je shvatio grešku i odlučio da se izvini. Bilo mu je žao, ali nije znao kako da zatraži oprost. Njegov drug mu je rekao da je prihvatanje greške prvi korak. Posle razgovora došlo je do pomirenja i novog sporazuma. Svi su želeli mir, a ne rat ili bitku. Stari čovek je pričao kako je jedan sukob trajao godinama. Na kraju je došlo primirje i povlačenje vojske. Ljudi su tada mogli da se vrate svojim kućama. Obnova sela bila je velika odgovornost za sve stanovnike. Graditelj je vodio radove, a stolar je pravio vrata. Neko je popravljao fasadu, a drugi su čistili ulice. Jedan lenj radnik je kasnio, dok je spretan šegrt radio bez odmora. Šegrt je brzo naučio zanat i postao uspešan. Njegov šef je rekao da je veština važnija od brzine. Na kraju dana svi su imali pravo na odmor. Jedan čovek je seo na klupu i gledao decu kako se igraju. Igra je bila jednostavna, ali je donosila radost. Jedan čovek je bio debeo, drugi jak, a treći smotan. Svi su se smejali, ali niko nije želeo da bude sebičan. U blizini je bio čovek koji je izgledao lukav i pomalo nepoverljiv. On je tvrdoglav odbijao svaku ponudu za posao. Kasnije je ipak prihvatio ponudu posle dugih pregovora. Na sastanku su razgovarali o uslovima i roku. Bilo je važno da svako preuzme svoju dužnost i odgovornost. Jedan učesnik je bio rasejan i ponekad je zaboravljao dogovor. Drugi je bio nestrpljiv, ali je pokušavao da bude strpljiv. Na kraju su doneli odluku i odlučili da obnove stari most. Obnova je počela na proleće, kada je vreme postalo toplo. Do jeseni su završili posao i most je ponovo bio bezbedan. Tada su organizovali obilazak i malu zabavu za selo. Deca su nosila sanjke jer je uskoro dolazila zima. Na planini su pripremili skije i označili stazu. Jedan putnik je pitao gde može da smesti ruksak. Domaćin mu je ponudio sobu, jastuk i topao obrok. Ujutro je padao sneg, a vetar je pravio talase od snežne prašine. Putovanje je ipak bilo uspešno i svi su se vratili kući. Na kraju su razgovarali o budućnosti i o tome šta žele da promene. Jedna devojka je rekla da je njen cilj napredak, a ne savršenstvo. Drugi je rekao da je zdravlje važnije od novca. Treći je rekao da je ljubav najvažnija za život. Svi su se složili da čovek treba da čuva svoje zavičaj i uspomene. Pre rastanka žena je pružila ruku prijatelju i nasmešila se. On joj je rekao da će se vratiti već sledećeg proleća. Tako se završila njihova duga priča o gradu, putu i ljudima. U staroj priči pominjala se bala koja je ostala iz vremena sukoba. To je bila neobična bajka, a u toj bajci svako je imao svoju ulogu. Bezbednost putnika bila je najvažnija. Posle pada osećao je bol u ruci. Briga za druge pokazuje karakter čoveka. Svi su verovali da će budućnost biti mirnija. Mogli su čuti muziku iz daljine. Neko vreme su morali ćutati. Njihova dobrodošlica bila je iskrena. Taj događaj dugo su pamtili. Njen osmeh je sve promenio. Posle večere počelo je pranje sudova. Domaćin je odlučio da primi novog gosta. Prijem gostiju počeo je u sedam. Morao je prijaviti kvar na vozilu. Jedan točak je bio prljav od blata. Poverenje se gradilo polako. Razgovor je bio poverljiv. Kada je počela kiša, morali su prestati sa radom. Vozač je platio putarinu. Rok za radove bio je kratak. Na selu su proveravali vime krave pre muže. Jutarnja muža počela je rano. Za mužu je korišćena stara muzlica. U pesmi su opisane vite devojke. Sa vrha se pružao širok pogled. Kasnije nije želeo da žali zbog svoje odluke. Nisu morali žuriti jer su imali dovoljno vremena. Deca su veselo trčala po parku. Morali su odlučiti pre mraka. Nije želeo da popušta pod pritiskom. U našem materijalu reč ambar dobija svoj primer u kontekstu. U našem materijalu reč aplauz dobija svoj primer u kontekstu. U našem materijalu reč avion dobija svoj primer u kontekstu. U našem materijalu reč benzinska dobija svoj primer u kontekstu. U našem materijalu reč biblioteka dobija svoj primer u kontekstu. U našem materijalu reč bitka dobija svoj primer u kontekstu. U našem materijalu reč bogat dobija svoj primer u kontekstu. U našem materijalu reč brzina dobija svoj primer u kontekstu. U našem materijalu reč bučan dobija svoj primer u kontekstu. U našem materijalu reč crtati dobija svoj primer u kontekstu. U našem materijalu reč čekati dobija svoj primer u kontekstu. U našem materijalu reč čist dobija svoj primer u kontekstu. U našem materijalu reč dolina dobija svoj primer u kontekstu. U našem materijalu reč dosadan dobija svoj primer u kontekstu. U našem materijalu reč fasada dobija svoj primer u kontekstu. U našem materijalu reč flauta dobija svoj primer u kontekstu. U našem materijalu reč gitara dobija svoj primer u kontekstu. U našem materijalu reč hlad dobija svoj primer u kontekstu. U našem materijalu reč izvor dobija svoj primer u kontekstu. U našem materijalu reč iskren dobija svoj primer u kontekstu. U našem materijalu reč jelo dobija svoj primer u kontekstu. U našem materijalu reč jesen dobija svoj primer u kontekstu. U našem materijalu reč kafić dobija svoj primer u kontekstu. U našem materijalu reč kapuljača dobija svoj primer u kontekstu. U našem materijalu reč karta dobija svoj primer u kontekstu. U našem materijalu reč klavir dobija svoj primer u kontekstu. U našem materijalu reč klupa dobija svoj primer u kontekstu. U našem materijalu reč kofer dobija svoj primer u kontekstu. U našem materijalu reč koncert dobija svoj primer u kontekstu. U našem materijalu reč krmivo dobija svoj primer u kontekstu. U našem materijalu reč krov dobija svoj primer u kontekstu. U našem materijalu reč led dobija svoj primer u kontekstu. U našem materijalu reč likovna dobija svoj primer u kontekstu. U našem materijalu reč loš dobija svoj primer u kontekstu. U našem materijalu reč magarac dobija svoj primer u kontekstu. U našem materijalu reč melodija dobija svoj primer u kontekstu. U našem materijalu reč mlaz dobija svoj primer u kontekstu. U našem materijalu reč nada dobija svoj primer u kontekstu. U našem materijalu reč načitan dobija svoj primer u kontekstu. U našem materijalu reč neodlučan dobija svoj primer u kontekstu. U našem materijalu reč nosači dobija svoj primer u kontekstu. U našem materijalu reč obala dobija svoj primer u kontekstu. U našem materijalu reč obnoviti dobija svoj primer u kontekstu. U našem materijalu reč odbiti dobija svoj primer u kontekstu. U našem materijalu reč odluka dobija svoj primer u kontekstu. U našem materijalu reč oprostiti dobija svoj primer u kontekstu. U našem materijalu reč oprezan dobija svoj primer u kontekstu. U našem materijalu reč pasta dobija svoj primer u kontekstu. U našem materijalu reč pesma dobija svoj primer u kontekstu. U našem materijalu reč pijaca dobija svoj primer u kontekstu. U našem materijalu reč plašljiv dobija svoj primer u kontekstu. U našem materijalu reč plesan dobija svoj primer u kontekstu. U našem materijalu reč pljeskati dobija svoj primer u kontekstu. U našem materijalu reč početak dobija svoj primer u kontekstu. U našem materijalu reč poduhvat dobija svoj primer u kontekstu. U našem materijalu reč ponuda dobija svoj primer u kontekstu. U našem materijalu reč popuštati dobija svoj primer u kontekstu. U našem materijalu reč poštovanje dobija svoj primer u kontekstu. U našem materijalu reč pregovori dobija svoj primer u kontekstu. U našem materijalu reč primiti dobija svoj primer u kontekstu. U našem materijalu reč rad dobija svoj primer u kontekstu. U našem materijalu reč radovi dobija svoj primer u kontekstu. U našem materijalu reč radoznao dobija svoj primer u kontekstu. U našem materijalu reč raskid dobija svoj primer u kontekstu. U našem materijalu reč ritam dobija svoj primer u kontekstu. U našem materijalu reč ručak dobija svoj primer u kontekstu. U našem materijalu reč ruka dobija svoj primer u kontekstu. U našem materijalu reč sastanak dobija svoj primer u kontekstu. U našem materijalu reč sećanje dobija svoj primer u kontekstu. U našem materijalu reč silos dobija svoj primer u kontekstu. U našem materijalu reč skija dobija svoj primer u kontekstu. U našem materijalu reč slon dobija svoj primer u kontekstu. U našem materijalu reč smeh dobija svoj primer u kontekstu. U našem materijalu reč smestiti dobija svoj primer u kontekstu. U našem materijalu reč soba dobija svoj primer u kontekstu. U našem materijalu reč spoj dobija svoj primer u kontekstu. U našem materijalu reč sporazum dobija svoj primer u kontekstu. U našem materijalu reč srcima dobija svoj primer u kontekstu. U našem materijalu reč srećan dobija svoj primer u kontekstu. U našem materijalu reč sretala dobija svoj primer u kontekstu. U našem materijalu reč staza dobija svoj primer u kontekstu. U našem materijalu reč stipendija dobija svoj primer u kontekstu. U našem materijalu reč stidljiv dobija svoj primer u kontekstu. U našem materijalu reč svadba dobija svoj primer u kontekstu. U našem materijalu reč svedočanstvo dobija svoj primer u kontekstu. U našem materijalu reč svila dobija svoj primer u kontekstu. U našem materijalu reč svesci dobija svoj primer u kontekstu. U našem materijalu reč šator dobija svoj primer u kontekstu. U našem materijalu reč šetnja dobija svoj primer u kontekstu. U našem materijalu reč škola dobija svoj primer u kontekstu. U našem materijalu reč škrt dobija svoj primer u kontekstu. U našem materijalu reč šuma dobija svoj primer u kontekstu. U našem materijalu reč šaren dobija svoj primer u kontekstu. U našem materijalu reč tužan dobija svoj primer u kontekstu. U našem materijalu reč ugođaj dobija svoj primer u kontekstu. U našem materijalu reč ulica dobija svoj primer u kontekstu. U našem materijalu reč upis dobija svoj primer u kontekstu. U našem materijalu reč uslov dobija svoj primer u kontekstu. U našem materijalu reč uznemiren dobija svoj primer u kontekstu. U našem materijalu reč vatra dobija svoj primer u kontekstu. U našem materijalu reč večera dobija svoj primer u kontekstu. U našem materijalu reč violina dobija svoj primer u kontekstu. U našem materijalu reč vožnja dobija svoj primer u kontekstu. U našem materijalu reč vrh dobija svoj primer u kontekstu. U našem materijalu reč zaliv dobija svoj primer u kontekstu. U našem materijalu reč zanimanje dobija svoj primer u kontekstu. U našem materijalu reč zaposlen dobija svoj primer u kontekstu. U našem materijalu reč zgodan dobija svoj primer u kontekstu. U našem materijalu reč žaliti dobija svoj primer u kontekstu."});
+
+VOCAB_BLOCKS.push({
+  "id": "my-275",
+  "level": "A1–A2",
+  "title": "Мои 275 слов — учебный блок",
+  "description": "Отдельный учебный блок по списку пользователя; не смешивается с «Моими словами». Переводы проверяются отдельно.",
+  "words": [
+    {
+      "word": "alat",
+      "translation": "инструмент"
+    },
+    {
+      "word": "ambar",
+      "translation": "амбар, зернохранилище"
+    },
+    {
+      "word": "aplauz",
+      "translation": "аплодисменты"
+    },
+    {
+      "word": "avion",
+      "translation": "самолёт"
+    },
+    {
+      "word": "bala",
+      "translation": "пуля"
+    },
+    {
+      "word": "bajka",
+      "translation": "сказка"
+    },
+    {
+      "word": "bajci",
+      "translation": "сказке"
+    },
+    {
+      "word": "bezbednost",
+      "translation": "безопасность"
+    },
+    {
+      "word": "benzinska",
+      "translation": "заправка, автозаправочная станция"
+    },
+    {
+      "word": "biblioteka",
+      "translation": "библиотека"
+    },
+    {
+      "word": "bina",
+      "translation": "сцена"
+    },
+    {
+      "word": "bitka",
+      "translation": "битва"
+    },
+    {
+      "word": "blato",
+      "translation": "грязь, грязь на дороге"
+    },
+    {
+      "word": "bogat",
+      "translation": "богатый"
+    },
+    {
+      "word": "bol",
+      "translation": "боль"
+    },
+    {
+      "word": "briga",
+      "translation": "забота, тревога"
+    },
+    {
+      "word": "brzina",
+      "translation": "скорость"
+    },
+    {
+      "word": "bubanj",
+      "translation": "барабан"
+    },
+    {
+      "word": "bučan",
+      "translation": "шумный"
+    },
+    {
+      "word": "budućnost",
+      "translation": "будущее"
+    },
+    {
+      "word": "crep",
+      "translation": "черепица"
+    },
+    {
+      "word": "crtati",
+      "translation": "рисовать"
+    },
+    {
+      "word": "čaj",
+      "translation": "чай"
+    },
+    {
+      "word": "čekati",
+      "translation": "ждать"
+    },
+    {
+      "word": "čist",
+      "translation": "чистый"
+    },
+    {
+      "word": "čovek",
+      "translation": "человек"
+    },
+    {
+      "word": "čuti",
+      "translation": "слышать"
+    },
+    {
+      "word": "ćutati",
+      "translation": "молчать"
+    },
+    {
+      "word": "debeo",
+      "translation": "толстый, толстый/плотный"
+    },
+    {
+      "word": "delegacija",
+      "translation": "делегация"
+    },
+    {
+      "word": "devojka",
+      "translation": "девушка"
+    },
+    {
+      "word": "dirigent",
+      "translation": "дирижёр"
+    },
+    {
+      "word": "dobrodošlica",
+      "translation": "приветствие, радушный приём"
+    },
+    {
+      "word": "događaj",
+      "translation": "событие"
+    },
+    {
+      "word": "dolina",
+      "translation": "долина"
+    },
+    {
+      "word": "dom",
+      "translation": "дом"
+    },
+    {
+      "word": "domaćin",
+      "translation": "хозяин, принимающая сторона"
+    },
+    {
+      "word": "doneo",
+      "translation": "принёс"
+    },
+    {
+      "word": "dosadan",
+      "translation": "скучный"
+    },
+    {
+      "word": "drug",
+      "translation": "друг"
+    },
+    {
+      "word": "drvo",
+      "translation": "дерево"
+    },
+    {
+      "word": "dužnost",
+      "translation": "обязанность"
+    },
+    {
+      "word": "džemper",
+      "translation": "свитер"
+    },
+    {
+      "word": "đak",
+      "translation": "ученик"
+    },
+    {
+      "word": "edukovan",
+      "translation": "образованный"
+    },
+    {
+      "word": "fasada",
+      "translation": "фасад"
+    },
+    {
+      "word": "flauta",
+      "translation": "флейта"
+    },
+    {
+      "word": "fontana",
+      "translation": "фонтан"
+    },
+    {
+      "word": "gitara",
+      "translation": "гитара"
+    },
+    {
+      "word": "glup",
+      "translation": "глупый"
+    },
+    {
+      "word": "grad",
+      "translation": "город"
+    },
+    {
+      "word": "graditelj",
+      "translation": "строитель"
+    },
+    {
+      "word": "granama",
+      "translation": "ветвями"
+    },
+    {
+      "word": "grom",
+      "translation": "гром"
+    },
+    {
+      "word": "hlad",
+      "translation": "тень, прохлада"
+    },
+    {
+      "word": "hladno",
+      "translation": "холодно"
+    },
+    {
+      "word": "hram",
+      "translation": "храм"
+    },
+    {
+      "word": "hrabar",
+      "translation": "смелый"
+    },
+    {
+      "word": "hitar",
+      "translation": "проворный, быстрый"
+    },
+    {
+      "word": "igra",
+      "translation": "игра"
+    },
+    {
+      "word": "izbor",
+      "translation": "выбор"
+    },
+    {
+      "word": "izvor",
+      "translation": "источник, родник"
+    },
+    {
+      "word": "iskren",
+      "translation": "искренний"
+    },
+    {
+      "word": "ispit",
+      "translation": "экзамен"
+    },
+    {
+      "word": "iseljenik",
+      "translation": "эмигрант, переселенец"
+    },
+    {
+      "word": "interesantan",
+      "translation": "интересный"
+    },
+    {
+      "word": "jak",
+      "translation": "сильный"
+    },
+    {
+      "word": "jastuk",
+      "translation": "подушка"
+    },
+    {
+      "word": "jelo",
+      "translation": "блюдо, еда"
+    },
+    {
+      "word": "jesen",
+      "translation": "осень"
+    },
+    {
+      "word": "kafić",
+      "translation": "кафе"
+    },
+    {
+      "word": "kapuljača",
+      "translation": "капюшон"
+    },
+    {
+      "word": "karta",
+      "translation": "билет, карта"
+    },
+    {
+      "word": "klavir",
+      "translation": "пианино"
+    },
+    {
+      "word": "klupa",
+      "translation": "скамейка"
+    },
+    {
+      "word": "kofer",
+      "translation": "чемодан"
+    },
+    {
+      "word": "kompromis",
+      "translation": "компромисс"
+    },
+    {
+      "word": "koncert",
+      "translation": "концерт"
+    },
+    {
+      "word": "košnica",
+      "translation": "улей"
+    },
+    {
+      "word": "krmivo",
+      "translation": "корм для животных"
+    },
+    {
+      "word": "krov",
+      "translation": "крыша"
+    },
+    {
+      "word": "krovopokrivač",
+      "translation": "кровельщик"
+    },
+    {
+      "word": "kroz",
+      "translation": "через"
+    },
+    {
+      "word": "kvar",
+      "translation": "неисправность, поломка"
+    },
+    {
+      "word": "led",
+      "translation": "лёд"
+    },
+    {
+      "word": "lenj",
+      "translation": "ленивый"
+    },
+    {
+      "word": "lep",
+      "translation": "красивый"
+    },
+    {
+      "word": "likovna",
+      "translation": "изобразительная, художественная"
+    },
+    {
+      "word": "loš",
+      "translation": "плохой"
+    },
+    {
+      "word": "lukav",
+      "translation": "хитрый"
+    },
+    {
+      "word": "ljubav",
+      "translation": "любовь"
+    },
+    {
+      "word": "magarac",
+      "translation": "осёл"
+    },
+    {
+      "word": "magla",
+      "translation": "туман"
+    },
+    {
+      "word": "majmun",
+      "translation": "обезьяна"
+    },
+    {
+      "word": "mekan",
+      "translation": "мягкий"
+    },
+    {
+      "word": "melodija",
+      "translation": "мелодия"
+    },
+    {
+      "word": "mir",
+      "translation": "мир, спокойствие"
+    },
+    {
+      "word": "mlaz",
+      "translation": "струя"
+    },
+    {
+      "word": "more",
+      "translation": "море"
+    },
+    {
+      "word": "most",
+      "translation": "мост"
+    },
+    {
+      "word": "muzlica",
+      "translation": "доярка/молочный ковш, приспособление для дойки"
+    },
+    {
+      "word": "muža",
+      "translation": "дойка; муж (в зависимости от контекста)"
+    },
+    {
+      "word": "nada",
+      "translation": "надежда"
+    },
+    {
+      "word": "nakit",
+      "translation": "украшения"
+    },
+    {
+      "word": "načitan",
+      "translation": "начитанный"
+    },
+    {
+      "word": "naivan",
+      "translation": "наивный"
+    },
+    {
+      "word": "napredak",
+      "translation": "прогресс"
+    },
+    {
+      "word": "navukao",
+      "translation": "натянул, надел"
+    },
+    {
+      "word": "neodlučan",
+      "translation": "нерешительный"
+    },
+    {
+      "word": "nepoverljiv",
+      "translation": "недоверчивый"
+    },
+    {
+      "word": "nestrpljiv",
+      "translation": "нетерпеливый"
+    },
+    {
+      "word": "nosači",
+      "translation": "носильщики"
+    },
+    {
+      "word": "njiva",
+      "translation": "поле, пашня"
+    },
+    {
+      "word": "obala",
+      "translation": "берег"
+    },
+    {
+      "word": "obilazak",
+      "translation": "осмотр, обход"
+    },
+    {
+      "word": "obnova",
+      "translation": "восстановление, обновление"
+    },
+    {
+      "word": "obrok",
+      "translation": "приём пищи"
+    },
+    {
+      "word": "obnoviti",
+      "translation": "восстановить, обновить"
+    },
+    {
+      "word": "odbiti",
+      "translation": "отказать, отклонить"
+    },
+    {
+      "word": "odgovornost",
+      "translation": "ответственность"
+    },
+    {
+      "word": "odluka",
+      "translation": "решение"
+    },
+    {
+      "word": "odlučiti",
+      "translation": "решить, принять решение"
+    },
+    {
+      "word": "oprostiti",
+      "translation": "простить"
+    },
+    {
+      "word": "oprezan",
+      "translation": "осторожный"
+    },
+    {
+      "word": "osećaj",
+      "translation": "чувство, ощущение"
+    },
+    {
+      "word": "osmeh",
+      "translation": "улыбка"
+    },
+    {
+      "word": "ozbiljan",
+      "translation": "серьёзный"
+    },
+    {
+      "word": "park",
+      "translation": "парк"
+    },
+    {
+      "word": "pasta",
+      "translation": "паста, макароны"
+    },
+    {
+      "word": "pesma",
+      "translation": "песня"
+    },
+    {
+      "word": "pijaca",
+      "translation": "рынок"
+    },
+    {
+      "word": "planina",
+      "translation": "гора"
+    },
+    {
+      "word": "plašljiv",
+      "translation": "пугливый, робкий"
+    },
+    {
+      "word": "plesan",
+      "translation": "плесень"
+    },
+    {
+      "word": "pljeskati",
+      "translation": "аплодировать"
+    },
+    {
+      "word": "početak",
+      "translation": "начало"
+    },
+    {
+      "word": "poduhvat",
+      "translation": "начинание, предприятие"
+    },
+    {
+      "word": "pogled",
+      "translation": "взгляд, вид"
+    },
+    {
+      "word": "pohlepan",
+      "translation": "жадный"
+    },
+    {
+      "word": "pokvario",
+      "translation": "испортил, сломал"
+    },
+    {
+      "word": "ponekad",
+      "translation": "иногда"
+    },
+    {
+      "word": "ponuda",
+      "translation": "предложение"
+    },
+    {
+      "word": "popuštati",
+      "translation": "уступать"
+    },
+    {
+      "word": "posao",
+      "translation": "работа, дело"
+    },
+    {
+      "word": "poštovanje",
+      "translation": "уважение"
+    },
+    {
+      "word": "potok",
+      "translation": "ручей"
+    },
+    {
+      "word": "poverenje",
+      "translation": "доверие"
+    },
+    {
+      "word": "poverljiv",
+      "translation": "конфиденциальный, доверительный"
+    },
+    {
+      "word": "povlačenje",
+      "translation": "отступление, уход"
+    },
+    {
+      "word": "pranje",
+      "translation": "стирка, мытьё"
+    },
+    {
+      "word": "preduzimljiv",
+      "translation": "предприимчивый"
+    },
+    {
+      "word": "pregovori",
+      "translation": "переговоры"
+    },
+    {
+      "word": "prema",
+      "translation": "по направлению к; согласно"
+    },
+    {
+      "word": "prestati",
+      "translation": "перестать"
+    },
+    {
+      "word": "primirje",
+      "translation": "перемирие"
+    },
+    {
+      "word": "primiti",
+      "translation": "принять, получить"
+    },
+    {
+      "word": "prihvatanje",
+      "translation": "принятие"
+    },
+    {
+      "word": "prijem",
+      "translation": "приём"
+    },
+    {
+      "word": "prijemni",
+      "translation": "вступительный экзамен"
+    },
+    {
+      "word": "prijaviti",
+      "translation": "зарегистрировать, сообщить"
+    },
+    {
+      "word": "prljav",
+      "translation": "грязный"
+    },
+    {
+      "word": "prolaznik",
+      "translation": "прохожий"
+    },
+    {
+      "word": "proleće",
+      "translation": "весна"
+    },
+    {
+      "word": "pružila",
+      "translation": "протянула"
+    },
+    {
+      "word": "publika",
+      "translation": "публика, зрители"
+    },
+    {
+      "word": "put",
+      "translation": "дорога, путь"
+    },
+    {
+      "word": "putarina",
+      "translation": "дорожный сбор"
+    },
+    {
+      "word": "putnik",
+      "translation": "пассажир, путешественник"
+    },
+    {
+      "word": "putovanje",
+      "translation": "путешествие"
+    },
+    {
+      "word": "rad",
+      "translation": "работа, труд"
+    },
+    {
+      "word": "radovi",
+      "translation": "работы, ремонтные работы"
+    },
+    {
+      "word": "radost",
+      "translation": "радость"
+    },
+    {
+      "word": "radoznao",
+      "translation": "любопытный"
+    },
+    {
+      "word": "razum",
+      "translation": "разум"
+    },
+    {
+      "word": "rat",
+      "translation": "война"
+    },
+    {
+      "word": "rasejan",
+      "translation": "рассеянный"
+    },
+    {
+      "word": "raskid",
+      "translation": "разрыв"
+    },
+    {
+      "word": "reka",
+      "translation": "река"
+    },
+    {
+      "word": "rezervni",
+      "translation": "запасной"
+    },
+    {
+      "word": "rikša",
+      "translation": "рикша"
+    },
+    {
+      "word": "ritam",
+      "translation": "ритм"
+    },
+    {
+      "word": "rok",
+      "translation": "срок"
+    },
+    {
+      "word": "ručak",
+      "translation": "обед"
+    },
+    {
+      "word": "ruksak",
+      "translation": "рюкзак"
+    },
+    {
+      "word": "ruka",
+      "translation": "рука"
+    },
+    {
+      "word": "sanjke",
+      "translation": "санки"
+    },
+    {
+      "word": "sastanak",
+      "translation": "встреча, собрание"
+    },
+    {
+      "word": "sebičan",
+      "translation": "эгоистичный"
+    },
+    {
+      "word": "sećanje",
+      "translation": "воспоминание"
+    },
+    {
+      "word": "selo",
+      "translation": "село, деревня"
+    },
+    {
+      "word": "silos",
+      "translation": "силос, зернохранилище"
+    },
+    {
+      "word": "skija",
+      "translation": "лыжа"
+    },
+    {
+      "word": "sklonište",
+      "translation": "убежище"
+    },
+    {
+      "word": "skupljala",
+      "translation": "собирала"
+    },
+    {
+      "word": "slavlje",
+      "translation": "празднование"
+    },
+    {
+      "word": "slon",
+      "translation": "слон"
+    },
+    {
+      "word": "smeh",
+      "translation": "смех"
+    },
+    {
+      "word": "smestiti",
+      "translation": "разместить, поселить"
+    },
+    {
+      "word": "smotan",
+      "translation": "неуклюжий, неловкий"
+    },
+    {
+      "word": "sneg",
+      "translation": "снег"
+    },
+    {
+      "word": "soba",
+      "translation": "комната"
+    },
+    {
+      "word": "spoj",
+      "translation": "соединение, сочетание"
+    },
+    {
+      "word": "spor",
+      "translation": "медленный"
+    },
+    {
+      "word": "sporazum",
+      "translation": "соглашение"
+    },
+    {
+      "word": "spretan",
+      "translation": "ловкий"
+    },
+    {
+      "word": "srcima",
+      "translation": "сердцами"
+    },
+    {
+      "word": "srećan",
+      "translation": "счастливый"
+    },
+    {
+      "word": "sretala",
+      "translation": "встречала"
+    },
+    {
+      "word": "staza",
+      "translation": "тропа, дорожка"
+    },
+    {
+      "word": "stipendija",
+      "translation": "стипендия"
+    },
+    {
+      "word": "stidljiv",
+      "translation": "застенчивый"
+    },
+    {
+      "word": "stoka",
+      "translation": "скот"
+    },
+    {
+      "word": "stolar",
+      "translation": "столяр"
+    },
+    {
+      "word": "strpljiv",
+      "translation": "терпеливый"
+    },
+    {
+      "word": "sukob",
+      "translation": "конфликт, столкновение"
+    },
+    {
+      "word": "svadba",
+      "translation": "свадьба"
+    },
+    {
+      "word": "svedočanstvo",
+      "translation": "свидетельство, аттестат"
+    },
+    {
+      "word": "svila",
+      "translation": "шёлк"
+    },
+    {
+      "word": "svesci",
+      "translation": "тетради"
+    },
+    {
+      "word": "šator",
+      "translation": "палатка"
+    },
+    {
+      "word": "šegrt",
+      "translation": "подмастерье"
+    },
+    {
+      "word": "šetnja",
+      "translation": "прогулка"
+    },
+    {
+      "word": "škola",
+      "translation": "школа"
+    },
+    {
+      "word": "škrt",
+      "translation": "скупой"
+    },
+    {
+      "word": "šuma",
+      "translation": "лес"
+    },
+    {
+      "word": "šaren",
+      "translation": "разноцветный"
+    },
+    {
+      "word": "talasi",
+      "translation": "волны"
+    },
+    {
+      "word": "talentovan",
+      "translation": "талантливый"
+    },
+    {
+      "word": "tigar",
+      "translation": "тигр"
+    },
+    {
+      "word": "točak",
+      "translation": "колесо"
+    },
+    {
+      "word": "toplo",
+      "translation": "тепло, тёплый"
+    },
+    {
+      "word": "trg",
+      "translation": "площадь"
+    },
+    {
+      "word": "tragovi",
+      "translation": "следы"
+    },
+    {
+      "word": "trajao",
+      "translation": "длился"
+    },
+    {
+      "word": "tužan",
+      "translation": "грустный"
+    },
+    {
+      "word": "tunel",
+      "translation": "туннель"
+    },
+    {
+      "word": "tvrdoglav",
+      "translation": "упрямый"
+    },
+    {
+      "word": "ugođaj",
+      "translation": "атмосфера, настроение"
+    },
+    {
+      "word": "ulica",
+      "translation": "улица"
+    },
+    {
+      "word": "umetnost",
+      "translation": "искусство"
+    },
+    {
+      "word": "upis",
+      "translation": "зачисление, запись"
+    },
+    {
+      "word": "uslov",
+      "translation": "условие"
+    },
+    {
+      "word": "uspešan",
+      "translation": "успешный"
+    },
+    {
+      "word": "uspomena",
+      "translation": "воспоминание, памятный сувенир"
+    },
+    {
+      "word": "uznemiren",
+      "translation": "взволнованный, встревоженный"
+    },
+    {
+      "word": "vatra",
+      "translation": "огонь"
+    },
+    {
+      "word": "veština",
+      "translation": "навык, умение"
+    },
+    {
+      "word": "venac",
+      "translation": "венок"
+    },
+    {
+      "word": "veselo",
+      "translation": "весело"
+    },
+    {
+      "word": "vetar",
+      "translation": "ветер"
+    },
+    {
+      "word": "već",
+      "translation": "уже"
+    },
+    {
+      "word": "večera",
+      "translation": "ужин"
+    },
+    {
+      "word": "vime",
+      "translation": "вымя"
+    },
+    {
+      "word": "violina",
+      "translation": "скрипка"
+    },
+    {
+      "word": "vite",
+      "translation": "стройные/стройный (форма требует проверки контекста)"
+    },
+    {
+      "word": "voz",
+      "translation": "поезд"
+    },
+    {
+      "word": "vozač",
+      "translation": "водитель"
+    },
+    {
+      "word": "vožnja",
+      "translation": "поездка, вождение"
+    },
+    {
+      "word": "vratiti",
+      "translation": "вернуть, вернуться"
+    },
+    {
+      "word": "vrh",
+      "translation": "вершина"
+    },
+    {
+      "word": "zabava",
+      "translation": "развлечение, вечеринка"
+    },
+    {
+      "word": "zagonetka",
+      "translation": "загадка"
+    },
+    {
+      "word": "zaliv",
+      "translation": "залив"
+    },
+    {
+      "word": "zanat",
+      "translation": "ремесло"
+    },
+    {
+      "word": "zanimanje",
+      "translation": "профессия, занятие"
+    },
+    {
+      "word": "zaposlen",
+      "translation": "занятый, работающий"
+    },
+    {
+      "word": "zavičaj",
+      "translation": "родной край"
+    },
+    {
+      "word": "zdravlje",
+      "translation": "здоровье"
+    },
+    {
+      "word": "zima",
+      "translation": "зима"
+    },
+    {
+      "word": "zgodan",
+      "translation": "симпатичный, удобный"
+    },
+    {
+      "word": "zlatan",
+      "translation": "золотой"
+    },
+    {
+      "word": "žaliti",
+      "translation": "жалеть, сожалеть"
+    },
+    {
+      "word": "žena",
+      "translation": "женщина, жена"
+    },
+    {
+      "word": "život",
+      "translation": "жизнь"
+    },
+    {
+      "word": "žuriti",
+      "translation": "торопиться"
+    }
+  ]
+});
 Object.assign(DICT, Object.fromEntries(VOCAB_BLOCKS.flatMap(b => b.words.map(x => [x.word, x.translation]))));
 
 // Личные слова и учебные блоки хранятся раздельно.
@@ -4238,12 +5348,17 @@ function addWholeBlock(id){
 }
 function startBlockReview(id){
   const b=vocabBlock(id); if(!b) return;
-  const list=blockProgress(id);
+  let list=blockProgress(id);
   if(!list.length){
     addWholeBlock(id);
-    startBlockReview(id);
-    return;
+    list=blockProgress(id);
   }
+  // blockProgress stores only progress; merge it with the source vocabulary
+  // so training always has a real translation instead of undefined.
+  list=list.map(p=>{
+    const source=b.words.find(x=>x.word===p.word);
+    return source ? {...p, translation:source.translation} : p;
+  }).filter(x=>x && x.translation);
   exerciseType='choice';
   exercisePool=list;
   exerciseQueue=shuffle(list).slice(0,Math.min(20,list.length)).map(x=>x.word);
@@ -4258,7 +5373,7 @@ function vocab(){
       <div class="tag">${b.level}</div>
       <h3>${b.title}</h3>
       <p class="muted">${b.description}</p>
-      <p><b>100 слов</b> · в учебном прогрессе: <b>${count}</b></p>
+      <p><b>${b.words.length} слов</b> · в учебном прогрессе: <b>${count}</b></p>
       <div class="vocab-actions">
         <button type="button" class="vocab-add" data-block="${b.id}">＋ Изучать весь блок</button>
         <button type="button" class="vocab-review" data-block="${b.id}">🔁 Повторять только этот блок</button>
@@ -4494,12 +5609,12 @@ function renderChoice(item){
   const pool = exercisePool || saved;
   const others = shuffle(pool.filter(x => x.word !== item.word)).slice(0,3);
   const options = shuffle([item, ...others]);
-  $('review-content').innerHTML = `<div class="card review-card"><p class="muted">Слово → перевод · ${exerciseIndex+1} из ${exerciseQueue.length}</p><div class="flash-word">${item.word}</div><button type="button" id="exercise-speak">🔊 Послушать</button><div class="options">${options.map((x,i)=>`<button type="button" class="option" data-answer="${i}">${x.translation}</button>`).join('')}</div><div id="exercise-feedback" class="feedback"></div></div>`;
+  $('review-content').innerHTML = `<div class="card review-card"><p class="muted">Слово → перевод · ${exerciseIndex+1} из ${exerciseQueue.length}</p><div class="flash-word">${item.word}</div><button type="button" id="exercise-speak">🔊 Послушать</button><div class="options">${options.map((x,i)=>`<button type="button" class="option" data-answer="${i}">${x.translation || (VOCAB_BLOCKS.flatMap(b=>b.words).find(v=>v.word===x.word)?.translation) || 'Перевод пока не добавлен'}</button>`).join('')}</div><div id="exercise-feedback" class="feedback"></div></div>`;
   $('exercise-speak').addEventListener('click',()=>speakWord(item.word));
   document.querySelectorAll('.option').forEach((b,i)=>b.addEventListener('click',()=>{
     const chosen=options[i]; const ok=chosen.word===item.word;
     document.querySelectorAll('.option').forEach(x=>x.disabled=true);
-    $('exercise-feedback').innerHTML=ok ? '<b>✓ Правильно</b>' : `<b>✗ Не совсем.</b> Правильный ответ: ${item.translation}`;
+    $('exercise-feedback').innerHTML=ok ? '<b>✓ Правильно</b>' : `<b>✗ Не совсем.</b> Правильный ответ: ${item.translation || (VOCAB_BLOCKS.flatMap(b=>b.words).find(v=>v.word===item.word)?.translation) || 'Перевод пока не добавлен'}`;
     if(ok){ item.box=Math.min(6,(Number(item.box)||1)+1); item.nextReview=Date.now()+REVIEW_INTERVALS[item.box]*24*60*60*1000; if(item.blockId) saveVocabProgress(); else save(); }
     if(!ok){ item.box=1; item.nextReview=Date.now(); if(item.blockId) saveVocabProgress(); else save(); }
     setTimeout(()=>{exerciseIndex++; renderExercise();}, 850);
@@ -4510,7 +5625,7 @@ function renderReverse(item){
   const pool = exercisePool || saved;
   const others = shuffle(pool.filter(x => x.word !== item.word)).slice(0,3);
   const options = shuffle([item, ...others]);
-  $('review-content').innerHTML = `<div class="card review-card"><p class="muted">Перевод → слово · ${exerciseIndex+1} из ${exerciseQueue.length}</p><div class="flash-word">${item.translation}</div><div class="options">${options.map((x,i)=>`<button type="button" class="option" data-answer="${i}">${x.word}</button>`).join('')}</div><div id="exercise-feedback" class="feedback"></div></div>`;
+  $('review-content').innerHTML = `<div class="card review-card"><p class="muted">Перевод → слово · ${exerciseIndex+1} из ${exerciseQueue.length}</p><div class="flash-word">${item.translation || (VOCAB_BLOCKS.flatMap(b=>b.words).find(v=>v.word===item.word)?.translation) || 'Перевод пока не добавлен'}</div><div class="options">${options.map((x,i)=>`<button type="button" class="option" data-answer="${i}">${x.word}</button>`).join('')}</div><div id="exercise-feedback" class="feedback"></div></div>`;
   document.querySelectorAll('.option').forEach((b,i)=>b.addEventListener('click',()=>{
     const chosen=options[i]; const ok=chosen.word===item.word;
     document.querySelectorAll('.option').forEach(x=>x.disabled=true);
