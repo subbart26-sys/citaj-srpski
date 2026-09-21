@@ -18,3 +18,9 @@
 .verb-grid div:first-child{border-top:0}
 .verb-grid span{color:#666}
 .verb-grid b{font-weight:700;text-align:right}
+
+.library-heading{margin-top:30px}
+.real-source-card{border:2px solid #e2e2e2}
+.source-link{display:inline-block;margin:10px 10px 0 0;color:inherit;text-decoration:underline}
+.verb-note{margin-top:10px;color:#666;font-size:14px;line-height:1.45}
+.popup{z-index:20}

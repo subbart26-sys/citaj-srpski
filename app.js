@@ -29,6 +29,12 @@ const TEXTS = [
   }
 ];
 
+const REAL_SOURCES = [
+  {title:"Međedović", ru:"Меджедович", level:"A2+ · Исторический текст", page:"Međedović", source:"Vuk Stefanović Karadžić, Srpske narodne pripovijetke (1870). Текст в общественном достоянии; источник — Викизворник.", url:"https://sr.wikisource.org/sr-el/Međedović"},
+  {title:"Aždaja i carev sin", ru:"Аждая и царевич", level:"A2+ · Исторический текст", page:"Aždaja i carev sin", source:"Vuk Stefanović Karadžić, Srpske narodne pripovijetke (1870), str. 43–51. Текст в общественном достоянии; источник — Викизворник.", url:"https://sr.wikisource.org/sr-el/Aždaja_i_carev_sin"},
+  {title:"Dobra djela ne propadaju", ru:"Добрые дела не пропадают", level:"A2+ · Исторический текст", page:"Dobra djela ne propadaju", source:"Vuk Stefanović Karadžić, Srpske narodne pripovijetke (1870), str. 246–255. Текст в общественном достоянии; источник — Викизворник.", url:"https://sr.wikisource.org/sr-el/Dobra_djela_ne_propadaju"}
+];
+
 // Первая версия блока «Времена» для часто встречающихся глаголов.
 const VERB_FORMS = {
   "živela": {lemma:"živeti", translation:"жить", past:"živeo / živela", present:"živi", future:"će živeti"},
@@ -91,7 +97,35 @@ const VERB_FORMS = {
   "pravili": {lemma:"praviti", translation:"строить, делать", past:"pravio / pravila", present:"pravi", future:"će praviti"},
   "odlučili": {lemma:"odlučiti", translation:"решить", past:"odlučio / odlučila", present:"odlučuje", future:"će odlučiti"},
   "hodala": {lemma:"hodati", translation:"ходить", past:"hodao / hodala", present:"hoda", future:"će hodati"},
-  "pobedio": {lemma:"pobediti", translation:"победить", past:"pobedio / pobedila", present:"pobeđuje", future:"će pobediti"}
+  "pobedio": {lemma:"pobediti", translation:"победить", past:"pobedio / pobedila", present:"pobeđuje", future:"će pobediti"},
+  "bio": {lemma:"biti", translation:"быть", past:"bio / bila", present:"je", future:"će biti"},
+  "bila": {lemma:"biti", translation:"быть", past:"bio / bila", present:"je", future:"će biti"},
+  "bili": {lemma:"biti", translation:"быть", past:"bio / bila", present:"su", future:"će biti"},
+  "imao": {lemma:"imati", translation:"иметь", past:"imao / imala", present:"ima", future:"će imati"},
+  "imala": {lemma:"imati", translation:"иметь", past:"imao / imala", present:"ima", future:"će imati"},
+  "živeo": {lemma:"živeti", translation:"жить", past:"živeo / živela", present:"živi", future:"će živeti"},
+  "spavao": {lemma:"spavati", translation:"спать", past:"spavao / spavala", present:"spava", future:"će spavati"},
+  "smejala": {lemma:"smejati se", translation:"смеяться", past:"smejao / smejala se", present:"smeje se", future:"će se smejati"},
+  "nastavilo": {lemma:"nastaviti", translation:"продолжить", past:"nastavio / nastavila", present:"nastavlja", future:"će nastaviti"},
+  "nastavio": {lemma:"nastaviti", translation:"продолжить", past:"nastavio / nastavila", present:"nastavlja", future:"će nastaviti"},
+  "pokušao": {lemma:"pokušati", translation:"попробовать", past:"pokušao / pokušala", present:"pokušava", future:"će pokušati"},
+  "pobeglo": {lemma:"pobeći", translation:"убежать", past:"pobegao / pobegla", present:"beži", future:"će pobeći"},
+  "pobegla": {lemma:"pobeći", translation:"убежать", past:"pobegao / pobegla", present:"beži", future:"će pobeći"},
+  "zatvorila": {lemma:"zatvoriti", translation:"закрыть", past:"zatvorio / zatvorila", present:"zatvara", future:"će zatvoriti"},
+  "zatresla": {lemma:"zatresti", translation:"затрясти", past:"zatresao / zatresla", present:"trese", future:"će zatresti"},
+  "stigao": {lemma:"stići", translation:"прибыть, прийти", past:"stigao / stigla", present:"stiže", future:"će stići"},
+  "došao": {lemma:"doći", translation:"прийти", past:"došao / došla", present:"dolazi", future:"će doći"},
+  "pošao": {lemma:"poći", translation:"отправиться, пойти", past:"pošao / pošla", present:"polazi", future:"će poći"},
+  "krenuo": {lemma:"krenuti", translation:"отправиться", past:"krenuo / krenula", present:"kreće", future:"će krenuti"},
+  "rekao": {lemma:"reći", translation:"сказать", past:"rekao / rekla", present:"kaže", future:"će reći"},
+  "može": {lemma:"moći", translation:"мочь", past:"mogao / mogla", present:"može", future:"moći će"},
+  "mogao": {lemma:"moći", translation:"мочь", past:"mogao / mogla", present:"može", future:"moći će"},
+  "morala": {lemma:"morati", translation:"быть должным, быть вынужденным", past:"morao / morala", present:"mora", future:"moraće"},
+  "počeo": {lemma:"početi", translation:"начать", past:"počeo / počela", present:"počinje", future:"počeće"},
+  "poželela": {lemma:"poželeti", translation:"захотеть", past:"poželeo / poželela", present:"poželi", future:"poželeće"},
+  "shvatili": {lemma:"shvatiti", translation:"понять", past:"shvatio / shvatila", present:"shvataju", future:"shvatiće"},
+  "odlučili": {lemma:"odlučiti", translation:"решить", past:"odlučio / odlučila", present:"odlučuju", future:"odlučiće"},
+  "naučili": {lemma:"naučiti", translation:"научить, научиться", past:"naučio / naučila", present:"uče", future:"naučiće"}
 };
 
 const DICT = {
@@ -1104,7 +1138,7 @@ function view(id){
 }
 
 function texts(){
-  $("list").innerHTML = TEXTS.map((t,i) => `
+  const local = TEXTS.map((t,i) => `
     <div class="card">
       <div class="tag">${t.level}</div>
       <h3>${t.title}</h3>
@@ -1112,6 +1146,45 @@ function texts(){
       <p class="muted">Большой учебный текст · около ${t.text.split(/[.!?]+/).filter(Boolean).length} предложений</p>
       <button type="button" class="read-text" data-index="${i}">Читать</button>
     </div>`).join("");
+  const real = REAL_SOURCES.map((t,i) => `
+    <div class="card real-source-card">
+      <div class="tag">${t.level}</div>
+      <h3>${t.title}</h3>
+      <p>${t.ru}</p>
+      <p class="muted">Реальный текст из открытого источника. Загружается с Викизворника прямо при открытии.</p>
+      <button type="button" class="read-source" data-source-index="${i}">Читать оригинал</button>
+      <a class="source-link" href="${t.url}" target="_blank" rel="noopener">Открыть источник ↗</a>
+    </div>`).join("");
+  $("list").innerHTML = `
+    <h3 class="library-heading">Учебные тексты</h3>${local}
+    <h3 class="library-heading">Реальные тексты из открытых источников</h3>
+    <p class="muted">Здесь мы не выдаём AI-текст за настоящий: оригинал загружается с Викизворника и остаётся исходным.</p>${real}`;
+}
+
+async function openRealSource(i){
+  const t=REAL_SOURCES[i];
+  $("title").textContent=t.title;
+  $("level").textContent=t.level+" · "+t.ru;
+  $("source").textContent=t.source;
+  $("text").innerHTML='<p class="muted">Загружаю оригинальный текст…</p>';
+  $("popup").classList.add("hide");
+  view("reader");
+  try{
+    const api='https://sr.wikisource.org/w/api.php?action=parse&page='+encodeURIComponent(t.page)+'&prop=text&format=json&origin=*';
+    const res=await fetch(api);
+    if(!res.ok) throw new Error('HTTP '+res.status);
+    const data=await res.json();
+    const html=data?.parse?.text?.['*'];
+    if(!html) throw new Error('Нет текста');
+    const doc=new DOMParser().parseFromString(html,'text/html');
+    doc.querySelectorAll('style,script,table,.mw-editsection,.reference,.reflist,.navbox').forEach(x=>x.remove());
+    const parts=[...doc.querySelectorAll('p')].map(p=>p.textContent.trim()).filter(Boolean);
+    const text=parts.join(' ');
+    if(!text) throw new Error('Пустой текст');
+    renderText(text);
+  }catch(err){
+    $("text").innerHTML=`<p>Не удалось загрузить оригинал автоматически.</p><p class="muted">Можно открыть источник напрямую:</p><p><a class="source-link" href="${t.url}" target="_blank" rel="noopener">${t.url}</a></p>`;
+  }
 }
 
 function tokenize(text){ return text.split(/(\s+)/); }
@@ -1140,16 +1213,27 @@ function openText(i){
   view("reader");
 }
 
+function getSerbianVoice(){
+  const voices=window.speechSynthesis.getVoices();
+  return voices.find(v=>/^sr(-|_)/i.test(v.lang)) || null;
+}
+
 function speakWord(w){
   if (!('speechSynthesis' in window)) {
     alert('Озвучка не поддерживается этим браузером.');
     return;
   }
   window.speechSynthesis.cancel();
+  const voice=getSerbianVoice();
+  if(!voice){
+    alert('На этом устройстве не найден сербский голос. Я не буду подставлять английский голос, чтобы не искажать произношение. Установи/включи сербский голос в настройках синтеза речи Android, после чего кнопка будет использовать именно его.');
+    return;
+  }
   const u = new SpeechSynthesisUtterance(w);
-  u.lang = 'sr-RS';
-  u.rate = 0.82;
-  u.pitch = 1;
+  u.voice=voice;
+  u.lang=voice.lang || 'sr-RS';
+  u.rate=0.78;
+  u.pitch=1;
   window.speechSynthesis.speak(u);
 }
 
@@ -1171,12 +1255,14 @@ function word(w){
   const verb = VERB_FORMS[w];
   const verbBlock = verb ? `
     <div class="verb-block">
-      <div class="verb-title">Глагол · ${verb.lemma}</div>
+      <div class="verb-title">Глагол: <b>${verb.lemma}</b> · ${verb.translation}</div>
       <div class="verb-grid">
-        <div><span>Прошедшее</span><b>${verb.past}</b></div>
-        <div><span>Настоящее</span><b>${verb.present}</b></div>
-        <div><span>Будущее</span><b>${verb.future}</b></div>
+        <div><span>Инфинитив</span><b>${verb.lemma}</b></div>
+        <div><span>Прошедшее время</span><b>${verb.past}</b></div>
+        <div><span>Настоящее время</span><b>${verb.present}</b></div>
+        <div><span>Будущее время</span><b>${verb.future}</b></div>
       </div>
+      ${verb.note ? `<div class="verb-note">${verb.note}</div>` : ''}
     </div>` : '';
   $('popup').innerHTML = `
     <div class="popup-title">${w}</div>
@@ -1403,6 +1489,17 @@ function removeWord(i){
 
 // Навигация — без inline onclick, чтобы сайт одинаково работал на GitHub Pages и мобильном Chrome.
 document.addEventListener("click", event => {
+  const popup=$('popup');
+  if(!popup.classList.contains('hide') && !event.target.closest('.popup') && !event.target.closest('.word')){
+    popup.classList.add('hide');
+  }
+
+  const sourceButton=event.target.closest('.read-source');
+  if(sourceButton){
+    openRealSource(Number(sourceButton.dataset.sourceIndex));
+    return;
+  }
+
   const nav = event.target.closest("[data-v]");
   if (nav) {
     const v = nav.dataset.v;
