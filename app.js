@@ -120,6 +120,62 @@ const TEXTS = [
     "source": "Vuk Stefanović Karadžić, Srpske narodne pripovijetke (1870), str. 246–255. Текст общественного достояния; источник — Викизворник.",
     "url": "https://sr.wikisource.org/sr-el/Добра_дјела_не_пропадају",
     "text": "Bio je muž i žena, i imali su jednoga sina. Kad im sin poodraste, dadu ga na nauku, koja će mu u neko vrijeme i pomoći. On je bio dobar i miran, i za najviše pun straha Božijega. Pošto svrši nauku, otac mu da brod i u njemu trgovinu, da kroz prostrani svijet ide i da se trudi, ne bi li u starost roditeljima svojijema od pomoći bio. On se s brodom naveze, i ploveći po moru, sretne brod Turski i čuje, gdje u njemu veliki plač stoji, te zapita mornare na Turskome brodu: „Molim vas, šta se ta plač u brodu vašem čuje?“ A oni mu odgovore: „Vozimo roblje, što smo kroz svijet zarobili, i to oni vezani plaču.“ Onda on reče: „Molim vas, braćo, upitajte kapetana vašeg, bi li ih na otkupe za gotove novce dao.“ Oni ga odmah veselo poslušaju, potrče i zovnu kapetana. Kapetan iziđe, i oni se odmah pogode, on kapetanu brod i trgovinu a kapetan njemu vezane robove. On ih prizove k sebi i počne ih pitati, oklen je koji, pa svakome reče da ide na svoju postojbinu, i tako redom jedno po jedno, dok najposlije dođe do jedne starice, koja je držala do sebe prekrasnu đevojku. Kad njih zapita, otkuda su, baba mu plačući odgovori: „Ja sam izdaleka, babica od dvora careva; a ova đevojčica, ovo je jedina šćer careva, koju sam ja od malena gojila; pa po nesreći svojoj otide u bašču, podaleko od dvora. Prokleti Turci opaze je i uhvate, ona počne vikati, a ja opet po nesreći svojoj namjerim se blizu, pritrčim na glas, a oni uhvate i mene, i povedu obadvoje na brod.“ Potom one ne umijući kuđ hoditi, a i nemajući su što tražiti kuće svoje, zamole se njemu, da ih on uzme sobom. On ih uzme, đevojku vjenča sebi za ženu, i ode natrag svojoj kući. Kad dođe kući, otac ga zapita, đe mu je brod i trgovina. A on mu pripovjedi sve šta je bilo, kako je otkupio roblje i otpuštao kućama, „a ova“ reče „đevojka jest šćer careva, a ova starica, ovo je careva kutnja babica; one ne umijući kud, a i nemajući su šta tražiti svoje kuće, ostadoše u mene, i ja uzeh sebi đevojku ovu za ženu.“ Otac mu se na to ražljuti: „Nesretni sine, što učini! Za što li izgubi moje blago bez i kake nesreće i bez i kake napasti?“ pa ga išćera od sebe. On potom sa svojom ženom i s ovom staricom življaše dugo vremena u istome selu, ali u tuđoj kući, preporučujući se materi svojoj i ostalim prijateljima, ne bi li kakogod oca sklonili da ga jopet k sebi primi, i da mu druga brod napravi, obećavajući se da će unaprijed bolju pamet imati. Poslije toliko vremena otac mu se smiluje i primi ga k sebi sa ženom i s onom starcem, i dade mu drugi brod viši i ljepši od prvoga, pun trgovine svake, da ide jopet trgovati. On otplovi, a žena mu i ona starica ostanu kod njegovijeh roditelja. Kad doplovi u jedan grad, vidi gdje vojnici nesretne seljane po gradu hvataju i u tamnicu meću. On ih zapita: „Za što to činite, braćo? te siromaš u tamnicu mećete?“ A oni mu odgovore: „Za to, za što nijesu carevine caru platili.“ Onda on pođe k vlasniku i zapita: „Koliko, molim te, ima oni narod pohvatani carevine da plati?“ Vlasnik mu reče koliko i toliko. Onda on opet proda svoj brod i trgovinu, i otkupi sve pohvatane seljake, pa se opet vrati kući bez ništa, i padnuvši ocu pod noge kaže sve šta mu se dogodilo, i plačući počne ga moliti za oproštenje. Otac mu se još više ražljuti, i oćera ga jopet od sebe. Kako će sad nesretni sin, na koju li će stranu? kod bogatijeh roditelja sad prosi? Dok nakon toliko vremena opet prijatelji okolo njegova oca nagovarajući, da ga opet k sebi primi, obećavajući mu se oni, da više ne će biti onakov kakov i do sad, već da ga je nevolja na bolju pamet naučila. Već na sve duge jade otac mu se opet skloni, primi ga k sebi i dade mu brod još višlji i još ljepši od prvijeh. On ispiše na krmu od broda iznutra svoju ženu a na provu onu staricu: pozdravi se s ocem i s materom, sa ženom i sa svima u kući, i otisne se ploviti. Ploveći tako dođe pod jedan veliki grad, u kom je car živio, ispustivši svoja sidra stane grad topovima pozdravljati. Svi se građani začude, a i sam car, ne znajući ko je i što je. Kad bude pred noć, pošlje car k njemu svoga ministra da vidi, ko je i što je, i da mu reče, da će sjutra na devet ura ujutru car doći na njegov brod. Ministar pođe, gdje će viđeti čuda? ugleda na krmi od ovoga broda ispisanu njegovu vjerenicu a carevu šćer, koju mu je car još iz malena obećao bio, a na provu dvora careva babicu, koju su zajedno s njom Turci zarobili bili, ali od radosti nije mogao sam sebi vjerovati, niti je i kome za to što kazivao. Dok sjutradan, devet ura zazvoni, evo cara sa svojim ministrima na brod, počne se razgovarati, ko je i oklen je, i šetajući se s prove na krmu upazi đevojku ispisanu na krmi i staricu jednu na provu od broda, i on pozna svoju jedinu šćer i nje babicu, što su im Turci zarobili, ali ni on od velike radosti nije mogao uvjeriti, već pozove kapetana dvije ure poslijed podne, da pođe u njegov dvor da ga iskuša, jeli istinito što mu srce kaže. Po tom se pozdravi s njim i otide. Kad su dvije zazvonile, kapetan otide na zapovijest carsku. Car ga počne ispitivati poizdaleka, što mu dolazi ona mladica ispisana na krmi od njegova broda i ona starica na provi! Spazi se on odmah, da je ovo žene njegove roditelj, i počne mu sve žitije svoje redom kazivati, kako je ploveći po moru srio Turski brod, pun robova, i kako ih je svijeh otkupio, i svakoga domu otpustio, „a ova đevojka“ reče, „i s njom ona starica, ne umijući kuđ hoditi a i neimajući su što tražiti svoje postojbine, jer im je daleko bilo, ostanu u mene, i ja đevojku vjenčam za svoju ženu.“ Kad par to čuje, povikne: „To je moja jedina šćer, koju su prokleti Turci zarobili; a ta starica, to je od moga dvora babica, koja je nju još izmalena gojila i čuvala; a ti – ti ćeš biti krune moje našljednik, već trči natrag svojoj kući, i dovedi mi šćer moju, a ženu tvoju, da je viđu još jednom prijed nego li umrem, i dovedi oca svoga i mater svoju i svu familju svoju, i prodaj sve imanje svoje; tvoj otac biće moj brat, a tvoja mati moja sestra, a ti ćeš biti moj sin i krune moje našljednik, i svi ćemo življeti u jednome dvoru.“ Potom zovne ženu svoju caricu i sve ministre i kaže im, što se zbilo sa šćeri njegovom. Onda se počnu svi radovati i veliko veselje činiti. Potom car mu da svoj veliki i prekrasni brod, a on svoj ostavi onđe, ali reče caru: „Svijetla kruno! ne će mene kod doma mog vjerovati, ako mi ne daš jednoga od svojijeh ministara.“ Car mu da ministra, baš onoga kom je šćer svoju obećao bio. I tako se oni otisnu i stanu ploviti. Kad doma dođe, otac mu se začudi, oklen tako ubrzo doma se vrati, i brod ljepši i viši dobavi. On mu kaže sve šta je i kako, i materi svojoj i ženi i onoj starici objavi radosni glas, i „evo“ veli, „ako ne vjerujete, evo vam carskog ministra, koga je car sa mnom poslao da se bolje uvjerite.“ Kad žena njegova ugleda ministra, povikne od radosti svekru svome i svekrvi: „Jest istina, dragi oče, ovo je ministar oca moga, a moj nesuđeni zaručnik.“ Oni onda prodadu sve svoje imanje, i otisnu se ploviti. Ministar ovi gledao je svakojako mladog našljednika careva a vjerenice svoje muža da ubije, ne bi li se on s njome vjenčao, kako mu je od nje roditelja obećano bilo, da bi onda on našljednik carski ostao. Kad su već bili na neki dio puta, zovne on njega notnjo, kad su svi pospali, da iziđe na kuvijertu da se s njim nešto dogovori. On prave misli bez i kakvog straha iziđe gore, a ovi ga onda uhvati i preko broda u more baci. Brod je jedrio, i on se već nije mogao njega uhvatiti. Onda ministar otide opet spavati. Mladoga našljednika carskog iznese sreća na jednu seku podaleko od kraja, ali pod jednu pustinju, đe nikome tuda prolazak ne bijaše, da bi ga izbavio. Kad ujutru svane, vide oni u brodu da njega nema, pa počnu plakati i jaukati sudeći, da se notnjo sam nehotice utopio, i nikako se nijesu mogli utješiti i za najviše njegova žena, jer su se premnogo pazili. Kad dođu kod cara, jave mu nesreću, koja im se u putu dogodila. Tada nastane tuga i plač u carskom dvoru za mnogo, i nigda se utješiti nijesu mogli. Njegove roditelje car primi i kod sebe ih uzdrži kao što je obećao bio. Nesretni zet carev sjedeći na ploči morskoj življaše o travici, koja bješe pri ploči prirasla, vas bješe već pocrnio, aljine na njemu izagnjile, da se ne mogaše poznati i ni od kuda žive duše, koja bi ga izbavila, dok srećom njegovom poslije petnaest dana i petnaest noći eto ti jednog starca na štapu pokraj mora đe ribu lovi. On ga odmah stane vikati i moliti, da ga na suho prenese. Starac mu se obeća: „Hoću“ reče „ali da mi platiš.“ „Od kud ću ti platiti“ odgovori mu on, „kad ni haljine na sebi nemam.“ „Ništa za to“ starac odgovori; „evo ja imam pri sebi kalamar i pero, ako umiješ pisati da mi se potpišeš, od svega svoga, što bi i gda imao, da ćeš mi polovicu dati.“ On na to pristane sa svim srcem. Starac onda zagazi i dođe do njega, on mu se potpiše, a starac njega na suho prenese. Onda on od kuće do kuće, od sela do sela, go, bos, crn i gladan, dade mu neko gaće a neko košulju, samo što tijelo pokrije. Nakom trideset dana donese ga sreća u carev grad i pred carev dvor, te sjedne sa štapom u ruci pokraj vrata od dvora, a prsten vjenčani s imenom njegovijem i njegove žene a careve šćere još mu je na ruci stajao. U veče sluge careve prime ga u dvor i dadu mu što je iza njih ostalo da jede. Sjutridan pođe i sjedne ukraj vrata od carske bašče; ali dođe baščovan te ga otole oćera govoreći mu, da će sad car tuda proći sa svojom familjom. On se otole makne i opet sjedne u jedan kraj od bašče, dok evo ti cara gdje šeta s njegovom materom, a otac njegov sa caricom, a žena njegova s krvnikom njegovim, ministrom. Onim se još nije hotio otkriti, već oni šetajući prođu pokraj njega i dadu mu nekoliko novaca; ali na onoj ruci kojom je novce prihvatao, prsten je stajao, žena ga njegova ugleda, i ne mogući ni pomisliti daje on nje muž, reče mu: „Nu, daj mi ruku, da viđu prsten taj kakav je.“ Ministar, koji je do nje stajao, malo se ka i prepane i reče joj: „Odmakni se“ veli „kako bi s ovom odrpanicom govorila?“ Ali ga ona ne ćedne ni slušati, već uzme prsten i pozna ime nje i nje muža. Kako se njoj tada učinilo, kako li se srce bilo okamenilo, kad prsten ovaj viđe; ali se opet ustrpi i premuči. Kad dođu u dvor, kaže ona ocu svom, kako je prsten nje pokojnog muža poznala u prosjaka onoga što u bašči sjeđaše, „nego pošlji“ reče „neka ga zovnu, da ga ispitamo, od kud je prsten oni u ruke njegove došao.“ Car odmah pošlje sluge, te prosjaka dovedu. Onda ga car počne ispitivati, od kud je, i kako se zove, i kako je prsten taj u ruke njegove došao. On se više ne mogaše uzdržavati da im se ne otkrije, već počne im redom kazivati, kako ga je ministar oni kad su bili u putu, preko broda u more bacio, i kako ga je sreća na jednu ploču blizu kraja nanijela, na kojoj je petnaest dana i petnaest noći živio o travi, koja je pri ploči prirasla bila, i nakom ovoliko dana kako ga je starac jedan otlen izbavio, „i evo“ reče „Bog i moja pravica donese me opet mojim roditeljima i mojoj ljubi.“ Oni kad ovo čuše, onijeme od radosti, a pošto se malo razabraše, skoči car i zovne oca njegova i mater i kaže im, što se dogodilo od sina njihovoga. Ko bi sad mogao iskazati radost ovu, koja ih obuze, kad su se poznali, kako li veselje u tome dvoru postade! Odmah mu donesoše svijetlo i novo ođelo, izmiše ga p obukoše. Za toliko dana trajala je radost i veselje ne samo u njihovom dvoru, već po cijelom gradu, pjevalo se i veselilo, i njega za mladog cara okruniše. Car odmah zapovjedi, te onoga ministra uhvate i da ga zetu na volju da mu sudi. On mu sve oprosti, ne dade ga ni ubiti ni objesiti, već samo oćera ga izvan njihovog carstva, da više pod vlast njihovu ne pripada. Novi car počne carovati, kad nakom malo dana njegova vladanja, evo ti mu onoga starca, koji ga je iz mora izbavio, nosi oni potpis što mu je potpisao, da će mu kad god bi što imao, od svega polovinu dati. Došavši starac u dvor, zamoli sluge da ga pred cara puste. Sluge uljezu k caru i kažu mu, da jedan starac želi k njemu uljesti. Car dopusti, i starac uljezavši pokloni mu se i poljubi mu ruku i metne mu kartu na koljeno. Car uzme i pročativši je reče mu: „Dobro, starče moj, sjedi, ja sam danas car, ali da sam i prosjak, ja ću riječ moju i potpis moj potvrditi; već pričekaj, da počnemo dijeliti.“ Car iznese knjigu i počnu prvo gradove dijeliti: „Ovaj“ reče „meni, ovaj tebi“ pišući sve na kartu, doklen sve podijele od najvišega grada do najmanje kućerice. Starac uzme svoju polovinu zapisanu svu u karti, i pokloni je opet caru govoreći: „Na, nijesam ja starac, čoek zemaljski; već sam ja anđeo Božij, kojino sam poslan bio od Boga, da tebe iz mora izbavim za tvoja dobra đela, koja si do sad pred Bogom učinio. Već caruj i uživaj, da ti bude dugovječno.“ Anđela nestane, a on ostane sretno vladajući."
+  },
+  {
+    "title": "Kod lekara",
+    "ru": "У врача",
+    "level": "A2",
+    "source": "Авторская учебная адаптация для Čitaj srpski; текст создан специально для изучения сербского языка и не выдается за литературный оригинал.",
+    "text": "Pre nego što je krenuo, zapisao je pitanja koja je želeo da postavi. Nije želeo da zaboravi nijedan važan detalj. U čekaonici je sedeo još jedan čovek. On je tiho čitao novine. Medicinska sestra je pozvala Petra po imenu. Petar je ušao u ordinaciju. Lekar ga je pitao koliko dugo ima tegobe. Petar je rekao da je počelo pre tri dana. Lekar je pitao da li ima temperaturu. Petar je odgovorio da nema visoku temperaturu. Da li je imao problema sa disanjem? Nije, ali je imao jak kašalj. Lekar mu je poslušao pluća. Zatim mu je izmerio temperaturu. Sve je izgledalo normalno. Ipak, lekar je preporučio da se odmara. Rekao je da treba da pije dovoljno vode. Petar je pitao da li može da ide na posao. Lekar je rekao da bi bilo bolje da ostane kod kuće ako se ne oseća dobro. Petar nije želeo da uzima lek bez potrebe. Zato je pitao šta može da koristi za kašalj. Lekar mu je objasnio kako da koristi sirup. Takođe mu je rekao da prati simptome. Ako temperatura poraste, treba ponovo da se javi lekaru. Petar je sve zapisao u telefon. Posle pregleda otišao je u apoteku. Farmaceut ga je pitao da li ima recept. Petar je rekao da nema recept. Pokazao je preporuku lekara. Farmaceut mu je objasnio kako se lek koristi. Petar je proverio koliko puta dnevno treba da ga uzima. Nije želeo da pogreši. Pre nego što je platio, pitao je koliko košta. Cena nije bila visoka. Zatim je otišao kući autobusom. Kod kuće je otvorio prozor. Nije želeo da bude u zagušljivoj sobi. Napravio je čaj i odmorio se. Kasnije je poslao poruku kolegi. Napisao je da sutra verovatno neće doći na posao. Kolega mu je poželeo brz oporavak. Petar je zatim još jednom pročitao uputstvo. Uveče se osećao malo bolje. Ipak, nije pokušavao da radi. Sledećeg jutra je proverio temperaturu. Bila je normalna. Kašalj je još postojao, ali je bio slabiji. Petar je odlučio da još jedan dan ostane kod kuće. Petar je izbegavao hladan vazduh. Nije izlazio bez jakne. Da li je morao da ode na kontrolu? Lekar je rekao da ne mora ako se bude osećao bolje. Petar je ipak odlučio da pozove ordinaciju za nekoliko dana. Tako će proveriti da li se simptomi potpuno povlače. Lekar mu je savetovao da ne žuri sa povratkom treninzima. Posle nedelju dana Petar se osećao potpuno zdravo. Kašalj je nestao. Ponovo je počeo da trenira, ali je prvih dana radio lakše vežbe. Nije želeo da se odmah vrati starom ritmu. Lekar mu je rekao da je to dobar pristup. Petar je nastavio da prati svoje zdravlje. Sada zna kada treba da napravi pauzu. Takođe je počeo da nosi flašu vode sa sobom. To mu je postalo jednostavno. Nije više čekao da oseti žeđ. Posle nekog vremena shvatio je da male navike mogu mnogo da znače. Sada se osećao sigurnije kada treba da donese odluku o odmoru. Ako se ponovo razboli, znaće kada treba da potraži savet. Nije više mislio da mora sve da završi odmah. Sada bolje sluša svoje telo."
+  },
+  {
+    "title": "Telefon, internet i svakodnevni život",
+    "ru": "Телефон, интернет и повседневная жизнь",
+    "level": "A2",
+    "source": "Авторская учебная адаптация для Čitaj srpski; текст создан специально для изучения сербского языка и не выдается за литературный оригинал.",
+    "text": "Jelena je odlučila da bolje organizuje korišćenje telefona. Primetila je da često proverava poruke bez pravog razloga. Da li joj je telefon pomagao da bude organizovanija? Ponekad jeste, ali ponekad joj je samo odvlačio pažnju. Zato je jednog jutra isključila nepotrebne obaveštenja. Ostavila je samo poruke i pozive. Prvih nekoliko sati bilo joj je neobično. Nije stalno gledala u ekran. Na poslu je lakše završila jedan važan dokument. Nije otvarala društvene mreže dok je radila. Posle posla je ponovo uključila poruke. Prijatelj joj je poslao fotografiju sa putovanja. Jelena je odgovorila kratkom porukom. Zatim je odlučila da proveri elektronsku poštu. Imala je nekoliko novih mejlova. Jedan je bio od banke. Drugi je bio od operatera. Treći je sadržao link koji nije prepoznala. Da li je trebalo da otvori taj link? Ne, odlučila je da ga prvo proveri. Pogledala je adresu pošiljaoca. Nije joj izgledala poznato. Zato je poruku obrisala. Kasnije je dobila poruku od prijateljice. Prijateljica je pitala da li mogu da razgovaraju uveče. Jelena je rekla da može. Uveče su razgovarale preko video poziva. Veza je nekoliko puta bila loša. Slika se zamrzla, ali razgovor je ipak nastavljen. Jelena je zatim pokušala da popravi kućni internet. Restartovala je ruter. Nije pomoglo odmah. Zato je pozvala korisničku podršku. Operater joj je postavio nekoliko pitanja. Jelena je objasnila šta se dešava. Operater joj je rekao da proveri kabl. Kabl je bio dobro povezan. Posle nekoliko minuta internet je ponovo radio. Jelena je zahvalila operateru. Kasnije je napravila rezervnu kopiju važnih fotografija. Nije želela da ih izgubi. Fotografije je sačuvala na računaru i na drugom mestu. Zatim je promenila jednu staru lozinku. Izabrala je dužu lozinku koju nije koristila drugde. Pre spavanja je stavila telefon dalje od kreveta. Nije želela da poslednjih trideset minuta dana provede gledajući ekran. Shvatila je da tehnologija može mnogo da pomogne, ali da je važno znati kada treba napraviti pauzu. Sledećeg dana Jelena je napravila još jedno pravilo. Tokom rada telefon je ostajao u drugoj sobi. Da li joj je to bilo teško? Ne, posle nekoliko dana navikla se. U pauzi je proveravala poruke. Nije želela da bude stalno dostupna. Uveče je zapisala koliko joj je vremena ostalo bez ekrana. Rezultat ju je iznenadio. Imala je više vremena za knjigu. Tako je odlučila da pravilo zadrži. Posle mesec dana Jelena je primetila još jednu promenu. Lakše je završavala posao bez prekida. Nije proveravala telefon čim bi dobila novu poruku. Da li je izgubila kontakt sa prijateljima? Nije, samo je razgovore planirala mirnije. Vikendom je ponekad potpuno isključivala obaveštenja. Tako je imala više vremena za porodicu i odmor. Jelena je napravila i listu aplikacija koje zaista koristi. Nekoliko starih aplikacija je obrisala. Nije želela da joj telefon bude pun programa koje nikada ne otvara. Da li joj je telefon posle toga bio manje koristan? Naprotiv, lakše je pronalazila ono što joj treba. Sada jednom mesečno proverava podešavanja. To joj oduzima samo nekoliko minuta. Jelena je taj mali pregled počela da radi prvog dana svakog meseca. Nije joj trebalo mnogo vremena. Tako je održavala telefon urednim i sigurnijim."
+  },
+  {
+    "title": "Stan i novi komšije",
+    "ru": "Квартира и новые соседи",
+    "level": "A2",
+    "source": "Авторская учебная адаптация для Čitaj srpski; текст создан специально для изучения сербского языка и не выдается за литературный оригинал.",
+    "text": "Nikola je želeo da bolje upozna svoje nove komšije. U zgradi je živeo tek nekoliko nedelja. Da li je već znao sve ljude sa svog sprata? Nije, ali je često sretao istu porodicu. Jednog dana je u hodniku upoznao stariju komšinicu. Ona je nosila nekoliko kesa. Nikola joj je pomogao da ih odnese do stana. Komšinica mu je zahvalila i pozvala ga na kafu. Nikola je prihvatio poziv. U njenom stanu bilo je mnogo biljaka. Komšinica mu je pokazala balkon. Sa balkona se video mali park. Rekla je da u stanu živi više od dvadeset godina. Nikola ju je pitao kakva je zgrada bila ranije. Ona je rekla da je bilo manje stanova renovirano. U hodniku su nekada stajala stara vrata. Sada su vrata nova i bolje zatvorena. Nikola je primetio da je zgrada prilično mirna. Ipak, ponekad se uveče čuje buka. Komšinica je rekla da je to obično samo vikendom. Nikola nije želeo da se žali zbog svake sitnice. Važnije mu je bilo da se sa ljudima dogovara. Nekoliko dana kasnije upoznao je i porodicu sa drugog sprata. Imali su malu decu. Deca su se igrala u parku ispred zgrade. Nikola je pitao da li često izlaze tamo. Majka je rekla da idu skoro svakog dana. Jednog vikenda organizovali su malo čišćenje zajedničkog prostora. Nikola je pomogao da se očisti podrum. Tamo je pronađen stari alat. Niko nije znao čiji je. Dogovorili su se da ga ostave u posebnom ormaru. Ako nekome zatreba, može da ga koristi. Kasnije su popravili svetlo u hodniku. Jedna sijalica je često prestajala da radi. Majstor je došao sledećeg dana. Problem nije bio veliki. Posle popravke hodnik je bio mnogo svetliji. Nikola je shvatio da je život u zgradi lakši kada komšije razgovaraju. Ne moraju svi da budu bliski prijatelji. Dovoljno je da se poštuju i da pomognu kada je potrebno. Od tada je Nikola češće pozdravljao ljude u liftu. Tako je polako počeo da se oseća kao deo komšiluka. Nedugo zatim komšije su organizovale zajedničku večeru. Nikola je doneo salatu. Druga porodica je donela kolač. Niko nije želeo da večera bude formalna. Ljudi su sedeli dugo i razgovarali. Da li su svi imali iste navike? Naravno da nisu, ali su lako našli teme za razgovor. Nikola je upoznao još nekoliko ljudi iz zgrade. Posle te večeri zgrada mu više nije izgledala strano. Nikola je jednog dana primetio mali problem sa vratima ulaza. Vrata se nisu dobro zatvarala. Pozvao je upravnika zgrade. Upravnik je obećao da će poslati majstora. Da li je problem bio ozbiljan? Nije, popravka je završena istog dana. Nikola je tada shvatio da je korisno znati kome se treba obratiti. Komšije su zatim dogovorile da ne ostavljaju stvari u hodniku. Nije bilo dobro da prolaz bude zatvoren. Svi su se složili sa tim pravilom. Nikola je predložio da se napravi i mali spisak važnih telefona. Na njemu su bili upravnik, majstor i servis za lift. Da li je to bilo potrebno svaki dan? Nije, ali je bilo korisno imati informacije kada nastane problem. Tako je zgrada postala bolje organizovana. Nikola je kasnije predložio i zajedničku grupu za važne obaveštenja. Komšije nisu želele da grupa bude puna nepotrebnih poruka. Dogovorili su se da je koriste samo kada postoji važna informacija. To je svima odgovaralo."
+  },
+  {
+    "title": "Sport posle posla",
+    "ru": "Спорт после работы",
+    "level": "A2",
+    "source": "Авторская учебная адаптация для Čitaj srpski; текст создан специально для изучения сербского языка и не выдается за литературный оригинал.",
+    "text": "Marko je posle nekoliko napornih nedelja shvatio da mu nedostaje kretanje. Nije želeo da slobodno vreme provodi samo kod kuće. Zato je odlučio da tri puta nedeljno ide na trening. Da li je izabrao teretanu ili sport na otvorenom? Prvo je izabrao plivanje. Blizu njegovog stana nalazi se gradski bazen. Marko je otišao tamo u ponedeljak. Na recepciji je kupio mesečnu kartu. Radnica mu je objasnila pravila bazena. Marko nije poneo peškir. Srećom, mogao je da ga iznajmi. Presvukao se i otišao do bazena. Voda nije bila hladna. Prvih deset minuta je samo polako plivao. Zatim je pokušao da pliva brže. Brzo se umorio. Da li je očekivao da će odmah biti u dobroj formi? Ne, znao je da mora polako da počne. Posle treninga se istuširao. Popio je mnogo vode. Nije odmah jeo težak obrok. Kući je otišao peške. Šetnja mu je prijala. Sledećeg dana su ga boleli mišići. Zato nije trenirao. Umesto toga je napravio laganu šetnju. Da li treba trenirati svaki dan? Marko je naučio da odmor takođe ima važnu ulogu. U sredu se ponovo vratio na bazen. Ovoga puta je plivao malo duže. Nije pokušavao da bude najbrži. Važnije mu je bilo da pravilno diše. Trener mu je pokazao kako da popravi položaj ruku. Marko je pokušao ponovo. Pokret mu je odmah bio lakši. Posle treninga trener ga je pitao da li ima pitanja. Marko je pitao kako može da poveća izdržljivost. Trener mu je preporučio redovan trening i dovoljno sna. Rekao je da napredak neće doći preko noći. Marko je prihvatio savet. U petak je ponovo došao na bazen. Pre treninga je kratko razgibao telo. Nije preskočio zagrevanje. Tokom treninga je napravio nekoliko pauza. Posle mesec dana primetio je promenu. Više se nije umarao tako brzo. Shvatio je da sport ne mora da bude takmičenje. Sledećeg meseca odlučio je da proba i trčanje. Nije znao koliko će moći da izdrži. Počeo je sa kratkom rutom. Posle nekoliko nedelja mogao je da trči duže. Nije jurio rezultat. Važno mu je bilo da napravi naviku. Kada je imao manje vremena, vežbao je kod kuće. Tako je pronašao način da ostane aktivan i tokom zauzetih dana. Marko je počeo da prati i koliko spava. Shvatio je da bez odmora trening nije prijatan. Da li je svaki trening morao da bude težak? Ne, neke dane je samo hodao. Jednom je preskočio trening zbog umora. Nije osećao krivicu. Naučio je da sluša svoje telo. Posle nekoliko meseci imao je više energije tokom radnog dana. To mu je bio najvažniji rezultat. Kasnije je Marko počeo da beleži treninge. Zapisivao je koliko je plivao i kako se osećao. Nije se opterećivao brojevima. Želeo je samo da vidi napredak. Posle šest meseci mogao je da pliva duže bez odmora. Da li je postao profesionalni sportista? Naravno da nije. Ali je stekao zdravu naviku koja mu je mnogo značila."
+  },
+  {
+    "title": "U restoranu",
+    "ru": "В ресторане",
+    "level": "A2",
+    "source": "Авторская учебная адаптация для Čitaj srpski; текст создан специально для изучения сербского языка и не выдается за литературный оригинал.",
+    "text": "Jelena je u subotu pozvala prijatelja na večeru. Želela je da probaju mali restoran u centru. Da li su morali da rezervišu sto? Nisu, ali su ipak pozvali restoran. Konobar im je rekao da ima slobodan sto. Stigli su oko sedam sati. Restoran nije bio veoma velik. Na zidovima su visile stare fotografije grada. Jelena je dobila jelovnik. Prijatelj je prvo pogledao ponudu pića. Jelena nije želela gazirano piće. Poručila je vodu. Zatim su pogledali jela. Na jelovniku je bilo nekoliko tradicionalnih specijaliteta. Da li je Jelena odmah znala šta želi? Ne, nije mogla da odluči. Konobar joj je objasnio nekoliko jela. Rekao je da je jedno jelo posebno popularno. Jelena je pitala da li je veoma ljuto. Konobar je rekao da nije. Prijatelj je naručio supu. Jelena je izabrala jelo sa povrćem i sirom. Uz to je naručila salatu. Da li žele hleb? Da, uzeli su malu korpu hleba. Dok su čekali, razgovarali su o poslu. Prijatelj je pričao o svom novom projektu. Jelena ga je pažljivo slušala. Hrana nije stigla odmah. Ipak, nisu se žalili. Konobar je rekao da će hrana stići za nekoliko minuta. Ubrzo su dobili poručena jela. Supa je bila topla. Jelena je probala svoje jelo. Ukus joj se dopao. Prijatelj je rekao da je njegova supa odlična. Da li je nešto bilo previše slano? Ne, sve je bilo dobro začinjeno. Jelena je pitala odakle je sir. Konobar je rekao da dolazi sa malog imanja iz okoline. To joj se dopalo. Volela je da proba lokalne proizvode. Posle glavnog jela nisu odmah naručili desert. Konobar ih je pitao da li žele kafu. Jelena je uzela kafu. Prijatelj nije želeo kafu. Umesto toga je naručio čaj. Da li je restoran imao kolače? Da, ali tog dana nije ostao veliki izbor. Platili su karticom. Jelena je rekla da će ponovo doći. Pre nego što su otišli, pitala je konobara koje jelo najčešće preporučuje gostima. On je rekao da se mnogo ljudi vraća zbog domaće testenine. Prijatelj je zapamtio preporuku. Sledećeg meseca žele da dođu sa još dvojicom prijatelja. Ovog puta planiraju da rezervišu sto unapred. Tako neće morati da čekaju ako restoran bude pun. Jelena je rekla da joj je važno da osoblje bude ljubazno. Prijatelj se složio. Oboje su zaključili da dobar restoran nije samo ukusna hrana. Važni su i usluga, atmosfera i mogućnost da mirno razgovaraju. Na kraju večeri Jelena je proverila račun. Sve stavke su bile jasne. Nije bilo dodatne naknade. Prijatelj je ostavio napojnicu. Da li su bili zadovoljni uslugom? Da, posebno im se dopao odnos konobara prema gostima. Pre odlaska su pitali da li restoran prima rezervacije preko interneta. Konobar im je objasnio postupak. Jelena je sačuvala broj telefona restorana. Sledeći put neće morati dugo da traže kontakt."
+  },
+  {
+    "title": "Dan za zajednicu",
+    "ru": "День для сообщества",
+    "level": "A2",
+    "source": "Авторская учебная адаптация для Čitaj srpski; текст создан специально для изучения сербского языка и не выдается за литературный оригинал.",
+    "text": "U subotu je u gradu organizovana akcija za komšiluk. Cilj akcije bio je da se uredi mali park. Marija je videla poziv na internetu. Odlučila je da se prijavi kao volonter. Da li je ranije učestvovala u takvoj akciji? Nije, ali je želela da proba. Ujutru je ponela rukavice i vodu. U parku je već bilo mnogo ljudi. Neki su skupljali lišće. Drugi su čistili staze. Jedna grupa je sadila cveće. Marija je dobila zadatak da čisti klupe. Klupe nisu bile veoma prljave. Ipak, trebalo ih je oprati i obojiti. Organizator je objasnio šta treba uraditi. Marija nije bila sigurna kako se koristi četka. Jedna starija komšinica joj je pokazala. Posao je bio jednostavan. Da li su ljudi radili samo jedan sat? Ne, većina je ostala skoro celo jutro. Tokom rada su se ljudi upoznavali. Marija je razgovarala sa čovekom iz susedne ulice. On je rekao da često šeta tim parkom. Voleo bi da park bude čistiji. Jedna devojka je donela male biljke. Deca su pomagala da se napravi novi cvetni deo. Nisu radila sama. Uvek je pored njih bio neki odrasli volonter. Oko podneva je počela kratka pauza. Organizatori su doneli vodu, voće i sendviče. Marija nije bila gladna, ali je uzela jabuku. Da li je bilo dovoljno hrane za sve? Da, organizatori su dobro planirali količinu. Posle pauze su nastavili sa radom. Jedna grupa je popravljala ogradu. Druga grupa je skupljala otpad. Marija je primetila mnogo plastičnih flaša. Odlučila je da ih razdvoji od drugog otpada. Organizator je objasnio gde treba staviti plastiku. Neki ljudi nisu znali da se otpad tako razdvaja. Marija im je pokazala različite kutije. Do kraja dana park je izgledao drugačije. Staze su bile čiste. Nova ograda je bila čvršća. Da li je sve bilo završeno? Ne, nekoliko stvari je ostalo za sledeći vikend. Marija je rekla da će ponovo doći. Shvatila je da mala grupa ljudi može mnogo da promeni. Sledeće nedelje organizatori su poslali fotografije učesnicima. Marija je na njima videla kako je park izgledao pre akcije. Razlika je bila velika. Nije očekivala da će nekoliko sati rada toliko promeniti prostor. Jedan komšija je predložio da se napravi mala biblioteka na otvorenom. Drugi su želeli više klupa. Organizator je rekao da mogu da naprave plan. Da li će grad pomoći? Još nisu znali. Ipak, ljudi nisu želeli da čekaju. Dogovorili su se da prvo sakupe ideje. Marija je zapisala nekoliko predloga. Tako je jedna mala akcija otvorila razgovor o tome kako komšiluk može zajedno da rešava probleme. Nekoliko dana kasnije održan je novi sastanak komšiluka. Marija je došla sa svojim beleškama. Predložila je da se napravi raspored za održavanje parka. Da li su svi odmah prihvatili predlog? Nisu, ali su razgovarali o različitim mogućnostima. Na kraju su napravili jednostavan plan. Svaka grupa će pomoći jednom mesečno. Marija je bila zadovoljna jer je ideja dobila konkretan oblik. Posle nekoliko meseci park je postao mesto gde se ljudi češće sastaju. Deca su tamo provodila više vremena. Stariji ljudi su koristili nove klupe. Marija je bila zadovoljna promenom. Nije očekivala da će jedan dan rada imati tako dug rezultat. Sada želi da učestvuje i u drugim akcijama u gradu."
+  },
+  {
+    "title": "U banci i pošti",
+    "ru": "В банке и на почте",
+    "level": "A2",
+    "source": "Авторская учебная адаптация для Čitaj srpski; текст создан специально для изучения сербского языка и не выдается за литературный оригинал.",
+    "text": "Petar je jednog jutra morao da završi nekoliko poslova u gradu. Prvo je trebalo da ode u banku. Želeo je da promeni adresu u svojim podacima. Da li je to mogao da uradi preko interneta? Nije bio siguran, pa je odlučio da ode u poslovnicu. U banci je uzeo broj za čekanje. Na ekranu je video svoj broj. Nije morao dugo da čeka. Službenica ga je pozvala za nekoliko minuta. Petar joj je objasnio šta želi. Ona je tražila ličnu kartu. Petar je izvadio dokument iz novčanika. Službenica je proverila podatke. Adresa je bila promenjena bez problema. Petar je pitao da li treba nešto da potpiše. Morao je da potpiše jedan obrazac. Posle toga je dobio potvrdu. Nije bilo dodatnih troškova. Pre nego što je izašao, proverio je stanje na računu. Nije želeo da podigne novac. Samo je proverio nekoliko poslednjih uplata. Da li je bilo neke nepoznate uplate? Ne, sve je bilo jasno. Zatim je otišao do pošte. Trebalo je da pošalje paket prijatelju. Paket nije bio velik. U njemu su bile knjiga i fotografije. Radnica na šalteru ga je pitala šta šalje. Petar je objasnio sadržaj paketa. Radnica je izmerila paket. Zatim mu je rekla cenu slanja. Petar nije očekivao da će cena biti toliko visoka. Pitao je da li postoji jeftinija opcija. Radnica mu je ponudila sporiju dostavu. Petar je izabrao tu opciju. Nije mu bilo važno da paket stigne odmah. Popunio je adresu primaoca. Da li je znao poštanski broj? Da, imao ga je zapisanog u telefonu. Radnica je proverila adresu. Zatim je zalepila nalepnicu na paket. Petar je platio karticom. Posle pošte je otišao u prodavnicu. Nije želeo da kupi mnogo stvari. Uzeo je mleko, hleb, povrće i deterdžent. Na kasi je proverio račun. Jedan proizvod je bio skuplji nego što je očekivao. Kasirka je proverila cenu. Ispostavilo se da je cena na polici bila stara. Petar nije želeo da se raspravlja. Kasirka mu je ponudila da pozove odgovornu osobu. Posle provere cena je ispravljena. Petar je dobio račun sa novim iznosom. Pre nego što je krenuo kući, setio se još jedne obaveze. Morao je da kupi kartu za autobus. Na stanici je proverio red vožnje. Nije bilo potrebe da žuri. Autobus je dolazio za petnaest minuta. Petar je seo na klupu i proverio da li je sve završio. Shvatio je da mu je ostao samo jedan mali zadatak. Trebalo je da pošalje poruku prijatelju o paketu. To je uradio pre nego što je autobus stigao. Tako je završio sve obaveze bez nepotrebnog stresa. Kada je stigao kući, Petar je odložio sve dokumente na jedno mesto. Nije želeo da ih ponovo traži. Zatim je proverio elektronsko bankarstvo. Na telefonu je video da je promena adrese već evidentirana. Da li je trebalo još nešto da uradi? Nije. Sve obaveze su bile završene. Petar je zapisao šta je tog dana naučio o procedurama. Sledeći put će verovatno mnogo brže završiti slične poslove."
+  },
+  {
+    "title": "Kako planirati mesečni budžet",
+    "ru": "Как планировать месячный бюджет",
+    "level": "A2",
+    "source": "Авторская учебная адаптация для Čitaj srpski; текст создан специально для изучения сербского языка и не выдается за литературный оригинал.",
+    "text": "Jelena je dugo želela da bolje planira svoje troškove. Svaki mesec je znala koliko zarađuje. Ipak, nije uvek znala gde joj novac odlazi. Da li je zapisivala svaki trošak? Ne, ranije nije imala tu naviku. Jednog meseca je odlučila da počne. Na početku je zapisala sve svoje prihode. Zatim je napravila spisak redovnih troškova. Stan, struja i internet bili su najvažniji. Tu su bili i troškovi prevoza. Jelena nije zaboravila hranu. Odvojila je i mali iznos za nepredviđene troškove. Da li je ostalo mnogo novca? Nije ostalo onoliko koliko je očekivala. Zato je pogledala ostale troškove. Videla je da često kupuje kafu usput. Takve male kupovine nisu izgledale važno. Ipak, na kraju meseca njihov zbir je bio veliki. Jelena je odlučila da neke kafe pije kod kuće. Nije želela da prestane da izlazi. Samo je želela da napravi bolju ravnotežu. Zatim je pogledala troškove hrane. Često je kupovala više nego što joj treba. Dešavalo se da neke namirnice ostanu neiskorišćene. Da li je pravila spisak za kupovinu? Ne, ali je od tada počela da ga pravi. Pre odlaska u prodavnicu proverava šta već ima. Tako ne kupuje iste proizvode dva puta. Počela je i da planira obroke. To joj štedi vreme i novac. Jedne nedelje je napravila jednostavan plan. Ponedeljkom je kuvala supu. Utorkom je pravila testeninu sa povrćem. Sredom je koristila ostatke hrane. Nije morala da kuva komplikovana jela svaki dan. Jelena je zatim proverila troškove prevoza. Najčešće je išla autobusom. Ponekad je koristila taksi. Da li joj je taksi bio potreban svaki put? Ne, često je mogla da ide peške. Počela je više da hoda. To je bilo dobro i za budžet i za zdravlje. Jelena je odredila mali iznos za zabavu. Nije želela da potpuno izbaci izlaske. Jednom nedeljno može da ode u bioskop ili kafić. Ako potroši manje, novac može da sačuva. Na kraju meseca pregledala je svoj plan. Videla je gde je uspela da uštedi. Planiranje joj daje više sigurnosti. Sledećeg meseca je napravila još jednostavniju tabelu. U nju je upisala planirani i stvarni trošak. Tako je mogla da vidi razliku. Da li je svakog meseca uspela da prati plan? Ne uvek, ali joj je bilo lakše da primeti problem. Jednom je potrošila više na odeću. Sledećeg meseca je smanjila taj trošak. Nije želela da sebi zabrani sve što voli. Želela je samo da zna koliko može da potroši. Tako je naučila da budžet nije kazna. On joj pomaže da donosi mirnije odluke. Posle nekoliko meseci imala je malu rezervu za neplanirane situacije. To joj je dalo više sigurnosti. Sada jednom nedeljno proverava svoje troškove. Ne troši mnogo vremena na to. Ipak, oseća da bolje kontroliše novac. Jelena je odlučila da deo ušteđenog novca odvaja svakog meseca. Nije želela da sve potroši čim dobije platu. Da li je to uvek bilo lako? Nije, posebno kada su se pojavili neplanirani troškovi. Ipak, mali fond joj je pomogao. Jednog meseca pokvario joj se telefon. Nije morala da pozajmi novac. Iskoristila je deo rezerve i kasnije je ponovo popunila fond. Tako je videla praktičnu korist od planiranja."
   }
 ]
 
@@ -218,6 +274,157 @@ const VERB_FORMS = {
   "naučili": {lemma:"naučiti", translation:"научить, научиться", past:"naučio / naučila", present:"uče", future:"naučiće"}
 };
 
+const CONTEXT_TRANSLATIONS = {
+  "se": "частица se; часть возвратного/неполного глагольного выражения — перевод зависит от глагола",
+  "šeshire": "шляпы; головные уборы",
+  "šešire": "шляпы; головные уборы",
+  "prikazuju": "показывают; демонстрируют",
+  "lake": "лёгкие; простые",
+  "laka": "лёгкая; простая",
+  "lak": "лёгкий; нетрудный",
+  "karta": "билет; карта; карточка — по контексту",
+  "kraj": "конец; край; район/местность — по контексту",
+  "pogled": "взгляд; вид; осмотр",
+  "ponuda": "предложение; ассортимент; предложение товара/услуги",
+  "prijemni": "вступительный; приёмный; обычно: prijemni ispit — вступительный экзамен",
+  "poverljiv": "конфиденциальный; доверительный; доверчивый — по контексту",
+  "zaposlen": "занятый; работающий; трудоустроенный",
+  "zgodan": "симпатичный; удобный; подходящий — по контексту",
+  "likovna": "изобразительная; художественная — например, likovna umetnost = изобразительное искусство",
+  "muzlica": "сосуд/ведро для молока или дойки; молочный сосуд",
+  "muža": "дойка; процесс доения",
+  "bala": "тюк; кипа (сена, соломы и т. п.); также «пуля» в другом значении",
+  "hlad": "тень; прохлада",
+  "izvor": "источник; родник",
+  "prijem": "приём; получение; встреча/приём гостей — по контексту",
+  "odmor": "отдых; перерыв",
+  "rad": "работа; труд; деятельность; желание/охота — в некоторых конструкциях",
+  "put": "путь; дорога; раз — в выражениях типа prvi put",
+  "obrok": "приём пищи; порция; обед/еда — по контексту",
+  "smeh": "смех",
+  "veselo": "весело; радостно",
+  "čist": "чистый; незапачканный",
+  "čisto": "чисто; совершенно/просто — по контексту"
+};
+
+
+
+// v29: проверенные контекстные значения для слов, которые часто получают
+// слишком узкий или неподходящий перевод при автоматическом выборе значения.
+Object.assign(CONTEXT_TRANSLATIONS, {
+  "se": "частица se; сама по себе не переводится как отдельное слово — значение зависит от конструкции",
+  "šešire": "шляпы; головные уборы",
+  "šešir": "шляпа; головной убор",
+  "prikazuju": "показывают; изображают; демонстрируют",
+  "prikazati": "показать; изобразить; продемонстрировать",
+  "lake": "лёгкие; простые (форма множественного числа/женского рода — зависит от контекста)",
+  "laka": "лёгкая; простая",
+  "karta": "билет; карта; карточка — по контексту",
+  "ponuda": "предложение; ассортимент; предложение товара/услуги",
+  "prijemni": "вступительный; приёмный; обычно: prijemni ispit — вступительный экзамен",
+  "poverljiv": "конфиденциальный; доверительный; доверчивый — по контексту",
+  "zaposlen": "занятый; работающий; трудоустроенный",
+  "zgodan": "симпатичный; удобный; подходящий — по контексту",
+  "likovna": "изобразительная; художественная — например, likovna umetnost = изобразительное искусство",
+  "muzlica": "сосуд/ведро для молока или дойки; молочный сосуд",
+  "muža": "дойка; процесс доения",
+  "bala": "тюк; кипа (сена, соломы и т. п.); также «пуля» в другом значении",
+  "hlad": "тень; прохлада",
+  "rad": "работа; труд; деятельность; желание/охота — в некоторых конструкциях",
+  "put": "путь; дорога; раз — в выражениях типа prvi put",
+  "obrok": "приём пищи; порция; обед/еда — по контексту",
+  "prijem": "приём; получение; встреча/приём гостей — по контексту",
+  "kraj": "конец; край; район/местность — по контексту",
+  "pogled": "взгляд; вид; осмотр",
+  "čist": "чистый; незапачканный; ясный/чистый — по контексту",
+  "veselo": "весело; радостно; оживлённо",
+  "čisto": "чисто; совершенно/просто — по контексту"
+});
+
+const EXTRA_VERB_FORMS = {
+  "učiti": {lemma:"učiti",translation:"учить, изучать",past:"učio / učila",present:"uči",future:"će učiti"},
+  "čitati": {lemma:"čitati",translation:"читать",past:"čitao / čitala",present:"čita",future:"će čitati"},
+  "pisati": {lemma:"pisati",translation:"писать",past:"pisao / pisala",present:"piše",future:"će pisati"},
+  "govoriti": {lemma:"govoriti",translation:"говорить",past:"govorio / govorila",present:"govori",future:"će govoriti"},
+  "pitati": {lemma:"pitati",translation:"спрашивать",past:"pitao / pitala",present:"pita",future:"će pitati"},
+  "odgovoriti": {lemma:"odgovoriti",translation:"ответить",past:"odgovorio / odgovorila",present:"odgovara",future:"će odgovoriti"},
+  "odgovarati": {lemma:"odgovarati",translation:"отвечать; подходить; соответствовать",past:"odgovarao / odgovarala",present:"odgovara",future:"će odgovarati"},
+  "slušati": {lemma:"slušati",translation:"слушать",past:"slušao / slušala",present:"sluša",future:"će slušati"},
+  "čekati": {lemma:"čekati",translation:"ждать",past:"čekao / čekala",present:"čeka",future:"će čekati"},
+  "dolaziti": {lemma:"dolaziti",translation:"приходить; приезжать",past:"dolazio / dolazila",present:"dolazi",future:"će dolaziti"},
+  "dolaziti se": {lemma:"dolaziti",translation:"приходить; приезжать",past:"dolazio / dolazila",present:"dolazi",future:"će dolaziti"},
+  "raditi": {lemma:"raditi",translation:"работать; делать",past:"radio / radila",present:"radi",future:"će raditi"},
+  "koristiti": {lemma:"koristiti",translation:"использовать; пользоваться",past:"koristio / koristila",present:"koristi",future:"će koristiti"},
+  "kupiti": {lemma:"kupiti",translation:"купить",past:"kupio / kupila",present:"kupuje",future:"će kupiti"},
+  "kupovati": {lemma:"kupovati",translation:"покупать",past:"kupovao / kupovala",present:"kupuje",future:"će kupovati"},
+  "prodati": {lemma:"prodati",translation:"продать",past:"prodao / prodala",present:"prodaje",future:"će prodati"},
+  "prodavati": {lemma:"prodavati",translation:"продавать",past:"prodavao / prodavala",present:"prodaje",future:"će prodavati"},
+  "jesti": {lemma:"jesti",translation:"есть",past:"jeo / jela",present:"jede",future:"će jesti"},
+  "piti": {lemma:"piti",translation:"пить",past:"pio / pila",present:"pije",future:"će piti"},
+  "spremati": {lemma:"spremati",translation:"готовить; собирать; убирать",past:"spremao / spremala",present:"sprema",future:"će spremati"},
+  "živeti": {lemma:"živeti",translation:"жить",past:"živeo / živela",present:"živi",future:"će živeti"},
+  "osećati se": {lemma:"osećati se",translation:"чувствовать себя",past:"osećao / osećala se",present:"oseća se",future:"će se osećati"},
+  "smejati se": {lemma:"smejati se",translation:"смеяться",past:"smejao / smejala se",present:"smeje se",future:"će se smejati"},
+  "odmarati se": {lemma:"odmarati se",translation:"отдыхать",past:"odmarao / odmarala se",present:"odmara se",future:"će se odmarati"},
+  "oblačiti se": {lemma:"oblačiti se",translation:"одеваться",past:"oblačio / oblačila se",present:"oblači se",future:"će se oblačiti"},
+  "presvući se": {lemma:"presvući se",translation:"переодеться",past:"presvukao / presvukla se",present:"presvlači se",future:"će se presvući"},
+  "platiti": {lemma:"platiti",translation:"заплатить; оплатить",past:"platio / platila",present:"plaća",future:"će platiti"},
+  "plaćati": {lemma:"plaćati",translation:"платить; оплачивать",past:"plaćao / plaćala",present:"plaća",future:"će plaćati"},
+  "planirati": {lemma:"planirati",translation:"планировать",past:"planirao / planirala",present:"planira",future:"će planirati"},
+  "počet(i)": {lemma:"početi",translation:"начать",past:"počeo / počela",present:"počinje",future:"će početi"},
+  "nastaviti": {lemma:"nastaviti",translation:"продолжить",past:"nastavio / nastavila",present:"nastavlja",future:"će nastaviti"},
+  "pomoći": {lemma:"pomoći",translation:"помочь",past:"pomogao / pomogla",present:"pomaže",future:"će pomoći"},
+  "tražiti": {lemma:"tražiti",translation:"искать; просить",past:"tražio / tražila",present:"traži",future:"će tražiti"},
+  "naći": {lemma:"naći",translation:"найти",past:"našao / našla",present:"nalazi",future:"će naći"},
+  "izabrati": {lemma:"izabrati",translation:"выбрать",past:"izabrao / izabrala",present:"bira",future:"će izabrati"},
+  "odlučiti": {lemma:"odlučiti",translation:"решить; принять решение",past:"odlučio / odlučila",present:"odlučuje",future:"će odlučiti"},
+  "pokušati": {lemma:"pokušati",translation:"попробовать; попытаться",past:"pokušao / pokušala",present:"pokušava",future:"će pokušati"},
+  "objasniti": {lemma:"objasniti",translation:"объяснить",past:"objasnio / objasnila",present:"objašnjava",future:"će objasniti"},
+  "proveriti": {lemma:"proveriti",translation:"проверить",past:"proverio / proverila",present:"proverava",future:"će proveriti"},
+  "proveravati": {lemma:"proveravati",translation:"проверять",past:"proveravao / proveravala",present:"proverava",future:"će proveravati"},
+  "slati": {lemma:"slati",translation:"отправлять; посылать",past:"slao / slala",present:"šalje",future:"će slati"},
+  "poslati": {lemma:"poslati",translation:"отправить; послать",past:"poslao / poslala",present:"šalje",future:"će poslati"},
+  "dobiti": {lemma:"dobiti",translation:"получить",past:"dobio / dobila",present:"dobija",future:"će dobiti"},
+  "davati": {lemma:"davati",translation:"давать",past:"davao / davala",present:"daje",future:"će davati"},
+  "dati": {lemma:"dati",translation:"дать",past:"dao / dala",present:"daje",future:"će dati"},
+  "uzeti": {lemma:"uzeti",translation:"взять",past:"uzeo / uzela",present:"uzima",future:"će uzeti"},
+  "nositi": {lemma:"nositi",translation:"носить",past:"nosio / nosila",present:"nosi",future:"će nositi"},
+  "doći": {lemma:"doći",translation:"прийти; приехать",past:"došao / došla",present:"dolazi",future:"će doći"},
+  "otići": {lemma:"otići",translation:"уйти; уехать",past:"otišao / otišla",present:"odlazi",future:"će otići"},
+  "ići": {lemma:"ići",translation:"идти; ехать",past:"išao / išla",present:"ide",future:"će ići"},
+  "putovati": {lemma:"putovati",translation:"путешествовать; ехать",past:"putovao / putovala",present:"putuje",future:"će putovati"},
+  "voziti": {lemma:"voziti",translation:"водить; везти; ездить",past:"vozio / vozila",present:"vozi",future:"će voziti"},
+  "voziti se": {lemma:"voziti se",translation:"ехать; кататься",past:"vozio / vozila se",present:"vozi se",future:"će se voziti"},
+  "šetati": {lemma:"šetati",translation:"гулять",past:"šetao / šetala",present:"šeta",future:"će šetati"},
+  "plivati": {lemma:"plivati",translation:"плавать",past:"plivao / plivala",present:"pliva",future:"će plivati"},
+  "trenirati": {lemma:"trenirati",translation:"тренироваться; тренировать",past:"trenirao / trenirala",present:"trenira",future:"će trenirati"},
+  "vežbati": {lemma:"vežbati",translation:"упражняться; тренироваться",past:"vežbao / vežbala",present:"vežba",future:"će vežbati"},
+  "sastati se": {lemma:"sastati se",translation:"встретиться",past:"sastao / sastala se",present:"sastaje se",future:"će se sastati"},
+  "sresti": {lemma:"sresti",translation:"встретить; встретиться",past:"sreo / srela",present:"sreće",future:"će sresti"},
+  "upoznati": {lemma:"upoznati",translation:"познакомиться; узнать",past:"upoznao / upoznala",present:"upoznaje",future:"će upoznati"},
+  "razgovarati": {lemma:"razgovarati",translation:"разговаривать",past:"razgovarao / razgovarala",present:"razgovara",future:"će razgovarati"},
+  "slušati": {lemma:"slušati",translation:"слушать",past:"slušao / slušala",present:"sluša",future:"će slušati"},
+  "učestvovati": {lemma:"učestvovati",translation:"участвовать",past:"učestvovao / učestvovala",present:"učestvuje",future:"će učestvovati"},
+  "prijaviti se": {lemma:"prijaviti se",translation:"записаться; зарегистрироваться; подать заявку",past:"prijavio / prijavila se",present:"prijavljuje se",future:"će se prijaviti"},
+  "čuvati": {lemma:"čuvati",translation:"хранить; беречь; охранять",past:"čuvao / čuvala",present:"čuva",future:"će čuvati"},
+  "razumeti": {lemma:"razumeti",translation:"понимать",past:"razumeo / razumela",present:"razume",future:"će razumeti"},
+  "shvatiti": {lemma:"shvatiti",translation:"понять; осознать",past:"shvatio / shvatila",present:"shvata",future:"će shvatiti"},
+  "pamtiti": {lemma:"pamtiti",translation:"помнить; запоминать",past:"pamtio / pamtila",present:"pamti",future:"će pamtiti"},
+  "zaboraviti": {lemma:"zaboraviti",translation:"забыть",past:"zaboravio / zaboravila",present:"zaboravlja",future:"će zaboraviti"},
+  "vratiti se": {lemma:"vratiti se",translation:"вернуться",past:"vratio / vratila se",present:"vraća se",future:"će se vratiti"},
+  "ostati": {lemma:"ostati",translation:"остаться",past:"ostao / ostala",present:"ostaje",future:"će ostati"},
+  "čekati": {lemma:"čekati",translation:"ждать",past:"čekao / čekala",present:"čeka",future:"će čekati"}
+};
+Object.assign(VERB_FORMS, EXTRA_VERB_FORMS);
+
+Object.assign(VERB_FORMS, {
+  "prikazivati": {lemma:"prikazivati",translation:"показывать; демонстрировать",past:"prikazivao / prikazivala",present:"prikazuje",future:"će prikazivati"},
+  "prikazuju": {lemma:"prikazivati",translation:"показывать; демонстрировать",past:"prikazivao / prikazivala",present:"prikazuje",future:"će prikazivati"},
+  "pokazivati": {lemma:"pokazivati",translation:"показывать",past:"pokazivao / pokazivala",present:"pokazuje",future:"će pokazivati"},
+  "pokazuju": {lemma:"pokazivati",translation:"показывать",past:"pokazivao / pokazivala",present:"pokazuje",future:"će pokazivati"},
+  "smeje": {lemma:"smejati se",translation:"смеяться",past:"smejao / smejala se",present:"smeje se",future:"će se smejati"},
+  "smeju": {lemma:"smejati se",translation:"смеяться",past:"smejao / smejala se",present:"smeju se",future:"će se smejati"}
+});
 const DICT = {
   "lisica": "лиса",
   "grožđe": "виноград",
@@ -286,7 +493,7 @@ const DICT = {
   "večeru": "вечера, ужин",
   "ponudio": "предложил",
   "jednostavan": "простой",
-  "obrok": "еда, приём пищи",
+  "obrok": "приём пищи; порция; обед/еда — по контексту",
   "žita": "зерно",
   "voća": "фрукты",
   "hleb": "хлеб",
@@ -346,7 +553,7 @@ const DICT = {
   "ili": "или",
   "da": "что / чтобы",
   "ne": "не",
-  "se": "-ся / себя",
+  "se": "частица se; часть возвратного глагола",
   "su": "суть / являются",
   "sam": "сам",
   "sama": "сама",
@@ -417,7 +624,7 @@ const DICT = {
   "vrt": "сад",
   "vrta": "сада",
   "vode": "воды",
-  "put": "дорога / путь",
+  "put": "путь; дорога; раз — в выражениях типа prvi put",
   "puta": "дороги / пути",
   "čovek": "человек",
   "čoveka": "человека",
@@ -638,7 +845,7 @@ const DICT = {
   "vetar": "ветер",
   "vazduh": "воздух",
   "zrak": "луч / воздух",
-  "bala": "бал",
+  "bala": "тюк; кипа (сена, соломы и т. п.); также «пуля» в другом значении",
   "bašti": "в саду",
   "belih": "белых",
   "bez": "без",
@@ -740,7 +947,7 @@ const DICT = {
   "kasnije": "позже",
   "koju": "которую",
   "kosu": "волосы",
-  "kraj": "край / конец / рядом",
+  "kraj": "конец; край; район/местность — по контексту",
   "kraja": "края / конца",
   "kraju": "краю / конце",
   "kraljevog": "королевского / короля",
@@ -952,7 +1159,7 @@ const DICT = {
   "putem": "путём / по дороге",
   "putovali": "путешествовали",
   "putovao": "путешествовал",
-  "rad": "работа / труд",
+  "rad": "работа; труд; деятельность; желание/охота — в некоторых конструкциях",
   "radi": "работает / делает",
   "radili": "работали",
   "radilo": "работало",
@@ -1933,7 +2140,7 @@ const VOCAB_BLOCKS = [
       },
       {
         "word": "obrok",
-        "translation": "приём пищи"
+        "translation": "приём пищи; порция; обед/еда — по контексту"
       },
       {
         "word": "kuvati",
@@ -2069,7 +2276,7 @@ const VOCAB_BLOCKS = [
       },
       {
         "word": "put",
-        "translation": "дорога, путь"
+        "translation": "путь; дорога; раз — в выражениях типа prvi put"
       },
       {
         "word": "stanica",
@@ -2113,7 +2320,7 @@ const VOCAB_BLOCKS = [
       },
       {
         "word": "karta",
-        "translation": "билет, карта"
+        "translation": "билет; карта; карточка — по контексту"
       },
       {
         "word": "pasoš",
@@ -2573,7 +2780,7 @@ const VOCAB_BLOCKS = [
       },
       {
         "word": "rad",
-        "translation": "работа, труд"
+        "translation": "работа; труд; деятельность; желание/охота — в некоторых конструкциях"
       },
       {
         "word": "firma",
@@ -4070,7 +4277,7 @@ VOCAB_BLOCKS.push({
     },
     {
       "word": "bala",
-      "translation": "пуля"
+      "translation": "тюк; кипа (сена, соломы и т. п.); также «пуля» в другом значении"
     },
     {
       "word": "bajka",
@@ -4270,7 +4477,7 @@ VOCAB_BLOCKS.push({
     },
     {
       "word": "hlad",
-      "translation": "тень, прохлада"
+      "translation": "тень; прохлада"
     },
     {
       "word": "hladno",
@@ -4342,7 +4549,7 @@ VOCAB_BLOCKS.push({
     },
     {
       "word": "karta",
-      "translation": "билет, карта"
+      "translation": "билет; карта; карточка — по контексту"
     },
     {
       "word": "klavir",
@@ -4402,7 +4609,7 @@ VOCAB_BLOCKS.push({
     },
     {
       "word": "likovna",
-      "translation": "изобразительная, художественная"
+      "translation": "изобразительная; художественная — например, likovna umetnost = изобразительное искусство"
     },
     {
       "word": "loš",
@@ -4454,11 +4661,11 @@ VOCAB_BLOCKS.push({
     },
     {
       "word": "muzlica",
-      "translation": "доярка/молочный ковш, приспособление для дойки"
+      "translation": "сосуд/ведро для молока или дойки; молочный сосуд"
     },
     {
       "word": "muža",
-      "translation": "дойка; муж (в зависимости от контекста)"
+      "translation": "дойка; процесс доения"
     },
     {
       "word": "nada",
@@ -4518,7 +4725,7 @@ VOCAB_BLOCKS.push({
     },
     {
       "word": "obrok",
-      "translation": "приём пищи"
+      "translation": "приём пищи; порция; обед/еда — по контексту"
     },
     {
       "word": "obnoviti",
@@ -4602,7 +4809,7 @@ VOCAB_BLOCKS.push({
     },
     {
       "word": "pogled",
-      "translation": "взгляд, вид"
+      "translation": "взгляд; вид; осмотр"
     },
     {
       "word": "pohlepan",
@@ -4618,7 +4825,7 @@ VOCAB_BLOCKS.push({
     },
     {
       "word": "ponuda",
-      "translation": "предложение"
+      "translation": "предложение; ассортимент; предложение товара/услуги"
     },
     {
       "word": "popuštati",
@@ -4642,7 +4849,7 @@ VOCAB_BLOCKS.push({
     },
     {
       "word": "poverljiv",
-      "translation": "конфиденциальный, доверительный"
+      "translation": "конфиденциальный; доверительный; доверчивый — по контексту"
     },
     {
       "word": "povlačenje",
@@ -4682,11 +4889,11 @@ VOCAB_BLOCKS.push({
     },
     {
       "word": "prijem",
-      "translation": "приём"
+      "translation": "приём; получение; встреча/приём гостей — по контексту"
     },
     {
       "word": "prijemni",
-      "translation": "вступительный экзамен"
+      "translation": "вступительный; приёмный; обычно: prijemni ispit — вступительный экзамен"
     },
     {
       "word": "prijaviti",
@@ -4714,7 +4921,7 @@ VOCAB_BLOCKS.push({
     },
     {
       "word": "put",
-      "translation": "дорога, путь"
+      "translation": "путь; дорога; раз — в выражениях типа prvi put"
     },
     {
       "word": "putarina",
@@ -4730,7 +4937,7 @@ VOCAB_BLOCKS.push({
     },
     {
       "word": "rad",
-      "translation": "работа, труд"
+      "translation": "работа; труд; деятельность; желание/охота — в некоторых конструкциях"
     },
     {
       "word": "radovi",
@@ -5114,7 +5321,7 @@ VOCAB_BLOCKS.push({
     },
     {
       "word": "zaposlen",
-      "translation": "занятый, работающий"
+      "translation": "занятый; работающий; трудоустроенный"
     },
     {
       "word": "zavičaj",
@@ -5130,7 +5337,7 @@ VOCAB_BLOCKS.push({
     },
     {
       "word": "zgodan",
-      "translation": "симпатичный, удобный"
+      "translation": "симпатичный; удобный; подходящий — по контексту"
     },
     {
       "word": "zlatan",
@@ -5158,12 +5365,18 @@ Object.assign(DICT, Object.fromEntries(VOCAB_BLOCKS.flatMap(b => b.words.map(x =
 
 // Личные слова и учебные блоки хранятся раздельно.
 let saved = [];
+let savedPhrases = [];
 let vocabProgress = [];
 try {
   const rawPersonal = localStorage.getItem("citajSrpskiWords");
   const parsedPersonal = rawPersonal ? JSON.parse(rawPersonal) : [];
   saved = Array.isArray(parsedPersonal) ? parsedPersonal : [];
 } catch (e) { saved = []; }
+try {
+  const rawPhrases = localStorage.getItem("citajSrpskiPhrasesV1");
+  const parsedPhrases = rawPhrases ? JSON.parse(rawPhrases) : [];
+  savedPhrases = Array.isArray(parsedPhrases) ? parsedPhrases : [];
+} catch (e) { savedPhrases = []; }
 try {
   const rawVocab = localStorage.getItem("citajSrpskiVocabProgress");
   const parsedVocab = rawVocab ? JSON.parse(rawVocab) : [];
@@ -5214,15 +5427,107 @@ normalizeSavedWords();
 const $ = id => document.getElementById(id);
 const normalize = w => w.toLowerCase().replace(/[„“”«».,!?;:()\[\]{}]/g, "").trim();
 
+// v29: канонические формы для часто встречающихся глаголов.
+// Здесь хранятся именно 3-е лицо ед. числа настоящего, формы прошедшего
+// (м./ж.) и будущее; это лучше, чем пытаться угадывать спряжение по окончанию.
+const CANONICAL_VERBS = {
+  "biti":        {lemma:"biti", translation:"быть", past:"bio / bila", present:"je", future:"će biti"},
+  "imati":       {lemma:"imati", translation:"иметь", past:"imao / imala", present:"ima", future:"će imati"},
+  "moći":        {lemma:"moći", translation:"мочь", past:"mogao / mogla", present:"može", future:"moći će"},
+  "morati":      {lemma:"morati", translation:"быть должным; быть вынужденным", past:"morao / morala", present:"mora", future:"moraće"},
+  "hteti":       {lemma:"hteti", translation:"хотеть", past:"hteo / htela", present:"hoće", future:"hteće"},
+  "želeti":      {lemma:"želeti", translation:"хотеть; желать", past:"želeo / želela", present:"želi", future:"želeće"},
+  "trebati":     {lemma:"trebati", translation:"быть нужным; требоваться; следовать/нужно", past:"trebalo", present:"treba", future:"trebaće"},
+  "učiti":       {lemma:"učiti", translation:"учить; изучать", past:"učio / učila", present:"uči", future:"učiće"},
+  "čitati":      {lemma:"čitati", translation:"читать", past:"čitao / čitala", present:"čita", future:"čitaće"},
+  "pisati":      {lemma:"pisati", translation:"писать", past:"pisao / pisala", present:"piše", future:"pisaće"},
+  "govoriti":    {lemma:"govoriti", translation:"говорить", past:"govorio / govorila", present:"govori", future:"govoriće"},
+  "pitati":      {lemma:"pitati", translation:"спрашивать", past:"pitao / pitala", present:"pita", future:"pitaće"},
+  "odgovoriti":  {lemma:"odgovoriti", translation:"ответить", past:"odgovorio / odgovorila", present:"odgovori", future:"odgovoriće"},
+  "odgovarati":  {lemma:"odgovarati", translation:"отвечать; подходить; соответствовать", past:"odgovarao / odgovarala", present:"odgovara", future:"odgovaraće"},
+  "slušati":     {lemma:"slušati", translation:"слушать", past:"slušao / slušala", present:"sluša", future:"slušaće"},
+  "čekati":      {lemma:"čekati", translation:"ждать", past:"čekao / čekala", present:"čeka", future:"čekaće"},
+  "dolaziti":    {lemma:"dolaziti", translation:"приходить; приезжать", past:"dolazio / dolazila", present:"dolazi", future:"dolaziće"},
+  "raditi":      {lemma:"raditi", translation:"работать; делать", past:"radio / radila", present:"radi", future:"radiće"},
+  "koristiti":   {lemma:"koristiti", translation:"использовать; пользоваться", past:"koristio / koristila", present:"koristi", future:"koristiće"},
+  "kupiti":      {lemma:"kupiti", translation:"купить", past:"kupio / kupila", present:"kupi", future:"kupiće"},
+  "kupovati":    {lemma:"kupovati", translation:"покупать", past:"kupovao / kupovala", present:"kupuje", future:"kupovaće"},
+  "prodati":     {lemma:"prodati", translation:"продать", past:"prodao / prodala", present:"proda", future:"prodaće"},
+  "prodavati":   {lemma:"prodavati", translation:"продавать", past:"prodavao / prodavala", present:"prodaje", future:"prodavaće"},
+  "jesti":       {lemma:"jesti", translation:"есть", past:"jeo / jela", present:"jede", future:"ješće"},
+  "piti":        {lemma:"piti", translation:"пить", past:"pio / pila", present:"pije", future:"piće"},
+  "spremati":    {lemma:"spremati", translation:"готовить; собирать; убирать", past:"spremao / spremala", present:"sprema", future:"spremaće"},
+  "živeti":      {lemma:"živeti", translation:"жить", past:"živeo / živela", present:"živi", future:"živeće"},
+  "osećati se":  {lemma:"osećati se", translation:"чувствовать себя", past:"osećao / osećala se", present:"oseća se", future:"osećaće se"},
+  "smejati se":  {lemma:"smejati se", translation:"смеяться", past:"smejao / smejala se", present:"smeje se", future:"smejaće se"},
+  "odmarati se": {lemma:"odmarati se", translation:"отдыхать", past:"odmarao / odmarala se", present:"odmara se", future:"odmaraće se"},
+  "oblačiti se": {lemma:"oblačiti se", translation:"одеваться", past:"oblačio / oblačila se", present:"oblači se", future:"oblačiće se"},
+  "presvući se": {lemma:"presvući se", translation:"переодеться", past:"presvukao / presvukla se", present:"presvuče se", future:"presvući će se"},
+  "platiti":     {lemma:"platiti", translation:"заплатить; оплатить", past:"platio / platila", present:"plati", future:"platiće"},
+  "plaćati":     {lemma:"plaćati", translation:"платить; оплачивать", past:"plaćao / plaćala", present:"plaća", future:"plaćaće"},
+  "planirati":   {lemma:"planirati", translation:"планировать", past:"planirao / planirala", present:"planira", future:"planiraće"},
+  "početi":      {lemma:"početi", translation:"начать", past:"počeo / počela", present:"počne", future:"počeće"},
+  "nastaviti":   {lemma:"nastaviti", translation:"продолжить", past:"nastavio / nastavila", present:"nastavi", future:"nastaviće"},
+  "pomoći":      {lemma:"pomoći", translation:"помочь", past:"pomogao / pomogla", present:"pomogne", future:"pomoći će"},
+  "tražiti":     {lemma:"tražiti", translation:"искать; просить", past:"tražio / tražila", present:"traži", future:"tražiće"},
+  "naći":        {lemma:"naći", translation:"найти", past:"našao / našla", present:"nađe", future:"naći će"},
+  "izabrati":    {lemma:"izabrati", translation:"выбрать", past:"izabrao / izabrala", present:"izabere", future:"izabraće"},
+  "odlučiti":    {lemma:"odlučiti", translation:"решить; принять решение", past:"odlučio / odlučila", present:"odluči", future:"odlučiće"},
+  "pokušati":    {lemma:"pokušati", translation:"попробовать; попытаться", past:"pokušao / pokušala", present:"pokuša", future:"pokušaće"},
+  "objasniti":   {lemma:"objasniti", translation:"объяснить", past:"objasnio / objasnila", present:"objasni", future:"objasniće"},
+  "proveriti":   {lemma:"proveriti", translation:"проверить", past:"proverio / proverila", present:"proveri", future:"proveriće"},
+  "proveravati": {lemma:"proveravati", translation:"проверять", past:"proveravao / proveravala", present:"proverava", future:"proveravaće"},
+  "slati":       {lemma:"slati", translation:"отправлять; посылать", past:"slao / slala", present:"šalje", future:"slaće"},
+  "poslati":     {lemma:"poslati", translation:"отправить; послать", past:"poslao / poslala", present:"pošalje", future:"poslaće"},
+  "dobiti":      {lemma:"dobiti", translation:"получить", past:"dobio / dobila", present:"dobije", future:"dobiće"},
+  "davati":      {lemma:"davati", translation:"давать", past:"davao / davala", present:"daje", future:"davaće"},
+  "dati":        {lemma:"dati", translation:"дать", past:"dao / dala", present:"da", future:"daće"},
+  "uzeti":       {lemma:"uzeti", translation:"взять", past:"uzeo / uzela", present:"uzme", future:"uzeće"},
+  "nositi":      {lemma:"nositi", translation:"носить", past:"nosio / nosila", present:"nosi", future:"nosiće"},
+  "doći":        {lemma:"doći", translation:"прийти; приехать", past:"došao / došla", present:"dođe", future:"doći će"},
+  "otići":       {lemma:"otići", translation:"уйти; уехать", past:"otišao / otišla", present:"ode", future:"otići će"},
+  "ići":         {lemma:"ići", translation:"идти; ехать", past:"išao / išla", present:"ide", future:"ići će"},
+  "putovati":    {lemma:"putovati", translation:"путешествовать; ехать", past:"putovao / putovala", present:"putuje", future:"putovaće"},
+  "voziti":      {lemma:"voziti", translation:"водить; везти; ездить", past:"vozio / vozila", present:"vozi", future:"voziće"},
+  "voziti se":   {lemma:"voziti se", translation:"ехать; кататься", past:"vozio / vozila se", present:"vozi se", future:"voziće se"},
+  "šetati":      {lemma:"šetati", translation:"гулять", past:"šetao / šetala", present:"šeta", future:"šetaće"},
+  "plivati":     {lemma:"plivati", translation:"плавать", past:"plivao / plivala", present:"pliva", future:"plivaće"},
+  "trenirati":   {lemma:"trenirati", translation:"тренироваться; тренировать", past:"trenirao / trenirala", present:"trenira", future:"treniraće"},
+  "vežbati":     {lemma:"vežbati", translation:"упражняться; тренироваться", past:"vežbao / vežbala", present:"vežba", future:"vežbaće"},
+  "sastati se":  {lemma:"sastati se", translation:"встретиться", past:"sastao / sastala se", present:"sastane se", future:"sastaće se"},
+  "sresti":      {lemma:"sresti", translation:"встретить; встретиться", past:"sreo / srela", present:"sretne", future:"sresće"},
+  "upoznati":     {lemma:"upoznati", translation:"познакомиться; узнать", past:"upoznao / upoznala", present:"upozna", future:"upoznaće"},
+  "razgovarati": {lemma:"razgovarati", translation:"разговаривать", past:"razgovarao / razgovarala", present:"razgovara", future:"razgovaraće"},
+  "učestvovati": {lemma:"učestvovati", translation:"участвовать", past:"učestvovao / učestvovala", present:"učestvuje", future:"učestvovaće"},
+  "prijaviti se": {lemma:"prijaviti se", translation:"записаться; зарегистрироваться; подать заявку", past:"prijavio / prijavila se", present:"prijavi se", future:"prijaviće se"},
+  "čuvati":      {lemma:"čuvati", translation:"хранить; беречь; охранять", past:"čuvao / čuvala", present:"čuva", future:"čuvaće"},
+  "razumeti":    {lemma:"razumeti", translation:"понимать", past:"razumeo / razumela", present:"razume", future:"razumeće"},
+  "shvatiti":    {lemma:"shvatiti", translation:"понять; осознать", past:"shvatio / shvatila", present:"shvati", future:"shvatiće"},
+  "pamtiti":     {lemma:"pamtiti", translation:"помнить; запоминать", past:"pamtio / pamtila", present:"pamti", future:"pamtiće"},
+  "zaboraviti":  {lemma:"zaboraviti", translation:"забыть", past:"zaboravio / zaboravila", present:"zaboravi", future:"zaboraviće"},
+  "vratiti se":  {lemma:"vratiti se", translation:"вернуться", past:"vratio / vratila se", present:"vrati se", future:"vratiće se"},
+  "ostati":      {lemma:"ostati", translation:"остаться", past:"ostao / ostala", present:"ostane", future:"ostaće"},
+  "videti":      {lemma:"videti", translation:"видеть", past:"video / videla", present:"vidi", future:"videće"},
+  "reći":        {lemma:"reći", translation:"сказать", past:"rekao / rekla", present:"kaže", future:"reći će"},
+  "pokazati":    {lemma:"pokazati", translation:"показать; продемонстрировать", past:"pokazao / pokazala", present:"pokaže", future:"pokazaće"},
+  "prikazivati": {lemma:"prikazivati", translation:"показывать; изображать; демонстрировать", past:"prikazivao / prikazivala", present:"prikazuje", future:"prikazivaće"},
+  "prikazati":   {lemma:"prikazati", translation:"показать; изобразить; продемонстрировать", past:"prikazao / prikazala", present:"prikaže", future:"prikazaće"},
+  "doneti":      {lemma:"doneti", translation:"принести; привезти", past:"doneo / donela", present:"donese", future:"doneće"},
+  "donositi":    {lemma:"donositi", translation:"приносить; привозить", past:"donosio / donosila", present:"donosi", future:"donosiće"},
+  "odlaziti":    {lemma:"odlaziti", translation:"уходить; уезжать", past:"odlazio / odlazila", present:"odlazi", future:"odlaziće"},
+  "dolaziti":    {lemma:"dolaziti", translation:"приходить; приезжать", past:"dolazio / dolazila", present:"dolazi", future:"dolaziće"}
+};
+
 // Индекс глаголов строится из известных форм и инфинитивов учебной библиотеки.
 // Это позволяет не зависеть только от вручную перечисленных форм.
 const VERB_INDEX = {};
 function addVerbIndex(info, extraForms=[]){
   if(!info || !info.lemma) return;
   const forms = [info.lemma, info.present, ...(info.past||'').split('/'), ...(info.future||'').split(/\s+/), ...extraForms];
-  forms.map(normalize).filter(Boolean).forEach(f=>VERB_INDEX[f]=info);
+  forms.map(normalize).filter(f=>f && f!=="se" && f!=="će" && f!=="sam" && f!=="je" && f!=="su").forEach(f=>VERB_INDEX[f]=info);
 }
 Object.values(VERB_FORMS).forEach(v=>addVerbIndex(v));
+Object.values(EXTRA_VERB_FORMS).forEach(v=>addVerbIndex(v));
 
 function makeRegularVerb(lemma){
   const l=normalize(lemma);
@@ -5255,11 +5560,23 @@ try{
 
 function findVerbInfo(w){
   const n=normalize(w);
+  if(CANONICAL_VERBS[n]) return CANONICAL_VERBS[n];
   if(VERB_INDEX[n]) return VERB_INDEX[n];
-  if(VERB_FORMS[n]) return VERB_FORMS[n];
+  if(VERB_FORMS[n]) {
+    const lemma=normalize(VERB_FORMS[n].lemma||'');
+    if(CANONICAL_VERBS[lemma]) return CANONICAL_VERBS[lemma];
+    return VERB_FORMS[n];
+  }
+  for(const v of Object.values(CANONICAL_VERBS)){
+    const forms=[v.lemma,v.present,v.past,v.future].filter(Boolean).join(' ').split(/\s+/).map(normalize);
+    if(forms.includes(n)) return v;
+  }
   for(const v of Object.values(VERB_FORMS)){
     const forms=[v.lemma,v.past,v.present,v.future].filter(Boolean).join(' ').split(/\s+/).map(normalize);
-    if(forms.includes(n)) return v;
+    if(forms.includes(n)){
+      const lemma=normalize(v.lemma||'');
+      return CANONICAL_VERBS[lemma] || v;
+    }
   }
   return null;
 }
@@ -5273,6 +5590,7 @@ function saveRemoteTranslationCache(){
 
 function getTranslation(w){
   const n=normalize(w);
+  if(CONTEXT_TRANSLATIONS[n]) return CONTEXT_TRANSLATIONS[n];
   if(DICT[n]) return DICT[n];
   const verb=findVerbInfo(n);
   if(verb && verb.translation) return verb.translation;
@@ -5316,6 +5634,88 @@ function escapeHtml(s){
 }
 
 
+
+function savePhrases(){try{localStorage.setItem('citajSrpskiPhrasesV1',JSON.stringify(savedPhrases));}catch(e){}}
+function addPhrase(sr, translation, source, sentence){
+  const key=normalizePhrase(sr);
+  if(!key) return false;
+  if(!savedPhrases.some(x=>normalizePhrase(x.sr)===key)){
+    savedPhrases.push({sr,translation,source:source||'',sentence:sentence||'',added:new Date().toISOString(),box:1,nextReview:Date.now()});
+    savePhrases();
+    return true;
+  }
+  return false;
+}
+function normalizePhrase(x){return String(x||'').toLowerCase().replace(/[„“”«».,!?;:()\[\]{}]/g,'').replace(/\s+/g,' ').trim();}
+const PHRASE_TRANSLATIONS = {
+  "doneti odluku":"принять решение",
+  "donositi odluku":"принимать решение",
+  "postaviti pitanje":"задать вопрос",
+  "postaviti pitanje":"задать вопрос",
+  "dati odgovor":"дать ответ",
+  "uzeti kartu":"взять билет; купить билет",
+  "kupiti kartu":"купить билет",
+  "ići na posao":"идти на работу; ехать на работу",
+  "otići kući":"пойти домой; уйти домой",
+  "vratiti se kući":"вернуться домой",
+  "provoditi vreme":"проводить время",
+  "slobodno vreme":"свободное время",
+  "glavni trg":"главная площадь",
+  "stari deo":"старая часть",
+  "stari grad":"старый город",
+  "gradski muzej":"городской музей",
+  "kulturni centar":"культурный центр",
+  "savremena umetnost":"современное искусство",
+  "tradicionalna muzika":"традиционная музыка",
+  "svakodnevni život":"повседневная жизнь",
+  "svakodnevni život":"повседневная жизнь",
+  "mesečna karta":"месячный билет; абонемент",
+  "lična karta":"удостоверение личности; ID-карта",
+  "korisnička podrška":"служба поддержки",
+  "društvene mreže":"социальные сети",
+  "video poziv":"видеозвонок",
+  "rezervna kopija":"резервная копия",
+  "kućni internet":"домашний интернет",
+  "glavni obrok":"основной приём пищи",
+  "lokalni proizvodi":"местные продукты",
+  "prijemni ispit":"вступительный экзамен",
+  "radni dan":"рабочий день",
+  "redovan trening":"регулярная тренировка",
+  "dovoljno sna":"достаточное количество сна",
+  "dobroj formi":"хорошей физической форме",
+  "plastične flaše":"пластиковые бутылки",
+  "susedne ulice":"соседняя улица; соседние улицы",
+  "poštanski broj":"почтовый индекс",
+  "cena slanja":"стоимость отправки",
+  "nepoznata uplata":"неизвестное поступление/платёж",
+  "red vožnje":"расписание движения",
+  "nepredviđeni troškovi":"непредвиденные расходы",
+  "troškovi prevoza":"расходы на транспорт",
+  "planirati obroke":"планировать приёмы пищи; планировать меню",
+  "napraviti spisak":"составить список",
+  "uštedi novac":"сэкономить деньги",
+  "doneti vodu":"принести воду",
+  "pomoći komšiji":"помочь соседу",
+  "upoznati ljude":"познакомиться с людьми",
+  "ostati kod kuće":"остаться дома"
+};
+
+const PHRASE_TRANSLATION_CACHE=(()=>{try{return JSON.parse(localStorage.getItem('citajSrpskiPhraseTranslationCacheV1')||'{}')||{};}catch(e){return {};}})();
+function savePhraseTranslationCache(){try{localStorage.setItem('citajSrpskiPhraseTranslationCacheV1',JSON.stringify(PHRASE_TRANSLATION_CACHE));}catch(e){}}
+async function translatePhrase(sr){
+  const key=normalizePhrase(sr);
+  if(PHRASE_TRANSLATIONS[key]) return PHRASE_TRANSLATIONS[key];
+  if(PHRASE_TRANSLATION_CACHE[key]) return PHRASE_TRANSLATION_CACHE[key];
+  try{
+    const url='https://api.mymemory.translated.net/get?q='+encodeURIComponent(sr)+'&langpair=sr|ru';
+    const res=await fetch(url,{headers:{Accept:'application/json'}});
+    const data=await res.json();
+    const tr=String(data?.responseData?.translatedText||'').trim();
+    if(tr && !/MYMEMORY|quota|error|invalid/i.test(tr)){PHRASE_TRANSLATION_CACHE[key]=tr;savePhraseTranslationCache();return tr;}
+  }catch(e){}
+  return 'Перевод словосочетания пока недоступен.';
+}
+
 function save(){
   localStorage.setItem("citajSrpskiWords", JSON.stringify(saved));
   const count = $("count");
@@ -5340,7 +5740,7 @@ function training(){
       <button type="button" id="open-sentence-training">Начать тренировку</button>
     </div>
     <div class="card">
-      <h3>📚 Другие тренировки</h3>
+      <h3>🔗 Словосочетания</h3><p>Отдельно сохранённые связки слов можно повторять как готовые единицы речи.</p><button type="button" id="open-phrase-training">Начать тренировку словосочетаний</button></div><div class="card"><h3>📚 Другие тренировки</h3>
       <p class="muted">Тренировки твоих сохранённых слов находятся во вкладке «Мои слова», а тематических блоков — внутри «Слова по темам».</p>
       <div class="training-buttons">
         <button type="button" id="open-my-words-training">Мои слова</button>
@@ -5349,6 +5749,7 @@ function training(){
     </div>`;
   view('training');
   $('open-sentence-training').addEventListener('click', startSentenceAssembly);
+  $('open-phrase-training')?.addEventListener('click', startPhraseTraining);
   $('open-my-words-training').addEventListener('click', words);
   $('open-vocab-training').addEventListener('click', vocab);
 }
@@ -5445,21 +5846,34 @@ function speakSentenceList(sentences, rate=0.86){
 
 function readerSentenceControls(text){
   const sentences=splitSentences(text);
-  return `<div class="reader-audio card"><div class="vocab-actions"><button type="button" id="speak-full-text">🔊 Озвучить весь текст</button><button type="button" id="speak-sentences">▶ Озвучить по предложениям</button><button type="button" id="speak-slow">🐢 Медленно</button><button type="button" id="stop-speech">⏹ Остановить</button><button type="button" id="text-training">🎯 Тренировать слова этого текста</button></div><p class="muted small-note">Используется установленный сербский голос (sr-RS). Ударение зависит от движка озвучки.</p><div class="sentence-audio-list">${sentences.map((x,i)=>`<div class="sentence-row"><span>${i+1}. ${escapeHtml(x)}</span><button type="button" class="speak-sentence" data-sentence="${encodeURIComponent(x)}">🔊</button></div>`).join('')}</div></div>`;
+  return `<div class="reader-audio card"><div class="vocab-actions"><button type="button" id="speak-full-text">🔊 Озвучить весь текст</button><button type="button" id="speak-sentences">▶ Озвучить по предложениям</button><button type="button" id="speak-slow">🐢 Медленно</button><button type="button" id="stop-speech">⏹ Остановить</button><button type="button" id="text-training">🎯 Тренировать слова этого текста</button><button type="button" id="phrase-mode-button">🔗 Словосочетание: выбрать 2 слова</button></div><div id="phrase-help" class="phrase-help hide">Нажми первое слово, затем соседнее второе. Словосочетание можно сохранить отдельно.</div><p class="muted small-note">Используется установленный сербский голос (sr-RS). Ударение зависит от движка озвучки.</p><div class="sentence-audio-list">${sentences.map((x,i)=>`<div class="sentence-row"><span>${i+1}. ${escapeHtml(x)}</span><button type="button" class="speak-sentence" data-sentence="${encodeURIComponent(x)}">🔊</button></div>`).join('')}</div></div>`;
 }
 
 function renderText(text){
-  $("text").innerHTML = tokenize(text).map(part => {
-    if (/^\s+$/.test(part)) return part;
-    const clean = normalize(part);
-    if (!clean) return part;
-    const btn = document.createElement("button");
-    btn.type = "button";
-    btn.className = "word";
-    btn.dataset.word = clean;
-    btn.textContent = part;
+  const parts=tokenize(text);
+  let wordIndex=0, sentenceIndex=0;
+  return parts.map(part=>{
+    if(/^\s+$/.test(part)) return part;
+    const clean=normalize(part); if(!clean) return part;
+    const btn=document.createElement('button'); btn.type='button'; btn.className='word';
+    btn.dataset.word=clean; btn.dataset.wordIndex=String(wordIndex++); btn.dataset.sentenceIndex=String(sentenceIndex);
+    btn.textContent=part;
+    if(/[.!?][”"»]?\s*$/.test(part)) sentenceIndex++;
     return btn.outerHTML;
-  }).join("");
+  }).join('');
+}
+
+
+function lexicalAudit(){
+  const seen=new Set(), missing=new Set(), verbsMissing=new Set();
+  TEXTS.forEach(t=>String(t.text||'').toLowerCase().match(/[a-zčćđšž]+/g)?.forEach(w=>{
+    if(w.length<2 || seen.has(w)) return; seen.add(w);
+    const tr=getTranslation(w);
+    if(!tr || tr==='Перевод загружается…' || tr==='Перевод пока не добавлен') missing.add(w);
+    const v=findVerbInfo(w);
+    if(v && (!v.past||!v.present||!v.future)) verbsMissing.add(w);
+  }));
+  return {unique:seen.size,missing:[...missing].sort(),verbsMissing:[...verbsMissing].sort()};
 }
 
 function openText(i){
@@ -5476,7 +5890,18 @@ function openText(i){
   $("speak-slow").addEventListener("click",()=>speakSentenceList(splitSentences(t.text),0.62));
   $("stop-speech").addEventListener("click",()=>window.speechSynthesis?.cancel());
   $("text-training").addEventListener("click",()=>startTextTraining(t.text));
+  $("phrase-mode-button").addEventListener("click",()=>{phraseSelection=null;document.querySelectorAll(".word").forEach(x=>x.classList.remove("phrase-selected"));$("phrase-help").classList.toggle("hide");});
   document.querySelectorAll(".speak-sentence").forEach(b=>b.addEventListener("click",()=>speakText(decodeURIComponent(b.dataset.sentence))));
+  document.querySelectorAll('.word').forEach(b=>b.addEventListener('click',()=>{
+    if(phraseSelection){
+      const first=document.querySelector(`.word[data-word-index="${phraseSelection.firstIndex}"]`);
+      const second=b;
+      const adjacent=Math.abs(Number(first?.dataset.wordIndex)-Number(second.dataset.wordIndex))===1 && first?.dataset.sentenceIndex===second.dataset.sentenceIndex;
+      if(adjacent){document.querySelectorAll('.word').forEach(x=>x.classList.remove('phrase-selected'));phraseSelection=null;finishPhraseSelection(first,second);return;}
+      phraseSelection=null;document.querySelectorAll('.word').forEach(x=>x.classList.remove('phrase-selected'));
+    }
+    word(b.dataset.word,{wordIndex:b.dataset.wordIndex,sentenceIndex:b.dataset.sentenceIndex,sentence:[...document.querySelectorAll('.word[data-sentence-index="'+b.dataset.sentenceIndex+'"]')].map(x=>x.textContent.trim()).join(' ')});
+  }));
   view("reader");
 }
 
@@ -5523,55 +5948,81 @@ function speakText(text){
   window.speechSynthesis.speak(u);
 }
 
-async function word(w){
+async function word(w, context={}){
   const requestId=++translationRequestId;
-  const translation = getTranslation(w);
-  const exists = saved.some(x => x.word === w);
-  const verb = findVerbInfo(w);
-  const render = (tr, v=verb) => {
-    if(requestId!==translationRequestId) return;
-    const verbBlock = v ? `
-      <div class="verb-block">
-        <div class="verb-title">Глагол: <b>${escapeHtml(v.lemma)}</b> · ${escapeHtml(v.translation||tr)}</div>
-        <div class="verb-grid">
-          <div><span>Инфинитив</span><b>${escapeHtml(v.lemma)} <small>— ${escapeHtml(v.translation||tr)}</small></b></div>
-          <div><span>Прошедшее</span><b>${escapeHtml(v.past||'—')}</b></div>
-          <div><span>Настоящее</span><b>${escapeHtml(v.present||'—')}</b></div>
-          <div><span>Будущее</span><b>${escapeHtml(v.future||('će '+v.lemma))}</b></div>
-        </div>
-        ${v.generated ? '<div class="verb-note">Формы построены для регулярного глагола. Для неправильных глаголов используются отдельные формы.</div>' : ''}
-      </div>` : '';
-    $('popup').innerHTML = `
-      <div class="popup-title">${escapeHtml(w)}</div>
-      <div class="popup-translation">${escapeHtml(tr)}</div>
-      ${verbBlock}
-      <div class="popup-actions">
-        <button type="button" id="speak-word">🔊 Слушать</button>
-        <button type="button" id="add-word-button">${exists ? '✓ Уже в моих словах' : 'Добавить в мои слова'}</button>
-      </div>`;
+  const translation=getTranslation(w);
+  const exists=saved.some(x=>x.word===w);
+  const verb=findVerbInfo(w);
+  const render=(tr,v=verb)=>{
+    if(requestId!==translationRequestId)return;
+    const formNote=v&&normalize(w)!==normalize(v.lemma)?`<div class="word-form-note">Форма слова: <b>${escapeHtml(w)}</b> → начальная форма <b>${escapeHtml(v.lemma)}</b></div>`:''; const verbBlock=v?`<div class="verb-block"><div class="verb-title">Глагол: <b>${escapeHtml(v.lemma)}</b> · ${escapeHtml(v.translation||tr)}</div><div class="verb-grid"><div><span>Инфинитив</span><b>${escapeHtml(v.lemma)} <small>— ${escapeHtml(v.translation||tr)}</small></b></div><div><span>Прошедшее</span><b>${escapeHtml(v.past||'—')}</b></div><div><span>Настоящее</span><b>${escapeHtml(v.present||'—')}</b></div><div><span>Будущее</span><b>${escapeHtml(v.future||'—')}</b></div></div></div>`:'';
+    const contextBlock=context.sentence?`<div class="word-context"><span>В предложении:</span> ${escapeHtml(context.sentence)}</div>`:'';
+    $('popup').innerHTML=`<div class="popup-title">${escapeHtml(w)}</div><div class="popup-translation">${escapeHtml(tr)}</div>${formNote}${verbBlock}${contextBlock}<div class="popup-actions"><button type="button" id="speak-word">🔊 Слушать</button><button type="button" id="add-word-button">${exists?'✓ Уже в моих словах':'Добавить в мои слова'}</button><button type="button" id="phrase-start">🔗 Выбрать словосочетание</button></div>`;
     $('popup').classList.remove('hide');
-    $('speak-word').addEventListener('click', () => speakWord(w));
-    const addButton = $('add-word-button');
-    if(addButton && !exists) addButton.addEventListener('click', () => addWord(w));
+    $('speak-word').addEventListener('click',()=>speakWord(w));
+    const addButton=$('add-word-button'); if(addButton&&!exists)addButton.addEventListener('click',()=>addWord(w));
+    $('phrase-start').addEventListener('click',()=>startPhraseSelection(context.wordIndex,context.sentenceIndex));
   };
   render(translation);
-  if(translation === 'Перевод загружается…'){
-    const tr=await remoteTranslateWord(w);
-    let v=verb;
-    if(v && !v.translation) v={...v,translation:tr};
-    render(tr,v);
-  } else if(verb && !verb.translation){
-    const tr=await remoteTranslateWord(verb.lemma);
-    render(translation,{...verb,translation:tr});
-  }
+  if(translation==='Перевод загружается…'){const tr=await remoteTranslateWord(w);render(tr,verb);}
+}
+function startPhraseSelection(index,sentenceIndex){
+  phraseSelection={firstIndex:Number(index),sentenceIndex:Number(sentenceIndex)};
+  $('popup').classList.add('hide');
+  document.querySelectorAll('.word').forEach(b=>b.classList.remove('phrase-selected'));
+  const first=document.querySelector(`.word[data-word-index="${Number(index)}"]`); if(first)first.classList.add('phrase-selected');
+  $('phrase-help')?.classList.remove('hide');
+}
+let phraseSelection=null;
+async function finishPhraseSelection(firstBtn,secondBtn){
+  const sr=[firstBtn.textContent.trim(),secondBtn.textContent.trim()].join(' ');
+  const sourceTitle=document.getElementById('title')?.textContent||'';
+  const sentenceBtns=[...document.querySelectorAll('.word[data-sentence-index="'+firstBtn.dataset.sentenceIndex+'"]')];
+  const sentence=sentenceBtns.map(b=>b.textContent.trim()).join(' ');
+  const tr=await translatePhrase(sr);
+  $('popup').innerHTML=`<div class="popup-title">🔗 ${escapeHtml(sr)}</div><div class="popup-translation">${escapeHtml(tr)}</div><div class="word-context"><span>Словосочетание из текста:</span> ${escapeHtml(sentence)}</div><div class="popup-actions"><button type="button" id="speak-phrase">🔊 Слушать</button><button type="button" id="save-phrase">Добавить в мои словосочетания</button></div>`;
+  $('popup').classList.remove('hide');
+  $('speak-phrase').addEventListener('click',()=>speakWord(sr));
+  $('save-phrase').addEventListener('click',()=>{const added=addPhrase(sr,tr,sourceTitle,sentence);$('save-phrase').textContent=added?'✓ Сохранено':'✓ Уже сохранено';});
 }
 
 function addWord(w){
-  if (!saved.some(x => x.word === w)) {
-    saved.push({word:w, translation:getTranslation(w), added:new Date().toISOString(), box:1, nextReview:Date.now(), mistakes:0, hard:false});
-    save();
-  }
+  if(!saved.some(x=>x.word===w)){saved.push({word:w,translation:getTranslation(w),added:new Date().toISOString(),box:1,nextReview:Date.now(),mistakes:0,hard:false});save();}
   word(w);
+}
+
+const PHRASE_PROGRESS_KEY='citajSrpskiPhraseProgressV2';
+let phraseProgress={};
+try{ phraseProgress=JSON.parse(localStorage.getItem(PHRASE_PROGRESS_KEY)||'{}')||{}; }catch(e){ phraseProgress={}; }
+function savePhraseProgress(){try{localStorage.setItem(PHRASE_PROGRESS_KEY,JSON.stringify(phraseProgress));}catch(e){}}
+function phraseKey(p){return normalizePhrase(p.sr);}
+function phraseMark(p,ok){
+  const k=phraseKey(p), st=phraseProgress[k]||{successes:0,attempts:0,dueAt:0};
+  st.attempts=(st.attempts||0)+1;
+  if(ok){ st.successes=Math.min(3,(st.successes||0)+1); const days=[1,3,7]; st.dueAt=st.successes>=3?0:Date.now()+days[st.successes-1]*86400000; }
+  else { st.dueAt=Date.now()+10*60*1000; }
+  phraseProgress[k]=st; savePhraseProgress();
+}
+function startPhraseTraining(){
+  if(savedPhrases.length<1){alert('Сначала сохрани хотя бы одно словосочетание.');return;}
+  const due=savedPhrases.filter(p=>{const st=phraseProgress[phraseKey(p)];return !st || !st.dueAt || st.dueAt<=Date.now() || (st.successes||0)<3;});
+  phraseExerciseQueue=shuffle(due.length?due:savedPhrases).slice(0,Math.min(20,savedPhrases.length));
+  phraseExerciseIndex=0; renderPhraseTraining(); view('review');
+}
+let phraseExerciseQueue=[], phraseExerciseIndex=0;
+function renderPhraseTraining(){
+  if(phraseExerciseIndex>=phraseExerciseQueue.length){
+    $('review-content').innerHTML='<div class="card"><h2>Тренировка словосочетаний завершена 🎉</h2><p>Ты прошёл '+phraseExerciseQueue.length+' словосочетаний.</p><button type="button" id="phrase-training-back">Вернуться к тренировкам</button></div>';
+    $('phrase-training-back').addEventListener('click',training); return;
+  }
+  const p=phraseExerciseQueue[phraseExerciseIndex], st=phraseProgress[phraseKey(p)]||{successes:0};
+  const dir=phraseExerciseIndex%2===0?'sr':'ru';
+  const prompt=dir==='sr'?p.sr:p.translation;
+  const answer=dir==='sr'?p.translation:p.sr;
+  $('review-content').innerHTML=`<div class="card review-card"><p class="muted">Словосочетание · ${phraseExerciseIndex+1} из ${phraseExerciseQueue.length} · закреплено ${st.successes||0}/3</p><div class="flash-word phrase-flash">${escapeHtml(prompt)}</div><div class="vocab-actions"><button type="button" id="phrase-answer">Показать перевод</button><button type="button" id="phrase-know" class="hide">✓ Помню</button><button type="button" id="phrase-forget" class="hide">✗ Не помню</button></div><div id="phrase-training-feedback" class="feedback"></div></div>`;
+  $('phrase-answer').addEventListener('click',()=>{ $('phrase-training-feedback').innerHTML='<b>'+escapeHtml(answer)+'</b>'; $('phrase-know').classList.remove('hide'); $('phrase-forget').classList.remove('hide'); $('phrase-answer').classList.add('hide'); });
+  $('phrase-know').addEventListener('click',()=>{phraseMark(p,true);phraseExerciseIndex++;renderPhraseTraining();});
+  $('phrase-forget').addEventListener('click',()=>{phraseMark(p,false);phraseExerciseIndex++;renderPhraseTraining();});
 }
 
 function words(){
@@ -5588,7 +6039,7 @@ function words(){
         <button type="button" id="start-learning">🟡 Повторить изучаемые</button>
         <button type="button" id="start-choice">🎯 Слово → перевод</button>
         <button type="button" id="start-reverse">🧠 Перевод → слово</button>
-        <button type="button" id="start-assembly">🧩 Русское предложение → собрать сербское</button>
+        <button type="button" id="start-assembly">🧩 Русское предложение → собрать сербское</button><button type="button" id="start-phrase-training">🔗 Тренировать словосочетания</button>
       </div>
       <h4>Как запоминаются слова</h4>
       <p class="muted">После «Помню» слово поднимается по интервалам: 1 → 2 → 4 → 7 → 14 → 30 дней. После первого «Не помню» оно считается изучаемым и остаётся на повторении. Если одно и то же слово снова забыто, оно помечается как трудное и попадает в отдельную тренировку «Повторить трудные». После устойчивых правильных ответов слово доходит до «Выучены».</p>
@@ -5596,6 +6047,9 @@ function words(){
       <h4>Учебные блоки — отдельно от «Моих слов»</h4>
       <p class="muted">Слова из тематических блоков не входят в «Мои слова». Они хранятся отдельно и повторяются только внутри выбранного блока.</p>
       <div class="block-buttons">${blockCounts.length ? blockCounts.map(b=>`<button type="button" class="saved-block-review" data-block="${b.id}">${b.level} · ${b.title} (${b.count}/${b.words.length})</button>`).join('') : '<span class="muted">Пока нет сохранённых блоков.</span>'}</div>
+      <h4>🔗 Мои словосочетания: ${savedPhrases.length}</h4>
+      <p class="muted">Словосочетания хранятся отдельно от отдельных слов. Это удобно для связок вроде <i>doneti odluku</i> — «принять решение».</p>
+      <div class="phrase-list">${savedPhrases.length?savedPhrases.map((p,i)=>`<div class="row"><b>${escapeHtml(p.sr)}</b><span> — ${escapeHtml(p.translation)}</span><button type="button" class="small remove-phrase" data-index="${i}">Удалить</button></div>`).join(''):'<p class="muted">Пока нет сохранённых словосочетаний.</p>'}</div>
       <hr>
       <button type="button" id="export-words">💾 Сохранить мои слова</button>
       <button type="button" id="import-words">📥 Загрузить мои слова</button>
@@ -5614,11 +6068,13 @@ function words(){
   $('start-choice').addEventListener('click', () => startExercise('choice'));
   $('start-reverse').addEventListener('click', () => startExercise('reverse'));
   $('start-assembly').addEventListener('click', startSentenceAssembly);
+  $('start-phrase-training')?.addEventListener('click', startPhraseTraining);
   document.querySelectorAll('.saved-block-review').forEach(b=>b.addEventListener('click',()=>startBlockReview(b.dataset.block,'review')));
   $('export-words').addEventListener('click', exportWords);
   $('import-words').addEventListener('click', () => $('import-file').click());
   $('import-file').addEventListener('change', importWords);
   document.querySelectorAll('.speak-saved').forEach(b => b.addEventListener('click', () => speakWord(b.dataset.word)));
+  document.querySelectorAll('.remove-phrase').forEach(b=>b.addEventListener('click',()=>{savedPhrases.splice(Number(b.dataset.index),1);savePhrases();words();}));
 }
 
 let exerciseQueue = [];
@@ -5778,6 +6234,7 @@ function renderSentenceAssembly(){
     if(checked)return; const i=Number(btn.dataset.i); if(chosen.some(x=>x.bankIndex===i))return;
     chosen.push({word:shuffled[i].word,bankIndex:i}); btn.disabled=true; renderChosen(); if(chosen.length===shuffled.length)checkAnswer();
   }));
+  $('assembly-speak').addEventListener('click',()=>speakText(item.sr));
   $('assembly-show').addEventListener('click',()=>finishAnswer('hint'));
   $('assembly-skip').addEventListener('click',()=>finishAnswer('skipped'));
   $('assembly-next').addEventListener('click',()=>{sentenceExerciseIndex++;renderSentenceAssembly();});
@@ -5939,7 +6396,7 @@ function answerReview(w, correct){
 }
 
 function exportWords(){
-  const blob = new Blob([JSON.stringify(saved, null, 2)], {type:'application/json'});
+  const blob = new Blob([JSON.stringify({words:saved,phrases:savedPhrases,phraseProgress,exportedAt:new Date().toISOString()}, null, 2)], {type:'application/json'});
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
@@ -5955,15 +6412,18 @@ function importWords(event){
   reader.onload = () => {
     try {
       const imported = JSON.parse(reader.result);
-      if (!Array.isArray(imported)) throw new Error('bad');
-      const clean = imported.filter(x => x && typeof x.word === 'string').map(x => ({
+      const importedWords = Array.isArray(imported) ? imported : imported.words;
+      if (!Array.isArray(importedWords)) throw new Error('bad');
+      const clean = importedWords.filter(x => x && typeof x.word === 'string').map(x => ({
         word:x.word, translation:x.translation || getTranslation(x.word),
         added:x.added || new Date().toISOString(), box:Math.min(6,Math.max(1,Number(x.box)||1)), nextReview:x.nextReview || Date.now()
       }));
       saved = clean;
+      if(Array.isArray(imported.phrases)){ savedPhrases=imported.phrases; savePhrases(); }
+      if(imported.phraseProgress && typeof imported.phraseProgress==='object'){ phraseProgress=imported.phraseProgress; savePhraseProgress(); }
       save();
       words();
-      alert('Слова загружены.');
+      alert('Слова и словосочетания загружены.');
     } catch(e) { alert('Не удалось прочитать резервную копию.'); }
   };
   reader.readAsText(file);
@@ -6019,4 +6479,3 @@ document.addEventListener("click", event => {
 
 save();
 texts();
-  $('assembly-speak').addEventListener('click',()=>speakText(item.sr));
