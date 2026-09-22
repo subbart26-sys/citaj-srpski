@@ -6054,6 +6054,21 @@ function getTranslation(w){
 }
 
 let translationRequestId=0;
+async function preloadTextTranslations(text){
+  const words=[...new Set((String(text||'').match(/[\p{L}\p{M}\p{N}]+(?:['’][\p{L}\p{M}\p{N}]+)?/gu)||[]).map(normalize).filter(Boolean))];
+  const missing=words.filter(w=>getTranslation(w)==='Перевод загружается…');
+  let cursor=0;
+  const worker=async()=>{
+    while(cursor<missing.length){
+      const w=missing[cursor++];
+      try{await remoteTranslateWord(w);}catch(e){}
+    }
+  };
+  // Несколько последовательных запросов на каждом воркере не перегружают бесплатные API.
+  await Promise.all(Array.from({length:4},worker));
+  return missing.length;
+}
+
 async function remoteTranslateWord(w){
   const n=normalize(w);
   if(!n || DICT[n] || REMOTE_TRANSLATION_CACHE[n]) return getTranslation(n);
@@ -6226,20 +6241,21 @@ function view(id){
 
 function subotica(){
   const items=TEXTS.filter(t=>t.category==='subotica');
-  const media=(t)=>{
-    const title=(t.title||'').toLowerCase();
-    let imgs=[];
-    if(title.includes('синагог')) imgs=['https://commons.wikimedia.org/wiki/Special:Redirect/file/SuboticaSynagogue.jpg','https://commons.wikimedia.org/wiki/Special:Redirect/file/Subotica%20Synagogue%2C%20interior.jpg'];
-    else if(title.includes('рајх')||title.includes('rajhl')) imgs=['https://commons.wikimedia.org/wiki/Special:Redirect/file/SUBOTICA%20Raichl%20Palace.JPG','https://commons.wikimedia.org/wiki/Special:Redirect/file/Subotica%2C%20Rajhlova%20palata.jpg'];
-    else if(title.includes('korzo')) imgs=['https://commons.wikimedia.org/wiki/Special:Redirect/file/Subotica%2C%20Korzo.jpg','https://commons.wikimedia.org/wiki/Special:Redirect/file/Subotica_Town_Hall_View_1.jpg'];
-    else if(title.includes('trg slobode')||title.includes('gradska ku')) imgs=['https://commons.wikimedia.org/wiki/Special:Redirect/file/Subotica%20Town%20Hall.jpg','https://commons.wikimedia.org/wiki/Special:Redirect/file/City%20Hall%20Subotica%2C%20detail%201%20%282024%29.jpg'];
-    else imgs=['https://commons.wikimedia.org/wiki/Special:Redirect/file/Subotica%2C%20Korzo.jpg','https://commons.wikimedia.org/wiki/Special:Redirect/file/Subotica_Town_Hall_View_1.jpg'];
-    return `<div class="sub-media">${imgs.map((u,k)=>`<img loading="lazy" src="${u}" alt="Суботица — фото к тексту" referrerpolicy="no-referrer"><small>${k===0?'Фото: Wikimedia Commons':''}</small>`).join('')}</div>`;
-  };
-  const map=(t)=>{const q=encodeURIComponent(t.title.replace(/\s*[—-].*$/,''));return `<div class="sub-map"><iframe title="Карта центра Суботицы" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=19.658%2C46.095%2C19.678%2C46.108&layer=mapnik&marker=46.101%2C19.668"></iframe><p class="muted">📍 Карта центра Суботицы; объект/улица отмечены в тексте статьи. <a href="https://www.openstreetmap.org/?mlat=46.101&mlon=19.668#map=15/46.101/19.668" target="_blank" rel="noopener">Открыть карту ↗</a></p></div>`;};
-  $('subotica-list').innerHTML=items.map(t=>{const i=TEXTS.indexOf(t),n=splitSentences(t.text).length;return `<div class="card subotica-card"><div class="tag">${t.level}</div><h3>${t.title}</h3><p>${t.ru}</p>${media(t)}${map(t)}<p class="muted"><b>${n} предложений.</b> Адаптированный краеведческий текст.</p><p class="source">${t.source}</p><button type="button" class="read-text" data-index="${i}">📖 Читать на сайте</button></div>`}).join('');
+  // На этом этапе фотографии относятся к самому разделу, а не к каждому тексту.
+  // Оставляем только две общие иллюстрации в начале списка.
+  const gallery=`<div class="subotica-gallery card">
+    <h3>Суботица — для иллюстрации раздела</h3>
+    <div class="sub-media sub-media-gallery">
+      <figure><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Subotica%20Town%20Hall.jpg" alt="Градска кућа у Суботици" referrerpolicy="no-referrer"><figcaption>Градска кућа</figcaption></figure>
+      <figure><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Subotica%2C%20Korzo.jpg" alt="Корзо у Суботици" referrerpolicy="no-referrer"><figcaption>Корзо</figcaption></figure>
+    </div>
+    <p class="muted small-note">Фотографии: Wikimedia Commons.</p>
+  </div>`;
+  $('subotica-list').innerHTML=gallery+items.map(t=>{
+    const i=TEXTS.indexOf(t),n=splitSentences(t.text).length;
+    return `<div class="card subotica-card"><div class="tag">${t.level}</div><h3>${t.title}</h3><p>${t.ru}</p><p class="muted"><b>${n} предложений.</b> Адаптированный краеведческий текст.</p><p class="source">${t.source}</p><button type="button" class="read-text" data-index="${i}">📖 Читать на сайте</button></div>`;
+  }).join('');
 }
-
 function training(){
   $('training-content').innerHTML = `
     <h2>Тренировка</h2>
@@ -6424,6 +6440,7 @@ function openText(i){
 
   bindReaderWordInteractions();
   view("reader");
+  preloadTextTranslations(t.text).catch(()=>{});
 }
 
 let phraseSelection=null;
