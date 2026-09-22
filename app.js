@@ -5512,110 +5512,84 @@ if (localStorage.getItem('citajSrpskiSeparateVocabV13') !== '1') {
 }
 
 const REVIEW_INTERVALS = [0, 1, 2, 4, 7, 14, 30];
-// Каноническая форма личного слова: существительные/прилагательные —
-// словарная форма (обычно именительный падеж, ед. число), глаголы — инфинитив.
-// Карта намеренно консервативная: если форма не распознана уверенно, сохраняем
-// исходное слово, а не угадываем лемму.
-const CANONICAL_WORDS = {
-  "drvetu":"drvo", "drvetom":"drvo", "drve":"drvo", "drva":"drvo", "drveću":"drvo",
-  "gradu":"grad", "grada":"grad", "gradom":"grad", "gradovima":"grad", "gradovima":"grad",
-  "ulici":"ulica", "ulice":"ulica", "ulicom":"ulica", "ulicama":"ulica",
-  "centru":"centar", "centra":"centar", "centrom":"centar",
-  "zgradi":"zgrada", "zgrade":"zgrada", "zgradom":"zgrada", "zgradama":"zgrada",
-  "palate":"palata", "palati":"palata", "palatom":"palata", "palatama":"palata",
-  "putu":"put", "puta":"put", "putem":"put", "putevima":"put",
-  "stanici":"stanica", "stanice":"stanica", "stanicom":"stanica",
-  "istorije":"istorija", "istoriji":"istorija", "istorijom":"istorija",
-  "kulturi":"kultura", "kulture":"kultura", "kulturom":"kultura",
-  "škole":"škola", "školi":"škola", "školom":"škola", "školama":"škola",
-  "ulicama":"ulica", "trgu":"trg", "trga":"trg", "trgom":"trg",
-  "jeziku":"jezik", "jezika":"jezik", "jezikom":"jezik", "jezicima":"jezik",
-  "vremenu":"vreme", "vremena":"vreme", "vremenom":"vreme",
-  "ljudima":"čovek", "ljude":"čovek", "ljudima":"čovek",
-  "stanovnika":"stanovnik", "stanovnicima":"stanovnik", "stanovnike":"stanovnik",
-  "putnika":"putnik", "putnicima":"putnik", "putnikе":"putnik",
-  "trgovci":"trgovac", "trgovca":"trgovac", "trgovcima":"trgovac", "trgovce":"trgovac",
-  "arhivima":"arhiv", "arhivu":"arhiv", "arhiva":"arhiv",
-  "dokumentima":"dokument", "dokumentu":"dokument", "dokumenta":"dokument",
-  "izvorima":"izvor", "izvoru":"izvor", "izvora":"izvor",
-  "jezicima":"jezik", "krajevima":"kraj", "krajevima":"kraj", "kraja":"kraj", "kraju":"kraj",
-  "naselja":"naselje", "naselju":"naselje", "naseljima":"naselje",
-  "porodice":"porodica", "porodici":"porodica", "porodicom":"porodica",
-  "zajednici":"zajednica", "zajednice":"zajednica", "zajednicom":"zajednica",
-  "arhitekturi":"arhitektura", "arhitekture":"arhitektura", "arhitekturom":"arhitektura",
-  "zgradama":"zgrada", "prozorima":"prozor", "prozorima":"prozor", "krovu":"krov", "krova":"krov",
-  "bojama":"boja", "boje":"boja", "bojom":"boja", "detaljima":"detalj", "detalja":"detalj",
-  "oblicima":"oblik", "oblika":"oblik", "oblikom":"oblik",
-  "gradovima":"grad", "mestima":"mesto", "mestu":"mesto", "mesta":"mesto",
-  "prostoru":"prostor", "prostora":"prostor", "prostorom":"prostor", "prostorima":"prostor",
-  "razvoju":"razvoj", "razvoja":"razvoj", "razvojem":"razvoj",
-  "promenama":"promena", "promene":"promena", "promeni":"promena", "promenom":"promena",
-  "naziva":"naziv", "nazivu":"naziv", "nazivima":"naziv", "nazivom":"naziv",
-  "imenima":"ime", "imena":"ime", "imenu":"ime",
-  "vlastima":"vlast", "vlasti":"vlast", "vlašću":"vlast",
-  "stanovništva":"stanovništvo", "stanovništvu":"stanovništvo",
-  "mogućnostima":"mogućnost", "mogućnosti":"mogućnost", "mogućnošću":"mogućnost",
-  "uslovima":"uslov", "uslovu":"uslov", "uslova":"uslov",
-  "tradicije":"tradicija", "tradiciji":"tradicija", "tradicijom":"tradicija",
-  "funkciji":"funkcija", "funkcije":"funkcija", "funkcijom":"funkcija",
-  "ustanove":"ustanova", "ustanovi":"ustanova", "ustanovama":"ustanova",
-  "predstave":"predstava", "predstavi":"predstava", "predstavama":"predstava",
-  "izložbe":"izložba", "izložbi":"izložba", "izložbama":"izložba",
-  "koncerte":"koncert", "koncerti":"koncert", "koncertima":"koncert",
-  "festivalima":"festival", "festivala":"festival", "festivalu":"festival",
-  "događajima":"događaj", "događaja":"događaj", "događaju":"događaj",
-  "fotografije":"fotografija", "fotografiji":"fotografija", "fotografijama":"fotografija",
-  "telefonu":"telefon", "telefona":"telefon", "telefonima":"telefon",
-  "internetu":"internet", "interneta":"internet",
-  "mapu":"mapa", "mape":"mapa", "mapi":"mapa",
-  "putevi":"put", "puteva":"put", "putevima":"put",
-  "stanovnici":"stanovnik", "stanovnike":"stanovnik", "stanovnicima":"stanovnik",
-  "važnih":"važan", "važnim":"važan", "važne":"važan", "važna":"važan",
-  "različitih":"različit", "različitim":"različit", "različite":"različit", "različito":"različit",
-  "poznatih":"poznat", "poznatim":"poznat", "poznate":"poznat",
-  "novim":"nov", "novih":"nov", "nove":"nov", "novoj":"nov",
-  "starim":"stari", "starih":"stari", "stare":"stari", "staroj":"stari",
-  "velikim":"velik", "velikih":"velik", "velike":"velik", "velikoj":"velik",
-  "malim":"mali", "malih":"mali", "male":"mali", "maloj":"mali",
-  "savremenim":"savremen", "savremenih":"savremen", "savremene":"savremen",
-  "istorijskih":"istorijski", "istorijskim":"istorijski", "istorijske":"istorijski",
-  "kulturnih":"kulturni", "kulturnim":"kulturni", "kulturne":"kulturni",
-  "javnih":"javni", "javnim":"javni", "javne":"javni",
-  "razvojni":"razvojni", "razvojnog":"razvojni", "razvojnom":"razvojni"
+const SAFE_LEMMA_MAP = {
+  // Частые формы из текстов: сохраняем одну словарную форму, не меняя смысл.
+  'na drvetu':'drvo','drvetu':'drvo','drva':'drvo','drvo':'drvo',
+  'u gradu':'grad','gradu':'grad','grada':'grad','gradom':'grad','gradovi':'grad',
+  'u ulici':'ulica','ulici':'ulica','ulice':'ulica','ulicom':'ulica',
+  'zgradi':'zgrada','zgrade':'zgrada','zgradom':'zgrada',
+  'važnih':'važan','važnim':'važan','važne':'važan','važna':'važan',
+  'stare':'stari','starih':'stari','starim':'stari','stara':'stari',
+  'nove':'nov','novih':'nov','novim':'nov','nova':'nov',
+  'svoje':'svoj','svoju':'svoj','svojim':'svoj','svojih':'svoj','svoja':'svoj',
+  'kuće':'kuća','kući':'kuća','kućom':'kuća','kuću':'kuća',
+  'ljudi':'čovek','ljudima':'čovek','ljude':'čovek',
+  'dana':'dan','dani':'dan','danom':'dan','dane':'dan',
+  'putevi':'put','puteva':'put','putem':'put','putu':'put',
+  'minuta':'minut','minuti':'minut','minutom':'minut',
+  'ulice':'ulica','ulicama':'ulica','ulicama':'ulica',
+  'zgrade':'zgrada','zgradama':'zgrada','zgradi':'zgrada',
+  'meseci':'mesec','meseca':'mesec','mesecom':'mesec',
+  'godine':'godina','godina':'godina','godinama':'godina',
+  'promene':'promena','promena':'promena','promenama':'promena',
+  'važan':'važan','važna':'važan','važni':'važan',
+  'hodala':'hodati','hodao':'hodati','hodali':'hodati','hodale':'hodati',
+  'šetala':'šetati','šetao':'šetati','šetali':'šetati','šetale':'šetati',
+  'stigao':'stići','stigla':'stići','stigli':'stići','stigle':'stići',
+  'vratio':'vratiti','vratila':'vratiti','vratili':'vratiti','vratile':'vratiti',
+  'počeo':'početi','počela':'početi','počeli':'početi','počele':'početi',
+  'rekao':'reći','rekla':'reći','rekli':'reći','rekle':'reći',
+  'video':'videti','videla':'videti','videli':'videti','videle':'videti',
+  'čuo':'čuti','čula':'čuti','čuli':'čuti','čule':'čuti',
+  'došao':'doći','došla':'doći','došli':'doći','došle':'doći',
+  'otišao':'otići','otišla':'otići','otišli':'otići','otišle':'otići',
+  'naučili':'naučiti','naučila':'naučiti','naučio':'naučiti','naučila':'naučiti',
+  'odlučili':'odlučiti','odlučila':'odlučiti','odlučio':'odlučiti','odlučile':'odlučiti',
+  'morala':'morati','morao':'morati','morali':'morati','morale':'morati',
+  'zaspao':'zaspati','zaspala':'zaspati','zaspali':'zaspati','zaspale':'zaspati',
+  'odleteo':'odleteti','odletela':'odleteti','odleteli':'odleteti','odletele':'odleteti',
+  'poželela':'poželeti','poželeo':'poželeti','poželeli':'poželeti','poželele':'poželeti',
+  'pobeglo':'pobeći','pobegao':'pobeći','pobegla':'pobeći','pobegli':'pobeći'
 };
-function canonicalSavedWord(w){
+function canonicalWord(w){
   const n=normalize(w);
-  const verb=findVerbInfo(n);
-  if(verb && verb.lemma) return normalize(verb.lemma);
-  return CANONICAL_WORDS[n] || n;
-}
-function canonicalSavedTranslation(form, lemma){
-  const tr=DICT[lemma]||getTranslation(lemma)||DICT[form]||getTranslation(form);
-  return tr;
+  if(!n) return n;
+  if(SAFE_LEMMA_MAP[n]) return SAFE_LEMMA_MAP[n];
+  try{
+    const v=findVerbInfo(n);
+    if(v && v.lemma) return normalize(v.lemma);
+  }catch(e){}
+  return n;
 }
 
 function normalizeSavedWords(){
   let changed=false;
-  const merged=[];
-  const seen=new Set();
+  const merged=new Map();
   saved.forEach(x=>{
     const y={...x};
     delete y.blockId;
-    const original=String(y.word||'').trim();
-    const lemma=canonicalSavedWord(original);
-    if(lemma && lemma!==normalize(original)){ y.sourceForm=original; y.word=lemma; changed=true; }
-    else y.word=lemma||original;
+    const old=normalize(y.word||'');
+    const lemma=canonicalWord(old);
+    if(lemma && lemma!==old){y.word=lemma;changed=true;}
     if(!Number.isInteger(y.box)||y.box<1||y.box>6){y.box=1;changed=true;}
     if(!y.nextReview){y.nextReview=Date.now();changed=true;}
-    const tr=canonicalSavedTranslation(original,y.word);
-    if(tr && tr!=='Перевод загружается…' && tr!=='Перевод пока не добавлен' && y.translation!==tr){y.translation=tr;changed=true;}
-    const key=normalize(y.word);
-    if(!seen.has(key)){seen.add(key);merged.push(y);} else changed=true;
+    if(!y.translation||y.translation==='Перевод пока не добавлен'||y.translation==='Перевод загружается…'){
+      const tr=DICT[lemma]||getTranslation(lemma);
+      if(tr&&tr!=='Перевод пока не добавлен'&&tr!=='Перевод загружается…'){y.translation=tr;changed=true;}
+    }
+    const key=lemma||old;
+    if(!merged.has(key)) merged.set(key,y);
+    else {
+      const prev=merged.get(key);
+      prev.box=Math.max(Number(prev.box)||1,Number(y.box)||1);
+      prev.nextReview=Math.min(Number(prev.nextReview)||Date.now(),Number(y.nextReview)||Date.now());
+      prev.mistakes=Math.max(Number(prev.mistakes)||0,Number(y.mistakes)||0);
+      changed=true;
+    }
   });
-  saved=merged;
+  saved=[...merged.values()];
   if(changed) localStorage.setItem('citajSrpskiWords',JSON.stringify(saved));
 }
-
 function normalizeVocabProgress(){
   vocabProgress=vocabProgress.filter(x=>x&&typeof x.word==='string'&&x.blockId&&vocabBlock(x.blockId)).map(x=>({...x,box:Math.min(6,Math.max(1,Number(x.box)||1)),nextReview:x.nextReview||Date.now()}));
   localStorage.setItem('citajSrpskiVocabProgress',JSON.stringify(vocabProgress));
@@ -6252,13 +6226,18 @@ function view(id){
 
 function subotica(){
   const items=TEXTS.filter(t=>t.category==='subotica');
-  const media=`<div class="card local-media-card"><h2>📍 Суботица: улицы и здания</h2><p>Пробный визуальный блок: фотографии центра и нескольких зданий на Korzo. Фотографии взяты из Wikimedia Commons; сведения об авторах и лицензиях указаны под изображениями.</p><div class="local-photo-grid">
-    <figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Subotica,_Korzo.jpg" alt="Korzo u Subotici" loading="lazy"><figcaption>Korzo — фото Szajci, CC BY-SA 4.0. <a href="https://commons.wikimedia.org/wiki/File:Subotica,_Korzo.jpg" target="_blank" rel="noopener">Источник</a></figcaption></figure>
-    <figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Subotica,_Rajhlova_palata.jpg" alt="Rajhlova palata u Subotici" loading="lazy"><figcaption>Rajhlova palata — фото Aktron, CC BY 3.0. <a href="https://commons.wikimedia.org/wiki/File:Subotica,_Rajhlova_palata.jpg" target="_blank" rel="noopener">Источник</a></figcaption></figure>
-    <figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Pa%C5%82ac_Rajhla_%28Galeria_Sztuki_Wsp%C3%B3%C5%82czesnej%29_w_Suboticy.jpg" alt="Raichle Palace" loading="lazy"><figcaption>Rajhlova palata — фото Marcin Konsek, CC BY-SA 4.0. <a href="https://commons.wikimedia.org/wiki/File:Pa%C5%82ac_Rajhla_(Galeria_Sztuki_Wsp%C3%B3%C5%82czesnej)_w_Suboticy.jpg" target="_blank" rel="noopener">Источник</a></figcaption></figure>
-    <figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Sinagoga_Subotica.JPG" alt="Sinagoga u Subotici" loading="lazy"><figcaption>Суботичка синагога — фото из Wikimedia Commons. <a href="https://commons.wikimedia.org/wiki/File:Sinagoga_Subotica.JPG" target="_blank" rel="noopener">Источник и лицензия</a></figcaption></figure>
-  </div><div class="local-map"><h3>🗺 Центр города</h3><p class="muted">На карте отмечена центральная точка Korzo, чтобы было понятно расположение улицы в центре Суботицы. Масштаб специально оставлен общегородским, без сильного приближения.</p><iframe title="Korzo u centru Subotice" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=19.6600%2C46.0950%2C19.6750%2C46.1070&amp;layer=mapnik&amp;marker=46.10049%2C19.66726"></iframe><small>© OpenStreetMap contributors</small></div></div>`;
-  $('subotica-list').innerHTML=media+items.map(t=>{const i=TEXTS.indexOf(t),n=splitSentences(t.text).length;return `<div class="card"><div class="tag">${t.level}</div><h3>${t.title}</h3><p>${t.ru}</p><p class="muted"><b>${n} предложений.</b> Адаптированный краеведческий текст.</p><p class="source">${t.source}</p><button type="button" class="read-text" data-index="${i}">📖 Читать на сайте</button></div>`}).join('');
+  const media=(t)=>{
+    const title=(t.title||'').toLowerCase();
+    let imgs=[];
+    if(title.includes('синагог')) imgs=['https://commons.wikimedia.org/wiki/Special:Redirect/file/SuboticaSynagogue.jpg','https://commons.wikimedia.org/wiki/Special:Redirect/file/Subotica%20Synagogue%2C%20interior.jpg'];
+    else if(title.includes('рајх')||title.includes('rajhl')) imgs=['https://commons.wikimedia.org/wiki/Special:Redirect/file/SUBOTICA%20Raichl%20Palace.JPG','https://commons.wikimedia.org/wiki/Special:Redirect/file/Subotica%2C%20Rajhlova%20palata.jpg'];
+    else if(title.includes('korzo')) imgs=['https://commons.wikimedia.org/wiki/Special:Redirect/file/Subotica%2C%20Korzo.jpg','https://commons.wikimedia.org/wiki/Special:Redirect/file/Subotica_Town_Hall_View_1.jpg'];
+    else if(title.includes('trg slobode')||title.includes('gradska ku')) imgs=['https://commons.wikimedia.org/wiki/Special:Redirect/file/Subotica%20Town%20Hall.jpg','https://commons.wikimedia.org/wiki/Special:Redirect/file/City%20Hall%20Subotica%2C%20detail%201%20%282024%29.jpg'];
+    else imgs=['https://commons.wikimedia.org/wiki/Special:Redirect/file/Subotica%2C%20Korzo.jpg','https://commons.wikimedia.org/wiki/Special:Redirect/file/Subotica_Town_Hall_View_1.jpg'];
+    return `<div class="sub-media">${imgs.map((u,k)=>`<img loading="lazy" src="${u}" alt="Суботица — фото к тексту" referrerpolicy="no-referrer"><small>${k===0?'Фото: Wikimedia Commons':''}</small>`).join('')}</div>`;
+  };
+  const map=(t)=>{const q=encodeURIComponent(t.title.replace(/\s*[—-].*$/,''));return `<div class="sub-map"><iframe title="Карта центра Суботицы" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=19.658%2C46.095%2C19.678%2C46.108&layer=mapnik&marker=46.101%2C19.668"></iframe><p class="muted">📍 Карта центра Суботицы; объект/улица отмечены в тексте статьи. <a href="https://www.openstreetmap.org/?mlat=46.101&mlon=19.668#map=15/46.101/19.668" target="_blank" rel="noopener">Открыть карту ↗</a></p></div>`;};
+  $('subotica-list').innerHTML=items.map(t=>{const i=TEXTS.indexOf(t),n=splitSentences(t.text).length;return `<div class="card subotica-card"><div class="tag">${t.level}</div><h3>${t.title}</h3><p>${t.ru}</p>${media(t)}${map(t)}<p class="muted"><b>${n} предложений.</b> Адаптированный краеведческий текст.</p><p class="source">${t.source}</p><button type="button" class="read-text" data-index="${i}">📖 Читать на сайте</button></div>`}).join('');
 }
 
 function training(){
@@ -6584,7 +6563,8 @@ async function remoteVerbInfo(surface){
 async function word(w, context={}){
   const requestId=++translationRequestId;
   const translation=getTranslation(w);
-  const exists=saved.some(x=>x.word===w);
+  const canonical=canonicalWord(w);
+  const exists=saved.some(x=>canonicalWord(x.word)===canonical);
   let verb=findVerbInfo(w);
   const render=(tr,v=verb)=>{
     if(requestId!==translationRequestId)return;
@@ -6593,7 +6573,7 @@ async function word(w, context={}){
     $('popup').innerHTML=`<div class="popup-title">${escapeHtml(w)}</div><div class="popup-translation">${escapeHtml(tr)}</div>${formNote}${verbBlock}${contextBlock}<div class="popup-actions"><button type="button" id="speak-word">🔊 Слушать</button><button type="button" id="add-word-button">${exists?'✓ Уже в моих словах':'Добавить в мои слова'}</button></div>`;
     $('popup').classList.remove('hide');
     $('speak-word').addEventListener('click',()=>speakWord(w));
-    const addButton=$('add-word-button'); if(addButton&&!exists)addButton.addEventListener('click',()=>addWord(w));
+    const addButton=$('add-word-button'); if(addButton&&!exists)addButton.addEventListener('click',()=>addWord(canonical));
   };
   render(translation,verb);
   if(!verb){
@@ -6628,15 +6608,9 @@ async function finishPhraseSelection(firstBtn,secondBtn){
 }
 
 function addWord(w){
-  const original=String(w||'').trim();
-  const lemma=canonicalSavedWord(original);
-  const tr=canonicalSavedTranslation(original,lemma);
-  const exists=saved.some(x=>normalize(x.word)===normalize(lemma));
-  if(!exists){
-    saved.push({word:lemma,translation:tr,sourceForm:lemma!==normalize(original)?original:undefined,added:new Date().toISOString(),box:1,nextReview:Date.now(),mistakes:0,hard:false});
-    save();
-  }
-  word(original);
+  const lemma=canonicalWord(w);
+  if(!saved.some(x=>canonicalWord(x.word)===lemma)){saved.push({word:lemma,translation:getTranslation(lemma),added:new Date().toISOString(),box:1,nextReview:Date.now(),mistakes:0,hard:false});save();}
+  word(lemma);
 }
 
 const PHRASE_PROGRESS_KEY='citajSrpskiPhraseProgressV2';

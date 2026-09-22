@@ -110,4 +110,14 @@ nav button{position:relative;z-index:2}
 .word{ -webkit-touch-callout:none; }
 .word.phrase-selected{outline:2px solid #777;outline-offset:1px;}
 
-.local-photo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:16px}.local-photo-grid figure{margin:0;background:#f7f8f9;border-radius:16px;overflow:hidden}.local-photo-grid img{display:block;width:100%;height:210px;object-fit:cover}.local-photo-grid figcaption{padding:9px 11px;font-size:12px;line-height:1.4;color:#666}.local-photo-grid a{color:inherit}.local-map{margin-top:22px}.local-map iframe{display:block;width:100%;height:360px;border:0;border-radius:16px;margin:10px 0 6px}.local-map small{color:#666}@media(max-width:600px){.local-photo-grid{grid-template-columns:1fr}.local-photo-grid img{height:220px}.local-map iframe{height:300px}}
+/* v39: слова кликабельны без пунктирных подчёркиваний */
+.word{border-bottom:0!important;text-decoration:none!important;box-shadow:none!important}
+.word:hover{background:#eee}
+.sub-media{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0 10px}
+.sub-media img{display:block;width:100%;height:190px;object-fit:cover;border-radius:16px;background:#eee}
+.sub-media small{display:none}
+.sub-map{margin:10px 0 16px;border-radius:16px;overflow:hidden;background:#f1f3f5}
+.sub-map iframe{display:block;width:100%;height:250px;border:0}
+.sub-map p{padding:8px 12px;margin:0;font-size:14px}
+.sub-map a{text-decoration:underline;color:inherit}
+@media(max-width:600px){.sub-media{grid-template-columns:1fr}.sub-media img{height:210px}.sub-map iframe{height:230px}}
