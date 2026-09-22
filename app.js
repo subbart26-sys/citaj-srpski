@@ -126,28 +126,28 @@ const TEXTS = [
     "ru": "У врача",
     "level": "A2",
     "source": "Авторская учебная адаптация для Čitaj srpski; текст создан специально для изучения сербского языка и не выдается за литературный оригинал.",
-    "text": "Pre nego što je krenuo, zapisao je pitanja koja je želeo da postavi. Nije želeo da zaboravi nijedan važan detalj. U čekaonici je sedeo još jedan čovek. On je tiho čitao novine. Medicinska sestra je pozvala Petra po imenu. Petar je ušao u ordinaciju. Lekar ga je pitao koliko dugo ima tegobe. Petar je rekao da je počelo pre tri dana. Lekar je pitao da li ima temperaturu. Petar je odgovorio da nema visoku temperaturu. Da li je imao problema sa disanjem? Nije, ali je imao jak kašalj. Lekar mu je poslušao pluća. Zatim mu je izmerio temperaturu. Sve je izgledalo normalno. Ipak, lekar je preporučio da se odmara. Rekao je da treba da pije dovoljno vode. Petar je pitao da li može da ide na posao. Lekar je rekao da bi bilo bolje da ostane kod kuće ako se ne oseća dobro. Petar nije želeo da uzima lek bez potrebe. Zato je pitao šta može da koristi za kašalj. Lekar mu je objasnio kako da koristi sirup. Takođe mu je rekao da prati simptome. Ako temperatura poraste, treba ponovo da se javi lekaru. Petar je sve zapisao u telefon. Posle pregleda otišao je u apoteku. Farmaceut ga je pitao da li ima recept. Petar je rekao da nema recept. Pokazao je preporuku lekara. Farmaceut mu je objasnio kako se lek koristi. Petar je proverio koliko puta dnevno treba da ga uzima. Nije želeo da pogreši. Pre nego što je platio, pitao je koliko košta. Cena nije bila visoka. Zatim je otišao kući autobusom. Kod kuće je otvorio prozor. Nije želeo da bude u zagušljivoj sobi. Napravio je čaj i odmorio se. Kasnije je poslao poruku kolegi. Napisao je da sutra verovatno neće doći na posao. Kolega mu je poželeo brz oporavak. Petar je zatim još jednom pročitao uputstvo. Uveče se osećao malo bolje. Ipak, nije pokušavao da radi. Sledećeg jutra je proverio temperaturu. Bila je normalna. Kašalj je još postojao, ali je bio slabiji. Petar je odlučio da još jedan dan ostane kod kuće. Petar je izbegavao hladan vazduh. Nije izlazio bez jakne. Da li je morao da ode na kontrolu? Lekar je rekao da ne mora ako se bude osećao bolje. Petar je ipak odlučio da pozove ordinaciju za nekoliko dana. Tako će proveriti da li se simptomi potpuno povlače. Lekar mu je savetovao da ne žuri sa povratkom treninzima. Posle nedelju dana Petar se osećao potpuno zdravo. Kašalj je nestao. Ponovo je počeo da trenira, ali je prvih dana radio lakše vežbe. Nije želeo da se odmah vrati starom ritmu. Lekar mu je rekao da je to dobar pristup. Petar je nastavio da prati svoje zdravlje. Sada zna kada treba da napravi pauzu. Takođe je počeo da nosi flašu vode sa sobom. To mu je postalo jednostavno. Nije više čekao da oseti žeđ. Posle nekog vremena shvatio je da male navike mogu mnogo da znače. Sada se osećao sigurnije kada treba da donese odluku o odmoru. Ako se ponovo razboli, znaće kada treba da potraži savet. Nije više mislio da mora sve da završi odmah. Sada bolje sluša svoje telo."
+    "text": "Pre nego što je krenuo, zapisao je pitanja koja je želeo da postavi. Nije želeo da zaboravi nijedan važan detalj. U čekaonici je sedeo još jedan čovek. On je tiho čitao novine. Medicinska sestra je pozvala Petra po imenu. Petar je ušao u ordinaciju. Lekar ga je pitao koliko dugo ima tegobe. Petar je rekao da je počelo pre tri dana. Lekar je pitao da li ima temperaturu. Petar je odgovorio da nema visoku temperaturu. Da li je imao problema sa disanjem? Nije, ali je imao jak kašalj. Lekar mu je pregledao pluća. Zatim mu je izmerio temperaturu. Sve je izgledalo normalno. Ipak, lekar je preporučio da se odmara. Rekao je da treba da pije dovoljno vode. Petar je pitao da li može da ide na posao. Lekar je rekao da bi bilo bolje da ostane kod kuće ako se ne oseća dobro. Petar nije želeo da uzima lek bez potrebe. Zato je pitao šta može da koristi za kašalj. Lekar mu je objasnio kako da koristi sirup. Takođe mu je rekao da prati simptome. Ako temperatura poraste, treba ponovo da se javi lekaru. Petar je sve zapisao u telefon. Posle pregleda otišao je u apoteku. Farmaceut ga je pitao da li ima recept. Petar je rekao da nema recept. Pokazao je preporuku lekara. Farmaceut mu je objasnio kako se lek koristi. Petar je proverio koliko puta dnevno treba da ga uzima. Nije želeo da pogreši. Pre nego što je platio, pitao je koliko košta. Cena nije bila visoka. Zatim je otišao kući autobusom. Kod kuće je otvorio prozor. Nije želeo da bude u zagušljivoj sobi. Napravio je čaj i odmorio se. Kasnije je poslao poruku kolegi. Napisao je da sutra verovatno neće doći na posao. Kolega mu je poželeo brz oporavak. Petar je zatim još jednom pročitao uputstvo. Uveče se osećao malo bolje. Ipak, nije pokušavao da radi. Sledećeg jutra je proverio temperaturu. Bila je normalna. Kašalj je još postojao, ali je bio slabiji. Petar je odlučio da još jedan dan ostane kod kuće. Petar je izbegavao hladan vazduh. Nije izlazio bez jakne. Da li je morao da ode na kontrolu? Lekar je rekao da ne mora ako se bude osećao bolje. Petar je ipak odlučio da pozove ordinaciju za nekoliko dana. Tako će proveriti da li se simptomi potpuno povlače. Lekar mu je savetovao da ne žuri sa povratkom treninzima. Posle nedelju dana Petar se osećao potpuno zdravo. Kašalj je nestao. Ponovo je počeo da trenira, ali je prvih dana radio lakše vežbe. Nije želeo da se odmah vrati starom ritmu. Lekar mu je rekao da je to dobar pristup. Petar je nastavio da prati svoje zdravlje. Sada zna kada treba da napravi pauzu. Takođe je počeo da nosi flašu vode sa sobom. To mu je postalo jednostavno. Nije više čekao da oseti žeđ. Posle nekog vremena shvatio je da male navike mogu mnogo da znače. Sada se osećao sigurnije kada treba da donese odluku o odmoru. Ako se ponovo razboli, znaće kada treba da potraži savet. Nije više mislio da mora sve da završi odmah. Sada bolje sluša svoje telo."
   },
   {
     "title": "Telefon, internet i svakodnevni život",
     "ru": "Телефон, интернет и повседневная жизнь",
     "level": "A2",
     "source": "Авторская учебная адаптация для Čitaj srpski; текст создан специально для изучения сербского языка и не выдается за литературный оригинал.",
-    "text": "Jelena je odlučila da bolje organizuje korišćenje telefona. Primetila je da često proverava poruke bez pravog razloga. Da li joj je telefon pomagao da bude organizovanija? Ponekad jeste, ali ponekad joj je samo odvlačio pažnju. Zato je jednog jutra isključila nepotrebne obaveštenja. Ostavila je samo poruke i pozive. Prvih nekoliko sati bilo joj je neobično. Nije stalno gledala u ekran. Na poslu je lakše završila jedan važan dokument. Nije otvarala društvene mreže dok je radila. Posle posla je ponovo uključila poruke. Prijatelj joj je poslao fotografiju sa putovanja. Jelena je odgovorila kratkom porukom. Zatim je odlučila da proveri elektronsku poštu. Imala je nekoliko novih mejlova. Jedan je bio od banke. Drugi je bio od operatera. Treći je sadržao link koji nije prepoznala. Da li je trebalo da otvori taj link? Ne, odlučila je da ga prvo proveri. Pogledala je adresu pošiljaoca. Nije joj izgledala poznato. Zato je poruku obrisala. Kasnije je dobila poruku od prijateljice. Prijateljica je pitala da li mogu da razgovaraju uveče. Jelena je rekla da može. Uveče su razgovarale preko video poziva. Veza je nekoliko puta bila loša. Slika se zamrzla, ali razgovor je ipak nastavljen. Jelena je zatim pokušala da popravi kućni internet. Restartovala je ruter. Nije pomoglo odmah. Zato je pozvala korisničku podršku. Operater joj je postavio nekoliko pitanja. Jelena je objasnila šta se dešava. Operater joj je rekao da proveri kabl. Kabl je bio dobro povezan. Posle nekoliko minuta internet je ponovo radio. Jelena je zahvalila operateru. Kasnije je napravila rezervnu kopiju važnih fotografija. Nije želela da ih izgubi. Fotografije je sačuvala na računaru i na drugom mestu. Zatim je promenila jednu staru lozinku. Izabrala je dužu lozinku koju nije koristila drugde. Pre spavanja je stavila telefon dalje od kreveta. Nije želela da poslednjih trideset minuta dana provede gledajući ekran. Shvatila je da tehnologija može mnogo da pomogne, ali da je važno znati kada treba napraviti pauzu. Sledećeg dana Jelena je napravila još jedno pravilo. Tokom rada telefon je ostajao u drugoj sobi. Da li joj je to bilo teško? Ne, posle nekoliko dana navikla se. U pauzi je proveravala poruke. Nije želela da bude stalno dostupna. Uveče je zapisala koliko joj je vremena ostalo bez ekrana. Rezultat ju je iznenadio. Imala je više vremena za knjigu. Tako je odlučila da pravilo zadrži. Posle mesec dana Jelena je primetila još jednu promenu. Lakše je završavala posao bez prekida. Nije proveravala telefon čim bi dobila novu poruku. Da li je izgubila kontakt sa prijateljima? Nije, samo je razgovore planirala mirnije. Vikendom je ponekad potpuno isključivala obaveštenja. Tako je imala više vremena za porodicu i odmor. Jelena je napravila i listu aplikacija koje zaista koristi. Nekoliko starih aplikacija je obrisala. Nije želela da joj telefon bude pun programa koje nikada ne otvara. Da li joj je telefon posle toga bio manje koristan? Naprotiv, lakše je pronalazila ono što joj treba. Sada jednom mesečno proverava podešavanja. To joj oduzima samo nekoliko minuta. Jelena je taj mali pregled počela da radi prvog dana svakog meseca. Nije joj trebalo mnogo vremena. Tako je održavala telefon urednim i sigurnijim."
+    "text": "Jelena je odlučila da bolje organizuje korišćenje telefona. Primetila je da često proverava poruke bez pravog razloga. Da li joj je telefon pomagao da bude organizovanija? Ponekad jeste, ali ponekad joj je samo odvlačio pažnju. Zato je jednog jutra isključila nepotrebna obaveštenja. Ostavila je samo poruke i pozive. Prvih nekoliko sati bilo joj je neobično. Nije stalno gledala u ekran. Na poslu je lakše završila jedan važan dokument. Nije otvarala društvene mreže dok je radila. Posle posla je ponovo uključila poruke. Prijatelj joj je poslao fotografiju sa putovanja. Jelena je odgovorila kratkom porukom. Zatim je odlučila da proveri elektronsku poštu. Imala je nekoliko novih mejlova. Jedan je bio od banke. Drugi je bio od operatera. Treći je sadržao link koji nije prepoznala. Da li je trebalo da otvori taj link? Ne, odlučila je da ga prvo proveri. Pogledala je adresu pošiljaoca. Nije joj izgledala poznato. Zato je poruku obrisala. Kasnije je dobila poruku od prijateljice. Prijateljica je pitala da li mogu da razgovaraju uveče. Jelena je rekla da može. Uveče su razgovarale preko video poziva. Veza je nekoliko puta bila loša. Slika se zamrzla, ali razgovor je ipak nastavljen. Jelena je zatim pokušala da popravi kućni internet. Restartovala je ruter. Nije pomoglo odmah. Zato je pozvala korisničku podršku. Operater joj je postavio nekoliko pitanja. Jelena je objasnila šta se dešava. Operater joj je rekao da proveri kabl. Kabl je bio dobro povezan. Posle nekoliko minuta internet je ponovo radio. Jelena je zahvalila operateru. Kasnije je napravila rezervnu kopiju važnih fotografija. Nije želela da ih izgubi. Fotografije je sačuvala na računaru i na drugom mestu. Zatim je promenila jednu staru lozinku. Izabrala je dužu lozinku koju nije koristila drugde. Pre spavanja je stavila telefon dalje od kreveta. Nije želela da poslednjih trideset minuta dana provede gledajući ekran. Shvatila je da tehnologija može mnogo da pomogne, ali da je važno znati kada treba napraviti pauzu. Sledećeg dana Jelena je napravila još jedno pravilo. Tokom rada telefon je ostajao u drugoj sobi. Da li joj je to bilo teško? Ne, posle nekoliko dana navikla se. U pauzi je proveravala poruke. Nije želela da bude stalno dostupna. Uveče je zapisala koliko joj je vremena ostalo bez ekrana. Rezultat ju je iznenadio. Imala je više vremena za knjigu. Tako je odlučila da pravilo zadrži. Posle mesec dana Jelena je primetila još jednu promenu. Lakše je završavala posao bez prekida. Nije proveravala telefon čim bi dobila novu poruku. Da li je izgubila kontakt sa prijateljima? Nije, samo je razgovore planirala mirnije. Vikendom je ponekad potpuno isključivala obaveštenja. Tako je imala više vremena za porodicu i odmor. Jelena je napravila i listu aplikacija koje zaista koristi. Nekoliko starih aplikacija je obrisala. Nije želela da joj telefon bude pun programa koje nikada ne otvara. Da li joj je telefon posle toga bio manje koristan? Naprotiv, lakše je pronalazila ono što joj treba. Sada jednom mesečno proverava podešavanja. To joj oduzima samo nekoliko minuta. Jelena je taj mali pregled počela da radi prvog dana svakog meseca. Nije joj trebalo mnogo vremena. Tako je održavala telefon urednim i sigurnijim."
   },
   {
     "title": "Stan i novi komšije",
     "ru": "Квартира и новые соседи",
     "level": "A2",
     "source": "Авторская учебная адаптация для Čitaj srpski; текст создан специально для изучения сербского языка и не выдается за литературный оригинал.",
-    "text": "Nikola je želeo da bolje upozna svoje nove komšije. U zgradi je živeo tek nekoliko nedelja. Da li je već znao sve ljude sa svog sprata? Nije, ali je često sretao istu porodicu. Jednog dana je u hodniku upoznao stariju komšinicu. Ona je nosila nekoliko kesa. Nikola joj je pomogao da ih odnese do stana. Komšinica mu je zahvalila i pozvala ga na kafu. Nikola je prihvatio poziv. U njenom stanu bilo je mnogo biljaka. Komšinica mu je pokazala balkon. Sa balkona se video mali park. Rekla je da u stanu živi više od dvadeset godina. Nikola ju je pitao kakva je zgrada bila ranije. Ona je rekla da je bilo manje stanova renovirano. U hodniku su nekada stajala stara vrata. Sada su vrata nova i bolje zatvorena. Nikola je primetio da je zgrada prilično mirna. Ipak, ponekad se uveče čuje buka. Komšinica je rekla da je to obično samo vikendom. Nikola nije želeo da se žali zbog svake sitnice. Važnije mu je bilo da se sa ljudima dogovara. Nekoliko dana kasnije upoznao je i porodicu sa drugog sprata. Imali su malu decu. Deca su se igrala u parku ispred zgrade. Nikola je pitao da li često izlaze tamo. Majka je rekla da idu skoro svakog dana. Jednog vikenda organizovali su malo čišćenje zajedničkog prostora. Nikola je pomogao da se očisti podrum. Tamo je pronađen stari alat. Niko nije znao čiji je. Dogovorili su se da ga ostave u posebnom ormaru. Ako nekome zatreba, može da ga koristi. Kasnije su popravili svetlo u hodniku. Jedna sijalica je često prestajala da radi. Majstor je došao sledećeg dana. Problem nije bio veliki. Posle popravke hodnik je bio mnogo svetliji. Nikola je shvatio da je život u zgradi lakši kada komšije razgovaraju. Ne moraju svi da budu bliski prijatelji. Dovoljno je da se poštuju i da pomognu kada je potrebno. Od tada je Nikola češće pozdravljao ljude u liftu. Tako je polako počeo da se oseća kao deo komšiluka. Nedugo zatim komšije su organizovale zajedničku večeru. Nikola je doneo salatu. Druga porodica je donela kolač. Niko nije želeo da večera bude formalna. Ljudi su sedeli dugo i razgovarali. Da li su svi imali iste navike? Naravno da nisu, ali su lako našli teme za razgovor. Nikola je upoznao još nekoliko ljudi iz zgrade. Posle te večeri zgrada mu više nije izgledala strano. Nikola je jednog dana primetio mali problem sa vratima ulaza. Vrata se nisu dobro zatvarala. Pozvao je upravnika zgrade. Upravnik je obećao da će poslati majstora. Da li je problem bio ozbiljan? Nije, popravka je završena istog dana. Nikola je tada shvatio da je korisno znati kome se treba obratiti. Komšije su zatim dogovorile da ne ostavljaju stvari u hodniku. Nije bilo dobro da prolaz bude zatvoren. Svi su se složili sa tim pravilom. Nikola je predložio da se napravi i mali spisak važnih telefona. Na njemu su bili upravnik, majstor i servis za lift. Da li je to bilo potrebno svaki dan? Nije, ali je bilo korisno imati informacije kada nastane problem. Tako je zgrada postala bolje organizovana. Nikola je kasnije predložio i zajedničku grupu za važne obaveštenja. Komšije nisu želele da grupa bude puna nepotrebnih poruka. Dogovorili su se da je koriste samo kada postoji važna informacija. To je svima odgovaralo."
+    "text": "Nikola je želeo da bolje upozna svoje nove komšije. U zgradi je živeo tek nekoliko nedelja. Da li je već znao sve ljude sa svog sprata? Nije, ali je često sretao istu porodicu. Jednog dana je u hodniku upoznao stariju komšinicu. Ona je nosila nekoliko kesa. Nikola joj je pomogao da ih odnese do stana. Komšinica mu je zahvalila i pozvala ga na kafu. Nikola je prihvatio poziv. U njenom stanu bilo je mnogo biljaka. Komšinica mu je pokazala balkon. Sa balkona se video mali park. Rekla je da u stanu živi više od dvadeset godina. Nikola ju je pitao kakva je zgrada bila ranije. Ona je rekla da je ranije bilo manje renoviranih stanova. U hodniku su nekada stajala stara vrata. Sada su vrata nova i bolje zatvorena. Nikola je primetio da je zgrada prilično mirna. Ipak, ponekad se uveče čuje buka. Komšinica je rekla da je to obično samo vikendom. Nikola nije želeo da se žali zbog svake sitnice. Važnije mu je bilo da se sa ljudima dogovara. Nekoliko dana kasnije upoznao je i porodicu sa drugog sprata. Imali su malu decu. Deca su se igrala u parku ispred zgrade. Nikola je pitao da li često izlaze tamo. Majka je rekla da idu skoro svakog dana. Jednog vikenda organizovali su malo čišćenje zajedničkog prostora. Nikola je pomogao da se očisti podrum. Tamo je pronađen stari alat. Niko nije znao čiji je. Dogovorili su se da ga ostave u posebnom ormaru. Ako nekome zatreba, može da ga koristi. Kasnije su popravili svetlo u hodniku. Jedna sijalica je često prestajala da radi. Majstor je došao sledećeg dana. Problem nije bio veliki. Posle popravke hodnik je bio mnogo svetliji. Nikola je shvatio da je život u zgradi lakši kada komšije razgovaraju. Ne moraju svi da budu bliski prijatelji. Dovoljno je da se poštuju i da pomognu kada je potrebno. Od tada je Nikola češće pozdravljao ljude u liftu. Tako je polako počeo da se oseća kao deo komšiluka. Nedugo zatim komšije su organizovale zajedničku večeru. Nikola je doneo salatu. Druga porodica je donela kolač. Niko nije želeo da večera bude formalna. Ljudi su sedeli dugo i razgovarali. Da li su svi imali iste navike? Naravno da nisu, ali su lako našli teme za razgovor. Nikola je upoznao još nekoliko ljudi iz zgrade. Posle te večeri zgrada mu više nije izgledala strano. Nikola je jednog dana primetio mali problem sa vratima ulaza. Vrata se nisu dobro zatvarala. Pozvao je upravnika zgrade. Upravnik je obećao da će poslati majstora. Da li je problem bio ozbiljan? Nije, popravka je završena istog dana. Nikola je tada shvatio da je korisno znati kome se treba obratiti. Komšije su zatim dogovorile da ne ostavljaju stvari u hodniku. Nije bilo dobro da prolaz bude zatvoren. Svi su se složili sa tim pravilom. Nikola je predložio da se napravi i mali spisak važnih telefona. Na njemu su bili upravnik, majstor i servis za lift. Da li je to bilo potrebno svaki dan? Nije, ali je bilo korisno imati informacije kada nastane problem. Tako je zgrada postala bolje organizovana. Nikola je kasnije predložio i zajedničku grupu za važne obaveštenja. Komšije nisu želele da grupa bude puna nepotrebnih poruka. Dogovorili su se da je koriste samo kada postoji važna informacija. To je svima odgovaralo."
   },
   {
     "title": "Sport posle posla",
     "ru": "Спорт после работы",
     "level": "A2",
     "source": "Авторская учебная адаптация для Čitaj srpski; текст создан специально для изучения сербского языка и не выдается за литературный оригинал.",
-    "text": "Marko je posle nekoliko napornih nedelja shvatio da mu nedostaje kretanje. Nije želeo da slobodno vreme provodi samo kod kuće. Zato je odlučio da tri puta nedeljno ide na trening. Da li je izabrao teretanu ili sport na otvorenom? Prvo je izabrao plivanje. Blizu njegovog stana nalazi se gradski bazen. Marko je otišao tamo u ponedeljak. Na recepciji je kupio mesečnu kartu. Radnica mu je objasnila pravila bazena. Marko nije poneo peškir. Srećom, mogao je da ga iznajmi. Presvukao se i otišao do bazena. Voda nije bila hladna. Prvih deset minuta je samo polako plivao. Zatim je pokušao da pliva brže. Brzo se umorio. Da li je očekivao da će odmah biti u dobroj formi? Ne, znao je da mora polako da počne. Posle treninga se istuširao. Popio je mnogo vode. Nije odmah jeo težak obrok. Kući je otišao peške. Šetnja mu je prijala. Sledećeg dana su ga boleli mišići. Zato nije trenirao. Umesto toga je napravio laganu šetnju. Da li treba trenirati svaki dan? Marko je naučio da odmor takođe ima važnu ulogu. U sredu se ponovo vratio na bazen. Ovoga puta je plivao malo duže. Nije pokušavao da bude najbrži. Važnije mu je bilo da pravilno diše. Trener mu je pokazao kako da popravi položaj ruku. Marko je pokušao ponovo. Pokret mu je odmah bio lakši. Posle treninga trener ga je pitao da li ima pitanja. Marko je pitao kako može da poveća izdržljivost. Trener mu je preporučio redovan trening i dovoljno sna. Rekao je da napredak neće doći preko noći. Marko je prihvatio savet. U petak je ponovo došao na bazen. Pre treninga je kratko razgibao telo. Nije preskočio zagrevanje. Tokom treninga je napravio nekoliko pauza. Posle mesec dana primetio je promenu. Više se nije umarao tako brzo. Shvatio je da sport ne mora da bude takmičenje. Sledećeg meseca odlučio je da proba i trčanje. Nije znao koliko će moći da izdrži. Počeo je sa kratkom rutom. Posle nekoliko nedelja mogao je da trči duže. Nije jurio rezultat. Važno mu je bilo da napravi naviku. Kada je imao manje vremena, vežbao je kod kuće. Tako je pronašao način da ostane aktivan i tokom zauzetih dana. Marko je počeo da prati i koliko spava. Shvatio je da bez odmora trening nije prijatan. Da li je svaki trening morao da bude težak? Ne, neke dane je samo hodao. Jednom je preskočio trening zbog umora. Nije osećao krivicu. Naučio je da sluša svoje telo. Posle nekoliko meseci imao je više energije tokom radnog dana. To mu je bio najvažniji rezultat. Kasnije je Marko počeo da beleži treninge. Zapisivao je koliko je plivao i kako se osećao. Nije se opterećivao brojevima. Želeo je samo da vidi napredak. Posle šest meseci mogao je da pliva duže bez odmora. Da li je postao profesionalni sportista? Naravno da nije. Ali je stekao zdravu naviku koja mu je mnogo značila."
+    "text": "Marko je posle nekoliko napornih nedelja shvatio da mu nedostaje kretanje. Nije želeo da slobodno vreme provodi samo kod kuće. Zato je odlučio da tri puta nedeljno ide na trening. Da li je izabrao teretanu ili sport na otvorenom? Prvo je izabrao plivanje. Blizu njegovog stana nalazi se gradski bazen. Marko je otišao tamo u ponedeljak. Na recepciji je kupio mesečnu kartu. Radnica mu je objasnila pravila bazena. Marko nije poneo peškir. Srećom, mogao je da ga iznajmi. Presvukao se i otišao do bazena. Voda nije bila hladna. Prvih deset minuta je samo polako plivao. Zatim je pokušao da pliva brže. Brzo se umorio. Da li je očekivao da će odmah biti u dobroj formi? Ne, znao je da mora polako da počne. Posle treninga se istuširao. Popio je mnogo vode. Nije odmah jeo težak obrok. Kući je otišao peške. Šetnja mu je prijala. Sledećeg dana su ga boleli mišići. Zato nije trenirao. Umesto toga je otišao u laganu šetnju. Da li treba trenirati svaki dan? Marko je naučio da odmor takođe ima važnu ulogu. U sredu se ponovo vratio na bazen. Ovoga puta je plivao malo duže. Nije pokušavao da bude najbrži. Važnije mu je bilo da pravilno diše. Trener mu je pokazao kako da popravi položaj ruku. Marko je pokušao ponovo. Pokret mu je odmah bio lakši. Posle treninga trener ga je pitao da li ima pitanja. Marko je pitao kako može da poveća izdržljivost. Trener mu je preporučio redovan trening i dovoljno sna. Rekao je da napredak neće doći preko noći. Marko je prihvatio savet. U petak je ponovo došao na bazen. Pre treninga je kratko razgibao telo. Nije preskočio zagrevanje. Tokom treninga je napravio nekoliko pauza. Posle mesec dana primetio je promenu. Više se nije umarao tako brzo. Shvatio je da sport ne mora da bude takmičenje. Sledećeg meseca odlučio je da proba i trčanje. Nije znao koliko će moći da izdrži. Počeo je sa kratkom rutom. Posle nekoliko nedelja mogao je da trči duže. Nije jurio rezultat. Važno mu je bilo da napravi naviku. Kada je imao manje vremena, vežbao je kod kuće. Tako je pronašao način da ostane aktivan i tokom zauzetih dana. Marko je počeo da prati i koliko spava. Shvatio je da bez odmora trening nije prijatan. Da li je svaki trening morao da bude težak? Ne, neke dane je samo hodao. Jednom je preskočio trening zbog umora. Nije osećao krivicu. Naučio je da sluša svoje telo. Posle nekoliko meseci imao je više energije tokom radnog dana. To mu je bio najvažniji rezultat. Kasnije je Marko počeo da beleži treninge. Zapisivao je koliko je plivao i kako se osećao. Nije se opterećivao brojevima. Želeo je samo da vidi napredak. Posle šest meseci mogao je da pliva duže bez odmora. Da li je postao profesionalni sportista? Naravno da nije. Ali je stekao zdravu naviku koja mu je mnogo značila."
   },
   {
     "title": "U restoranu",
@@ -5540,7 +5540,7 @@ function makeRegularVerb(lemma){
   } else {
     const stem=l.slice(0,-3); past=`${stem}eo / ${stem}ela`; present=`${stem}e`;
   }
-  return {lemma:l, translation:DICT[l]||'', past, present, future:`će ${l}`, generated:true};
+  return {lemma:l, translation:DICT[l]||'', past, present, future:`${l.replace(/i$/,'')}će`, generated:true};
 }
 
 // Берём инфинитивы прямо из текстов. Для регулярных глаголов создаём формы
@@ -5580,6 +5580,22 @@ function findVerbInfo(w){
   }
   return null;
 }
+
+// Контекстные переводы для часто встречающихся словоформ.
+const CONTEXT_TRANSLATIONS_EXTRA = {
+  'se':'служебная частица возвратных/средних глагольных конструкций; перевод зависит от глагола',
+  'šešire':'шляпы; головные уборы',
+  'prikazuju':'показывают; изображают; демонстрируют',
+  'lake':'лёгкие; простые (форма слова «lak»)',
+  'mužа':'мужа',
+  'muža':'дойка; доение (от «muža»), а в другом контексте может быть формой «muž» — «мужа»',
+  'muzlica':'сосуд/ведро для дойки; ёмкость для молока',
+  'prijemni':'вступительный; приёмный (обычно: prijemni ispit — вступительный экзамен)',
+  'poverljiv':'конфиденциальный; доверительный; доверчивый — по контексту',
+  'likovna':'изобразительная; художественная (обычно: likovna umetnost — изобразительное искусство)',
+  'zgodan':'симпатичный; удобный; подходящий — по контексту'
+};
+Object.assign(CONTEXT_TRANSLATIONS, CONTEXT_TRANSLATIONS_EXTRA);
 
 const REMOTE_TRANSLATION_CACHE = (()=>{
   try{return JSON.parse(localStorage.getItem('citajSrpskiRemoteTranslations')||'{}')||{};}catch(e){return {};}
@@ -5845,8 +5861,16 @@ function speakSentenceList(sentences, rate=0.86){
 }
 
 function readerSentenceControls(text){
-  const sentences=splitSentences(text);
-  return `<div class="reader-audio card"><div class="vocab-actions"><button type="button" id="speak-full-text">🔊 Озвучить весь текст</button><button type="button" id="speak-sentences">▶ Озвучить по предложениям</button><button type="button" id="speak-slow">🐢 Медленно</button><button type="button" id="stop-speech">⏹ Остановить</button><button type="button" id="text-training">🎯 Тренировать слова этого текста</button><button type="button" id="phrase-mode-button">🔗 Словосочетание: выбрать 2 слова</button></div><div id="phrase-help" class="phrase-help hide">Нажми первое слово, затем соседнее второе. Словосочетание можно сохранить отдельно.</div><p class="muted small-note">Используется установленный сербский голос (sr-RS). Ударение зависит от движка озвучки.</p><div class="sentence-audio-list">${sentences.map((x,i)=>`<div class="sentence-row"><span>${i+1}. ${escapeHtml(x)}</span><button type="button" class="speak-sentence" data-sentence="${encodeURIComponent(x)}">🔊</button></div>`).join('')}</div></div>`;
+  return `<div class="reader-audio card">
+    <div class="vocab-actions">
+      <button type="button" id="speak-full-text">🔊 Озвучить весь текст</button>
+      <button type="button" id="speak-sentences">▶ Озвучить по предложениям</button>
+      <button type="button" id="speak-slow">🐢 Медленно</button>
+      <button type="button" id="stop-speech">⏹ Остановить</button>
+      <button type="button" id="text-training">🎯 Тренировать слова этого текста</button>
+    </div>
+    <p class="muted small-note">Короткое нажатие на слово — перевод. Нажатие с удержанием на двух словах — словосочетание.</p>
+  </div>`;
 }
 
 function renderText(text){
@@ -5863,46 +5887,82 @@ function renderText(text){
   }).join('');
 }
 
-
-function lexicalAudit(){
-  const seen=new Set(), missing=new Set(), verbsMissing=new Set();
-  TEXTS.forEach(t=>String(t.text||'').toLowerCase().match(/[a-zčćđšž]+/g)?.forEach(w=>{
-    if(w.length<2 || seen.has(w)) return; seen.add(w);
-    const tr=getTranslation(w);
-    if(!tr || tr==='Перевод загружается…' || tr==='Перевод пока не добавлен') missing.add(w);
-    const v=findVerbInfo(w);
-    if(v && (!v.past||!v.present||!v.future)) verbsMissing.add(w);
-  }));
-  return {unique:seen.size,missing:[...missing].sort(),verbsMissing:[...verbsMissing].sort()};
-}
-
 function openText(i){
   const t = TEXTS[i];
   $("title").textContent = t.title;
   $("level").textContent = `${t.level} · ${t.ru}`;
-  $("source").textContent = t.source;
+  // Не выводим техническое описание источника над учебным текстом.
+  $("source").textContent = t.level.includes('Исторический') ? t.source : '';
   renderText(t.text);
   document.querySelectorAll('.reader-audio').forEach(x=>x.remove());
-  $("text").insertAdjacentHTML("afterend", readerSentenceControls(t.text));
   $("popup").classList.add("hide");
+  $("text").closest('.card')?.insertAdjacentHTML('afterend', readerSentenceControls(t.text));
+  $("popup").insertAdjacentHTML('afterend','<div id="phrase-help" class="phrase-help hide">Первое слово выбрано. Теперь нажми и удерживай второе слово в том же предложении.</div>');
   $("speak-full-text").addEventListener("click",()=>speakText(t.text));
   $("speak-sentences").addEventListener("click",()=>speakSentenceList(splitSentences(t.text),0.86));
   $("speak-slow").addEventListener("click",()=>speakSentenceList(splitSentences(t.text),0.62));
   $("stop-speech").addEventListener("click",()=>window.speechSynthesis?.cancel());
   $("text-training").addEventListener("click",()=>startTextTraining(t.text));
-  $("phrase-mode-button").addEventListener("click",()=>{phraseSelection=null;document.querySelectorAll(".word").forEach(x=>x.classList.remove("phrase-selected"));$("phrase-help").classList.toggle("hide");});
-  document.querySelectorAll(".speak-sentence").forEach(b=>b.addEventListener("click",()=>speakText(decodeURIComponent(b.dataset.sentence))));
-  document.querySelectorAll('.word').forEach(b=>b.addEventListener('click',()=>{
-    if(phraseSelection){
-      const first=document.querySelector(`.word[data-word-index="${phraseSelection.firstIndex}"]`);
-      const second=b;
-      const adjacent=Math.abs(Number(first?.dataset.wordIndex)-Number(second.dataset.wordIndex))===1 && first?.dataset.sentenceIndex===second.dataset.sentenceIndex;
-      if(adjacent){document.querySelectorAll('.word').forEach(x=>x.classList.remove('phrase-selected'));phraseSelection=null;finishPhraseSelection(first,second);return;}
-      phraseSelection=null;document.querySelectorAll('.word').forEach(x=>x.classList.remove('phrase-selected'));
-    }
-    word(b.dataset.word,{wordIndex:b.dataset.wordIndex,sentenceIndex:b.dataset.sentenceIndex,sentence:[...document.querySelectorAll('.word[data-sentence-index="'+b.dataset.sentenceIndex+'"]')].map(x=>x.textContent.trim()).join(' ')});
-  }));
+
+  bindReaderWordInteractions();
   view("reader");
+}
+
+let phraseSelection=null;
+let suppressWordClickUntil=0;
+const wordPressTimers=new WeakMap();
+
+function clearPhraseSelection(){
+  phraseSelection=null;
+  document.querySelectorAll('.word.phrase-selected').forEach(x=>x.classList.remove('phrase-selected'));
+  $('phrase-help')?.classList.add('hide');
+}
+
+function beginLongPress(btn){
+  const timer=setTimeout(()=>{
+    wordPressTimers.delete(btn);
+    suppressWordClickUntil=Date.now()+700;
+    const idx=Number(btn.dataset.wordIndex), sentence=Number(btn.dataset.sentenceIndex);
+    if(!phraseSelection){
+      phraseSelection={firstIndex:idx,sentenceIndex:sentence};
+      btn.classList.add('phrase-selected');
+      $('phrase-help')?.classList.remove('hide');
+      return;
+    }
+    const first=document.querySelector(`.word[data-word-index="${phraseSelection.firstIndex}"]`);
+    const sameSentence=first && Number(first.dataset.sentenceIndex)===sentence;
+    if(!sameSentence || first===btn){ clearPhraseSelection(); return; }
+    document.querySelectorAll('.word.phrase-selected').forEach(x=>x.classList.remove('phrase-selected'));
+    $('phrase-help')?.classList.add('hide');
+    finishPhraseSelection(first,btn);
+    phraseSelection=null;
+  },550);
+  wordPressTimers.set(btn,timer);
+}
+
+function cancelLongPress(btn){
+  const timer=wordPressTimers.get(btn);
+  if(timer){clearTimeout(timer);wordPressTimers.delete(btn);}
+}
+
+function bindReaderWordInteractions(){
+  document.querySelectorAll('.word').forEach(btn=>{
+    btn.addEventListener('pointerdown',e=>{
+      if(e.pointerType==='mouse' && e.button!==0)return;
+      beginLongPress(btn);
+    });
+    ['pointerup','pointercancel'].forEach(ev=>btn.addEventListener(ev,()=>cancelLongPress(btn)));
+    btn.addEventListener('contextmenu',e=>e.preventDefault());
+    btn.addEventListener('click',e=>{
+      if(Date.now()<suppressWordClickUntil){e.preventDefault();e.stopPropagation();return;}
+      // Короткое нажатие всегда открывает обычную карточку слова.
+      word(btn.dataset.word,{
+        wordIndex:btn.dataset.wordIndex,
+        sentenceIndex:btn.dataset.sentenceIndex,
+        sentence:[...document.querySelectorAll('.word[data-sentence-index="'+btn.dataset.sentenceIndex+'"]')].map(x=>x.textContent.trim()).join(' ')
+      });
+    });
+  });
 }
 
 function getSerbianVoice(){
@@ -5957,27 +6017,23 @@ async function word(w, context={}){
     if(requestId!==translationRequestId)return;
     const formNote=v&&normalize(w)!==normalize(v.lemma)?`<div class="word-form-note">Форма слова: <b>${escapeHtml(w)}</b> → начальная форма <b>${escapeHtml(v.lemma)}</b></div>`:''; const verbBlock=v?`<div class="verb-block"><div class="verb-title">Глагол: <b>${escapeHtml(v.lemma)}</b> · ${escapeHtml(v.translation||tr)}</div><div class="verb-grid"><div><span>Инфинитив</span><b>${escapeHtml(v.lemma)} <small>— ${escapeHtml(v.translation||tr)}</small></b></div><div><span>Прошедшее</span><b>${escapeHtml(v.past||'—')}</b></div><div><span>Настоящее</span><b>${escapeHtml(v.present||'—')}</b></div><div><span>Будущее</span><b>${escapeHtml(v.future||'—')}</b></div></div></div>`:'';
     const contextBlock=context.sentence?`<div class="word-context"><span>В предложении:</span> ${escapeHtml(context.sentence)}</div>`:'';
-    $('popup').innerHTML=`<div class="popup-title">${escapeHtml(w)}</div><div class="popup-translation">${escapeHtml(tr)}</div>${formNote}${verbBlock}${contextBlock}<div class="popup-actions"><button type="button" id="speak-word">🔊 Слушать</button><button type="button" id="add-word-button">${exists?'✓ Уже в моих словах':'Добавить в мои слова'}</button><button type="button" id="phrase-start">🔗 Выбрать словосочетание</button></div>`;
+    $('popup').innerHTML=`<div class="popup-title">${escapeHtml(w)}</div><div class="popup-translation">${escapeHtml(tr)}</div>${formNote}${verbBlock}${contextBlock}<div class="popup-actions"><button type="button" id="speak-word">🔊 Слушать</button><button type="button" id="add-word-button">${exists?'✓ Уже в моих словах':'Добавить в мои слова'}</button></div>`;
     $('popup').classList.remove('hide');
     $('speak-word').addEventListener('click',()=>speakWord(w));
     const addButton=$('add-word-button'); if(addButton&&!exists)addButton.addEventListener('click',()=>addWord(w));
-    $('phrase-start').addEventListener('click',()=>startPhraseSelection(context.wordIndex,context.sentenceIndex));
   };
   render(translation);
   if(translation==='Перевод загружается…'){const tr=await remoteTranslateWord(w);render(tr,verb);}
 }
-function startPhraseSelection(index,sentenceIndex){
-  phraseSelection={firstIndex:Number(index),sentenceIndex:Number(sentenceIndex)};
-  $('popup').classList.add('hide');
-  document.querySelectorAll('.word').forEach(b=>b.classList.remove('phrase-selected'));
-  const first=document.querySelector(`.word[data-word-index="${Number(index)}"]`); if(first)first.classList.add('phrase-selected');
-  $('phrase-help')?.classList.remove('hide');
-}
-let phraseSelection=null;
 async function finishPhraseSelection(firstBtn,secondBtn){
-  const sr=[firstBtn.textContent.trim(),secondBtn.textContent.trim()].join(' ');
+  const sentenceIndex=firstBtn.dataset.sentenceIndex;
+  const sentenceBtns=[...document.querySelectorAll('.word[data-sentence-index="'+sentenceIndex+'"]')];
+  const a=Number(firstBtn.dataset.wordIndex), b=Number(secondBtn.dataset.wordIndex);
+  const lo=Math.min(a,b), hi=Math.max(a,b);
+  const selected=sentenceBtns.filter(x=>{const n=Number(x.dataset.wordIndex); return n>=lo && n<=hi;});
+  selected.forEach(x=>x.classList.add('phrase-selected'));
+  const sr=selected.map(x=>x.textContent.trim()).join(' ');
   const sourceTitle=document.getElementById('title')?.textContent||'';
-  const sentenceBtns=[...document.querySelectorAll('.word[data-sentence-index="'+firstBtn.dataset.sentenceIndex+'"]')];
   const sentence=sentenceBtns.map(b=>b.textContent.trim()).join(' ');
   const tr=await translatePhrase(sr);
   $('popup').innerHTML=`<div class="popup-title">🔗 ${escapeHtml(sr)}</div><div class="popup-translation">${escapeHtml(tr)}</div><div class="word-context"><span>Словосочетание из текста:</span> ${escapeHtml(sentence)}</div><div class="popup-actions"><button type="button" id="speak-phrase">🔊 Слушать</button><button type="button" id="save-phrase">Добавить в мои словосочетания</button></div>`;
