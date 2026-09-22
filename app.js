@@ -234,7 +234,7 @@ const TEXTS = [
     "text": "U centru Subotice nalazi se Gradska kuća. Oko nje je prostor koji danas poznajemo kao Trg slobode. Za stanovnike je to jedan od najpoznatijih delova grada. Ali današnji trg nije oduvek izgledao ovako. Njegov izgled nastajao je postepeno. Promene su bile povezane sa razvojem gradske uprave. Bile su povezane i sa izgradnjom nove Gradske kuće. Zato istorija trga i istorija zgrade idu zajedno. Kada se promenila zgrada, promenila se i njena okolina. Tako je nastao jedan od glavnih prostora savremene Subotice. Današnja Gradska kuća završena je 1912. godine. Pre nje su na ovom mestu postojale druge gradske zgrade. Centar je imao drugačiju strukturu. U okolini su se nalazili različiti objekti i pijaca. Novi projekat doneo je velike promene. Prostor oko zgrade trebalo je urediti. Neke starije kuće morale su biti uklonjene. Otvoren je veći prostor ispred reprezentativne zgrade. Taj prostor postao je današnji Trg slobode. Centar je dobio novu vizuelnu celinu. Gradska kuća nije bila samo velika zgrada. U njoj su se nalazile gradske službe. Zgrada je imala administrativnu funkciju. Istovremeno je postala simbol grada. Njena kula je vidljiva iz mnogih delova centra. Fasada je bogato ukrašena. Detalji pokazuju uticaj secesije. Arhitektura je povezala funkciju i dekoraciju. Zbog toga ljudi dolaze da je vide i kao kulturni spomenik. Zgrada je postala deo identiteta Subotice. Trg ispred zgrade imao je različite funkcije. Ljudi su dolazili zbog pijace. Kasnije je prostor više služio za javna okupljanja. Na trgu su se održavale različite manifestacije. Ljudi su se sastajali sa prijateljima. Turisti fotografišu fasadu Gradske kuće. Stanovnici prolaze kroz trg svakog dana. Neki žure na posao. Drugi sede ili čekaju nekoga. Tako istorijski prostor ostaje deo savremenog života. Oko trga nalaze se druge važne zgrade. Njihove fasade zajedno stvaraju sliku centra. Svaka zgrada ima svoju priču. Neke su starije od Gradske kuće. Druge su nastale približno u isto vreme. Neke su kasnije menjale namenu. Zato je šetnja oko trga zanimljivija od samog gledanja jedne zgrade. Čovek može da upoređuje stilove. Može da posmatra ukrase i prozore. Može da zamišlja kako je prostor izgledao pre više od sto godina. Promene na trgu nisu bile samo arhitektonske. Menjao se i način života ljudi. Grad je postajao moderniji. Povećavao se broj stanovnika. Saobraćaj je postajao intenzivniji. Trgovina je rasla. Pojavljivale su se nove službe. Ljudi su imali više razloga da dolaze u centar. Zbog toga je centralni trg dobijao sve veću važnost. On je postajao mesto na kojem se vidi kako grad funkcioniše. Učenik srpskog ovde može naučiti mnogo praktičnih reči. Reč trg označava otvoreni gradski prostor. Reč kuća može imati različita značenja u složenim nazivima. Reč zgrada koristi se za različite objekte. Reč gradski povezuje nešto sa gradom. Glagol izgraditi govori o završetku gradnje. Glagol uređivati govori o procesu. Glagol nalaziti se koristi se za opis položaja. Sve ove reči možemo koristiti dok opisujemo centar. Zato lokalna tema pomaže i u svakodnevnom jeziku. Danas je Trg slobode prostor susreta. Na njemu se održavaju različiti događaji. Ljudi dolaze na kulturne programe. Turisti dolaze zbog arhitekture. Stanovnici dolaze zbog posla i svakodnevnih obaveza. Deca prolaze kroz trg sa roditeljima. Stariji ljudi pamte kako je centar izgledao ranije. Svaka generacija ima svoje uspomene. Iste zgrade mogu biti deo potpuno različitih priča. To pokazuje da grad nije samo arhitektura. Ako stojimo na trgu, možemo posmatrati više slojeva vremena. Možemo videti staru arhitekturu. Možemo videti savremene automobile. Možemo videti telefone u rukama prolaznika. Možemo čuti različite jezike. Možemo videti turiste i lokalne stanovnike. Sve se to dešava u prostoru koji je oblikovan pre više od jednog veka. Istorija zato nije zatvorena u prošlosti. Ona se svakog dana susreće sa sadašnjošću. Trg slobode je dobar primer takvog susreta. Kada učimo o ovom prostoru, ne moramo pamtiti samo godine. Važno je razumeti redosled promena. Najpre je postojao stariji centar. Zatim je izgrađena nova Gradska kuća. Okolina je uređena. Nastao je veći centralni prostor. Grad je dobio novu reprezentativnu sliku. Kasnije su se menjale funkcije trga. Danas je on važan i za svakodnevni život i za turizam. Zato se istorija Gradske kuće najbolje vidi kada izađemo na trg."
   },
   {
-    "title": "Суботичка синагога — зграда, која чува сећање",
+    "title": "Суботичка синагога — зграда која чува сећање",
     "ru": "История синагоги и еврейской общины",
     "level": "A2+/B1 · Суботица",
     "category": "subotica",
@@ -5713,7 +5713,183 @@ const TEXT_VERB_PATCH = {
   "sedeo":{lemma:"sedeti",translation:"сидеть",past:"sedeo / sedela",present:"sedi",future:"sedeće"},
   "postao":{lemma:"postati",translation:"стать",past:"postao / postala",present:"postane",future:"postaće"}
 };
-Object.assign(VERB_FORMS, TEXT_VERB_PATCH);
+Object.assign(VERB_FORMS, TEXT_VERB_PATCH, {
+  // Лингвистическая перепроверка v37: исправлены формы, которые раньше
+  // указывали на другой глагол или на неправильное настоящее время.
+  "zaspao":{lemma:"zaspati",translation:"заснуть",past:"zaspao / zaspala",present:"zaspi",future:"zaspaće"},
+  "odletele":{lemma:"odleteti",translation:"улететь",past:"odleteo / odletela",present:"odleće",future:"odleće"},
+  "vratio":{lemma:"vratiti",translation:"вернуть",past:"vratio / vratila",present:"vrati",future:"vratiće"},
+  "vratila":{lemma:"vratiti",translation:"вернуть",past:"vratio / vratila",present:"vrati",future:"vratiće"},
+  "naučili":{lemma:"naučiti",translation:"научить; выучить; научиться",past:"naučio / naučila",present:"nauči",future:"naučiće"},
+  "odlučili":{lemma:"odlučiti",translation:"решить; принять решение",past:"odlučio / odlučila",present:"odluči",future:"odlučiće"},
+  "morala":{lemma:"morati",translation:"быть должным; быть вынужденным",past:"morao / morala",present:"mora",future:"moraće"},
+  "odlučio":{lemma:"odlučiti",translation:"решить; принять решение",past:"odlučio / odlučila",present:"odluči",future:"odlučiće"},
+  "stigao":{lemma:"stići",translation:"прибыть; прийти; успеть",past:"stigao / stigla",present:"stiže",future:"stići će"},
+  "stigla":{lemma:"stići",translation:"прибыть; прийти; успеть",past:"stigao / stigla",present:"stiže",future:"stići će"},
+  "došao":{lemma:"doći",translation:"прийти; приехать",past:"došao / došla",present:"dođe",future:"doći će"},
+  "otišle":{lemma:"otići",translation:"уйти; уехать",past:"otišao / otišla",present:"ode",future:"otići će"},
+  "pošao":{lemma:"poći",translation:"пойти; отправиться",past:"pošao / pošla",present:"pođe",future:"poći će"},
+  "pobeglo":{lemma:"pobeći",translation:"убежать",past:"pobegao / pobegla",present:"pobegne",future:"pobeći će"},
+  "pobegla":{lemma:"pobeći",translation:"убежать",past:"pobegao / pobegla",present:"pobegne",future:"pobeći će"},
+  "rekao":{lemma:"reći",translation:"сказать",past:"rekao / rekla",present:"kaže",future:"reći će"},
+  "rekla":{lemma:"reći",translation:"сказать",past:"rekao / rekla",present:"kaže",future:"reći će"},
+  "reklo":{lemma:"reći",translation:"сказать",past:"rekao / rekla",present:"kaže",future:"reći će"},
+  "čula":{lemma:"čuti",translation:"слышать",past:"čuo / čula",present:"čuje",future:"čuće"},
+  "čulo":{lemma:"čuti",translation:"слышать",past:"čuo / čula",present:"čuje",future:"čuće"},
+  "video":{lemma:"videti",translation:"видеть",past:"video / videla",present:"vidi",future:"videće"},
+  "videla":{lemma:"videti",translation:"видеть",past:"video / videla",present:"vidi",future:"videće"},
+  "uzeo":{lemma:"uzeti",translation:"взять",past:"uzeo / uzela",present:"uzme",future:"uzeće"},
+  "uzela":{lemma:"uzeti",translation:"взять",past:"uzeo / uzela",present:"uzme",future:"uzeće"},
+  "zapisuje":{lemma:"zapisivati",translation:"записывать",past:"zapisivao / zapisivala",present:"zapisuje",future:"zapisivaće"},
+  "odlučuju":{lemma:"odlučivati",translation:"решать; принимать решение",past:"odlučivao / odlučivala",present:"odlučuje",future:"odlučivaće"},
+  "odlučuje":{lemma:"odlučivati",translation:"решать; принимать решение",past:"odlučivao / odlučivala",present:"odlučuje",future:"odlučivaće"},
+  "menjaju":{lemma:"menjati",translation:"менять; изменять",past:"menjao / menjala",present:"menja",future:"menjaće"},
+  "menja":{lemma:"menjati",translation:"менять; изменять",past:"menjao / menjala",present:"menja",future:"menjaće"},
+  "promenila":{lemma:"promeniti",translation:"изменить; поменять",past:"promenio / promenila",present:"promeni",future:"promeniće"},
+  "promenilo":{lemma:"promeniti",translation:"изменить; поменять",past:"promenio / promenila",present:"promeni",future:"promeniće"},
+  "postaje":{lemma:"postajati",translation:"становиться",past:"postajao / postajala",present:"postaje",future:"postajaće"},
+  "postalo":{lemma:"postati",translation:"стать",past:"postao / postala",present:"postane",future:"postaće"},
+  "postala":{lemma:"postati",translation:"стать",past:"postao / postala",present:"postane",future:"postaće"},
+  "postaju":{lemma:"postajati",translation:"становиться",past:"postajao / postajala",present:"postaje",future:"postajaće"},
+  "povezuje":{lemma:"povezivati",translation:"соединять; связывать",past:"povezivao / povezivala",present:"povezuje",future:"povezivaće"},
+  "povezuju":{lemma:"povezivati",translation:"соединять; связывать",past:"povezivao / povezivala",present:"povezuje",future:"povezivaće"},
+  "prolaze":{lemma:"prolaziti",translation:"проходить; проезжать",past:"prolazio / prolazila",present:"prolazi",future:"prolaziće"},
+  "prolazi":{lemma:"prolaziti",translation:"проходить; проезжать",past:"prolazio / prolazila",present:"prolazi",future:"prolaziće"},
+  "izlaze":{lemma:"izlaziti",translation:"выходить",past:"izlazio / izlazila",present:"izlazi",future:"izlaziće"},
+  "izlazi":{lemma:"izlaziti",translation:"выходить",past:"izlazio / izlazila",present:"izlazi",future:"izlaziće"},
+  "ulazi":{lemma:"ulaziti",translation:"входить",past:"ulazio / ulazila",present:"ulazi",future:"ulaziće"},
+  "stoje":{lemma:"stajati",translation:"стоять",past:"stajao / stajala",present:"stoji",future:"stajaće"},
+  "stoji":{lemma:"stajati",translation:"стоять",past:"stajao / stajala",present:"stoji",future:"stajaće"},
+  "sade":{lemma:"saditi",translation:"сажать",past:"sadio / sadila",present:"sadi",future:"sadiće"},
+  "gradile":{lemma:"graditi",translation:"строить",past:"gradio / gradila",present:"gradi",future:"gradiće"},
+  "gradile":{lemma:"graditi",translation:"строить",past:"gradio / gradila",present:"gradi",future:"gradiće"},
+  "pronalaze":{lemma:"pronalaziti",translation:"находить",past:"pronalazio / pronalazila",present:"pronalazi",future:"pronalaziće"},
+  "pronalazi":{lemma:"pronalaziti",translation:"находить",past:"pronalazio / pronalazila",present:"pronalazi",future:"pronalaziće"},
+  "proveravaju":{lemma:"proveravati",translation:"проверять",past:"proveravao / proveravala",present:"proverava",future:"proveravaće"},
+  "organizuju":{lemma:"organizovati",translation:"организовывать",past:"organizovao / organizovala",present:"organizuje",future:"organizovaće"},
+  "održavaju":{lemma:"održavati",translation:"проводить; поддерживать; содержать",past:"održavao / održavala",present:"održava",future:"održavaće"},
+  "stvaraju":{lemma:"stvarati",translation:"создавать",past:"stvarao / stvarala",present:"stvara",future:"stvaraće"},
+  "čuvaju":{lemma:"čuvati",translation:"хранить; беречь; охранять",past:"čuvao / čuvala",present:"čuva",future:"čuvaće"},
+  "dobijaju":{lemma:"dobijati",translation:"получать",past:"dobijao / dobijala",present:"dobija",future:"dobijaće"},
+  "nastavljaju":{lemma:"nastavljati",translation:"продолжать",past:"nastavljao / nastavljala",present:"nastavlja",future:"nastavljaće"},
+  "razvijali":{lemma:"razvijati",translation:"развивать; развиваться",past:"razvijao / razvijala",present:"razvija",future:"razvijaće"},
+  "razvijaju":{lemma:"razvijati",translation:"развивать; развиваться",past:"razvijao / razvijala",present:"razvija",future:"razvijaće"},
+  "dogovaraju":{lemma:"dogovarati se",translation:"договариваться",past:"dogovarao / dogovarala se",present:"dogovara se",future:"dogovaraće se"},
+  "razgovaraju":{lemma:"razgovarati",translation:"разговаривать",past:"razgovarao / razgovarala",present:"razgovara",future:"razgovaraće"},
+  "slušaju":{lemma:"slušati",translation:"слушать",past:"slušao / slušala",present:"sluša",future:"slušaće"},
+  "čekaju":{lemma:"čekati",translation:"ждать",past:"čekao / čekala",present:"čeka",future:"čekaće"},
+  "žive":{lemma:"živeti",translation:"жить",past:"živeo / živela",present:"živi",future:"živeće"},
+  "vole":{lemma:"voleti",translation:"любить",past:"voleo / volela",present:"voli",future:"voleće"},
+  "uči":{lemma:"učiti",translation:"учить; изучать",past:"učio / učila",present:"uči",future:"učiće"},
+  "učestvuju":{lemma:"učestvovati",translation:"участвовать",past:"učestvovao / učestvovala",present:"učestvuje",future:"učestvovaće"},
+  "piše":{lemma:"pisati",translation:"писать",past:"pisao / pisala",present:"piše",future:"pisaće"},
+  "daje":{lemma:"davati",translation:"давать",past:"davao / davala",present:"daje",future:"davaće"},
+  "daju":{lemma:"davati",translation:"давать",past:"davao / davala",present:"daje",future:"davaće"},
+  "pomaže":{lemma:"pomagati",translation:"помогать",past:"pomagao / pomagala",present:"pomaže",future:"pomagaće"},
+  "pomogne":{lemma:"pomoći",translation:"помочь",past:"pomogao / pomogla",present:"pomogne",future:"pomoći će"},
+  "traže":{lemma:"tražiti",translation:"искать; просить",past:"tražio / tražila",present:"traži",future:"tražiće"},
+  "traži":{lemma:"tražiti",translation:"искать; просить",past:"tražio / tražila",present:"traži",future:"tražiće"},
+  "stigne":{lemma:"stići",translation:"прибыть; прийти; успеть",past:"stigao / stigla",present:"stiže",future:"stići će"},
+  "primi":{lemma:"primiti",translation:"принять; получить",past:"primio / primila",present:"primi",future:"primiće"},
+  "prihvataju":{lemma:"prihvatati",translation:"принимать; соглашаться",past:"prihvatao / prihvatala",present:"prihvata",future:"prihvataće"},
+  "pronalaze":{lemma:"pronalaziti",translation:"находить",past:"pronalazio / pronalazila",present:"pronalazi",future:"pronalaziće"},
+  "pojavljuju":{lemma:"pojavljivati se",translation:"появляться",past:"pojavljivao / pojavljivala se",present:"pojavljuje se",future:"pojavljivaće se"},
+  "pojavljuje":{lemma:"pojavljivati se",translation:"появляться",past:"pojavljivao / pojavljivala se",present:"pojavljuje se",future:"pojavljivaće se"},
+  "preporučuje":{lemma:"preporučivati",translation:"рекомендовать",past:"preporučivao / preporučivala",present:"preporučuje",future:"preporučivaće"},
+  "predlaže":{lemma:"predlagati",translation:"предлагать",past:"predlagao / predlagala",present:"predlaže",future:"predlagaće"},
+  "misli":{lemma:"misliti",translation:"думать",past:"mislio / mislila",present:"misli",future:"misliće"},
+  "kreće":{lemma:"krenuti",translation:"отправляться; начинать движение",past:"krenuo / krenula",present:"kreće",future:"krenuće"},
+  "prođe":{lemma:"proći",translation:"пройти; проехать",past:"prošao / prošla",present:"prođe",future:"proći će"},
+  "izađe":{lemma:"izaći",translation:"выйти",past:"izašao / izašla",present:"izađe",future:"izaći će"},
+  "uđe":{lemma:"ući",translation:"войти",past:"ušao / ušla",present:"uđe",future:"ući će"},
+  "uplaši":{lemma:"uplašiti se",translation:"испугаться",past:"uplašio / uplašila se",present:"uplaši se",future:"uplašiće se"},
+  "skoči":{lemma:"skočiti",translation:"прыгнуть",past:"skočio / skočila",present:"skoči",future:"skočiće"},
+  "uteče":{lemma:"uteći",translation:"убежать; спастись бегством",past:"utekao / utekla",present:"uteče",future:"uteći će"},
+  "pusti":{lemma:"pustiti",translation:"пустить; отпустить",past:"pustio / pustila",present:"pusti",future:"pustiće"},
+  "metne":{lemma:"metnuti",translation:"положить; поставить",past:"metnuo / metnula",present:"metne",future:"metnuće"},
+  "drži":{lemma:"držati",translation:"держать",past:"držao / držala",present:"drži",future:"držaće"},
+  "poznaje":{lemma:"poznavati",translation:"знать; быть знакомым",past:"poznavao / poznavala",present:"poznaje",future:"poznavaće"},
+  "dogodilo":{lemma:"dogoditi se",translation:"произойти; случиться",past:"dogodio / dogodila se",present:"dogodi se",future:"dogodiće se"},
+  "dogovorili":{lemma:"dogovoriti se",translation:"договориться",past:"dogovorio / dogovorila se",present:"dogovore se",future:"dogovoriće se"},
+  "dopao":{lemma:"dopasti se",translation:"понравиться",past:"dopao / dopala se",present:"dopadne se",future:"dopasće se"},
+  "obećao":{lemma:"obećati",translation:"обещать",past:"obećao / obećala",present:"obeća",future:"obećaće"},
+  "molim":{lemma:"moliti",translation:"просить; умолять",past:"molio / molila",present:"moli",future:"moliće"},
+  "baci":{lemma:"baciti",translation:"бросить",past:"bacio / bacila",present:"baci",future:"baciće"},
+  "uhvati":{lemma:"uhvatiti",translation:"поймать; схватить",past:"uhvatio / uhvatila",present:"uhvati",future:"uhvatiće"},
+  "čuju":{lemma:"čuti",translation:"слышать",past:"čuo / čula",present:"čuje",future:"čuće"},
+  "čuje":{lemma:"čuti",translation:"слышать",past:"čuo / čula",present:"čuje",future:"čuće"},
+  "čine":{lemma:"činiti",translation:"делать; составлять",past:"činio / činila",present:"čini",future:"činiće"},
+  "stvaraju":{lemma:"stvarati",translation:"создавать",past:"stvarao / stvarala",present:"stvara",future:"stvaraće"},
+  "postoji":{lemma:"postojati",translation:"существовать; иметься",past:"postojao / postojala",present:"postoji",future:"postojaće"},
+  "postoje":{lemma:"postojati",translation:"существовать; иметься",past:"postojao / postojala",present:"postoji",future:"postojeće"},
+  "trebalo":{lemma:"trebati",translation:"нужно; следовало",past:"trebalo",present:"treba",future:"trebaće"},
+  "moraju":{lemma:"morati",translation:"быть должным; быть вынужденным",past:"morao / morala",present:"mora",future:"moraće"},
+  "neće":{lemma:"hteti",translation:"не хотеть; не будет",past:"hteo / htela",present:"hoće",future:"hteće"},
+  "bude":{lemma:"biti",translation:"быть",past:"bio / bila",present:"je",future:"biće"}
+});
+Object.assign(VERB_FORMS, {
+  "reče":{lemma:"reći",translation:"сказать",past:"rekao / rekla",present:"kaže",future:"reći će"},
+  "zapita":{lemma:"zapitati",translation:"спросить",past:"zapitao / zapitala",present:"zapita",future:"zapitaće"},
+  "stavlja":{lemma:"stavljati",translation:"ставить; класть",past:"stavljao / stavljala",present:"stavlja",future:"stavljaće"},
+  "objašnjava":{lemma:"objašnjavati",translation:"объяснять",past:"objašnjavao / objašnjavala",present:"objašnjava",future:"objašnjavaće"},
+  "sede":{lemma:"sedeti",translation:"сидеть",past:"sedeo / sedela",present:"sedi",future:"sedeće"},
+  "vrati":{lemma:"vratiti",translation:"вернуть; возвратить",past:"vratio / vratila",present:"vrati",future:"vratiće"},
+  "izgledao":{lemma:"izgledati",translation:"выглядеть",past:"izgledao / izgledala",present:"izgleda",future:"izgledaće"},
+  "izgledala":{lemma:"izgledati",translation:"выглядеть",past:"izgledao / izgledala",present:"izgleda",future:"izgledaće"},
+  "izgleda":{lemma:"izgledati",translation:"выглядеть",past:"izgledao / izgledala",present:"izgleda",future:"izgledaće"},
+  "naprave":{lemma:"napraviti",translation:"сделать; изготовить",past:"napravio / napravila",present:"napravi",future:"napraviće"},
+  "mogli":{lemma:"moći",translation:"мочь",past:"mogao / mogla",present:"može",future:"moći će"},
+  "mogla":{lemma:"moći",translation:"мочь",past:"mogao / mogla",present:"može",future:"moći će"},
+  "nema":{lemma:"imati",translation:"не иметь; нет",past:"imao / imala",present:"ima",future:"imaće"},
+  "rade":{lemma:"raditi",translation:"работать; делать",past:"radio / radila",present:"radi",future:"radiće"},
+  "sedi":{lemma:"sedeti",translation:"сидеть",past:"sedeo / sedela",present:"sedi",future:"sedeće"},
+  "vraća":{lemma:"vraćati se",translation:"возвращаться",past:"vraćao / vraćala se",present:"vraća se",future:"vraćaće se"},
+  "traje":{lemma:"trajati",translation:"длиться; продолжаться",past:"trajao / trajala",present:"traje",future:"trajaće"},
+  "fotografiše":{lemma:"fotografisati",translation:"фотографировать",past:"fotografisao / fotografisala",present:"fotografiše",future:"fotografisaće"},
+  "ostaje":{lemma:"ostajati",translation:"оставаться",past:"ostajao / ostajala",present:"ostaje",future:"ostajaće"},
+  "sade":{lemma:"saditi",translation:"сажать",past:"sadio / sadila",present:"sadi",future:"sadiće"},
+  "menjao":{lemma:"menjati",translation:"менять; изменять",past:"menjao / menjala",present:"menja",future:"menjaće"},
+  "dobija":{lemma:"dobijati",translation:"получать",past:"dobijao / dobijala",present:"dobija",future:"dobijaće"},
+  "živeli":{lemma:"živeti",translation:"жить",past:"živeo / živela",present:"živi",future:"živeće"},
+  "imali":{lemma:"imati",translation:"иметь",past:"imao / imala",present:"ima",future:"imaće"},
+  "putuju":{lemma:"putovati",translation:"путешествовать; ехать",past:"putovao / putovala",present:"putuje",future:"putovaće"},
+  "planiraju":{lemma:"planirati",translation:"планировать",past:"planirao / planirala",present:"planira",future:"planiraće"},
+  "nalaze":{lemma:"nalaziti se",translation:"находиться",past:"nalazio / nalazila se",present:"nalazi se",future:"nalaziće se"},
+  "pronalaze":{lemma:"pronalaziti",translation:"находить",past:"pronalazio / pronalazila",present:"pronalazi",future:"pronalaziće"},
+  "postajao":{lemma:"postajati",translation:"становиться",past:"postajao / postajala",present:"postaje",future:"postajaće"},
+  "povezuje":{lemma:"povezivati",translation:"связывать; соединять",past:"povezivao / povezivala",present:"povezuje",future:"povezivaće"},
+  "čuvaju":{lemma:"čuvati",translation:"хранить; беречь; охранять",past:"čuvao / čuvala",present:"čuva",future:"čuvaće"},
+  "promenila":{lemma:"promeniti",translation:"изменить; поменять",past:"promenio / promenila",present:"promeni",future:"promeniće"},
+  "promene":{lemma:"promeniti",translation:"изменить; поменять",past:"promenio / promenila",present:"promeni",future:"promeniće"},
+  "otide":{lemma:"otići",translation:"уйти; уехать",past:"otišao / otišla",present:"ode",future:"otići će"},
+  "iziđe":{lemma:"izići",translation:"выйти",past:"izišao / izišla",present:"iziđe",future:"izići će"},
+  "pođe":{lemma:"poći",translation:"пойти; отправиться",past:"pošao / pošla",present:"pođe",future:"poći će"},
+  "stane":{lemma:"stati",translation:"встать; остановиться",past:"stao / stala",present:"stane",future:"staće"},
+  "vratiće":{lemma:"vratiti",translation:"вернуть; возвратить",past:"vratio / vratila",present:"vrati",future:"vratiće"},
+  "smejali":{lemma:"smejati se",translation:"смеяться",past:"smejao / smejala se",present:"smeje se",future:"smejaće se"},
+  "pokušavaju":{lemma:"pokušavati",translation:"пытаться; пробовать",past:"pokušavao / pokušavala",present:"pokušava",future:"pokušaće"},
+  "nastavi":{lemma:"nastaviti",translation:"продолжить",past:"nastavio / nastavila",present:"nastavi",future:"nastaviće"},
+  "nastavlja":{lemma:"nastavljati",translation:"продолжать",past:"nastavljao / nastavljala",present:"nastavlja",future:"nastavljaće"},
+  "počne":{lemma:"početi",translation:"начать",past:"počeo / počela",present:"počne",future:"počeće"},
+  "počinje":{lemma:"počinjati",translation:"начинать(ся)",past:"počinjao / počinjala",present:"počinje",future:"počinjeće"},
+  "odlazi":{lemma:"odlaziti",translation:"уходить; уезжать",past:"odlazio / odlazila",present:"odlazi",future:"odlaziće"},
+  "dolaze":{lemma:"dolaziti",translation:"приходить; приезжать",past:"dolazio / dolazila",present:"dolazi",future:"dolaziće"},
+  "dolazi":{lemma:"dolaziti",translation:"приходить; приезжать",past:"dolazio / dolazila",present:"dolazi",future:"dolaziće"},
+  "vide":{lemma:"videti",translation:"видеть",past:"video / videla",present:"vidi",future:"videće"},
+  "žele":{lemma:"želeti",translation:"хотеть; желать",past:"želeo / želela",present:"želi",future:"želeće"},
+  "živi":{lemma:"živeti",translation:"жить",past:"živeo / živela",present:"živi",future:"živeće"},
+  "imaju":{lemma:"imati",translation:"иметь",past:"imao / imala",present:"ima",future:"imaće"},
+  "radi":{lemma:"raditi",translation:"работать; делать",past:"radio / radila",present:"radi",future:"radiće"},
+  "koriste":{lemma:"koristiti",translation:"использовать; пользоваться",past:"koristio / koristila",present:"koristi",future:"koristiće"},
+  "koristi":{lemma:"koristiti",translation:"использовать; пользоваться",past:"koristio / koristila",present:"koristi",future:"koristiće"},
+  "postoji":{lemma:"postojati",translation:"существовать; иметься",past:"postojao / postojala",present:"postoji",future:"postojeće"},
+  "postoje":{lemma:"postojati",translation:"существовать; иметься",past:"postojao / postojala",present:"postoji",future:"postojeće"},
+  "govori":{lemma:"govoriti",translation:"говорить",past:"govorio / govorila",present:"govori",future:"govoriće"},
+  "govore":{lemma:"govoriti",translation:"говорить",past:"govorio / govorila",present:"govori",future:"govoriće"},
+  "razume":{lemma:"razumeti",translation:"понимать",past:"razumeo / razumela",present:"razume",future:"razumeće"},
+  "želeli":{lemma:"želeti",translation:"хотеть; желать",past:"želeo / želela",present:"želi",future:"želeće"},
+  "bude":{lemma:"biti",translation:"быть",past:"bio / bila",present:"je",future:"biće"}
+});
 const VERB_INDEX = {};
 function addVerbIndex(info, extraForms=[]){
   if(!info || !info.lemma) return;
@@ -5910,6 +6086,17 @@ const PHRASE_TRANSLATIONS = {
   "ostati kod kuće":"остаться дома",
   "svoju kuću":"свой дом",
   "svojoj kući":"в своём доме; в свой дом (по контексту)",
+  "vašeg doma":"вашего дома",
+  "glavnog trga":"главной площади",
+  "stare zgrade":"старые здания",
+  "novi sadržaji":"новые возможности; новые объекты/сервисы",
+  "slobodno vreme":"свободное время",
+  "istorijskih mesta":"исторических мест",
+  "različitih ljudi":"разных людей",
+  "važan deo":"важная часть",
+  "svakodnevnom životu":"повседневной жизни",
+  "svoju kuću":"свой дом",
+  "svojoj kući":"в своём доме; в свой дом (по контексту)",
   "glavnog trga":"главной площади",
   "duge kapute":"длинные пальто",
   "stara fotografija":"старая фотография",
@@ -5926,27 +6113,39 @@ async function translatePhrase(sr){
   const key=normalizePhrase(sr);
   if(PHRASE_TRANSLATIONS[key]) return PHRASE_TRANSLATIONS[key];
   if(PHRASE_TRANSLATION_CACHE[key]) return PHRASE_TRANSLATION_CACHE[key];
-  // Не показываем машинный перевод с заведомо плохим контекстом как истину.
-  // Сначала пробуем словарную композицию; внешний перевод используется только
-  // как дополнительный источник и сохраняется лишь при нормальном ответе.
   const parts=key.split(/\s+/).filter(Boolean);
-  const localParts=parts.map(x=>getTranslation(x)).filter(x=>x && x!=='Перевод загружается…' && x!==x);
-  if(localParts.length===parts.length){
-    const fallback=localParts.join(' + ');
+  const localParts=parts.map(x=>getTranslation(x)).map(x=>String(x||'').replace(/\s*\([^)]*\)/g,'').trim()).filter(x=>x && x!=='Перевод загружается…');
+  const fallback=localParts.length===parts.length ? localParts.join(' + ') : (localParts.length ? localParts.join(' + ') : 'Перевод пока недоступен');
+  const urls=[
+    'https://api.mymemory.translated.net/get?q='+encodeURIComponent(sr)+'&langpair=sr|ru',
+    'https://translate.googleapis.com/translate_a/single?client=gtx&sl=sr&tl=ru&dt=t&q='+encodeURIComponent(sr)
+  ];
+  for(const url of urls){
     try{
-      const url='https://api.mymemory.translated.net/get?q='+encodeURIComponent(sr)+'&langpair=sr|ru';
       const res=await fetch(url,{headers:{Accept:'application/json'}});
+      if(!res.ok) continue;
       const data=await res.json();
-      const tr=String(data?.responseData?.translatedText||'').trim();
-      // Не принимаем ответы, которые выглядят как другой случай/фраза или ошибка.
-      if(tr && !/MYMEMORY|quota|error|invalid/i.test(tr) && tr.length<180 && tr.toLowerCase()!==key){
+      const tr=String(url.includes('translate.googleapis.com')?(data?.[0]?.[0]?.[0]||''):(data?.responseData?.translatedText||'')).trim();
+      if(tr && !/MYMEMORY|quota|error|invalid target/i.test(tr) && tr.length<180 && normalizePhrase(tr)!==key){
         PHRASE_TRANSLATION_CACHE[key]=tr;savePhraseTranslationCache();return tr;
       }
     }catch(e){}
-    return fallback;
   }
-  return 'Перевод словосочетания пока недоступен.';
+  return fallback;
 }
+
+
+function migrateSavedPhraseTranslations(){
+  let changed=false;
+  for(const p of savedPhrases){
+    const key=normalizePhrase(p.sr);
+    if(PHRASE_TRANSLATIONS[key] && p.translation!==PHRASE_TRANSLATIONS[key]){
+      p.translation=PHRASE_TRANSLATIONS[key]; changed=true;
+    }
+  }
+  if(changed) savePhrases();
+}
+migrateSavedPhraseTranslations();
 
 function save(){
   localStorage.setItem("citajSrpskiWords", JSON.stringify(saved));
@@ -6263,11 +6462,35 @@ function speakText(text){
   window.speechSynthesis.speak(u);
 }
 
+async function remoteVerbInfo(surface){
+  const n=normalize(surface);
+  if(!n || findVerbInfo(n)) return findVerbInfo(n);
+  try{
+    const r=await fetch('https://saptac.online/api/word/'+encodeURIComponent(n),{headers:{Accept:'application/json'}});
+    if(!r.ok) return null;
+    const d=await r.json();
+    const pos=String(d?.pos||d?.pos_sr||'').toLowerCase();
+    if(!/verb|glagol/.test(pos)) return null;
+    const lemma=normalize(d?.lemma||'');
+    if(!lemma) return null;
+    const base=CANONICAL_VERBS[lemma]||VERB_FORMS[lemma];
+    if(base) return base;
+    const morph=d?.morphology||{};
+    const collect=(rx)=>{const out=[];for(const [k,v] of Object.entries(morph)){if(rx.test(String(k).toLowerCase())){for(const x of Array.isArray(v)?v:[v]){const z=String(x||'').trim();if(z&&!out.includes(z))out.push(z);}}}return out;};
+    const pres=collect(/pres|prezent/);
+    const past=collect(/past|perf|particip/);
+    const fut=collect(/fut|future|futur/);
+    const info={lemma,translation:'',past:past.slice(0,4).join(' / '),present:pres.slice(0,4).join(' / '),future:fut.slice(0,4).join(' / '),remote:true};
+    if(!info.present && !info.past && !info.future) return null;
+    return info;
+  }catch(e){return null;}
+}
+
 async function word(w, context={}){
   const requestId=++translationRequestId;
   const translation=getTranslation(w);
   const exists=saved.some(x=>x.word===w);
-  const verb=findVerbInfo(w);
+  let verb=findVerbInfo(w);
   const render=(tr,v=verb)=>{
     if(requestId!==translationRequestId)return;
     const formNote=v&&normalize(w)!==normalize(v.lemma)?`<div class="word-form-note">Форма слова: <b>${escapeHtml(w)}</b> → начальная форма <b>${escapeHtml(v.lemma)}</b></div>`:''; const verbBlock=v?`<div class="verb-block"><div class="verb-title">Глагол: <b>${escapeHtml(v.lemma)}</b> · ${escapeHtml(v.translation||tr)}</div><div class="verb-grid"><div><span>Инфинитив</span><b>${escapeHtml(v.lemma)} <small>— ${escapeHtml(v.translation||tr)}</small></b></div><div><span>Прошедшее</span><b>${escapeHtml(v.past||'—')}</b></div><div><span>Настоящее</span><b>${escapeHtml(v.present||'—')}</b></div><div><span>Будущее</span><b>${escapeHtml(v.future||'—')}</b></div></div></div>`:'';
@@ -6277,8 +6500,19 @@ async function word(w, context={}){
     $('speak-word').addEventListener('click',()=>speakWord(w));
     const addButton=$('add-word-button'); if(addButton&&!exists)addButton.addEventListener('click',()=>addWord(w));
   };
-  render(translation);
-  if(translation==='Перевод загружается…'){const tr=await remoteTranslateWord(w);render(tr,verb);}
+  render(translation,verb);
+  if(!verb){
+    const remoteVerb=await remoteVerbInfo(w);
+    if(remoteVerb){
+      verb=remoteVerb;
+      const lemmaTr=await remoteTranslateWord(remoteVerb.lemma);
+      if(requestId===translationRequestId) render(lemmaTr||translation,verb);
+    }
+  }
+  if(translation==='Перевод загружается…'){
+    const tr=await remoteTranslateWord(w);
+    render(tr,verb);
+  }
 }
 async function finishPhraseSelection(firstBtn,secondBtn){
   const sentenceIndex=firstBtn.dataset.sentenceIndex;
@@ -6287,7 +6521,8 @@ async function finishPhraseSelection(firstBtn,secondBtn){
   const lo=Math.min(a,b), hi=Math.max(a,b);
   const selected=sentenceBtns.filter(x=>{const n=Number(x.dataset.wordIndex); return n>=lo && n<=hi;});
   selected.forEach(x=>x.classList.add('phrase-selected'));
-  const sr=selected.map(x=>x.textContent.trim()).join(' ');
+  const cleanPhraseToken=x=>String(x.textContent||'').replace(/^[„“”«»(\[\{]+|[.,!?;:…”»)\]\}]+$/g,'').trim();
+  const sr=selected.map(cleanPhraseToken).filter(Boolean).join(' ');
   const sourceTitle=document.getElementById('title')?.textContent||'';
   const sentence=sentenceBtns.map(b=>b.textContent.trim()).join(' ');
   const tr=await translatePhrase(sr);
