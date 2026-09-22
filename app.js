@@ -5893,7 +5893,7 @@ function openText(i){
   $("level").textContent = `${t.level} · ${t.ru}`;
   // Не выводим техническое описание источника над учебным текстом.
   $("source").textContent = t.level.includes('Исторический') ? t.source : '';
-  renderText(t.text);
+  $("text").innerHTML = renderText(t.text);
   document.querySelectorAll('.reader-audio').forEach(x=>x.remove());
   $("popup").classList.add("hide");
   $("text").closest('.card')?.insertAdjacentHTML('afterend', readerSentenceControls(t.text));
