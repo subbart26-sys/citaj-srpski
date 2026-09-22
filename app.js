@@ -5594,7 +5594,7 @@ function normalizeVocabProgress(){
   vocabProgress=vocabProgress.filter(x=>x&&typeof x.word==='string'&&x.blockId&&vocabBlock(x.blockId)).map(x=>({...x,box:Math.min(6,Math.max(1,Number(x.box)||1)),nextReview:x.nextReview||Date.now()}));
   localStorage.setItem('citajSrpskiVocabProgress',JSON.stringify(vocabProgress));
 }
-normalizeSavedWords();
+// Нормализацию запускаем после инициализации словаря и VERB_INDEX.
 
 const $ = id => document.getElementById(id);
 const normalize = w => w.toLowerCase().replace(/[„“”«».,!?;:()\[\]{}…—–-]/g, "").trim();
@@ -7061,6 +7061,9 @@ function removeWord(i){
 }
 
 // Навигация — без inline onclick, чтобы сайт одинаково работал на GitHub Pages и мобильном Chrome.
+// Миграция личных слов выполняется только после полной инициализации словаря.
+normalizeSavedWords();
+
 document.addEventListener("click", event => {
   const popup=$('popup');
   if(!popup.classList.contains('hide') && !event.target.closest('.popup') && !event.target.closest('.word')){
