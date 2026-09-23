@@ -6340,8 +6340,26 @@ function renderTenseExercise(){
   $('tense-check')?.addEventListener('click',()=>checkTenseAnswer($('tense-input').value,item.answer,tenseLevel===3?tenseSentence(item).answer:null));
   $('tense-input')?.addEventListener('keydown',e=>{if(e.key==='Enter')$('tense-check').click()});
 }
+function tenseOptionForm(v, pi, mode){
+  if(mode==='past'){
+    const person=TENSE_PERSONS[pi];
+    return `${person.auxPast} ${v.past[pi]}`;
+  }
+  return v[mode][pi];
+}
 function tenseDistractors(item){
-  return TENSE_VERBS.flatMap(v=>v[tenseMode]).filter(x=>x!==item.answer).slice(0,3);
+  // Варианты должны быть формами ОДНОГО и того же глагола.
+  // Раньше сюда попадали формы других глаголов (например, для doći
+  // среди вариантов появлялся uči), из-за чего упражнение проверяло
+  // не спряжение, а случайное узнавание.
+  const v=TENSE_VERBS.find(x=>x.inf===item.verb);
+  if(!v) return [];
+  const pi=TENSE_PERSONS.findIndex(x=>item.prompt.startsWith(x.p));
+  return TENSE_PERSONS.map((_,i)=>tenseOptionForm(v,i,tenseMode))
+    .filter(x=>x!==item.answer)
+    .filter((x,i,a)=>a.indexOf(x)===i)
+    .sort(()=>Math.random()-0.5)
+    .slice(0,3);
 }
 function tenseSentence(item){
   const pi=TENSE_PERSONS.findIndex(x=>item.prompt.startsWith(x.p));
