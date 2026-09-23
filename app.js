@@ -6272,7 +6272,7 @@ function subotica(){
   }).join('');
 }
 
-/* ==================== ТРЕНАЖЁР ВРЕМЁН v5 ====================
+/* ==================== ТРЕНАЖЁР ВРЕМЁН v6 ====================
    Версия v48:
    - оставлены только два упражнения;
    - сначала выбирается упражнение, затем глагол;
@@ -6353,10 +6353,15 @@ function tenseSentenceData(v,pi,mode){
   const ru=`${p.ru} ${tenseRuVerb(v,mode,pi)} ${ruTime}.`;
   return {sr,ru,person:p,form,time,ruTime};
 }
+function uniqueTenseOptions(answer,pool,count=4){
+  const unique=[...new Set(pool.filter(x=>x!==answer))];
+  const distractors=shuffle(unique).slice(0,Math.max(0,count-1));
+  return shuffle([answer,...distractors]);
+}
 function allFormOptions(v,pi,mode){
   const answer=tenseOptionForm(v,pi,mode);
-  const pool=TENSE_PERSONS.map((_,i)=>tenseOptionForm(v,i,mode)).filter(x=>x!==answer);
-  return shuffle([answer,...pool]).slice(0,Math.min(4,1+pool.length));
+  const pool=TENSE_PERSONS.map((_,i)=>tenseOptionForm(v,i,mode));
+  return uniqueTenseOptions(answer,pool,4);
 }
 function tenseMakeItems(mode,level){
   const v=selectedTenseVerb(), out=[];
@@ -6414,15 +6419,21 @@ function tenseConstruction(item){
   if(tenseMode==='past') return {display:`${escapeHtml(s.person.sr)} <span class="tense-blank" data-slot="0">_____</span> <span class="tense-blank" data-slot="1">_____</span> ${escapeHtml(s.time)}.`,correct:[TENSE_PERSONS[p].auxPast,v.past[p]],options:[allAuxOptions('past',p),allParticipleOptions(v,p)]};
   return {display:`${escapeHtml(s.person.sr)} <span class="tense-blank" data-slot="0">_____</span> <span class="tense-blank" data-slot="1">_____</span> ${escapeHtml(s.time)}.`,correct:[TENSE_PERSONS[p].auxFuture,v.futureInf],options:[allAuxOptions('future',p),allInfOptions(v)]};
 }
-function allAuxOptions(mode,p){const answer=mode==='past'?TENSE_PERSONS[p].auxPast:TENSE_PERSONS[p].auxFuture;const pool=TENSE_PERSONS.map(x=>mode==='past'?x.auxPast:x.auxFuture).filter(x=>x!==answer);return shuffle([answer,...pool]).slice(0,4)}
-function allParticipleOptions(v,p){const answer=v.past[p],pool=TENSE_PERSONS.map((_,i)=>v.past[i]).filter(x=>x!==answer);return shuffle([answer,...pool]).slice(0,4)}
-function allInfOptions(v){const answer=v.futureInf,pool=TENSE_VERBS.map(x=>x.futureInf).filter(x=>x!==answer);return shuffle([answer,...pool]).slice(0,4)}
+function allAuxOptions(mode,p){const answer=mode==='past'?TENSE_PERSONS[p].auxPast:TENSE_PERSONS[p].auxFuture;const pool=TENSE_PERSONS.map(x=>mode==='past'?x.auxPast:x.auxFuture);return uniqueTenseOptions(answer,pool,4)}
+function allParticipleOptions(v,p){const answer=v.past[p],pool=TENSE_PERSONS.map((_,i)=>v.past[i]);return uniqueTenseOptions(answer,pool,4)}
+function allInfOptions(v){const answer=v.futureInf,pool=TENSE_VERBS.map(x=>x.futureInf);return uniqueTenseOptions(answer,pool,4)}
+function nextTenseQuestion(feedbackId){
+  const fb=$(feedbackId);
+  if(!fb)return;
+  fb.innerHTML += ` <button type="button" class="tense-next" id="tense-next-question">Следующий вопрос →</button>`;
+  $('tense-next-question').onclick=()=>{tenseIndex++;renderTenseExercise()};
+}
 function bindTenseConstruction(item){
   const data=tenseConstruction(item),blanks=[...document.querySelectorAll('.tense-blank')];let slot=0;
-  const renderOptions=()=>{const box=$('tense-word-options');if(!box||slot>=data.correct.length)return;box.innerHTML=shuffle(data.options[slot]).map(x=>`<button type="button" class="tense-option tense-word-option" data-answer="${escapeHtml(x)}">${escapeHtml(x)}</button>`).join('');box.querySelectorAll('.tense-word-option').forEach(b=>b.onclick=()=>{const ok=normalizeTenseAnswer(b.dataset.answer)===normalizeTenseAnswer(data.correct[slot]),fb=$('tense-word-progress');if(!ok){fb.innerHTML=`<b>✗ Правильный вариант: ${escapeHtml(data.correct[slot])}</b>`;return;}blanks[slot].textContent=b.dataset.answer;blanks[slot].classList.add('filled');slot++;if(slot<data.correct.length){fb.innerHTML='<b>✓ Верно.</b> Теперь выбери следующий элемент.';renderOptions();}else{fb.innerHTML='<b>✓ Всё правильно!</b>';document.querySelectorAll('.tense-word-option').forEach(x=>x.disabled=true);tenseScore++;setTimeout(()=>{tenseIndex++;renderTenseExercise()},650)}})};renderOptions();
+  const renderOptions=()=>{const box=$('tense-word-options');if(!box||slot>=data.correct.length)return;box.innerHTML=shuffle(data.options[slot]).map(x=>`<button type="button" class="tense-option tense-word-option" data-answer="${escapeHtml(x)}">${escapeHtml(x)}</button>`).join('');box.querySelectorAll('.tense-word-option').forEach(b=>b.onclick=()=>{const ok=normalizeTenseAnswer(b.dataset.answer)===normalizeTenseAnswer(data.correct[slot]),fb=$('tense-word-progress');if(!ok){fb.innerHTML=`<b>✗ Неправильно.</b> Правильный вариант: <b>${escapeHtml(data.correct[slot])}</b>`;document.querySelectorAll('.tense-word-option').forEach(x=>x.disabled=true);nextTenseQuestion('tense-word-progress');return;}blanks[slot].textContent=b.dataset.answer;blanks[slot].classList.add('filled');slot++;if(slot<data.correct.length){fb.innerHTML='<b>✓ Верно.</b> Теперь выбери следующий элемент.';renderOptions();}else{fb.innerHTML='<b>✓ Всё правильно!</b>';document.querySelectorAll('.tense-word-option').forEach(x=>x.disabled=true);tenseScore++;setTimeout(()=>{tenseIndex++;renderTenseExercise()},650)}})};renderOptions();
 }
 function normalizeTenseAnswer(s){return String(s||'').trim().toLowerCase().replace(/[.!?]+$/,'').replace(/\s+/g,' ')}
-function checkTenseAnswer(value,expected){const raw=String(value||'').trim(),ok=normalizeTenseAnswer(raw)===normalizeTenseAnswer(expected),fb=$('tense-feedback');if(ok){tenseScore++;fb.innerHTML='<b>✓ Правильно!</b>';document.querySelectorAll('.tense-option').forEach(x=>x.disabled=true);setTimeout(()=>{tenseIndex++;renderTenseExercise()},650)}else{fb.innerHTML=`<b>✗ Неправильно.</b> Правильный ответ: <b>${escapeHtml(expected)}</b>`}}
+function checkTenseAnswer(value,expected){const raw=String(value||'').trim(),ok=normalizeTenseAnswer(raw)===normalizeTenseAnswer(expected),fb=$('tense-feedback');if(ok){tenseScore++;fb.innerHTML='<b>✓ Правильно!</b>';document.querySelectorAll('.tense-option').forEach(x=>x.disabled=true);setTimeout(()=>{tenseIndex++;renderTenseExercise()},650)}else{fb.innerHTML=`<b>✗ Неправильно.</b> Правильный ответ: <b>${escapeHtml(expected)}</b>`;document.querySelectorAll('.tense-option').forEach(x=>x.disabled=true);nextTenseQuestion('tense-feedback')}}
 
 function training(){
   $('training-content').innerHTML = `
