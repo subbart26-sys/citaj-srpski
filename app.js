@@ -6272,22 +6272,36 @@ function subotica(){
   }).join('');
 }
 
-/* ==================== ТРЕНАЖЁР ВРЕМЁН v3 ====================
-   Важно: русская подсказка и сербское задание не смешиваются в одной фразе.
-   Во всех уровнях ответ выбирается кнопками. Уровень 3 проверяет отдельные
-   элементы конструкции, а не заставляет выбирать целое готовое предложение.
+/* ==================== ТРЕНАЖЁР ВРЕМЁН v4 ====================
+   Версия v47:
+   - 20 выбранных глаголов;
+   - пользователь сначала выбирает глагол;
+   - уровень 1 объединяет выбор формы и пропуск в предложении;
+   - уровень 3 — новая задача: определить нужное время;
+   - каждый набор вариантов гарантированно содержит правильный ответ;
+   - при ошибке правильный ответ показывается сразу.
 */
 const TENSE_VERBS = [
-  {inf:'raditi', ru:'работать', present:['radim','radiš','radi','radimo','radite','rade'], past:['radio','radio','radio','radili','radili','radili'], futureInf:'raditi'},
-  {inf:'učiti', ru:'учиться', present:['učim','učiš','uči','učimo','učite','uče'], past:['učio','učio','učio','učili','učili','učili'], futureInf:'učiti'},
-  {inf:'čitati', ru:'читать', present:['čitam','čitaš','čita','čitamo','čitate','čitaju'], past:['čitao','čitao','čitao','čitali','čitali','čitali'], futureInf:'čitati'},
-  {inf:'govoriti', ru:'говорить', present:['govorim','govoriš','govori','govorimo','govorite','govore'], past:['govorio','govorio','govorio','govorili','govorili','govorili'], futureInf:'govoriti'},
-  {inf:'živeti', ru:'жить', present:['živim','živiš','živi','živimo','živite','žive'], past:['živeo','živeo','živeo','živeli','živeli','živeli'], futureInf:'živeti'},
-  {inf:'gledati', ru:'смотреть', present:['gledam','gledaš','gleda','gledamo','gledate','gledaju'], past:['gledao','gledao','gledao','gledali','gledali','gledali'], futureInf:'gledati'},
-  {inf:'slušati', ru:'слушать', present:['slušam','slušaš','sluša','slušamo','slušate','slušaju'], past:['slušao','slušao','slušao','slušali','slušali','slušali'], futureInf:'slušati'},
-  {inf:'pisati', ru:'писать', present:['pišem','pišeš','piše','pišemo','pišete','pišu'], past:['pisao','pisao','pisao','pisali','pisali','pisali'], futureInf:'pisati'},
-  {inf:'ići', ru:'идти / ехать', present:['idem','ideš','ide','idemo','idete','idu'], past:['išao','išao','išao','išli','išli','išli'], futureInf:'ići'},
-  {inf:'doći', ru:'прийти / приехать', present:['dođem','dođeš','dođe','dođemo','dođete','dođu'], past:['došao','došao','došao','došli','došli','došli'], futureInf:'doći'}
+  {inf:'raditi',ru:'работать',present:['radim','radiš','radi','radimo','radite','rade'],past:['radio','radio','radio','radili','radili','radili'],futureInf:'raditi'},
+  {inf:'učiti',ru:'учиться / изучать',present:['učim','učiš','uči','učimo','učite','uče'],past:['učio','učio','učio','učili','učili','učili'],futureInf:'učiti'},
+  {inf:'čitati',ru:'читать',present:['čitam','čitaš','čita','čitamo','čitate','čitaju'],past:['čitao','čitao','čitao','čitali','čitali','čitali'],futureInf:'čitati'},
+  {inf:'govoriti',ru:'говорить',present:['govorim','govoriš','govori','govorimo','govorite','govore'],past:['govorio','govorio','govorio','govorili','govorili','govorili'],futureInf:'govoriti'},
+  {inf:'živeti',ru:'жить',present:['živim','živiš','živi','živimo','živite','žive'],past:['živeo','živeo','živeo','živeli','živeli','živeli'],futureInf:'živeti'},
+  {inf:'gledati',ru:'смотреть',present:['gledam','gledaš','gleda','gledamo','gledate','gledaju'],past:['gledao','gledao','gledao','gledali','gledali','gledali'],futureInf:'gledati'},
+  {inf:'slušati',ru:'слушать',present:['slušam','slušaš','sluša','slušamo','slušate','slušaju'],past:['slušao','slušao','slušao','slušali','slušali','slušali'],futureInf:'slušati'},
+  {inf:'pisati',ru:'писать',present:['pišem','pišeš','piše','pišemo','pišete','pišu'],past:['pisao','pisao','pisao','pisali','pisali','pisali'],futureInf:'pisati'},
+  {inf:'ići',ru:'идти / ехать',present:['idem','ideš','ide','idemo','idete','idu'],past:['išao','išao','išao','išli','išli','išli'],futureInf:'ići'},
+  {inf:'dolaziti',ru:'приходить / приезжать',present:['dolazim','dolaziš','dolazi','dolazimo','dolazite','dolaze'],past:['dolazio','dolazio','dolazio','dolazili','dolazili','dolazili'],futureInf:'dolaziti'},
+  {inf:'čekati',ru:'ждать',present:['čekam','čekaš','čeka','čekamo','čekate','čekaju'],past:['čekao','čekao','čekao','čekali','čekali','čekali'],futureInf:'čekati'},
+  {inf:'kupovati',ru:'покупать',present:['kupujem','kupuješ','kupuje','kupujemo','kupujete','kupuju'],past:['kupovao','kupovao','kupovao','kupovali','kupovali','kupovali'],futureInf:'kupovati'},
+  {inf:'plaćati',ru:'платить',present:['plaćam','plaćaš','plaća','plaćamo','plaćate','plaćaju'],past:['plaćao','plaćao','plaćao','plaćali','plaćali','plaćali'],futureInf:'plaćati'},
+  {inf:'piti',ru:'пить',present:['pijem','piješ','pije','pijemo','pijete','piju'],past:['pio','pio','pio','pili','pili','pili'],futureInf:'piti'},
+  {inf:'jesti',ru:'есть',present:['jedem','jedeš','jede','jedemo','jedete','jedu'],past:['jeo','jeo','jeo','jeli','jeli','jeli'],futureInf:'jesti'},
+  {inf:'spavati',ru:'спать',present:['spavam','spavaš','spava','spavamo','spavate','spavaju'],past:['spavao','spavao','spavao','spavali','spavali','spavali'],futureInf:'spavati'},
+  {inf:'sedeti',ru:'сидеть',present:['sedim','sediš','sedi','sedimo','sedite','sede'],past:['sedeo','sedeo','sedeo','sedeli','sedeli','sedeli'],futureInf:'sedeti'},
+  {inf:'stajati',ru:'стоять',present:['stojim','stojiš','stoji','stojimo','stojite','stoje'],past:['stajao','stajao','stajao','stajali','stajali','stajali'],futureInf:'stajati'},
+  {inf:'pričati',ru:'разговаривать / рассказывать',present:['pričam','pričaš','priča','pričamo','pričate','pričaju'],past:['pričao','pričao','pričao','pričali','pričali','pričali'],futureInf:'pričati'},
+  {inf:'misliti',ru:'думать',present:['mislim','misliš','misli','mislimo','mislite','misle'],past:['mislio','mislio','mislio','mislili','mislili','mislili'],futureInf:'misliti'}
 ];
 const TENSE_PERSONS = [
   {p:'ja',ru:'я',sr:'Ja',auxPast:'sam',auxFuture:'ću'},
@@ -6298,11 +6312,12 @@ const TENSE_PERSONS = [
   {p:'oni',ru:'они',sr:'Oni',auxPast:'su',auxFuture:'će'}
 ];
 const TENSE_MODES = [
-  {id:'present',title:'Настоящее — Prezent',short:'Что происходит сейчас или происходит обычно.',formula:'личная форма глагола',note:'Например: ja radim, ti radiš, on radi, mi radimo, vi radite, oni rade.'},
-  {id:'past',title:'Прошедшее — Perfekt',short:'Что уже произошло.',formula:'sam / si / je / smo / ste / su + причастие',note:'Например: Ja sam radio. Mi smo radili. В этой версии используются мужские формы причастия.'},
-  {id:'future',title:'Будущее — Futur I',short:'Что произойдёт позже.',formula:'ću / ćeš / će / ćemo / ćete / će + infinitiv',note:'Здесь специально тренируем отдельные формы ću, ćeš, će, ćemo, ćete, će: Ja ću raditi. Mi ćemo čitati.'}
+  {id:'present',title:'Настоящее — Prezent',short:'Что происходит сейчас или происходит обычно.',formula:'личная форма глагола',note:'Ja radim, ti radiš, on radi, mi radimo, vi radite, oni rade.'},
+  {id:'past',title:'Прошедшее — Perfekt',short:'Что уже произошло.',formula:'sam / si / je / smo / ste / su + причастие',note:'Например: Ja sam radio. Mi smo radili. Пока используются мужские формы причастия.'},
+  {id:'future',title:'Будущее — Futur I',short:'Что произойдёт позже.',formula:'ću / ćeš / će / ćemo / ćete / će + infinitiv',note:'Ja ću raditi. Ti ćeš raditi. Mi ćemo raditi.'}
 ];
-let tenseMode='present', tenseLevel=1, tenseItems=[], tenseIndex=0, tenseScore=0;
+let tenseMode='present', tenseLevel=1, tenseVerb='raditi', tenseItems=[], tenseIndex=0, tenseScore=0;
+function selectedTenseVerb(){return TENSE_VERBS.find(v=>v.inf===tenseVerb)||TENSE_VERBS[0]}
 function tenseOptionForm(v,pi,mode){
   const p=TENSE_PERSONS[pi];
   if(mode==='past') return `${p.auxPast} ${v.past[pi]}`;
@@ -6311,126 +6326,97 @@ function tenseOptionForm(v,pi,mode){
 }
 function tenseTime(v,mode){
   const times={
-    raditi:{present:'sada',past:'juče',future:'sutra'},
-    učiti:{present:'često',past:'juče',future:'sutra'},
-    čitati:{present:'sada',past:'juče',future:'sutra'},
-    govoriti:{present:'često',past:'juče',future:'sutra'},
-    živeti:{present:'ovde',past:'prošle godine',future:'od sutra'},
-    gledati:{present:'sada',past:'juče',future:'sutra'},
-    slušati:{present:'sada',past:'juče',future:'sutra'},
-    pisati:{present:'sada',past:'juče',future:'sutra'},
-    ići:{present:'danas',past:'juče',future:'sutra'},
-    doći:{present:'često',past:'juče',future:'sutra'}
-  };
-  return (times[v.inf]||times.raditi)[mode];
+    raditi:{present:'sada',past:'juče',future:'sutra'}, učiti:{present:'često',past:'juče',future:'sutra'}, čitati:{present:'sada',past:'juče',future:'sutra'},
+    govoriti:{present:'često',past:'juče',future:'sutra'}, živeti:{present:'ovde',past:'prošle godine',future:'od sutra'}, gledati:{present:'sada',past:'juče',future:'sutra'},
+    slušati:{present:'sada',past:'juče',future:'sutra'}, pisati:{present:'sada',past:'juče',future:'sutra'}, ići:{present:'danas',past:'juče',future:'sutra'},
+    dolaziti:{present:'često',past:'juče',future:'sutra'}, čekati:{present:'često',past:'juče',future:'sutra'}, kupovati:{present:'često',past:'juče',future:'sutra'},
+    plaćati:{present:'često',past:'juče',future:'sutra'}, piti:{present:'sada',past:'juče',future:'sutra'}, jesti:{present:'sada',past:'juče',future:'sutra'},
+    spavati:{present:'noću',past:'sinoć',future:'sutra'}, sedeti:{present:'ovde',past:'juče',future:'sutra'}, stajati:{present:'ovde',past:'juče',future:'sutra'},
+    pričati:{present:'sada',past:'juče',future:'sutra'}, misliti:{present:'često',past:'juče',future:'sutra'}
+  }; return (times[v.inf]||times.raditi)[mode];
 }
 function tenseRuTime(v,mode){
-  const times={
-    raditi:{present:'сейчас',past:'вчера',future:'завтра'},
-    učiti:{present:'часто',past:'вчера',future:'завтра'},
-    čitati:{present:'сейчас',past:'вчера',future:'завтра'},
-    govoriti:{present:'часто',past:'вчера',future:'завтра'},
-    živeti:{present:'здесь',past:'в прошлом году',future:'с завтрашнего дня'},
-    gledati:{present:'сейчас',past:'вчера',future:'завтра'},
-    slušati:{present:'сейчас',past:'вчера',future:'завтра'},
-    pisati:{present:'сейчас',past:'вчера',future:'завтра'},
-    ići:{present:'сегодня',past:'вчера',future:'завтра'},
-    doći:{present:'часто',past:'вчера',future:'завтра'}
-  };
-  return (times[v.inf]||times.raditi)[mode];
+  const times={raditi:{present:'сейчас',past:'вчера',future:'завтра'},učiti:{present:'часто',past:'вчера',future:'завтра'},čitati:{present:'сейчас',past:'вчера',future:'завтра'},govoriti:{present:'часто',past:'вчера',future:'завтра'},živeti:{present:'здесь',past:'в прошлом году',future:'с завтрашнего дня'},gledati:{present:'сейчас',past:'вчера',future:'завтра'},slušati:{present:'сейчас',past:'вчера',future:'завтра'},pisati:{present:'сейчас',past:'вчера',future:'завтра'},ići:{present:'сегодня',past:'вчера',future:'завтра'},dolaziti:{present:'часто',past:'вчера',future:'завтра'},čekati:{present:'часто',past:'вчера',future:'завтра'},kupovati:{present:'часто',past:'вчера',future:'завтра'},plaćati:{present:'часто',past:'вчера',future:'завтра'},piti:{present:'сейчас',past:'вчера',future:'завтра'},jesti:{present:'сейчас',past:'вчера',future:'завтра'},spavati:{present:'ночью',past:'вчера вечером',future:'завтра'},sedeti:{present:'здесь',past:'вчера',future:'завтра'},stajati:{present:'здесь',past:'вчера',future:'завтра'},pričati:{present:'сейчас',past:'вчера',future:'завтра'},misliti:{present:'часто',past:'вчера',future:'завтра'}}; return (times[v.inf]||times.raditi)[mode];
+}
+function tenseRuVerb(v,mode,pi){
+  const present={raditi:'работает',učiti:'учится',čitati:'читает',govoriti:'говорит',živeti:'живёт',gledati:'смотрит',slušati:'слушает',pisati:'пишет',ići:'идёт',dolaziti:'приходит',čekati:'ждёт',kupovati:'покупает',plaćati:'платит',piti:'пьёт',jesti:'ест',spavati:'спит',sedeti:'сидит',stajati:'стоит',pričati:'разговаривает',misliti:'думает'};
+  const pastM={raditi:'работал',učiti:'учился',čitati:'читал',govoriti:'говорил',živeti:'жил',gledati:'смотрел',slušati:'слушал',pisati:'писал',ići:'ходил',dolaziti:'приходил',čekati:'ждал',kupovati:'покупал',plaćati:'платил',piti:'пил',jesti:'ел',spavati:'спал',sedeti:'сидел',stajati:'стоял',pričati:'разговаривал',misliti:'думал'};
+  const pastPl={raditi:'работали',učiti:'учились',čitati:'читали',govoriti:'говорили',živeti:'жили',gledati:'смотрели',slušati:'слушали',pisati:'писали',ići:'ходили',dolaziti:'приходили',čekati:'ждали',kupovati:'покупали',plaćati:'платили',piti:'пили',jesti:'ели',spavati:'спали',sedeti:'сидели',stajati:'стояли',pričati:'разговаривали',misliti:'думали'};
+  if(mode==='future') return `${['буду','будешь','будет','будем','будете','будут'][pi]} ${v.ru.split(' / ')[0]}`;
+  if(mode==='past') return (pi>=3?pastPl:pastM)[v.inf];
+  return present[v.inf];
 }
 function tenseSentenceData(v,pi,mode){
-  const p=TENSE_PERSONS[pi], time=tenseTime(v,mode), ruTime=tenseRuTime(v,mode);
-  const ruVerb=v.ru.split(' / ')[0];
-  const form=tenseOptionForm(v,pi,mode);
+  const p=TENSE_PERSONS[pi], time=tenseTime(v,mode), ruTime=tenseRuTime(v,mode), form=tenseOptionForm(v,pi,mode);
   const sr=`${p.sr} ${form} ${time}.`;
-  let ru;
-  if(mode==='future') ru=`${p.ru} ${['буду','будешь','будет','будем','будете','будут'][pi]} ${ruVerb} ${ruTime}.`;
-  else ru=`${p.ru} ${mode==='past'?'вчера ':''}${mode==='present'?'': ''}${ruVerb} ${ruTime}.`;
-  // Present/past Russian wording must be natural rather than infinitive + time.
-  const ruPresent={raditi:'работает',učiti:'учится',čitati:'читает',govoriti:'говорит',živeti:'живёт',gledati:'смотрит',slušati:'слушает',pisati:'пишет',ići:'идёт',doći:'приходит'};
-  const ruPast={raditi:'работал',učiti:'учился',čitati:'читал',govoriti:'говорил',živeti:'жил',gledati:'смотрел',slušati:'слушал',pisati:'писал',ići:'ходил',doći:'пришёл'};
-  if(mode==='present') ru=`${p.ru} ${ruPresent[v.inf]} ${ruTime}.`;
-  if(mode==='past') ru=`${p.ru} ${ruPast[v.inf]} ${ruTime}.`;
-  return {sr,ru,person:p,form,time,ruTime,ruVerb};
+  const ru=`${p.ru} ${tenseRuVerb(v,mode,pi)} ${ruTime}.`;
+  return {sr,ru,person:p,form,time,ruTime};
+}
+function allFormOptions(v,pi,mode){
+  const answer=tenseOptionForm(v,pi,mode);
+  const pool=TENSE_PERSONS.map((_,i)=>tenseOptionForm(v,i,mode)).filter(x=>x!==answer);
+  return shuffle([answer,...pool]).slice(0,Math.min(4,1+pool.length));
 }
 function tenseMakeItems(mode,level){
-  const out=[];
-  TENSE_VERBS.forEach(v=>TENSE_PERSONS.forEach((person,pi)=>{
-    const form=tenseOptionForm(v,pi,mode), sentence=tenseSentenceData(v,pi,mode);
-    out.push({type:'form',prompt:`${person.p} + ${v.inf}`,answer:form,ru:v.ru,verb:v.inf,pi,sentence});
-  }));
-  return shuffle(out).slice(0,level>=3?20:12);
+  const v=selectedTenseVerb(), out=[];
+  TENSE_PERSONS.forEach((person,pi)=>{
+    const sentence=tenseSentenceData(v,pi,mode);
+    out.push({type:'form',prompt:`${person.p} + ${v.inf}`,answer:tenseOptionForm(v,pi,mode),ru:v.ru,verb:v.inf,pi,sentence});
+  });
+  return shuffle(out);
 }
 function tenseInstruction(mode){
   const m=TENSE_MODES.find(x=>x.id===mode);
   return `<div class="card"><h3>${m.title}</h3><p>${m.short}</p><p><b>Схема:</b> ${m.formula}</p><p class="muted">${m.note}</p></div>`;
 }
+function tenseVerbPicker(){
+  const v=selectedTenseVerb();
+  return `<div class="card"><h3>Выбери глагол</h3><p class="muted">Сейчас тренируются формы только выбранного глагола. Начинаем с 20 глаголов; список можно расширить позже.</p><div class="tense-verb-grid">${TENSE_VERBS.map(x=>`<button type="button" class="tense-verb ${x.inf===v.inf?'active':''}" data-verb="${escapeHtml(x.inf)}"><b>${escapeHtml(x.inf)}</b><span>${escapeHtml(x.ru)}</span></button>`).join('')}</div></div>`;
+}
 function tenses(){
-  $('tenses-content').innerHTML=`<h2>⏱ Тренажёр времён</h2><p class="muted">Три базовых времени. Русская подсказка и сербское задание не смешиваются. Во всех уровнях ответы выбираются кнопками.</p>
-    <div class="training-buttons tense-tabs">${TENSE_MODES.map(m=>`<button type="button" class="tense-tab" data-tense="${m.id}">${m.title.split(' — ')[0]}</button>`).join('')}</div>
+  $('tenses-content').innerHTML=`<h2>⏱ Тренажёр времён</h2><p class="muted">Сначала выбери один глагол, затем время и упражнение. Так легче заметить и исправить ошибку именно в нужном глаголе.</p>
+    ${tenseVerbPicker()}
+    <div class="training-buttons tense-tabs">${TENSE_MODES.map(m=>`<button type="button" class="tense-tab ${m.id===tenseMode?'active':''}" data-tense="${m.id}">${m.title.split(' — ')[0]}</button>`).join('')}</div>
     <div id="tense-instruction">${tenseInstruction(tenseMode)}</div>
-    <div class="card"><h3>Уровень тренировки</h3><p class="muted">1 — форма глагола. 2 — форма внутри русского предложения. 3 — отдельные части сербской конструкции.</p><div class="training-buttons"><button type="button" class="tense-level" data-level="1">1 · Форма</button><button type="button" class="tense-level" data-level="2">2 · Пропуск</button><button type="button" class="tense-level" data-level="3">3 · По словам</button></div></div>
+    <div class="card"><h3>Упражнения</h3><p class="muted">1 — форма или пропуск: выбирай сербскую форму. 2 — по словам: собирай две части формы. 3 — новое: определи время по русскому предложению.</p><div class="training-buttons"><button type="button" class="tense-level" data-level="1">1 · Форма / пропуск</button><button type="button" class="tense-level" data-level="2">2 · По словам</button><button type="button" class="tense-level" data-level="3">3 · Определи время</button></div></div>
     <div id="tense-exercise"></div>`;
   view('tenses'); renderTenseExercise();
+  document.querySelectorAll('.tense-verb').forEach(b=>b.addEventListener('click',()=>{tenseVerb=b.dataset.verb;tenseIndex=0;tenseScore=0;tenses();}));
   document.querySelectorAll('.tense-tab').forEach(b=>b.addEventListener('click',()=>{tenseMode=b.dataset.tense;tenseIndex=0;tenseScore=0;$('tense-instruction').innerHTML=tenseInstruction(tenseMode);renderTenseExercise();}));
   document.querySelectorAll('.tense-level').forEach(b=>b.addEventListener('click',()=>{tenseLevel=Number(b.dataset.level);tenseIndex=0;tenseScore=0;renderTenseExercise();}));
 }
 function renderTenseExercise(){
-  tenseItems=tenseMakeItems(tenseMode,tenseLevel);
-  const item=tenseItems[tenseIndex];
-  if(!item){$('tense-exercise').innerHTML=`<div class="card"><h3>Раунд закончен 🎉</h3><p>Результат: <b>${tenseScore} из ${tenseItems.length}</b>.</p><button type="button" id="tense-restart">Повторить раунд</button></div>`;$('tense-restart').onclick=()=>{tenseIndex=0;tenseScore=0;renderTenseExercise()};return;}
-  let html=`<div class="card review-card"><p class="muted">${tenseIndex+1} из ${tenseItems.length} · ${TENSE_MODES.find(m=>m.id===tenseMode).title}</p>`;
+  tenseItems=tenseMakeItems(tenseMode,tenseLevel); const item=tenseItems[tenseIndex];
+  if(!item){$('tense-exercise').innerHTML=`<div class="card"><h3>Раунд закончен 🎉</h3><p>Глагол: <b>${escapeHtml(item?.verb||tenseVerb)}</b>. Результат: <b>${tenseScore} из ${tenseItems.length}</b>.</p><button type="button" id="tense-restart">Повторить раунд</button></div>`;$('tense-restart').onclick=()=>{tenseIndex=0;tenseScore=0;renderTenseExercise()};return;}
+  const v=selectedTenseVerb(); let html=`<div class="card review-card"><p class="muted">${tenseIndex+1} из ${tenseItems.length} · ${TENSE_MODES.find(m=>m.id===tenseMode).title} · <b>${escapeHtml(v.inf)}</b></p>`;
   if(tenseLevel===1){
-    html+=`<p class="muted">Выбери правильную форму:</p><h3>${escapeHtml(item.prompt)}</h3><p class="muted">${escapeHtml(item.ru)}</p><div class="options">${shuffle([item.answer,...tenseDistractors(item)]).map(x=>`<button type="button" class="tense-option" data-answer="${escapeHtml(x)}">${escapeHtml(x)}</button>`).join('')}</div>`;
+    const gap=tenseIndex%2===1;
+    if(!gap) html+=`<p class="muted">Выбери правильную форму:</p><h3>${escapeHtml(item.prompt)}</h3><p class="muted">${escapeHtml(item.ru)}</p><div class="options">${allFormOptions(v,item.pi,tenseMode).map(x=>`<button type="button" class="tense-option" data-answer="${escapeHtml(x)}">${escapeHtml(x)}</button>`).join('')}</div>`;
+    else {const s=item.sentence; html+=`<p class="muted">Русское предложение:</p><h3>${escapeHtml(s.ru)}</h3><p class="muted">Выбери недостающее сербское слово:</p><div class="tense-sentence-prompt">${escapeHtml(s.person.sr)} <b>_____</b> ${escapeHtml(s.time)}.</div><div class="options">${allFormOptions(v,item.pi,tenseMode).map(x=>`<button type="button" class="tense-option" data-answer="${escapeHtml(x)}">${escapeHtml(x)}</button>`).join('')}</div>`;}
   } else if(tenseLevel===2){
-    const s=item.sentence;
-    html+=`<p class="muted">Русское предложение:</p><h3>${escapeHtml(s.ru)}</h3><p class="muted">Выбери сербскую форму глагола:</p><div class="tense-sentence-prompt">${escapeHtml(s.person.sr)} <b>_____</b> ${escapeHtml(s.time)}.</div><div class="options">${shuffle(tenseGapOptions(item)).map(x=>`<button type="button" class="tense-option" data-answer="${escapeHtml(x)}">${escapeHtml(x)}</button>`).join('')}</div>`;
+    const parts=tenseConstruction(item); html+=`<p class="muted">Русское предложение:</p><h3>${escapeHtml(item.sentence.ru)}</h3><p class="muted">Выбери части сербской формы по очереди:</p><div class="tense-sentence-prompt">${parts.display}</div><div class="options" id="tense-word-options"></div><div id="tense-word-progress" class="feedback"></div>`;
   } else {
-    const s=item.sentence, parts=tenseConstruction(item);
-    html+=`<p class="muted">Русское предложение:</p><h3>${escapeHtml(s.ru)}</h3><p class="muted">Выбери недостающие слова по очереди:</p><div class="tense-sentence-prompt">${parts.display}</div><div class="options" id="tense-word-options">${shuffle(parts.options[0]).map(x=>`<button type="button" class="tense-option tense-word-option" data-answer="${escapeHtml(x)}">${escapeHtml(x)}</button>`).join('')}</div><div id="tense-word-progress" class="feedback"></div>`;
+    const correct=tenseMode, opts=shuffle(TENSE_MODES.map(m=>m.id)); html+=`<p class="muted">Какое время нужно для этого предложения?</p><h3>${escapeHtml(item.sentence.ru)}</h3><p class="muted">Выбери время:</p><div class="options">${opts.map(id=>{const m=TENSE_MODES.find(x=>x.id===id);return `<button type="button" class="tense-option" data-answer="${id}">${escapeHtml(m.title)}</button>`}).join('')}</div>`;
   }
   html+=`<div id="tense-feedback" class="feedback"></div></div>`; $('tense-exercise').innerHTML=html;
-  if(tenseLevel===3) bindTenseConstruction(item); else document.querySelectorAll('.tense-option').forEach(b=>b.onclick=()=>checkTenseAnswer(b.dataset.answer,item.answer,tenseLevel===2?item.sentence.form:null));
-}
-function tenseDistractors(item){
-  const v=TENSE_VERBS.find(x=>x.inf===item.verb); if(!v) return [];
-  return TENSE_PERSONS.map((_,i)=>tenseOptionForm(v,i,tenseMode)).filter(x=>x!==item.answer).filter((x,i,a)=>a.indexOf(x)===i).sort(()=>Math.random()-0.5).slice(0,3);
-}
-function tenseGapOptions(item){
-  const v=TENSE_VERBS.find(x=>x.inf===item.verb); if(!v) return [item.answer];
-  const forms=TENSE_PERSONS.map((_,i)=>tenseOptionForm(v,i,tenseMode));
-  return forms.filter((x,i,a)=>a.indexOf(x)===i).sort(()=>Math.random()-0.5).slice(0,4);
+  if(tenseLevel===2) bindTenseConstruction(item);
+  else document.querySelectorAll('.tense-option').forEach(b=>b.onclick=()=>checkTenseAnswer(b.dataset.answer,tenseLevel===3?tenseMode:item.answer,tenseLevel===3?null:item.answer));
 }
 function tenseConstruction(item){
-  const s=item.sentence, p=item.pi, v=TENSE_VERBS.find(x=>x.inf===item.verb);
-  if(tenseMode==='present') return {display:`${escapeHtml(s.person.sr)} <span class="tense-blank" data-slot="0">_____</span> ${escapeHtml(s.time)}.`,options:[[v.present[p]]] .map(a=>[a[0],...TENSE_PERSONS.map((_,i)=>v.present[i]).filter(x=>x!==a[0])].slice(0,4))};
-  if(tenseMode==='past') return {display:`${escapeHtml(s.person.sr)} <span class="tense-blank" data-slot="0">_____</span> <span class="tense-blank" data-slot="1">_____</span> ${escapeHtml(s.time)}.`,options:[[v?TENSE_PERSONS[p].auxPast:''],[v? v.past[p]:'']].map((a,idx)=>[a[0],...(idx===0?TENSE_PERSONS.map(x=>x.auxPast).filter(x=>x!==a[0]):TENSE_PERSONS.map((_,i)=>v.past[i]).filter(x=>x!==a[0]))].slice(0,4))};
-  return {display:`${escapeHtml(s.person.sr)} <span class="tense-blank" data-slot="0">_____</span> <span class="tense-blank" data-slot="1">_____</span> ${escapeHtml(s.time)}.`,options:[[TENSE_PERSONS[p].auxFuture,...TENSE_PERSONS.map(x=>x.auxFuture).filter(x=>x!==TENSE_PERSONS[p].auxFuture)],[v.futureInf,...TENSE_VERBS.map(x=>x.futureInf).filter(x=>x!==v.futureInf)]].map(a=>a.slice(0,4))};
+  const p=item.pi,v=selectedTenseVerb(),s=item.sentence;
+  if(tenseMode==='present') return {display:`${escapeHtml(s.person.sr)} <span class="tense-blank" data-slot="0">_____</span> ${escapeHtml(s.time)}.`,correct:[v.present[p]],options:[allFormOptions(v,p,'present')]};
+  if(tenseMode==='past') return {display:`${escapeHtml(s.person.sr)} <span class="tense-blank" data-slot="0">_____</span> <span class="tense-blank" data-slot="1">_____</span> ${escapeHtml(s.time)}.`,correct:[TENSE_PERSONS[p].auxPast,v.past[p]],options:[allAuxOptions('past',p),allParticipleOptions(v,p)]};
+  return {display:`${escapeHtml(s.person.sr)} <span class="tense-blank" data-slot="0">_____</span> <span class="tense-blank" data-slot="1">_____</span> ${escapeHtml(s.time)}.`,correct:[TENSE_PERSONS[p].auxFuture,v.futureInf],options:[allAuxOptions('future',p),allInfOptions(v)]};
 }
+function allAuxOptions(mode,p){const answer=mode==='past'?TENSE_PERSONS[p].auxPast:TENSE_PERSONS[p].auxFuture;const pool=TENSE_PERSONS.map(x=>mode==='past'?x.auxPast:x.auxFuture).filter(x=>x!==answer);return shuffle([answer,...pool]).slice(0,4)}
+function allParticipleOptions(v,p){const answer=v.past[p],pool=TENSE_PERSONS.map((_,i)=>v.past[i]).filter(x=>x!==answer);return shuffle([answer,...pool]).slice(0,4)}
+function allInfOptions(v){const answer=v.futureInf,pool=TENSE_VERBS.map(x=>x.futureInf).filter(x=>x!==answer);return shuffle([answer,...pool]).slice(0,4)}
 function bindTenseConstruction(item){
-  const data=tenseConstruction(item), blanks=[...document.querySelectorAll('.tense-blank')]; let slot=0;
-  const correct=[tenseMode==='present'?item.sentence.form:(tenseMode==='past'?TENSE_PERSONS[item.pi].auxPast:TENSE_PERSONS[item.pi].auxFuture),tenseMode==='present'?null:(tenseMode==='past'?TENSE_VERBS.find(v=>v.inf===item.verb).past[item.pi]:TENSE_VERBS.find(v=>v.inf===item.verb).futureInf)].filter(x=>x!==null);
-  const renderOptions=()=>{
-    const box=$('tense-word-options'); if(!box||slot>=correct.length) return;
-    const opts=data.options[slot]; box.innerHTML=shuffle(opts).map(x=>`<button type="button" class="tense-option tense-word-option" data-answer="${escapeHtml(x)}">${escapeHtml(x)}</button>`).join('');
-    box.querySelectorAll('.tense-word-option').forEach(b=>b.onclick=()=>{
-      const ok=normalizeTenseAnswer(b.dataset.answer)===normalizeTenseAnswer(correct[slot]);
-      const fb=$('tense-word-progress');
-      if(!ok){fb.innerHTML=`<b>✗ Пока нет.</b> Выбери другой вариант.`;return;}
-      blanks[slot].textContent=b.dataset.answer; blanks[slot].classList.add('filled'); slot++;
-      if(slot<correct.length){fb.innerHTML=`✓ Первый элемент выбран. Теперь выбери следующий.`;renderOptions();}
-      else {fb.innerHTML='<b>✓ Всё правильно!</b>'; document.querySelectorAll('.tense-word-option').forEach(x=>x.disabled=true); tenseScore++; setTimeout(()=>{tenseIndex++;renderTenseExercise()},650);}
-    });
-  };
-  renderOptions();
+  const data=tenseConstruction(item),blanks=[...document.querySelectorAll('.tense-blank')];let slot=0;
+  const renderOptions=()=>{const box=$('tense-word-options');if(!box||slot>=data.correct.length)return;box.innerHTML=shuffle(data.options[slot]).map(x=>`<button type="button" class="tense-option tense-word-option" data-answer="${escapeHtml(x)}">${escapeHtml(x)}</button>`).join('');box.querySelectorAll('.tense-word-option').forEach(b=>b.onclick=()=>{const ok=normalizeTenseAnswer(b.dataset.answer)===normalizeTenseAnswer(data.correct[slot]),fb=$('tense-word-progress');if(!ok){fb.innerHTML=`<b>✗ Правильный вариант: ${escapeHtml(data.correct[slot])}</b>`;return;}blanks[slot].textContent=b.dataset.answer;blanks[slot].classList.add('filled');slot++;if(slot<data.correct.length){fb.innerHTML='<b>✓ Верно.</b> Теперь выбери следующий элемент.';renderOptions();}else{fb.innerHTML='<b>✓ Всё правильно!</b>';document.querySelectorAll('.tense-word-option').forEach(x=>x.disabled=true);tenseScore++;setTimeout(()=>{tenseIndex++;renderTenseExercise()},650)}})};renderOptions();
 }
 function normalizeTenseAnswer(s){return String(s||'').trim().toLowerCase().replace(/[.!?]+$/,'').replace(/\s+/g,' ')}
-function checkTenseAnswer(value,expected,sentenceExpected=null){
-  const raw=String(value||'').trim(), exp=sentenceExpected||expected, ok=normalizeTenseAnswer(raw)===normalizeTenseAnswer(exp), fb=$('tense-feedback');
-  if(ok){tenseScore++;fb.innerHTML='<b>✓ Правильно!</b>';document.querySelectorAll('.tense-option').forEach(x=>x.disabled=true);setTimeout(()=>{tenseIndex++;renderTenseExercise()},650);}
-  else fb.innerHTML=`<b>✗ Пока нет.</b> Правильный вариант: <b>${escapeHtml(exp)}</b>`;
-}
+function checkTenseAnswer(value,expected){const raw=String(value||'').trim(),ok=normalizeTenseAnswer(raw)===normalizeTenseAnswer(expected),fb=$('tense-feedback');if(ok){tenseScore++;fb.innerHTML='<b>✓ Правильно!</b>';document.querySelectorAll('.tense-option').forEach(x=>x.disabled=true);setTimeout(()=>{tenseIndex++;renderTenseExercise()},650)}else{fb.innerHTML=`<b>✗ Неправильно.</b> Правильный ответ: <b>${escapeHtml(expected)}</b>`}}
 
 function training(){
   $('training-content').innerHTML = `
