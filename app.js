@@ -6030,8 +6030,22 @@ const CONTEXT_TRANSLATIONS_EXTRA = {
 };
 Object.assign(CONTEXT_TRANSLATIONS, CONTEXT_TRANSLATIONS_EXTRA);
 
+function isLikelyRussianTranslation(value){
+  const t=String(value||'').trim();
+  if(!t) return false;
+  // Сербский/английский ответ от внешнего сервиса не должен попадать в русский словарь.
+  // Разрешаем цифры, латинские буквы внутри примечаний и знаки препинания,
+  // но требуем хотя бы одну кириллическую букву.
+  return /[А-Яа-яЁё]/.test(t);
+}
 const REMOTE_TRANSLATION_CACHE = (()=>{
-  try{return JSON.parse(localStorage.getItem('citajSrpskiRemoteTranslations')||'{}')||{};}catch(e){return {};}
+  try{
+    const raw=JSON.parse(localStorage.getItem('citajSrpskiRemoteTranslations')||'{}')||{};
+    let changed=false;
+    Object.keys(raw).forEach(k=>{if(!isLikelyRussianTranslation(raw[k])){delete raw[k];changed=true;}});
+    if(changed) localStorage.setItem('citajSrpskiRemoteTranslations',JSON.stringify(raw));
+    return raw;
+  }catch(e){return {};}
 })();
 function saveRemoteTranslationCache(){
   try{localStorage.setItem('citajSrpskiRemoteTranslations',JSON.stringify(REMOTE_TRANSLATION_CACHE));}catch(e){}
@@ -6083,7 +6097,7 @@ async function remoteTranslateWord(w){
       if(!r.ok) continue;
       const j=await r.json();
       const tr=item.type==='google' ? String(j?.[0]?.[0]?.[0]||'').trim() : String(j?.responseData?.translatedText||'').trim();
-      if(tr && !/INVALID TARGET LANGUAGE|MYMEMORY|quota|error/i.test(tr)){
+      if(tr && isLikelyRussianTranslation(tr) && !/INVALID TARGET LANGUAGE|MYMEMORY|quota|error/i.test(tr)){
         REMOTE_TRANSLATION_CACHE[n]=tr;
         saveRemoteTranslationCache();
         return tr;
@@ -6190,7 +6204,8 @@ function savePhraseTranslationCache(){try{localStorage.setItem('citajSrpskiPhras
 async function translatePhrase(sr){
   const key=normalizePhrase(sr);
   if(PHRASE_TRANSLATIONS[key]) return PHRASE_TRANSLATIONS[key];
-  if(PHRASE_TRANSLATION_CACHE[key]) return PHRASE_TRANSLATION_CACHE[key];
+  if(PHRASE_TRANSLATION_CACHE[key] && isLikelyRussianTranslation(PHRASE_TRANSLATION_CACHE[key])) return PHRASE_TRANSLATION_CACHE[key];
+  if(PHRASE_TRANSLATION_CACHE[key] && !isLikelyRussianTranslation(PHRASE_TRANSLATION_CACHE[key])) delete PHRASE_TRANSLATION_CACHE[key];
   const parts=key.split(/\s+/).filter(Boolean);
   const localParts=parts.map(x=>getTranslation(x)).map(x=>String(x||'').replace(/\s*\([^)]*\)/g,'').trim()).filter(x=>x && x!=='Перевод загружается…');
   const fallback=localParts.length===parts.length ? localParts.join(' + ') : (localParts.length ? localParts.join(' + ') : 'Перевод пока недоступен');
@@ -6204,7 +6219,7 @@ async function translatePhrase(sr){
       if(!res.ok) continue;
       const data=await res.json();
       const tr=String(url.includes('translate.googleapis.com')?(data?.[0]?.[0]?.[0]||''):(data?.responseData?.translatedText||'')).trim();
-      if(tr && !/MYMEMORY|quota|error|invalid target/i.test(tr) && tr.length<180 && normalizePhrase(tr)!==key){
+      if(tr && isLikelyRussianTranslation(tr) && !/MYMEMORY|quota|error|invalid target/i.test(tr) && tr.length<180 && normalizePhrase(tr)!==key){
         PHRASE_TRANSLATION_CACHE[key]=tr;savePhraseTranslationCache();return tr;
       }
     }catch(e){}
@@ -6684,7 +6699,8 @@ function words(){
         <button type="button" id="start-assembly">🧩 Русское предложение → собрать сербское</button><button type="button" id="start-phrase-training">🔗 Тренировать словосочетания</button>
       </div>
       <h4>Как запоминаются слова</h4>
-      <p class="muted">После «Помню» слово поднимается по интервалам: 1 → 2 → 4 → 7 → 14 → 30 дней. После первого «Не помню» оно считается изучаемым и остаётся на повторении. Если одно и то же слово снова забыто, оно помечается как трудное и попадает в отдельную тренировку «Повторить трудные». После устойчивых правильных ответов слово доходит до «Выучены».</p>
+      <p class="muted">После «Помню» слово поднимается по интервалам: 1 → 2 → 4 → 7 → 14 → 30 дней. После первого «Не помню» оно возвращается сразу. Если одно и то же слово снова забыто, оно помечается как трудное и попадает в отдельную тренировку «Повторить трудные». После устойчивых правильных ответов слово доходит до «Выучены».</p>
+      <p class="muted"><b>Сегодня к интервальному повторению:</b> ${getDueWords().length}. За один проход система показывает не более 30 слов.</p>
       <div class="memory-stats"><span>🆕 Новые: <b>${saved.filter(x=>(Number(x.box)||1)===1 && !x.hard && !(Number(x.mistakes)||0)).length}</b></span><span>🟡 Изучаемые: <b>${saved.filter(x=>!x.hard && ((Number(x.mistakes)||0)>0 || (Number(x.box)||1)>=2) && (Number(x.box)||1)<6).length}</b></span><span>🔥 Трудные: <b>${saved.filter(x=>x.hard===true).length}</b></span><span>🟢 Выучены: <b>${saved.filter(x=>(Number(x.box)||1)===6 && !x.hard).length}</b></span></div>
       <h4>Учебные блоки — отдельно от «Моих слов»</h4>
       <p class="muted">Слова из тематических блоков не входят в «Мои слова». Они хранятся отдельно и повторяются только внутри выбранного блока.</p>
@@ -6945,7 +6961,12 @@ function renderReverse(item){
 
 function getDueWords(){
   const now = Date.now();
-  return saved.filter(x => !x.nextReview || x.nextReview <= now);
+  return saved.filter(x => !x.nextReview || x.nextReview <= now).sort((a,b)=>{
+    const ad=Number(a.nextReview)||0, bd=Number(b.nextReview)||0;
+    if(ad!==bd) return ad-bd;
+    const aa=Date.parse(a.added||'')||0, ba=Date.parse(b.added||'')||0;
+    return aa-ba;
+  });
 }
 
 let reviewQueue = [];
@@ -6962,9 +6983,10 @@ function startReviewWithList(list, emptyMessage='Подходящих слов �
 }
 
 function startReview(){
-  // Повторение по интервалам можно запускать в любое время: показываем весь личный словарь,
-  // а не только слова, которым формально пришёл срок.
-  startReviewWithList(saved, 'В «Мои слова» пока нет слов для повторения.');
+  // Основной режим показывает только слова, которым уже пришёл срок.
+  // Очередь отсортирована по сроку, поэтому просроченные слова не теряются среди новых.
+  const due=getDueWords();
+  startReviewWithList(due, due.length ? '' : 'Сегодня слов к интервальному повторению нет. Можно использовать «Повторить изучаемые» для дополнительной тренировки.');
 }
 
 function startDifficultReview(){
