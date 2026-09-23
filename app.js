@@ -6272,12 +6272,13 @@ function subotica(){
   }).join('');
 }
 
-/* ==================== ТРЕНАЖЁР ВРЕМЁН v4 ====================
-   Версия v47:
-   - 20 выбранных глаголов;
-   - пользователь сначала выбирает глагол;
-   - уровень 1 объединяет выбор формы и пропуск в предложении;
-   - уровень 3 — новая задача: определить нужное время;
+/* ==================== ТРЕНАЖЁР ВРЕМЁН v5 ====================
+   Версия v48:
+   - оставлены только два упражнения;
+   - сначала выбирается упражнение, затем глагол;
+   - выбор глагола сделан компактной раскрывающейся кнопкой, чтобы не прокручивать длинный список;
+   - времена остаются отдельными вкладками;
+   - база глаголов остаётся общей и может расширяться позже;
    - каждый набор вариантов гарантированно содержит правильный ответ;
    - при ошибке правильный ответ показывается сразу.
 */
@@ -6369,21 +6370,28 @@ function tenseInstruction(mode){
   const m=TENSE_MODES.find(x=>x.id===mode);
   return `<div class="card"><h3>${m.title}</h3><p>${m.short}</p><p><b>Схема:</b> ${m.formula}</p><p class="muted">${m.note}</p></div>`;
 }
+let tenseVerbPickerOpen=false;
 function tenseVerbPicker(){
   const v=selectedTenseVerb();
-  return `<div class="card"><h3>Выбери глагол</h3><p class="muted">Сейчас тренируются формы только выбранного глагола. Начинаем с 20 глаголов; список можно расширить позже.</p><div class="tense-verb-grid">${TENSE_VERBS.map(x=>`<button type="button" class="tense-verb ${x.inf===v.inf?'active':''}" data-verb="${escapeHtml(x.inf)}"><b>${escapeHtml(x.inf)}</b><span>${escapeHtml(x.ru)}</span></button>`).join('')}</div></div>`;
+  return `<div class="tense-verb-picker card">
+    <button type="button" id="tense-open-verbs" class="tense-picker-button"><span>🔤</span><span><b>Выбор глагола</b><small>Сейчас: ${escapeHtml(v.inf)} — ${escapeHtml(v.ru)}</small></span><span class="tense-picker-arrow">${tenseVerbPickerOpen?'▲':'▼'}</span></button>
+    ${tenseVerbPickerOpen?`<div class="tense-verb-panel"><p class="muted">База глаголов: <b>${TENSE_VERBS.length}</b>. Выбери один глагол — оба упражнения будут работать с ним.</p><div class="tense-verb-grid">${TENSE_VERBS.map(x=>`<button type="button" class="tense-verb ${x.inf===v.inf?'active':''}" data-verb="${escapeHtml(x.inf)}"><b>${escapeHtml(x.inf)}</b><span>${escapeHtml(x.ru)}</span></button>`).join('')}</div></div>`:''}
+  </div>`;
 }
 function tenses(){
-  $('tenses-content').innerHTML=`<h2>⏱ Тренажёр времён</h2><p class="muted">Сначала выбери один глагол, затем время и упражнение. Так легче заметить и исправить ошибку именно в нужном глаголе.</p>
+  $('tenses-content').innerHTML=`<h2>⏱ Тренажёр времён</h2>
+    <p class="muted">Сначала выбери упражнение, затем глагол. После этого можно переключать время: настоящее, прошедшее или будущее.</p>
+    <div class="card"><h3>Выбор упражнения</h3><div class="training-buttons tense-levels"><button type="button" class="tense-level ${tenseLevel===1?'active':''}" data-level="1">1 · Форма / пропуск</button><button type="button" class="tense-level ${tenseLevel===2?'active':''}" data-level="2">2 · По словам</button></div></div>
     ${tenseVerbPicker()}
     <div class="training-buttons tense-tabs">${TENSE_MODES.map(m=>`<button type="button" class="tense-tab ${m.id===tenseMode?'active':''}" data-tense="${m.id}">${m.title.split(' — ')[0]}</button>`).join('')}</div>
     <div id="tense-instruction">${tenseInstruction(tenseMode)}</div>
-    <div class="card"><h3>Упражнения</h3><p class="muted">1 — форма или пропуск: выбирай сербскую форму. 2 — по словам: собирай две части формы. 3 — новое: определи время по русскому предложению.</p><div class="training-buttons"><button type="button" class="tense-level" data-level="1">1 · Форма / пропуск</button><button type="button" class="tense-level" data-level="2">2 · По словам</button><button type="button" class="tense-level" data-level="3">3 · Определи время</button></div></div>
     <div id="tense-exercise"></div>`;
   view('tenses'); renderTenseExercise();
-  document.querySelectorAll('.tense-verb').forEach(b=>b.addEventListener('click',()=>{tenseVerb=b.dataset.verb;tenseIndex=0;tenseScore=0;tenses();}));
+  const open=$('tense-open-verbs');
+  if(open) open.onclick=()=>{tenseVerbPickerOpen=!tenseVerbPickerOpen;tenses();};
+  document.querySelectorAll('.tense-verb').forEach(b=>b.addEventListener('click',()=>{tenseVerb=b.dataset.verb;tenseVerbPickerOpen=false;tenseIndex=0;tenseScore=0;tenses();}));
   document.querySelectorAll('.tense-tab').forEach(b=>b.addEventListener('click',()=>{tenseMode=b.dataset.tense;tenseIndex=0;tenseScore=0;$('tense-instruction').innerHTML=tenseInstruction(tenseMode);renderTenseExercise();}));
-  document.querySelectorAll('.tense-level').forEach(b=>b.addEventListener('click',()=>{tenseLevel=Number(b.dataset.level);tenseIndex=0;tenseScore=0;renderTenseExercise();}));
+  document.querySelectorAll('.tense-level').forEach(b=>b.addEventListener('click',()=>{tenseLevel=Number(b.dataset.level);tenseIndex=0;tenseScore=0;document.querySelectorAll('.tense-level').forEach(x=>x.classList.toggle('active',Number(x.dataset.level)===tenseLevel));renderTenseExercise();}));
 }
 function renderTenseExercise(){
   tenseItems=tenseMakeItems(tenseMode,tenseLevel); const item=tenseItems[tenseIndex];
@@ -6395,12 +6403,10 @@ function renderTenseExercise(){
     else {const s=item.sentence; html+=`<p class="muted">Русское предложение:</p><h3>${escapeHtml(s.ru)}</h3><p class="muted">Выбери недостающее сербское слово:</p><div class="tense-sentence-prompt">${escapeHtml(s.person.sr)} <b>_____</b> ${escapeHtml(s.time)}.</div><div class="options">${allFormOptions(v,item.pi,tenseMode).map(x=>`<button type="button" class="tense-option" data-answer="${escapeHtml(x)}">${escapeHtml(x)}</button>`).join('')}</div>`;}
   } else if(tenseLevel===2){
     const parts=tenseConstruction(item); html+=`<p class="muted">Русское предложение:</p><h3>${escapeHtml(item.sentence.ru)}</h3><p class="muted">Выбери части сербской формы по очереди:</p><div class="tense-sentence-prompt">${parts.display}</div><div class="options" id="tense-word-options"></div><div id="tense-word-progress" class="feedback"></div>`;
-  } else {
-    const correct=tenseMode, opts=shuffle(TENSE_MODES.map(m=>m.id)); html+=`<p class="muted">Какое время нужно для этого предложения?</p><h3>${escapeHtml(item.sentence.ru)}</h3><p class="muted">Выбери время:</p><div class="options">${opts.map(id=>{const m=TENSE_MODES.find(x=>x.id===id);return `<button type="button" class="tense-option" data-answer="${id}">${escapeHtml(m.title)}</button>`}).join('')}</div>`;
   }
   html+=`<div id="tense-feedback" class="feedback"></div></div>`; $('tense-exercise').innerHTML=html;
   if(tenseLevel===2) bindTenseConstruction(item);
-  else document.querySelectorAll('.tense-option').forEach(b=>b.onclick=()=>checkTenseAnswer(b.dataset.answer,tenseLevel===3?tenseMode:item.answer,tenseLevel===3?null:item.answer));
+  else document.querySelectorAll('.tense-option').forEach(b=>b.onclick=()=>checkTenseAnswer(b.dataset.answer,item.answer));
 }
 function tenseConstruction(item){
   const p=item.pi,v=selectedTenseVerb(),s=item.sentence;
@@ -6515,13 +6521,14 @@ function vocab(){
 }
 
 function texts(){
+  // Краеведческие материалы о Суботице находятся только в разделе «Краеведение».
+  // В «Текстах» показываем учебную библиотеку A1/A2 и исторические оригиналы.
   const local=TEXTS.filter(t=>!t.level.includes('Исторический') && t.category!=='subotica');
   const historical=TEXTS.filter(t=>t.level.includes('Исторический'));
   const card=t=>{const i=TEXTS.indexOf(t),n=splitSentences(t.text).length;return `<div class="card"><div class="tag">${t.level}</div><h3>${t.title}</h3><p>${t.ru}</p><p class="muted">Большой учебный текст · ${n} предложений</p><button type="button" class="read-text" data-index="${i}">📖 Читать на сайте</button></div>`};
   const hcard=t=>{const i=TEXTS.indexOf(t),n=splitSentences(t.text).length;return `<div class="card real-source-card"><div class="tag">${t.level}</div><h3>${t.title}</h3><p>${t.ru}</p><p class="muted"><b>${n} предложений.</b> Полный оригинальный текст встроен в сайт.</p><p class="source">${t.source}</p><div class="vocab-actions"><button type="button" class="read-text" data-index="${i}">📖 Читать оригинал</button><a class="source-link" href="${t.url}" target="_blank" rel="noopener">Первоисточник ↗</a></div></div>`};
-  const localHistory=TEXTS.filter(t=>t.category==='subotica');
-  $('list').innerHTML=`<div class="card library-summary"><h3>Библиотека</h3><p>На сайте сейчас <b>${local.length} учебных текстов</b>, <b>${localHistory.length} краеведческих текстов о Суботице</b> и <b>${historical.length} исторических оригиналов</b>.</p><p class="muted">Краеведческий раздел будет постепенно пополняться.</p><div class="library-filters"><button type="button" class="library-filter active" data-filter="all">Все</button><button type="button" class="library-filter" data-filter="A1">A1</button><button type="button" class="library-filter" data-filter="A2">A2</button><button type="button" class="library-filter" data-filter="subotica">🏙 Суботица</button><button type="button" class="library-filter" data-filter="Исторический">Исторические</button></div></div><h3 class="library-heading">🏙 История и жизнь Суботицы</h3><p class="muted">Большие адаптированные тексты о городе, его улицах, зданиях, истории и современной жизни. Это отдельная учебная коллекция, которую можно расширять дальше.</p><div id="library-subotica">${localHistory.map(card).join('')}</div><h3 class="library-heading">📚 Учебные тексты A1/A2</h3><div id="library-local">${local.filter(t=>t.category!=='subotica').map(card).join('')}</div><h3 class="library-heading">📜 Исторические оригинальные тексты</h3><p class="muted">Эти произведения встроены локально и открываются прямо в режиме чтения.</p><div id="library-historical">${historical.map(hcard).join('')}</div>`;
-  document.querySelectorAll('.library-filter').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.library-filter').forEach(x=>x.classList.remove('active'));btn.classList.add('active');const f=btn.dataset.filter;document.querySelectorAll('#library-local .card').forEach(c=>c.style.display=(f==='all'||c.querySelector('.tag')?.textContent.includes(f))?'':'none');document.querySelector('#library-subotica').style.display=(f==='all'||f==='subotica')?'':'none';document.querySelector('#library-historical').style.display=(f==='all'||f==='Исторический')?'':'none';}));
+  $('list').innerHTML=`<div class="card library-summary"><h3>Библиотека</h3><p>На сайте сейчас <b>${local.length} учебных текстов</b> и <b>${historical.length} исторических оригиналов</b>.</p><p class="muted">Материалы о Суботице находятся отдельно в разделе «🏙 Краеведение».</p><div class="library-filters"><button type="button" class="library-filter active" data-filter="all">Все</button><button type="button" class="library-filter" data-filter="A1">A1</button><button type="button" class="library-filter" data-filter="A2">A2</button><button type="button" class="library-filter" data-filter="Исторический">Исторические</button></div></div><h3 class="library-heading">📚 Учебные тексты A1/A2</h3><div id="library-local">${local.map(card).join('')}</div><h3 class="library-heading">📜 Исторические оригинальные тексты</h3><p class="muted">Эти произведения встроены локально и открываются прямо в режиме чтения.</p><div id="library-historical">${historical.map(hcard).join('')}</div>`;
+  document.querySelectorAll('.library-filter').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.library-filter').forEach(x=>x.classList.remove('active'));btn.classList.add('active');const f=btn.dataset.filter;document.querySelectorAll('#library-local .card').forEach(c=>c.style.display=(f==='all'||c.querySelector('.tag')?.textContent.includes(f))?'':'none');document.querySelector('#library-historical').style.display=(f==='all'||f==='Исторический')?'':'none';}));
 }
 
 function openRealSource(i){
@@ -6834,6 +6841,15 @@ function words(){
   const blockCounts = VOCAB_BLOCKS.map(b => ({...b, count:blockProgress(b.id).length})).filter(b => b.count);
   $('saved').innerHTML = `
     <div class="card review-card">
+      <h3>💾 Моя база — резервная копия</h3>
+      <p>Здесь можно сохранить свою базу слов и словосочетаний в файл или восстановить её на этом устройстве.</p>
+      <div class="training-buttons">
+        <button type="button" id="export-words">💾 Экспорт моих слов</button>
+        <button type="button" id="import-words">📥 Импорт моих слов</button>
+        <input id="import-file" type="file" accept="application/json" class="hide">
+      </div>
+      <p class="muted small-note">Файл содержит сохранённые слова, словосочетания и прогресс. Это резервная копия на случай очистки данных браузера или смены устройства.</p>
+      <hr>
       <h3>Тренировки</h3>
       <p>Здесь можно не только повторять слова по интервалам, но и активно вспоминать их.</p>
       <p><b>К повторению сегодня: ${due}</b></p>
@@ -6855,11 +6871,7 @@ function words(){
       <h4>🔗 Мои словосочетания: ${savedPhrases.length}</h4>
       <p class="muted">Словосочетания хранятся отдельно от отдельных слов. Это удобно для связок вроде <i>doneti odluku</i> — «принять решение».</p>
       <div class="phrase-list">${savedPhrases.length?savedPhrases.map((p,i)=>`<div class="row"><b>${escapeHtml(p.sr)}</b><span> — ${escapeHtml(p.translation)}</span><button type="button" class="small remove-phrase" data-index="${i}">Удалить</button></div>`).join(''):'<p class="muted">Пока нет сохранённых словосочетаний.</p>'}</div>
-      <hr>
-      <button type="button" id="export-words">💾 Сохранить мои слова</button>
-      <button type="button" id="import-words">📥 Загрузить мои слова</button>
-      <input id="import-file" type="file" accept="application/json" class="hide">
-      <p class="muted small-note">Твои слова остаются в localStorage при обычном обновлении сайта. Резервная копия нужна на случай очистки данных браузера или смены устройства.</p>
+      <p class="muted small-note">Твои слова остаются в localStorage при обычном обновлении сайта. Резервная копия находится выше, в начале раздела «Мои слова».</p>
     </div>
     <div class="card">
       <h3>Мои слова: ${saved.length}</h3>
