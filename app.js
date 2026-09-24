@@ -1,3 +1,19 @@
+
+const LOCAL_TRANSLATION_FALLBACK = {
+  "i":"и","a":"а","ali":"но","ili":"или","jer":"потому что","da":"что/да","ne":"не",
+  "je":"есть/является","sam":"я есть","si":"ты есть","smo":"мы есть","ste":"вы есть","su":"они есть",
+  "se":"се","u":"в/у","na":"на","iz":"из","do":"до","od":"от","za":"за","sa":"с/со","s":"с/со",
+  "po":"по","o":"о","kod":"у/возле","bez":"без","pred":"перед","pod":"под","nad":"над","među":"между",
+  "kroz":"через","preko":"через","posle":"после","pre":"перед/до","oko":"около","zbog":"из-за",
+  "mi":"мы/мне","ti":"ты/тебе","mu":"ему","joj":"ей","ga":"его","ih":"их",
+  "ja":"я","ti":"ты","on":"он","ona":"она","ono":"оно","mi":"мы","vi":"вы","oni":"они","one":"они",
+  "ovaj":"этот","ova":"эта","ovo":"это","taj":"тот","ta":"та","to":"то",
+  "moj":"мой","moja":"моя","moje":"моё","tvoj":"твой","tvoja":"твоя","njegov":"его","njen":"её",
+  "biti":"быть","imam":"имею/у меня есть","imaš":"имеешь/у тебя есть","ima":"имеет/есть",
+  "imamo":"имеем/у нас есть","imate":"имеете/у вас есть","imaju":"имеют/у них есть",
+  "bio":"был","bila":"была","bilo":"было","bili":"были","bile":"были"
+};
+
 const TEXTS = [
   {
     "title": "Pepeljuga",
@@ -180,7 +196,7 @@ const TEXTS = [
 
 ,
 {
-    "title": "Суботица — град на раскршћу путева",
+    "title": "Subotica — grad na raskršću puteva",
     "ru": "История города и его положения на перекрёстке дорог",
     "level": "A2+/B1 · Суботица",
     "category": "subotica",
@@ -189,7 +205,7 @@ const TEXTS = [
     "text": "Subotica je grad na severu Srbije. Nalazi se u Bačkoj, blizu granice sa Mađarskom. Njena istorija je duga i veoma složena. Položaj grada mnogo je uticao na njegov razvoj. Kroz ovaj prostor vekovima su prolazili ljudi i roba. Zato su putevi uvek imali posebno značenje. Grad je bio povezan sa različitim krajevima Evrope. U njemu su se susretali različiti jezici i kulture. Danas se ta raznolikost vidi na mnogim mestima. Čovek može da je primeti već tokom kratke šetnje. Prvi pisani pomen Subotice potiče iz 1391. godine. Tada je grad imao drugačije ime. Istorijski izvori navode oblik Zabadka. Mesto je, međutim, sigurno bilo starije. Na ovom prostoru ljudi su živeli mnogo ranije. Arheološki nalazi govore o veoma dugoj naseljenosti. Zbog toga istorija grada ne počinje jednim datumom. Datum iz 1391. samo je prvi poznati pisani trag. Takvi tragovi pomažu istoričarima da razumeju prošlost. Svaki novi dokument može da doda neku važnu informaciju. Subotica je tokom istorije menjala svoja imena. Zvanična gradska istorija govori o više od dvesta naziva. Među poznatijim imenima nalaze se Szent-Maria i Szabadka. Jedno od važnih imena bilo je Maria Theresiopolis. Promene imena nisu bile slučajne. One su često pratile promene vlasti i državnog uređenja. Grad je zbog toga ostavljao različit trag u dokumentima. Isto mesto moglo je imati različit naziv u različitim vremenima. Danas se u svakodnevnom životu najčešće koristi ime Subotica. U mađarskom jeziku koristi se ime Szabadka. Položaj grada donosio je i prednosti i probleme. Trgovci su mogli da koriste važne pravce kretanja. Vojska je takođe obraćala pažnju na ovaj prostor. Granice su se kroz istoriju menjale. Zajedno sa njima menjali su se i politički uslovi. Stanovništvo je zato često doživljavalo velike promene. Neki ljudi su odlazili, a drugi su dolazili. Grad je tako postajao sve raznovrsniji. U njemu su živeli ljudi različitog porekla. Njihove tradicije ostavile su trag u gradskom životu. U šestnaestom veku Subotica je došla pod osmansku vlast. To je bio težak period za širi region. Granica između različitih sila bila je blizu grada. Stanovništvo je moralo da se prilagođava novim okolnostima. Kasnije su se političke prilike ponovo promenile. Subotica je postala deo prostora kojim je upravljala Habzburška monarhija. U osamnaestom veku grad je dobio novi razvojni pravac. Godine 1779. proglašen je slobodnim kraljevskim gradom. Taj događaj imao je veliki značaj za budući razvoj. Od tada se grad planskije razvijao. Status slobodnog kraljevskog grada doneo je nove mogućnosti. Grad je dobio veću autonomiju. Razvijala se trgovina. Povećavao se broj stanovnika. Uređivale su se ulice i javni prostori. Kasnije su se razvijale škole i kulturne ustanove. Grad je postajao sve urbaniji. Ljudi su gradili nove kuće i javne zgrade. Menjao se i način svakodnevnog života. Subotica je postepeno dobijala izgled modernog grada. Veliki napredak donele su saobraćajne veze. Železnica je povezala Suboticu sa drugim važnim gradovima. Prvi voz je kroz grad prošao 1869. godine. To je promenilo trgovinu i kretanje ljudi. Roba je mogla brže da stigne do drugih mesta. Putnici su lakše mogli da putuju. Železnička stanica postala je važna tačka grada. Oko nje su se menjali putevi i gradski prostor. Neke nekadašnje periferijske ulice postale su veoma važne. Grad se sve više otvarao prema svetu. Krajem devetnaestog i početkom dvadesetog veka Subotica je brzo rasla. Grad je dobio nove javne zgrade. Ulice su se uređivale. Pojavila se električna rasveta. Razvijali su se trgovina i zanati. Otvarale su se škole i kulturne ustanove. U gradu su se gradile velike palate. Arhitektura je postajala važan deo njegovog identiteta. Posebno snažan trag ostavila je mađarska varijanta secesije. Danas je upravo ta arhitektura jedan od simbola Subotice. Istorija Subotice ne može da se razume samo kroz datume. Važno je posmatrati i ljude koji su živeli u gradu. Važno je posmatrati njihove poslove i svakodnevne navike. Važno je razumeti kako su putovali i gde su trgovali. Važno je videti kako su se menjale ulice. Tako istorija postaje bliža savremenom čoveku. Kada danas prolazimo centrom, često vidimo tragove različitih epoha. Jedna zgrada može da govori o vremenu u kojem je nastala. Jedna ulica može da pokaže kako se grad širio. Zato je šetnja Suboticom istovremeno i mala lekcija iz istorije. Subotica i danas živi od svojih veza sa okolnim krajevima. Ljudi svakodnevno prelaze granicu zbog posla, porodice ili putovanja. U gradu se čuju različiti jezici. Na ulicama se susreću različite generacije. Kulturni programi okupljaju stanovnike i goste. Stare zgrade dobijaju nove namene. Neke ulice čuvaju tragove prošlih vremena. Druge se menjaju zajedno sa savremenim životom. Grad zato nije samo zbir starih spomenika. Subotica je živi grad koji stalno dobija novo poglavlje."
   },
   {
-    "title": "Как Суботица меняла имена",
+    "title": "Kako je Subotica menjala imena",
     "ru": "История названий города",
     "level": "A2+/B1 · Суботица",
     "category": "subotica",
@@ -198,7 +214,7 @@ const TEXTS = [
     "text": "Kada govorimo o Subotici, koristimo ime koje nam je danas poznato. Međutim, grad nije uvek nosio ovo ime. Tokom vekova njegovo ime se više puta menjalo. Zvanični izvori navode više od dvesta različitih naziva. Takav broj pokazuje koliko je istorija grada bila promenljiva. Imena su se pojavljivala u različitim jezicima. Neka su trajala kratko, a druga mnogo duže. Neka danas zvuče veoma neobično. Ipak, sva ona pripadaju istoriji istog prostora. Zato je priča o imenima ujedno i priča o gradu. Prvi poznati pisani pomen potiče iz 1391. godine. U dokumentu se pojavljuje ime Zabadka. Kasnije su se pojavljivali drugi oblici. U različitim administracijama zapisivanje imena nije bilo isto. Jezik dokumenta takođe je uticao na oblik naziva. Zbog toga istoričari mogu pronaći više varijanti. Čitalac danas lako može da se zbuni. Ipak, promene se mogu pratiti kroz dokumente. Arhivi čuvaju tragove tih promena. Svaki naziv govori nešto o svom vremenu. Jedno poznato ime bilo je Szent-Maria. Kasnije je važnu ulogu imao naziv Maria Theresiopolis. To ime povezano je sa vremenom Marije Terezije. Godine 1779. Subotica je proglašena slobodnim kraljevskim gradom. Tom prilikom dobila je i ime Maria Theresiopolis. Novi status doneo je gradu veću autonomiju. Za stanovnike je to značilo nove obaveze i nove mogućnosti. Grad je počeo planskije da se razvija. Njegova administracija postajala je složenija. Menjao se i izgled grada. U dokumentima se kasnije pojavljuje i ime Maria Theresienstadt. To je još jedan primer kako se isti grad mogao drugačije zapisivati. U mađarskom jeziku poznato je ime Szabadka. U srpskom jeziku koristi se Subotica. Danas ova dva imena postoje paralelno u svakodnevnom životu. Na natpisima se mogu videti oba oblika. To nije neobično za višejezičnu sredinu. Jezici mogu da imaju različite nazive za isto mesto. Takva razlika može biti zanimljiva učeniku jezika. Ona pokazuje da je jezik povezan sa istorijom. Promena imena često je bila povezana sa promenom vlasti. Kada se promenila država ili administracija, mogao se promeniti i službeni naziv. Ponekad se menjala samo forma pisanja. Ponekad se menjao ceo naziv. Stanovnici su ipak nastavili da koriste i starije oblike. Zato su u govoru mogli da postoje različiti nazivi istovremeno. Istoričari moraju da razlikuju službeni naziv i svakodnevni govor. To nije uvek jednostavan zadatak. Stari planovi grada mogu da pokažu kako se ime koristilo. Stare novine mogu da daju još više primera. Učenje ovih naziva može biti korisno i za razumevanje gradskih ulica. Neke ulice su takođe više puta menjale imena. Promene su se dešavale posle velikih političkih događaja. Ponekad je nova vlast želela da uvede nova imena. Ponekad su vraćana starija imena. Zato današnja mapa nije ista kao mapa pre sto godina. Ako pronađemo staru razglednicu, možemo videti sasvim drugačiji naziv. To staro ime može da objasni deo istorije grada. Čitanje starih naziva zato postaje mali istraživački posao. Svaka nova informacija može otvoriti novo pitanje. Grad sa mnogo imena prirodno je i grad sa mnogo priča. Ljudi različitih jezika davali su prostoru svoje nazive. Neki nazivi bili su povezani sa vladarima. Drugi su bili povezani sa mestom ili funkcijom. Treći su nastali iz ranijih oblika. Ime nikada nije samo niz slova. Ono može da nosi sećanje na jedno vreme. Može da pokaže ko je upravljao gradom. Može da pokaže koji je jezik bio služben. Može čak da pokaže kako su ljudi tada gledali na svoj grad. Danas se u školama i na turističkim mestima govori o tim promenama. Posetioci mogu da čuju više istorijskih naziva. U muzeju se mogu videti stari dokumenti i karte. U arhivu se čuvaju različiti gradski fondovi. Na starim planovima mogu se pronaći stari oblici imena. Takvi izvori pomažu da se prošlost ne zaboravi. Oni su važni i za istraživače. Važni su i za učenike. Čovek tako može da uči jezik preko lokalne istorije. To je posebno korisno kada živi u samom gradu. Ako danas kažemo Subotica, svi znamo na koje mesto mislimo. Ipak, iza tog imena stoji mnogo starijih imena. Svako od njih pripada određenom istorijskom sloju. Zajedno čine jednu dugu priču. Ta priča nije uvek mirna. Bilo je ratova, promena granica i migracija. Bilo je i perioda razvoja, trgovine i kulturnog života. Grad je preživeo velike promene. Njegovo ime se menjalo, ali je mesto ostalo prepoznatljivo. Zato možemo reći da je istorija imena zapravo istorija kontinuiteta grada. Kada sledeći put prođemo centrom, možemo se setiti ove priče. Možemo pogledati stare fasade. Možemo zamisliti kako je ulica izgledala pre sto ili dvesta godina. Možemo pokušati da pronađemo staru kartu. Možemo pitati starije stanovnike za stare nazive. Možemo posetiti arhiv ili muzej. Tako se učenje ne završava u knjizi. Ono se nastavlja na ulici. A ime grada postaje mnogo više od obične reči. Postaje mali ključ za razumevanje Subotice."
   },
   {
-    "title": "Korzo — улица која је мењала лице",
+    "title": "Korzo — ulica koja je menjala lice",
     "ru": "История главной прогулочной улицы",
     "level": "A2+/B1 · Суботица",
     "category": "subotica",
@@ -207,7 +223,7 @@ const TEXTS = [
     "text": "Korzo je danas jedna od najpoznatijih ulica u Subotici. Mnogi ljudi ga povezuju sa šetnjom i centrom grada. Ali Korzo nije oduvek izgledao ovako. Njegova priča počela je mnogo ranije. U osamnaestom veku ovde je postojao put prema Segedinu. Put nije imao izgled današnje reprezentativne ulice. Bio je više saobraćajni pravac nego gradsko šetalište. Okolina je bila znatno manje izgrađena. U blizini se nalazila Rogina bara. Zbog toga je prostor dugo ostao na periferiji. Na starim planovima vidi se da je put bio kratak. Od glavnog trga vodio je prema prostoru današnje stanice. Uz njega nije bilo mnogo kuća. Ljudi su se kretali peške ili kolima. Putnici su njime išli prema Segedinu. Trgovina je postepeno povećavala značaj ovog pravca. Grad se širio prema tom prostoru. Ipak, velika promena tek je dolazila. Ta promena bila je povezana sa železnicom. Železnica je promenila način na koji se grad kretao. Prvi voz je kroz Suboticu prošao 1869. godine. To je bio važan trenutak za grad. Železnica je povezala Suboticu sa drugim mestima. Putnici su mogli brže da putuju. Roba je mogla lakše da se prevozi. Prostor oko stanice dobio je novu vrednost. Nekadašnja periferija počela je da se približava centru. Grad je uređivao prostor između centra i stanice. Stari put je postajao sve važnija gradska ulica. Njegova budućnost više nije bila samo saobraćajna. U drugoj polovini devetnaestog veka grad se brzo razvijao. Gradile su se nove kuće i palate. Menjao se izgled ulice. Pored puta pojavljivali su se trgovci i ugostitelji. Ljudi su imali više razloga da dolaze u ovaj deo grada. Ulica je postajala reprezentativna. Nije više služila samo za prolaz. Postala je mesto susreta. Ljudi su počeli da je povezuju sa gradskim životom. Tako je nastajao njen novi karakter. Krajem veka Korzo je dobio još jednu važnu ulogu. Kroz njega je prolazio tramvaj. Tramvaj je povezivao udaljenije delove grada sa centrom. Povezivao je i železničku stanicu sa drugim delovima grada. Za stanovnike je putovanje postalo jednostavnije. Ulica je zbog toga bila veoma prometna. Njome su prolazili pešaci, kola, tramvaji i kasnije automobili. Ipak, ljudi su i dalje voleli da šetaju. Ulica je postala mesto na kojem se grad pokazivao. Korzo je sve više ličio na pravu gradsku promenadu. Početkom dvadesetog veka izgrađene su mnoge palate koje danas poznajemo. Fasade su bile bogato ukrašene. Na njima su se pojavljivali cvetni i geometrijski motivi. Arhitektura je pratila evropske stilove tog vremena. Posebno je važna mađarska secesija. Korzo je zbog novih zgrada dobio svečaniji izgled. Trgovine su privlačile kupce. Kafići i restorani privlačili su goste. Ljudi su se sastajali na ulici. Ulica je postala deo svakodnevnog društvenog života. Kasnije su automobili postajali sve brojniji. To je promenilo odnos između pešaka i saobraćaja. Ulica više nije mogla da bude mirno šetalište. Tokom dana kroz nju su prolazila vozila. Pešaci su morali da koriste trotoare. Ipak, tradicija večernje šetnje nije nestala. Ljudi su i dalje dolazili da vide druge i budu viđeni. Korzo je ostao važan simbol grada. Menjali su se lokali, fasade i saobraćaj. Ali navika šetnje je opstajala. Sedamdesetih godina pitanje saobraćaja postalo je posebno važno. Grad je sve više razgovarao o pešačkoj zoni. Motorizacija je povećavala pritisak na centralne ulice. Istovremeno su građani želeli više prostora za pešake. Godine 1981. Korzo je zatvoren za automobile. Time je počela nova etapa u istoriji ulice. Prostor je postao pogodniji za šetnju. Kasnije su uređivane terase i javni sadržaji. Centar je sve više pripadao pešacima. Korzo je ponovo dobio izrazito društvenu ulogu. Danas Korzo izgleda drugačije nego pre sto godina. Nema tramvaja. Nema istog saobraćaja kao nekada. Ali mnoge palate i dalje stoje. Njihove fasade čuvaju sećanje na ranije vreme. Ljudi i dalje prolaze istim pravcem. Neki dolaze zbog kupovine. Drugi dolaze zbog kafića. Treći samo žele da prošetaju. Ulica tako nastavlja da živi kroz različite generacije. Priča o Korzou pokazuje da se ulica može stalno menjati. Jednom je bila put prema drugom gradu. Kasnije je postala važna saobraćajnica. Zatim je postala reprezentativna gradska ulica. Danas je pešački prostor i mesto susreta. Njena istorija prati razvoj cele Subotice. Kada se promenila železnica, promenio se i Korzo. Kada se promenio saobraćaj, promenio se i Korzo. Kada su se promenile navike ljudi, promenio se i Korzo. Zato je Korzo dobar primer kako grad raste zajedno sa svojim stanovnicima."
   },
   {
-    "title": "Teslina — једно име, више историјских слојева",
+    "title": "Teslina — jedno ime, više istorijskih slojeva",
     "ru": "История названия улицы Теслина",
     "level": "A2+/B1 · Суботица",
     "category": "subotica",
@@ -216,7 +232,7 @@ const TEXTS = [
     "text": "Teslina je danas poznata ulica u Subotici. Njeno ime je kratko i lako prepoznatljivo. Većina ljudi ga povezuje sa Nikolom Teslom. Međutim, istorija naziva ulice je zanimljivija. Naziv se kroz vreme menjao. U starim dokumentima možemo pronaći drugačije oblike. Takve promene nisu neobične za subotičke ulice. One pokazuju kako se menjala gradska istorija. Ime ulice može da bude mali istorijski dokument. Zato vredi istražiti kako je Teslina dobila svoje ime. Lokalni istraživački izvori navode da je ulica prvi put nazvana Teslina 1928. godine. Kasnije je u jednom periodu nosila ime Kemeny Zsigmond. Posle toga naziv je bio povezan sa Nikolom Teslom. Od 1962. godine ponovo se koristi oblik Teslina. Ovi podaci dolaze iz lokalnog istraživanja starih naziva. Za ozbiljno istorijsko istraživanje potrebno je proveriti i arhivske dokumente. To je važno jer se gradske ulice mogu menjati više puta. Različiti izvori ponekad navode različite detalje. Zato učenik treba da razlikuje činjenicu od pretpostavke. Takav oprez je deo dobrog istraživanja. Zašto su ulice uopšte menjale imena? Jedan razlog bila je promena vlasti. Drugi razlog bila je promena političkog sistema. Treći razlog bila je želja da se sačuva sećanje na određenu osobu. Ponekad je novo ime trebalo da zameni staro političko značenje. Ponekad se vraćalo ranije ime. Zbog toga današnja mapa krije mnogo starijih mapa. Čovek može da hoda istom ulicom, a da ne zna njene stare nazive. Stare razglednice mogu da pomognu u istraživanju. Stari gradski planovi mogu da pokažu još više. Ime Nikola Tesla danas je poznato širom sveta. Tesla je bio naučnik i pronalazač. Njegov rad je snažno povezan sa razvojem elektrotehnike. Zbog toga njegovo ime nose mnoge ulice i ustanove. Ulica u Subotici takođe čuva njegovo ime. Ali ime ulice nije samo počast jednoj osobi. Ono je i deo gradske svakodnevice. Ljudi ga koriste kada daju adresu. Poštari ga koriste kada raznose poštu. Stanari ga koriste kada objašnjavaju gde žive. Kada istražujemo naziv ulice, korisno je pogledati staru mapu. Na mapi možemo videti položaj ulice. Možemo videti okolne zgrade. Možemo videti stare nazive. Možemo uporediti mapu sa današnjim stanjem. Tako možemo da primetimo koliko se grad promenio. Neke kuće su nestale. Neke su sačuvane. Neke ulice su produžene. Neke su dobile sasvim drugačiju ulogu. Ulica je više od linije na mapi. Ona povezuje ljude i kuće. Njome svakodnevno prolaze stanovnici. Deca njome idu u školu. Ljudi njome idu na posao. Neko njome ide u prodavnicu. Neko drugi žuri na autobus. Svaki stanovnik ima drugačiji odnos prema istoj ulici. Za nekoga je to samo adresa. Za drugoga je to deo lične uspomene. Kada se naziv promeni, ne menja se odmah sve u životu ulice. Ljudi još dugo koriste staro ime. Starije generacije ga mogu pamtiti decenijama. Mlađi stanovnici mogu poznavati samo novo ime. Tako u jednom gradu mogu da postoje dva naziva u sećanju. To se može čuti u razgovoru starijih ljudi. To se može pronaći u starim novinama. Može se videti na starim dokumentima. Ponekad stari naziv ostane u nekom nadimku. Jezik tako čuva delove gradske prošlosti. Teslina je dobar primer za takvo istraživanje. Njeno današnje ime izgleda jednostavno. Ipak, iza njega se krije više istorijskih perioda. Svaki period ostavio je drugačiji trag. Promena naziva može se posmatrati zajedno sa promenom grada. Grad nije isti kao pre sto godina. Nisu isti ni stanovnici. Nisu isti ni saobraćaj ni zgrade. Ali ulica može ostati na približno istom mestu. Zato njeno ime postaje veza između prošlosti i sadašnjosti. Ako želimo da nastavimo istraživanje, možemo posetiti Istorijski arhiv Subotice. Arhiv čuva gradske fondove i planove. U njemu postoje dokumenti iz različitih perioda. Takav materijal može potvrditi stare nazive. Može pokazati i kada je neka promena nastala. Može objasniti zbog čega je do nje došlo. Za učenika je to zanimljiv način da uči nove reči. Reči kao što su ulica, naziv, promena i plan imaju praktičnu vrednost. One se mogu koristiti i u svakodnevnom razgovoru. Tako krajevi grada postaju deo jezičkog znanja. Sledeći put kada prođemo Teslinom, možemo zastati na trenutak. Možemo se zapitati kako je izgledala pre nekoliko generacija. Možemo potražiti staru fotografiju. Možemo pitati nekoga starijeg za uspomene. Možemo uporediti staru i novu mapu. Možemo proveriti podatke u arhivu. Tako obična ulica postaje tema za istraživanje. Istorija više nije daleka i apstraktna. Ona se nalazi pod našim nogama i na našim adresama. A ime Teslina postaje mala, ali zanimljiva vrata u prošlost grada."
   },
   {
-    "title": "Karađorđev put — пут који је мењао правац",
+    "title": "Karađorđev put — put koji je menjao pravac",
     "ru": "История названий Карађорђевог пута",
     "level": "A2+/B1 · Суботица",
     "category": "subotica",
@@ -225,7 +241,7 @@ const TEXTS = [
     "text": "Karađorđev put je jedna od ulica čije ime odmah zvuči istorijski. Ime podseća na Karađorđa i vreme srpskih ustanaka. Ali današnji naziv nije jedini naziv koji je ova saobraćajnica imala. Lokalni izvori navode nekoliko starijih imena. U devetnaestom veku pominje se naziv Pesti ut. Kasnije se javlja naziv Halasi ut. U Kraljevini Jugoslaviji ulica je nosila ime Save Tekelije. Tokom okupacije naziv se ponovo promenio. Posle rata dobila je današnji naziv. Ova promena pokazuje koliko istorija može da bude vidljiva na mapi. Stari naziv Pesti ut može se razumeti kao put prema Pešti. Takvi nazivi često su pokazivali pravac. Ljudi su pre automobila mnogo pažljivije gledali na pravac puta. Gradovi su bili povezani velikim drumovima. Put prema drugom gradu mogao je biti važan za trgovinu. Bio je važan i za putnike. Zato je naziv puta imao praktično značenje. Kasnije je urbanizacija promenila izgled takvih pravaca. Put je postajao gradska ulica. Njegovo ime je dobijalo drugačiju simboliku. Kada se ulica nazvala po Savi Tekeliji, promenilo se značenje njenog imena. Ime više nije samo opisivalo pravac. Ono je upućivalo na određenu ličnost. Takva imena su česta u gradovima. Ona pomažu da se javni prostor poveže sa istorijskim osobama. Ali ljudi mogu imati različita mišljenja o takvim promenama. Zato su nazivi ulica ponekad predmet javnih rasprava. Posebno su zanimljivi periodi kada se nazivi brzo menjaju. Tada jedna ulica može imati više imena za nekoliko decenija. Karađorđev put je upravo takav primer. Karađorđe je jedna od poznatih ličnosti srpske istorije. Njegovo ime se nalazi na mnogim ulicama i trgovima. U nazivu subotičke ulice ono je deo savremenog gradskog jezika. Stanovnici koriste ime kada daju adresu. Posetioci ga mogu čuti kada pitaju za pravac. Učenik srpskog može preko njega naučiti i nove istorijske reči. Reč put ima veoma staro i široko značenje. U savremenom gradu put može postati ulica. U starijem vremenu mogao je biti deo dugog druma. Zato se značenje prostora menja zajedno sa gradom. Stare karte mogu da pokažu kako je ovaj pravac izgledao. Na njima se vide polja i putevi. Kasnije se pojavljuју kuće. Zatim se pojavljuju veće gradske parcele. Ulica se postepeno uključuje u gradsko tkivo. Ljudi počinju da grade bliže putu. Saobraćaj postaje gušći. Javljaju se prodavnice i radionice. Grad tako polako obuhvata nekadašnji put. Proces traje mnogo godina. Promena vlasti često donosi i promenu javnih naziva. To se može videti na trgovima i ulicama. Jedno ime može biti zamenjeno drugim. Ponekad se posle nekoliko godina staro ime vrati. Ponekad se uvede sasvim novo ime. Takve promene ostavljaju trag u dokumentima. Stariji stanovnici često pamte više verzija. Mlađi ljudi mogu znati samo današnji naziv. Zato razgovor među generacijama može biti koristan. Jedan razgovor ponekad otkrije detalj koji nema na turističkoj mapi. Karađorđev put možemo posmatrati kao istorijski sloj grada. Njegovo ime govori o jednom periodu. Stara imena govore o drugim periodima. Sam pravac govori o vezama sa okolnim gradovima. Okolne zgrade govore o razvoju Subotice. Saobraćaj govori o savremenom načinu života. Sve se to nalazi na istom prostoru. Zbog toga jedna ulica može biti veoma bogat izvor informacija. Ne moramo odmah da otvorimo veliku istorijsku knjigu. Dovoljno je da počnemo od mape. Za učenika jezika takva tema ima još jednu prednost. Može učiti reči koje se često koriste u gradu. To su ulica, put, raskrsnica, adresa i pravac. Može naučiti i glagole kao što su menjati, vraćati i povezivati. Može vežbati prošlo vreme kroz istorijske događaje. Može vežbati sadašnje vreme kroz opis današnje ulice. Može govoriti o budućnosti kada zamišlja njen dalji razvoj. Tako jedan tekst istovremeno uči jezik i istoriju. Učenje postaje povezano sa stvarnim mestом. To je posebno korisno za ljude koji žive u Subotici. Istoriju naziva ipak treba proveravati pažljivo. Lokalni internet tekst nije isto što i arhivski dokument. Jedan izvor može sadržati grešku. Drugi izvor može dati drugačiju godinu. Zato je dobro porediti više izvora. Istorijski arhiv ima posebnu vrednost. Stare karte mogu biti veoma korisne. Novine mogu pokazati kako su ljudi tada koristili naziv. Fotografije mogu pomoći da se odredi mesto. Tek kada se izvori uporede, priča postaje sigurnija. Karađorđev put je zato dobar početak za zavičajno istraživanje. Možemo početi od današnjeg naziva. Zatim možemo potražiti starije nazive. Možemo napraviti malu vremensku liniju. Možemo pronaći staru kartu. Možemo uporediti fotografije. Možemo pitati starije stanovnike šta pamte. Na kraju možemo prošetati ulicom i posmatrati prostor. Tada mapa, jezik i istorija počinju da se povezuju. Jedna gradska ulica postaje otvorena knjiga o promenama Subotice. Istraživanje može da se nastavi novim ulicama i novim izvorima."
   },
   {
-    "title": "Trg slobode и Gradska kuća",
+    "title": "Trg slobode i Gradska kuća",
     "ru": "Как сформировался центральный городской простор",
     "level": "A2+/B1 · Суботица",
     "category": "subotica",
@@ -234,7 +250,7 @@ const TEXTS = [
     "text": "U centru Subotice nalazi se Gradska kuća. Oko nje je prostor koji danas poznajemo kao Trg slobode. Za stanovnike je to jedan od najpoznatijih delova grada. Ali današnji trg nije oduvek izgledao ovako. Njegov izgled nastajao je postepeno. Promene su bile povezane sa razvojem gradske uprave. Bile su povezane i sa izgradnjom nove Gradske kuće. Zato istorija trga i istorija zgrade idu zajedno. Kada se promenila zgrada, promenila se i njena okolina. Tako je nastao jedan od glavnih prostora savremene Subotice. Današnja Gradska kuća završena je 1912. godine. Pre nje su na ovom mestu postojale druge gradske zgrade. Centar je imao drugačiju strukturu. U okolini su se nalazili različiti objekti i pijaca. Novi projekat doneo je velike promene. Prostor oko zgrade trebalo je urediti. Neke starije kuće morale su biti uklonjene. Otvoren je veći prostor ispred reprezentativne zgrade. Taj prostor postao je današnji Trg slobode. Centar je dobio novu vizuelnu celinu. Gradska kuća nije bila samo velika zgrada. U njoj su se nalazile gradske službe. Zgrada je imala administrativnu funkciju. Istovremeno je postala simbol grada. Njena kula je vidljiva iz mnogih delova centra. Fasada je bogato ukrašena. Detalji pokazuju uticaj secesije. Arhitektura je povezala funkciju i dekoraciju. Zbog toga ljudi dolaze da je vide i kao kulturni spomenik. Zgrada je postala deo identiteta Subotice. Trg ispred zgrade imao je različite funkcije. Ljudi su dolazili zbog pijace. Kasnije je prostor više služio za javna okupljanja. Na trgu su se održavale različite manifestacije. Ljudi su se sastajali sa prijateljima. Turisti fotografišu fasadu Gradske kuće. Stanovnici prolaze kroz trg svakog dana. Neki žure na posao. Drugi sede ili čekaju nekoga. Tako istorijski prostor ostaje deo savremenog života. Oko trga nalaze se druge važne zgrade. Njihove fasade zajedno stvaraju sliku centra. Svaka zgrada ima svoju priču. Neke su starije od Gradske kuće. Druge su nastale približno u isto vreme. Neke su kasnije menjale namenu. Zato je šetnja oko trga zanimljivija od samog gledanja jedne zgrade. Čovek može da upoređuje stilove. Može da posmatra ukrase i prozore. Može da zamišlja kako je prostor izgledao pre više od sto godina. Promene na trgu nisu bile samo arhitektonske. Menjao se i način života ljudi. Grad je postajao moderniji. Povećavao se broj stanovnika. Saobraćaj je postajao intenzivniji. Trgovina je rasla. Pojavljivale su se nove službe. Ljudi su imali više razloga da dolaze u centar. Zbog toga je centralni trg dobijao sve veću važnost. On je postajao mesto na kojem se vidi kako grad funkcioniše. Učenik srpskog ovde može naučiti mnogo praktičnih reči. Reč trg označava otvoreni gradski prostor. Reč kuća može imati različita značenja u složenim nazivima. Reč zgrada koristi se za različite objekte. Reč gradski povezuje nešto sa gradom. Glagol izgraditi govori o završetku gradnje. Glagol uređivati govori o procesu. Glagol nalaziti se koristi se za opis položaja. Sve ove reči možemo koristiti dok opisujemo centar. Zato lokalna tema pomaže i u svakodnevnom jeziku. Danas je Trg slobode prostor susreta. Na njemu se održavaju različiti događaji. Ljudi dolaze na kulturne programe. Turisti dolaze zbog arhitekture. Stanovnici dolaze zbog posla i svakodnevnih obaveza. Deca prolaze kroz trg sa roditeljima. Stariji ljudi pamte kako je centar izgledao ranije. Svaka generacija ima svoje uspomene. Iste zgrade mogu biti deo potpuno različitih priča. To pokazuje da grad nije samo arhitektura. Ako stojimo na trgu, možemo posmatrati više slojeva vremena. Možemo videti staru arhitekturu. Možemo videti savremene automobile. Možemo videti telefone u rukama prolaznika. Možemo čuti različite jezike. Možemo videti turiste i lokalne stanovnike. Sve se to dešava u prostoru koji je oblikovan pre više od jednog veka. Istorija zato nije zatvorena u prošlosti. Ona se svakog dana susreće sa sadašnjošću. Trg slobode je dobar primer takvog susreta. Kada učimo o ovom prostoru, ne moramo pamtiti samo godine. Važno je razumeti redosled promena. Najpre je postojao stariji centar. Zatim je izgrađena nova Gradska kuća. Okolina je uređena. Nastao je veći centralni prostor. Grad je dobio novu reprezentativnu sliku. Kasnije su se menjale funkcije trga. Danas je on važan i za svakodnevni život i za turizam. Zato se istorija Gradske kuće najbolje vidi kada izađemo na trg."
   },
   {
-    "title": "Суботичка синагога — зграда која чува сећање",
+    "title": "Subotička sinagoga — zgrada koja čuva sećanje",
     "ru": "История синагоги и еврейской общины",
     "level": "A2+/B1 · Суботица",
     "category": "subotica",
@@ -243,7 +259,7 @@ const TEXTS = [
     "text": "Subotička sinagoga nalazi se u centru grada. Danas je jedan od najpoznatijih simbola Subotice. Zgrada privlači pažnju svojim oblikom i bojama. Njena istorija povezana je sa jevrejskom zajednicom grada. Jevrejske porodice živele su u Subotici još u osamnaestom veku. Godine 1775. prve porodice dobile su pravo na stalno naseljavanje. Kasnije je zajednica postajala sve važnija. Njeni članovi učestvovali su u životu grada. Sinagoga je bila važan deo tog života. Zato njena priča nije samo priča o arhitekturi. Sinagoga je izgrađena 1902. godine. Projektovali su je budimpeštanski arhitekti Marcell Komor i Dezső Jakab. Oni su radili i na drugim važnim zgradama u Subotici. Njihov rad povezuje nekoliko poznatih objekata. Sinagoga pripada mađarskoj varijanti secesije. Taj stil se oslanjao na prirodne oblike i narodne motive. Na zgradi se vide cvetni ukrasi. Pojavljuju se i stilizovani oblici. Keramika doprinosi njenom posebnom izgledu. Zbog toga je zgrada prepoznatljiva i iz daljine. Unutrašnjost sinagoge takođe je veoma bogata. U njoj se nalaze ukrasi i vitraži. Motivi su pažljivo raspoređeni. Boje imaju važnu ulogu. Centralna kupola privlači pažnju posetioca. Konstrukcija je istovremeno moderna i dekorativna. Arhitekte su spojile funkciju i umetnost. Zato se objekat može posmatrati iz više uglova. Možemo ga posmatrati kao verski prostor. Možemo ga posmatrati i kao arhitektonsko delo. Jevrejska zajednica imala je svoju društvenu i kulturnu ulogu. Ljudi su radili različite poslove. Učestvovali su u trgovini i gradskom životu. Grad je kroz njih dobio još jedan kulturni sloj. Zajednica je imala svoje ustanove. Pored sinagoge važna je i zgrada jevrejske opštine. Ona je izgrađena početkom dvadesetog veka. Dve zgrade zajedno čine važan istorijski kompleks. Danas taj kompleks podseća na dugu prisutnost zajednice. Sećanje je zato deo zaštite kulturnog nasleđa. Istorija jevrejske zajednice nije uvek bila laka. Dvadeseti vek doneo je velike tragedije. Drugi svetski rat posebno je teško pogodio evropske Jevreje. Subotička zajednica takođe je doživela strašne gubitke. Zato današnje čuvanje sinagoge ima i memorijalni značaj. Obnova zgrade nije samo pitanje lepote. Ona je i način da se sačuva sećanje. Posetioci tako mogu da nauče nešto o ljudima koji su živeli u gradu. Zgrada može da bude mesto znanja. Može da bude i mesto tišine i poštovanja. Sinagoga je danas zaštićeno kulturno dobro. Njena umetnička vrednost prepoznata je i zvaničnom zaštitom. Godine 1974. proglašena je spomenikom kulture od izuzetnog značaja. Takva zaštita obavezuje društvo da čuva zgradu. To znači da se moraju poštovati posebni uslovi obnove. Arhitektonski detalji ne mogu se menjati bez pažnje. Svaki ukras ima svoje mesto. Svaki materijal ima svoju ulogu. Zato je restauracija složen posao. Rezultat tog rada može se videti i danas. Za učenika jezika sinagoga je zanimljiva i zbog rečnika. Možemo naučiti reči kao što su kupola, fasada i ukras. Možemo učiti glagole čuvati, obnoviti i zaštititi. Možemo opisivati boje i oblike. Možemo govoriti o prošlosti i sadašnjosti. Možemo postavljati pitanja o zgradi. Možemo reći gde se nalazi. Možemo objasniti zašto je važna. Tako arhitektura postaje materijal za razgovor. Učenje jezika dobija konkretnu sliku. Kada čovek stoji ispred sinagoge, prvo primećuje fasadu. Zatim može da obrati pažnju na kupolu. Može da pogleda detalje oko prozora. Može da primeti keramiku. Može da vidi kako se boje menjaju na svetlosti. Ako uđe unutra, vidi još bogatiju dekoraciju. Vodič može objasniti istoriju zajednice. Posetilac tada povezuje zgradu sa ljudima. Tako arhitektura dobija ljudsku priču. To je važno za razumevanje kulturnog nasleđa. Subotica je grad sa više kulturnih slojeva. Sinagoga je jedan od njih. Ona podseća da je grad vekovima bio dom različitim zajednicama. Jezici su se susretali na ulicama. Trgovci su radili zajedno. Komšije su živeli jedni pored drugih. Ponekad su postojali sukobi i teški periodi. Ali ostali su i tragovi saradnje i zajedničkog života. Zgrade danas mogu pomoći da te slojeve razumemo. Zato je važno čuvati ih. Poseta sinagogi može biti kratka, ali priča je duga. Ona počinje mnogo pre današnje zgrade. Nastavlja se kroz istoriju zajednice. Zatim dolazi izgradnja 1902. godine. Dolaze ratovi i promene. Dolazi period obnove i zaštite. Dolazi savremeno vreme u kojem zgrada ponovo prima posetioce. Sve te faze čine njenu istoriju. Zato sinagoga nije samo lepa građevina. Ona je deo sećanja na ljude i grad koji su se menjali zajedno."
   },
   {
-    "title": "Rajhlova palata — кућа која је постала симбол града",
+    "title": "Rajhlova palata — kuća koja je postala simbol grada",
     "ru": "История дворца Райхля и архитектуры Сецесије",
     "level": "A2+/B1 · Суботица",
     "category": "subotica",
@@ -252,7 +268,7 @@ const TEXTS = [
     "text": "Rajhlova palata jedna je od najpoznatijih zgrada u Subotici. Nalazi se blizu centra grada. Njena fasada odmah privlači pažnju. Bogato je ukrašena. Oblik zgrade nije jednostavan. Detalji stvaraju utisak raskošne kuće. Palata pripada periodu snažnog razvoja Subotice. Tada su se u gradu gradile mnoge reprezentativne zgrade. Secesija je ostavila snažan trag. Rajhlova palata je jedan od najpoznatijih primera. Krajem devetnaestog i početkom dvadesetog veka Evropa se brzo menjala. Razvijali su se industrija i nauka. Gradovi su dobijali nove javne objekte. Arhitekte su tražile nove načine oblikovanja zgrada. U Suboticu su novi uticaji dolazili preko Budimpešte. Grad je tada bio deo iste države kao i mađarska prestonica. Zbog toga su kulturne i arhitektonske veze bile jake. Subotica je brzo prihvatala nove stilove. Istovremeno je čuvala lokalne motive. Tako je nastala posebna gradska arhitektura. Secesija je volela prirodne oblike. Na zgradama se mogu videti cvetovi i listovi. Pojavljuju se stilizovane linije. Ukras nije bio samo dodatak. On je bio deo celog dizajna zgrade. Fasada, prozori i krov morali su da izgledaju povezano. U Subotici je posebno važna mađarska varijanta secesije. Ona je koristila motive iz narodne umetnosti. Koristili su se i lokalni materijali. Zbog toga su zgrade dobile veoma prepoznatljiv karakter. Rajhlova palata je dobar primer takvog razmišljanja. Na njoj možemo videti različite ukrase. Možemo posmatrati boje. Možemo posmatrati keramiku. Možemo posmatrati oblik prozora. Možemo posmatrati liniju krova. Sve zajedno stvara jednu celinu. Čovek ne mora biti arhitekta da bi primetio razliku. Dovoljno je da polako pogleda fasadu. Tada detalji počinju da se otkrivaju. Zgrada je povezana sa imenom Ferenca Rajhla. Rajhl je bio važna ličnost gradskog života svog vremena. Palata je bila njegova porodična kuća. U njoj se vidi želja da se privatni prostor predstavi kao reprezentativan. Takve kuće nisu bile obične porodične kuće. One su pokazivale društveni položaj vlasnika. Arhitektura je zbog toga imala i društvenu funkciju. Zgrada je govorila nešto o svom vlasniku. Danas ona govori i o vremenu u kojem je nastala. Tako se privatna kuća pretvorila u deo javnog nasleđa. Subotica je u to vreme brzo rasla. Trgovina se razvijala. Železnica je povezivala grad sa drugim mestima. Novac je dolazio iz različitih delatnosti. Ljudi su ulagali u nove zgrade. Centar je dobijao sve reprezentativniji izgled. Ulice su se uređivale. Pojavljivali su se novi javni objekti. Grad je želeo da pokaže da pripada modernoj Evropi. Arhitektura je bila jedan od načina da to pokaže. Danas Rajhlova palata ima drugačiju ulogu. Više nije samo privatna kuća. Postala je deo kulturnog prostora grada. Posetioci dolaze da vide njenu arhitekturu. Fotografi često snimaju njenu fasadu. Turisti je uključuju u svoje šetnje. Lokalni stanovnici prolaze pored nje svakog dana. Neki je poznaju veoma dobro. Drugi je otkrivaju tek kada počnu da istražuju grad. Za učenika srpskog ona može biti zanimljiva tema za opisivanje. Možemo opisati palatu jednostavnim rečenicama. Možemo reći da je velika. Možemo reći da je ukrašena. Možemo reći gde se nalazi. Možemo objasniti zašto je važna. Možemo uporediti njen izgled sa drugom zgradom. Možemo koristiti prideve lep, bogat, star i neobičan. Možemo koristiti glagole graditi, čuvati, obnavljati i posmatrati. Tako učimo jezik kroz stvarni objekat. Reči lakše ostaju u sećanju kada ih povežemo sa mestom. Secesijska arhitektura nije važna samo zbog lepote. Ona govori o vremenu ekonomskog razvoja. Govori o novim idejama u umetnosti. Govori o vezama između gradova. Govori i o lokalnoj tradiciji. Zato secesija u Subotici ima posebno mesto. Gradska kuća, sinagoga i Rajhlova palata pripadaju istoj široj priči. Svaka zgrada je drugačija. Ipak, zajedno stvaraju prepoznatljivu sliku grada. Zbog njih Suboticu mnogi povezuju sa secesijom. Kada sledeći put vidimo Rajhlovu palatu, možemo pogledati detalje. Možemo se zapitati ko ju je projektovao. Možemo razmišljati o vremenu u kojem je nastala. Možemo uporediti njenu fasadu sa drugim zgradama. Možemo pronaći stare fotografije. Možemo pročitati više o secesiji. Tako jedna kuća otvara temu o celom gradu. Od jedne fasade možemo doći do istorije. Od istorije možemo doći do jezika. A od jezika možemo doći do još jednog načina da upoznamo Suboticu. Istraživanje ove teme može da se nastavi novim izvorima."
   },
   {
-    "title": "Железница и промена Суботице",
+    "title": "Železnica i promena Subotice",
     "ru": "Как железная дорога изменила город",
     "level": "A2+/B1 · Суботица",
     "category": "subotica",
@@ -261,7 +277,7 @@ const TEXTS = [
     "text": "Železnica je promenila Suboticu. Pre nje su ljudi putovali sporije. Roba je uglavnom išla drumovima. Putovanja su zavisila od vremena i puteva. Dolazak železnice promenio je taj ritam. Prvi voz je kroz Suboticu prošao 1869. godine. To je bio važan trenutak za grad. Veza sa drugim mestima postala je brža. Železnička stanica dobila je posebno mesto. Grad je počeo da se okreće prema novim mogućnostima. Železnica nije bila važna samo za putnike. Bila je važna i za trgovinu. Subotica je imala snažnu poljoprivrednu okolinu. Proizvodi su mogli da putuju do udaljenijih tržišta. Trgovci su dobijali nove mogućnosti. Stoka i poljoprivredni proizvodi lakše su se prevozili. Grad je postajao važniji privredni centar. Povećavala se potreba za skladištima i radnicima. Pojavljivali su se novi poslovi. Saobraćaj je menjao ekonomiju grada. Železnica je menjala i gradski prostor. Stanica je morala biti povezana sa centrom. Put između stanice i centra postajao je važan. Nekadašnji periferijski pravci dobijali su novu funkciju. Jedan od takvih pravaca bio je put prema Segedinu. Kasnije je njegov deo postao današnji Korzo. Oko pruge su se menjale parcele. Neki prostori su nasipani i uređivani. Grad je postajao kompaktniji. Železnica je tako uticala i na urbanizam. Putovanje vozom postalo je iskustvo novog vremena. Ljudi su mogli da planiraju duža putovanja. Poseta drugom gradu postala je dostupnija. Roba je mogla da stigne u dogovoreno vreme. Pošta je mogla brže da putuje. Vest je mogla brže da stigne. Gradovi su se tako približavali jedni drugima. Subotica je bila deo tog procesa. Njeni stanovnici sve više su bili povezani sa širim svetom. Promena se osećala i u svakodnevnom životu. Krajem devetnaestog veka Subotica je brzo rasla. Železnica je bila jedan od razloga. Ali nije bila jedini razlog. Razvijali su se trgovina, zanati i industrija. Grad je ulagao u infrastrukturu. Ulice su se uređivale. Uvođena je rasveta. Gradile su se javne zgrade. Novi centar grada dobijao je reprezentativan izgled. Železnica je bila deo šire modernizacije. Rad na železnici stvorio je nova zanimanja. Bili su potrebni mašinovođe. Bili su potrebni radnici na stanici. Bili su potrebni ljudi koji su popravljali prugu. Bili su potrebni trgovci i službenici. Porodice radnika dolazile su u grad. Stanovništvo se povećavalo. Nove potrebe su stvarale nove usluge. Grad je zbog toga postajao življi. Železnica je bila deo tog novog gradskog ritma. Stanica je postala mesto susreta. Neko je nekoga čekao. Neko je nekoga ispraćao. Neko je nosio prtljag. Neko je žurio da ne zakasni. Takve scene postoje i danas. Zato železnička stanica povezuje prošlost i sadašnjost. Tehnologija se promenila. Vozovi se promenili. Ali potreba ljudi da putuju ostala je ista. Za učenika jezika železnica je odlična tema. Možemo učiti reči voz, stanica, putnik i karta. Možemo učiti glagole putovati, stići, čekati i krenuti. Možemo praviti pitanja o vremenu polaska. Možemo vežbati prošlo vreme kroz istoriju. Možemo vežbati sadašnje vreme kroz današnje putovanje. Možemo vežbati buduće vreme kroz plan puta. Jedna tema tako daje mnogo korisnog rečnika. Još je bolje kada učenik živi u gradu sa železničkom istorijom. Tada reči imaju stvaran kontekst. Danas se uloga železnice ponovo menja. Neki ljudi putuju svakodnevno. Drugi koriste voz povremeno. Autobusi i automobili preuzeli su deo saobraćaja. Ipak, železnica nije nestala iz života grada. Stanica ostaje važna tačka. Stare fotografije pokazuju koliko je železnica nekada bila značajna. Savremene potrebe pokazuju da se njen značaj može ponovo menjati. Gradovi se stalno prilagođavaju saobraćaju. Subotica nije izuzetak. Kada posmatramo istoriju grada, železnica je važna tačka. Pre 1869. godine grad je imao drugačije mogućnosti. Posle dolaska voza otvorio se novi pravac razvoja. Trgovina je dobila novi ritam. Ljudi su dobili nove načine putovanja. Ulice su dobile nove funkcije. Centar se povezao sa stanicom. Grad se približio drugim gradovima. Jedna tehnička novina tako je promenila mnogo delova života. Zato priča o železnici pripada i priči o modernoj Subotici."
   },
   {
-    "title": "Majšanski put — школа, крај и град који расте",
+    "title": "Majšanski put — škola, kraj i grad koji raste",
     "ru": "История района и школьного развития",
     "level": "A2+/B1 · Суботица",
     "category": "subotica",
@@ -270,7 +286,7 @@ const TEXTS = [
     "text": "Majšanski put je danas poznat naziv u Subotici. Uz njega se nalaze kuće, škole i različiti gradski sadržaji. Ime puta povezuje ovaj prostor sa Majšom i okolnim krajem. Za stanovnika je to obična adresa. Za istoričara je to trag razvoja grada. Ulica i njen kraj nisu nastali odjednom. Grad se postepeno širio. Širenje je menjalo i potrebe stanovnika. Jedna od tih potreba bila je škola. Zato je istorija Majšanskog puta povezana i sa istorijom školstva. Krajem devetnaestog i početkom dvadesetog veka Subotica se brzo razvijala. Broj stanovnika je rastao. Pojavljivala su se nova naselja. Grad je imao sve više dece školskog uzrasta. Bilo je potrebno otvoriti nove škole. Školske zgrade su se gradile i van samog centra. To pokazuje da je grad već tada imao šire gradsko područje. Majšanski put bio je deo tog procesa. Škola je bila važna za razvoj kraja. Ona je povezivala porodice i susedstvo. Istorijat škole navodi da su zgrade na Majšanskom putu građene 1908. i 1909. godine. Te zgrade bile su deo brzog razvoja školstva. U to vreme škole su se gradile prema tipskim planovima. Funkcionalnost je bila važna. Grad je želeo da dobije što više školskih mesta. Nije bilo dovoljno samo graditi u centru. Nove škole morale su biti bliže učenicima. Zato se obrazovanje širilo zajedno sa gradom. Škola je tako postala deo urbanog razvoja. Njena zgrada danas čuva deo tog sećanja. Učenici su nekada imali drugačije uslove nego danas. Nije bilo računara. Nije bilo pametnih telefona. Nastava se oslanjala na knjige, tablu i sveske. Učitelji su imali drugačije metode. Ipak, osnovna potreba bila je ista. Deca su dolazila da uče. Roditelji su želeli da njihova deca imaju obrazovanje. Škola je bila važan deo zajednice. Taj značaj nije nestao. Oko škole se menjao i sam kraj. Gradile su se nove kuće. Pojavljivali su se putevi i ulice. Broj stanovnika je rastao. Deca su dolazila iz okolnih kuća. Roditelji su svakodnevno prolazili istim putem. Škola je tako postala poznata tačka u naselju. Ljudi su je koristili kao orijentir. Naziv škole i naziv puta ostali su povezani. Tako se jedno ime može preneti kroz generacije. Škola nije samo zgrada. Ona je mesto susreta. U njoj se stvaraju prijateljstva. Učenici uče da rade zajedno. Nastavnici prenose znanje. Roditelji dolaze na sastanke. Organizuju se priredbe i različite aktivnosti. Zgrada tako dobija život. Posle mnogo godina ljudi se sećaju svojih učionica. Takve uspomene postaju deo istorije kraja. Razvoj školstva govori i o promenama u društvu. Kada grad raste, raste i potreba za obrazovanjem. Kada se menja privreda, menjaju se i potrebna znanja. Kada se menja tehnologija, menjaju se metode nastave. Ali škola ostaje važna. Ona priprema decu za budućnost. U prošlosti je pripremala učenike za tadašnji život. Danas ih priprema za drugačiji svet. Zato škola može da bude ogledalo društva. To se dobro vidi i na Majšanskom putu. Za učenika srpskog ova tema je veoma praktična. Možemo učiti reči škola, učenik, učitelj i učionica. Možemo govoriti o rasporedu časova. Možemo opisivati put do škole. Možemo reći gde se škola nalazi. Možemo opisati kako je izgledala nekada. Možemo uporediti prošlost i sadašnjost. Možemo koristiti izraze pre mnogo godina i danas. Tako se gramatika povezuje sa lokalnom pričom. Učenje postaje konkretnije. Majšanski put je zanimljiv i zato što pokazuje širenje grada. Centar nije jedini deo Subotice sa istorijom. I rubniji krajevi imaju svoje priče. Škole su važni tragovi tih priča. Putevi pokazuju kako se grad povezivao. Kuće pokazuju gde su ljudi živeli. Stare fotografije pokazuju kako je prostor izgledao. Današnji pogled pokazuje koliko se promenio. Kada spojimo te izvore, dobijamo širu sliku. Grad postaje razumljiviji. Sledeći put kada prolazimo Majšanskim putem, možemo gledati drugačije. Možemo primetiti školsku zgradu. Možemo razmišljati o učenicima koji su tamo učili pre više od sto godina. Možemo zamisliti kako su dolazili na časove. Možemo zamisliti kako je izgledalo naselje. Možemo uporediti prošlost sa današnjim saobraćajem. Možemo potražiti stare fotografije. Možemo pročitati istorijat škole. Tako obična ulica postaje deo velike priče o obrazovanju. A ta priča pokazuje kako je Subotica rasla zajedno sa svojim stanovnicima."
   },
   {
-    "title": "Суботица и Палић — град и његово суседство",
+    "title": "Subotica i Palić — grad i njegovo susedstvo",
     "ru": "Связь Суботицы с Паличем и окружающим пространством",
     "level": "A2+/B1 · Суботица",
     "category": "subotica",
@@ -279,7 +295,7 @@ const TEXTS = [
     "text": "Subotica nije odvojena od svog neposrednog okruženja. Grad je povezan sa okolnim naseljima i Palićem. Za mnoge stanovnike ta veza je deo svakodnevnog života. Ljudi putuju između grada i jezera. Neki rade u Subotici. Neki žive u okolini. Neki dolaze zbog odmora. Zbog toga se priča o Subotici često nastavlja i van centra. Palić je važan deo tog šireg prostora. On ima svoju istoriju i svoj karakter. Palić je poznat po jezeru i turističkoj tradiciji. Ljudi su tamo dolazili zbog odmora i kupanja. Vremenom su se razvijali hoteli i drugi sadržaji. Parkovi su postali deo pejzaža. Pojavljivali su se sportski i kulturni programi. Veza sa Suboticom bila je važna. Ljudi su želeli da dođu do jezera. Saobraćajne veze su zato imale veliki značaj. Grad i odmaralište razvijali su se paralelno. Danas mnogi posetioci kombinuju oba mesta. Put između Subotice i Palića nije samo obična saobraćajnica. On povezuje gradski i turistički prostor. Tokom radne nedelje njime prolaze ljudi zbog posla. Vikendom je više ljudi koji putuju zbog odmora. Leti je saobraćaj posebno živ. Turisti traže smeštaj i restorane. Lokalni stanovnici odlaze na jezero. Deca i porodice koriste parkove i šetališta. Tako se menjaju i potrebe prostora. Grad mora da odgovori na različite vrste kretanja. Istorija Palića i Subotice povezana je sa razvojem turizma. Kada je grad rastao, rastao je i interes za okolinu. Ljudi su tražili mesta za odmor. Prirodno okruženje bilo je važan resurs. Jezero je privlačilo posetioce. Razvijali su se ugostiteljski sadržaji. Arhitektura je dobila turističku ulogu. Šetnja je postala deo odmora. Palić je tako dobio posebno mesto u regionalnom životu. Njegova priča i danas traje. Subotica ima još jednu posebnost. U gradu se susreću različite kulturne tradicije. Ta raznolikost postoji i u okolnim mestima. Ljudi govore različite jezike. Porodične tradicije mogu biti različite. Hrana i običaji nose tragove više kultura. Turizam može da pokaže tu raznolikost. Posetilac može da vidi različite zgrade. Može da čuje više jezika. Može da proba različita jela. Za učenika jezika tema je korisna jer daje mnogo svakodnevnih situacija. Možemo govoriti o putovanju. Možemo pitati kako doći do Palića. Možemo kupiti kartu. Možemo rezervisati smeštaj. Možemo opisati vreme. Možemo planirati izlet. Možemo govoriti o tome šta smo videli. Možemo reći šta ćemo raditi sutra. Jedan izlet tako postaje velika jezička vežba. Palić je važan i za kulturni život regiona. Na njemu se održavaju različiti programi. Tokom godine menjaju se događaji. Neki programi su namenjeni porodicama. Drugi su namenjeni ljubiteljima umetnosti. Treći privlače sportiste. Grad i jezero zajedno mogu ponuditi različite sadržaje. To je korisno i za stanovnike i za goste. Kultura i turizam se tako dopunjuju. Prostor dobija život u različitim sezonama. Prirodno okruženje takođe zahteva pažnju. Jezero nije samo turistički proizvod. To je i prirodni prostor. Ljudi treba da ga čuvaju. Čistoća je važna. Voda zahteva odgovorno ponašanje. Parkovi takođe traže održavanje. Turizam može biti uspešan samo ako prostor ostane prijatan. Zato se o razvoju mora razmišljati dugoročno. Grad i okolina dele odgovornost za budućnost. Kada posmatramo Suboticu i Palić zajedno, vidimo širu sliku. Grad daje posao, usluge i kulturne sadržaje. Palić daje prirodni prostor i turističke mogućnosti. Saobraćaj ih povezuje. Ljudi ih svakodnevno povezuju svojim životom. Jedan prostor ne može potpuno da se razume bez drugog. To važi i za istoriju. To važi i za savremeni život. To važi i za planiranje budućnosti. Zato su Subotica i Palić zanimljiva zajednička tema. Sledeći put možemo napraviti mali izlet. Možemo krenuti iz centra Subotice. Možemo posmatrati kako se grad menja dok izlazimo iz centra. Možemo obratiti pažnju na puteve i naselja. Možemo stići do Palića. Možemo prošetati pored jezera. Možemo opisati šta vidimo na srpskom. Možemo naučiti nove reči. Uveče možemo zapisati nekoliko rečenica o izletu. Tako lokalna geografija postaje deo svakodnevnog učenja jezika. Istraživanje ove teme može da se nastavi novim izvorima."
   },
   {
-    "title": "Суботица данас — град који наставља да се мења",
+    "title": "Subotica danas — grad koji nastavlja da se menja",
     "ru": "Современная жизнь, культура и события города",
     "level": "A2+/B1 · Суботица",
     "category": "subotica",
@@ -1505,7 +1521,7 @@ const VOCAB_BLOCKS = [
   {
     "id": "a1-01",
     "level": "A1",
-    "title": "Повседневная жизнь",
+    "title": "Svakodnevni život",
     "description": "Самые нужные слова для обычного дня",
     "words": [
       {
@@ -1913,7 +1929,7 @@ const VOCAB_BLOCKS = [
   {
     "id": "a1-02",
     "level": "A1",
-    "title": "Дом, семья и еда",
+    "title": "Dom, porodica i hrana",
     "description": "Быт, квартира, покупки и основные продукты",
     "words": [
       {
@@ -2321,7 +2337,7 @@ const VOCAB_BLOCKS = [
   {
     "id": "a2-01",
     "level": "A2",
-    "title": "Город, транспорт и путешествия",
+    "title": "Grad, prevoz i putovanja",
     "description": "Слова для города, дороги, поездок и путешествий",
     "words": [
       {
@@ -2729,7 +2745,7 @@ const VOCAB_BLOCKS = [
   {
     "id": "a2-02",
     "level": "A2",
-    "title": "Работа и учёба",
+    "title": "Posao i učenje",
     "description": "Учёба, профессия, офис и общение",
     "words": [
       {
@@ -3137,7 +3153,7 @@ const VOCAB_BLOCKS = [
   {
     "id": "a2-03",
     "level": "A2",
-    "title": "Природа, погода и чувства",
+    "title": "Priroda, vreme i osećanja",
     "description": "Природа, состояние человека и более абстрактная лексика",
     "words": [
       {
@@ -3546,7 +3562,7 @@ const VOCAB_BLOCKS = [
   {
     "id": "a1-shopping-clothes",
     "level": "A1",
-    "title": "Покупки и одежда",
+    "title": "Kupovina i odeća",
     "description": "Базовые слова для магазина, одежды, размеров, цен и покупок.",
     "words": [
       {
@@ -3954,7 +3970,7 @@ const VOCAB_BLOCKS = [
   {
     "id": "a2-communication-plans",
     "level": "A2",
-    "title": "Общение, планы и отношения",
+    "title": "Komunikacija, planovi i odnosi",
     "description": "Слова для разговоров, договорённостей, мнений, планов и общения с людьми.",
     "words": [
       {
@@ -4365,7 +4381,7 @@ const VOCAB_BLOCKS = [
 VOCAB_BLOCKS.push({
   "id": "my-275",
   "level": "A1–A2",
-  "title": "Импортированные слова — 275",
+  "title": "Uvezene reči — 275",
   "description": "Отдельный учебный блок по списку пользователя; не смешивается с «Моими словами». Переводы проверяются отдельно.",
   "words": [
     {
@@ -5502,7 +5518,7 @@ if (localStorage.getItem('citajSrpskiSeparateVocabV13') !== '1') {
       return {word:x.word, blockId:block, box:Math.min(6,Math.max(1,Number(x.box)||1)), nextReview:x.nextReview || Date.now()};
     }).filter(x => x.blockId);
     vocabProgress = [...vocabProgress, ...migrated];
-    saved = saved.slice(0,55).map(x => ({...x, blockId:undefined}));
+    saved = saved.map(x => ({...x, blockId:undefined}));
   } else {
     saved = saved.map(x => ({...x, blockId:undefined}));
   }
@@ -6055,6 +6071,7 @@ function saveRemoteTranslationCache(){
 function getTranslation(w){
   const n=normalize(w);
   if(CONTEXT_TRANSLATIONS[n]) return CONTEXT_TRANSLATIONS[n];
+  if(LOCAL_TRANSLATION_FALLBACK[n]) return LOCAL_TRANSLATION_FALLBACK[n];
   if(DICT[n]) return DICT[n];
   const verb=findVerbInfo(n);
   if(verb && verb.translation) return verb.translation;
@@ -6315,14 +6332,40 @@ const TENSE_PERSONS = [
 ];
 const TENSE_MODES = [
   {id:'present',title:'Настоящее — Prezent',short:'Что происходит сейчас или происходит обычно.',formula:'личная форма глагола',note:'Ja radim, ti radiš, on radi, mi radimo, vi radite, oni rade.'},
-  {id:'past',title:'Прошедшее — Perfekt',short:'Что уже произошло.',formula:'sam / si / je / smo / ste / su + причастие',note:'Например: Ja sam radio. Mi smo radili. Пока используются мужские формы причастия.'},
+  {id:'past',title:'Прошедшее — Perfekt',short:'Что уже произошло.',formula:'sam / si / je / smo / ste / su + причастие',note:'Выберите род для Perfekt. Например: Ja sam radio / Ja sam radila. В форме множественного числа: Mi smo radili.'},
   {id:'future',title:'Будущее — Futur I',short:'Что произойдёт позже.',formula:'ću / ćeš / će / ćemo / ćete / će + infinitiv',note:'Ja ću raditi. Ti ćeš raditi. Mi ćemo raditi.'}
 ];
 let tenseMode='present', tenseLevel=1, tenseVerb='raditi', tenseMixed=false, tenseItems=[], tenseIndex=0, tenseScore=0;
 function selectedTenseVerb(){return TENSE_VERBS.find(v=>v.inf===tenseVerb)||TENSE_VERBS[0]}
+
+let tenseGender='masculine';
+const TENSE_GENDER_OPTIONS = [
+  {id:'masculine',label:'мужской',example:'Ja sam radio.'},
+  {id:'feminine',label:'женский',example:'Ja sam radila.'},
+  {id:'neuter',label:'средний',example:'Dete je radilo.'},
+  {id:'plural',label:'множественное',example:'Mi smo radili.'}
+];
+function genderedPastParticiple(form, gender){
+  if(gender==='masculine') return form;
+  const irregular = {
+    'rekao': {feminine:'rekla',neuter:'reklo',plural:'rekli'},
+    'došao': {feminine:'došla',neuter:'došlo',plural:'došli'},
+    'išao': {feminine:'išla',neuter:'išlo',plural:'išli'},
+    'video': {feminine:'videla',neuter:'videlo',plural:'videli'},
+    'hteo': {feminine:'htela',neuter:'htelo',plural:'hteli'}
+  };
+  if(irregular[form] && irregular[form][gender]) return irregular[form][gender];
+  if(/ao$/.test(form)) return form.slice(0,-2)+(gender==='feminine'?'ala':gender==='neuter'?'alo':'ali');
+  if(/eo$/.test(form)) return form.slice(0,-2)+(gender==='feminine'?'ela':gender==='neuter'?'elo':'eli');
+  if(/io$/.test(form)) return form.slice(0,-2)+(gender==='feminine'?'ila':gender==='neuter'?'ilo':'ili');
+  return form;
+}
+function tensePastForm(v,pi){
+  return genderedPastParticiple(v.past[pi], tenseGender);
+}
 function tenseOptionForm(v,pi,mode){
   const p=TENSE_PERSONS[pi];
-  if(mode==='past') return `${p.auxPast} ${v.past[pi]}`;
+  if(mode==='past') return `${p.auxPast} ${tensePastForm(v,pi)}`;
   if(mode==='future') return `${p.auxFuture} ${v.futureInf}`;
   return v.present[pi];
 }
@@ -6396,6 +6439,7 @@ function tenses(){
     <p class="muted">Сначала выбери упражнение, затем режим глаголов. После этого можно переключать время: настоящее, прошедшее или будущее.</p>
     <div class="card"><h3>Выбор упражнения</h3><div class="training-buttons tense-levels"><button type="button" class="tense-level ${tenseLevel===1?'active':''}" data-level="1">1 · Форма / пропуск</button><button type="button" class="tense-level ${tenseLevel===2?'active':''}" data-level="2">2 · По словам</button></div></div>
     ${tenseVerbPicker()}
+    <div class="card tense-gender-picker"><h3>Род в Perfekt</h3><p class="muted">Для прошедшего времени выберите нужную форму причастия.</p><div class="training-buttons">${TENSE_GENDER_OPTIONS.map(g=>`<button type="button" class="tense-gender ${tenseGender===g.id?'active':''}" data-gender="${g.id}">${g.label}</button>`).join('')}</div></div>
     <button type="button" id="tense-mixed-toggle" class="tense-mixed-toggle card ${tenseMixed?'active':''}"><span class="tense-mixed-icon">🔀</span><span><b>Смешение глаголов</b><small>${tenseMixed?'Включено — глаголы будут чередоваться':'Выключено — работаем с одним выбранным глаголом'}</small></span><span>${tenseMixed?'✓':'○'}</span></button>
     <div class="training-buttons tense-tabs">${TENSE_MODES.map(m=>`<button type="button" class="tense-tab ${m.id===tenseMode?'active':''}" data-tense="${m.id}">${m.title.split(' — ')[0]}</button>`).join('')}</div>
     <div id="tense-instruction">${tenseInstruction(tenseMode)}</div>
@@ -6405,6 +6449,10 @@ function tenses(){
   if(open) open.onclick=()=>{tenseVerbPickerOpen=!tenseVerbPickerOpen;tenses();};
   const mixed=$('tense-mixed-toggle');
   if(mixed) mixed.onclick=()=>{tenseMixed=!tenseMixed;tenseVerbPickerOpen=false;tenseIndex=0;tenseScore=0;tenses();};
+  document.querySelectorAll('.tense-gender').forEach(b=>b.addEventListener('click',()=>{
+    tenseGender=b.dataset.gender; tenseIndex=0; tenseScore=0; renderTenseExercise();
+    document.querySelectorAll('.tense-gender').forEach(x=>x.classList.toggle('active',x.dataset.gender===tenseGender));
+  }));
   document.querySelectorAll('.tense-verb').forEach(b=>b.addEventListener('click',()=>{tenseVerb=b.dataset.verb;tenseMixed=false;tenseVerbPickerOpen=false;tenseIndex=0;tenseScore=0;tenses();}));
   document.querySelectorAll('.tense-tab').forEach(b=>b.addEventListener('click',()=>{tenseMode=b.dataset.tense;tenseIndex=0;tenseScore=0;$('tense-instruction').innerHTML=tenseInstruction(tenseMode);renderTenseExercise();}));
   document.querySelectorAll('.tense-level').forEach(b=>b.addEventListener('click',()=>{tenseLevel=Number(b.dataset.level);tenseIndex=0;tenseScore=0;document.querySelectorAll('.tense-level').forEach(x=>x.classList.toggle('active',Number(x.dataset.level)===tenseLevel));renderTenseExercise();}));
@@ -6885,7 +6933,7 @@ function phraseKey(p){return normalizePhrase(p.sr);}
 function phraseMark(p,ok){
   const k=phraseKey(p), st=phraseProgress[k]||{successes:0,attempts:0,dueAt:0};
   st.attempts=(st.attempts||0)+1;
-  if(ok){ st.successes=Math.min(3,(st.successes||0)+1); const days=[1,3,7]; st.dueAt=st.successes>=3?0:Date.now()+days[st.successes-1]*86400000; }
+  if(ok){ st.successes=Math.min(3,(st.successes||0)+1); const days=[1,3,7]; st.dueAt=st.successes>=3?Number.MAX_SAFE_INTEGER:Date.now()+days[st.successes-1]*86400000; }
   else { st.dueAt=Date.now()+10*60*1000; }
   phraseProgress[k]=st; savePhraseProgress();
 }
@@ -6893,8 +6941,10 @@ let phraseTrainingMode='both';
 function startPhraseTraining(mode='both'){
   if(savedPhrases.length<1){alert('Сначала сохрани хотя бы одно словосочетание.');return;}
   phraseTrainingMode=['sr','ru','both'].includes(mode)?mode:'both';
-  const due=savedPhrases.filter(p=>{const st=phraseProgress[phraseKey(p)];return !st || !st.dueAt || st.dueAt<=Date.now() || (st.successes||0)<3;});
-  phraseExerciseQueue=shuffle(due.length?due:savedPhrases).slice(0,Math.min(20,savedPhrases.length));
+  const due=savedPhrases.filter(p=>{const st=phraseProgress[phraseKey(p)];return !st || (st.successes||0)<3 || Number(st.dueAt)<=Date.now();});
+  const active= savedPhrases.filter(p=>{const st=phraseProgress[phraseKey(p)];return !st || (st.successes||0)<3;});
+  phraseExerciseQueue=shuffle(due.length?due:active).slice(0,Math.min(20,active.length||due.length));
+  if(!phraseExerciseQueue.length){ alert('Сейчас нет словосочетаний для повторения. Все сохранённые словосочетания закреплены на данный момент.'); return; }
   phraseExerciseIndex=0; renderPhraseTraining(); view('review');
 }
 let phraseExerciseQueue=[], phraseExerciseIndex=0;
@@ -7317,7 +7367,7 @@ function importWords(event){
       if (!Array.isArray(importedWords)) throw new Error('bad');
       const clean = importedWords.filter(x => x && typeof x.word === 'string').map(x => ({
         word:x.word, translation:x.translation || getTranslation(x.word),
-        added:x.added || new Date().toISOString(), box:Math.min(6,Math.max(1,Number(x.box)||1)), nextReview:x.nextReview || Date.now()
+        added:x.added || new Date().toISOString(), box:Math.min(6,Math.max(1,Number(x.box)||1)), nextReview:x.nextReview || Date.now(), mistakes:Number.isFinite(Number(x.mistakes)) ? Number(x.mistakes) : 0, hard:Boolean(x.hard)
       }));
       saved = clean;
       if(Array.isArray(imported.phrases)){ savedPhrases=imported.phrases; savePhrases(); }
@@ -7383,3 +7433,24 @@ document.addEventListener("click", event => {
 
 save();
 texts();
+
+
+function localFallbackTranslation(word){
+  const clean = String(word || "").trim().toLowerCase()
+    .replace(/[.,!?;:"“”„(){}\[\]…]+$/g, "");
+  return LOCAL_TRANSLATION_FALLBACK[clean] || null;
+}
+
+
+
+const PERFEKT_PERSON_FORMS = {
+  masculine: { "radio":"radio", "bio":"bio", "došao":"došao", "išao":"išao", "video":"video", "rekao":"rekao", "uradio":"uradio" },
+  feminine:  { "radio":"radila", "bio":"bila", "došao":"došla", "išao":"išla", "video":"videla", "rekao":"rekla", "uradio":"uradila" },
+  neuter:    { "radio":"radilo", "bio":"bilo", "došao":"došlo", "išao":"išlo", "video":"videlo", "rekao":"reklo", "uradio":"uradilo" },
+  plural:    { "radio":"radili", "bio":"bili", "došao":"došli", "išao":"išli", "video":"videli", "rekao":"rekli", "uradio":"uradili" }
+};
+function perfektForm(form, gender="masculine"){
+  const table = PERFEKT_PERSON_FORMS[gender] || PERFEKT_PERSON_FORMS.masculine;
+  return table[form] || form;
+}
+
