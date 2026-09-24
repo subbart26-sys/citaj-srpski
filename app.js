@@ -5629,9 +5629,13 @@ try {
 } catch(e) { textWordLinks = {}; }
 function saveTextWordLinks(){ try{ localStorage.setItem(TEXT_WORDS_KEY, JSON.stringify(textWordLinks)); }catch(e){} }
 function textSourceKey(text){
-  // Ключ текста должен быть одинаковым при открытии, клике по слову и показе
-  // списка. Для объектов используем id, если он есть, иначе заголовок.
-  // Строка трактуется как уже готовый ключ — это важно для data-text-key.
+  // Для привязки слов используем СТАБИЛЬНЫЙ внутренний индекс текста.
+  // Заголовок может меняться, повторяться или содержать разные знаки.
+  // Если объект пришёл из openText, у него есть __siteIndex.
+  if(text && typeof text==='object' && Number.isInteger(text.__siteIndex)){
+    return `text:${text.__siteIndex}`;
+  }
+  // Строка здесь может быть готовым ключом, например data-text-key.
   if(typeof text==='string') return normalize(text);
   const id=normalize(String(text?.id||''));
   if(id) return `id:${id}`;
@@ -5643,7 +5647,12 @@ function getTextLinkedWordsByKey(key){
   return Array.isArray(textWordLinks[k]) ? textWordLinks[k] : [];
 }
 function getTextLinkedWords(text){
-  return getTextLinkedWordsByKey(textSourceKey(text));
+  const key=textSourceKey(text);
+  const current= getTextLinkedWordsByKey(key);
+  if(current.length || !text || typeof text!=='object') return current;
+  // Совместимость с предыдущими версиями, где ключом был заголовок текста.
+  const legacy=normalize(String(text.title||''));
+  return legacy && legacy!==key ? getTextLinkedWordsByKey(legacy) : current;
 }
 function isWordLinkedToText(text, word){
   const n=normalize(word);
@@ -6887,8 +6896,11 @@ function renderText(text,textKey=''){
   }).join('');
 }
 function openText(i){
-  const t = TEXTS[i];
+  // Создаём объект текущего текста с неизменяемым внутренним индексом.
+  // Именно этот ключ используется и при добавлении слова, и при показе списка.
+  const t = {...TEXTS[i], __siteIndex:i};
   window.__citajCurrentText = t;
+  window.__citajCurrentTextKey = `text:${i}`;
   $("title").textContent = t.title;
   $("level").textContent = `${t.level} · ${t.ru}`;
   // Не выводим техническое описание источника над учебным текстом.
@@ -6898,7 +6910,7 @@ function openText(i){
   // кликабельные элементы; если браузер встретит неожиданные данные,
   // чтение всё равно не пропадёт целиком.
   const plain=String(t.text||'');
-  const currentTextKey=textSourceKey(t);
+  const currentTextKey=window.__citajCurrentTextKey || textSourceKey(t);
   textEl.textContent=plain;
   try{ textEl.innerHTML=renderText(plain,currentTextKey); }
   catch(err){ console.error('renderText error',err); textEl.textContent=plain; }
@@ -6997,7 +7009,7 @@ function bindReaderWordInteractions(){
         sentenceIndex:btn.dataset.sentenceIndex,
         sentence:[...document.querySelectorAll('.word[data-sentence-index="'+btn.dataset.sentenceIndex+'"]')].map(x=>x.textContent.trim()).join(' '),
         sourceText: window.__citajCurrentText || null,
-        textKey: btn.dataset.textKey || textSourceKey(window.__citajCurrentText || '')
+        textKey: window.__citajCurrentTextKey || btn.dataset.textKey || textSourceKey(window.__citajCurrentText || '')
       });
     });
   });
@@ -7095,7 +7107,7 @@ async function word(w, context={} ){
   const canonical=canonicalWord(w);
   const exists=saved.some(x=>canonicalWord(x.word)===canonical);
   const sourceText=context.sourceText || null;
-  const sourceTextKey=context.textKey || (sourceText ? textSourceKey(sourceText) : '');
+  const sourceTextKey=window.__citajCurrentTextKey || context.textKey || (sourceText ? textSourceKey(sourceText) : '');
   const linked=sourceTextKey ? getTextLinkedWordsByKey(sourceTextKey).some(x=>normalize(x)===normalize(w)||canonicalWord(x)===canonicalWord(w)) : false;
   let verb=findVerbInfo(w);
   const render=(tr,v=verb)=>{
@@ -7114,7 +7126,10 @@ async function word(w, context={} ){
       const lemma=await addWord(w);
       if(sourceTextKey && lemma) linkWordToTextKey(sourceTextKey,lemma);
       addButton.textContent=sourceText?'✓ Добавлено к словам этого текста':'✓ Сохранено';
-      if(sourceText) renderTextLinkedWords(sourceText,true);
+      if(sourceText){
+        // Перечитываем именно по стабильному ключу, а не по заголовку объекта.
+        renderTextLinkedWords(window.__citajCurrentText || sourceText,true);
+      }
     });
   };
   render(translation,verb);
