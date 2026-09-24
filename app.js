@@ -5629,38 +5629,43 @@ try {
 } catch(e) { textWordLinks = {}; }
 function saveTextWordLinks(){ try{ localStorage.setItem(TEXT_WORDS_KEY, JSON.stringify(textWordLinks)); }catch(e){} }
 function textSourceKey(text){
-  // Один и тот же ключ используется во всех местах: при открытии текста,
-  // при клике по слову и при отображении списка. Это критично для постоянной
-  // привязки слов к конкретному тексту.
+  // Ключ текста должен быть одинаковым при открытии, клике по слову и показе
+  // списка. Для объектов используем id, если он есть, иначе заголовок.
+  // Строка трактуется как уже готовый ключ — это важно для data-text-key.
   if(typeof text==='string') return normalize(text);
   const id=normalize(String(text?.id||''));
   if(id) return `id:${id}`;
   return normalize(String(text?.title||''));
 }
-function getTextLinkedWords(text){
-  const key=textSourceKey(text);
-  return Array.isArray(textWordLinks[key]) ? textWordLinks[key] : [];
-}
 function getTextLinkedWordsByKey(key){
   const k=normalize(String(key||''));
+  if(!k) return [];
   return Array.isArray(textWordLinks[k]) ? textWordLinks[k] : [];
+}
+function getTextLinkedWords(text){
+  return getTextLinkedWordsByKey(textSourceKey(text));
 }
 function isWordLinkedToText(text, word){
   const n=normalize(word);
   return getTextLinkedWords(text).some(x=>normalize(x)===n || canonicalWord(x)===canonicalWord(n));
 }
-function linkWordToText(text, word){
-  const key=textSourceKey(text); if(!key)return false;
+// ВАЖНО: функция принимает именно готовый ключ, а не объект текста.
+// Это исключает повторное преобразование ключа и разрыв связи между
+// data-text-key и localStorage.
+function linkWordToTextKey(key, word){
+  const k=normalize(String(key||''));
   const surface=normalize(word);
-  const lemma=canonicalWord(surface)||surface; if(!lemma)return false;
-  const list=getTextLinkedWordsByKey(key).slice();
+  const lemma=canonicalWord(surface)||surface;
+  if(!k || !lemma) return false;
+  const list=getTextLinkedWordsByKey(k).slice();
   if(!list.some(x=>normalize(x)===lemma || canonicalWord(x)===lemma)){
     list.push(lemma);
-    textWordLinks[key]=list;
+    textWordLinks[k]=list;
     saveTextWordLinks();
   }
   return true;
 }
+function linkWordToText(text, word){ return linkWordToTextKey(textSourceKey(text), word); }
 function unlinkWordFromText(text, word){
   const key=textSourceKey(text); const list=getTextLinkedWordsByKey(key);
   textWordLinks[key]=list.filter(x=>canonicalWord(x)!==canonicalWord(word)); saveTextWordLinks();
@@ -7105,11 +7110,11 @@ async function word(w, context={} ){
     if(addButton && !(sourceText && linked)) addButton.addEventListener('click',async()=>{
       // Ключ текста фиксируем ДО любых сетевых операций. Связь должна
       // сохраняться даже если лемматизация или перевод недоступны.
-      if(sourceTextKey) linkWordToText(sourceTextKey,w);
+      if(sourceTextKey) linkWordToTextKey(sourceTextKey,w);
       const lemma=await addWord(w);
-      if(sourceTextKey && lemma) linkWordToText(sourceTextKey,lemma);
+      if(sourceTextKey && lemma) linkWordToTextKey(sourceTextKey,lemma);
       addButton.textContent=sourceText?'✓ Добавлено к словам этого текста':'✓ Сохранено';
-      if(sourceTextKey) renderTextLinkedWords(sourceTextKey,true);
+      if(sourceText) renderTextLinkedWords(sourceText,true);
     });
   };
   render(translation,verb);
