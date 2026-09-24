@@ -6629,10 +6629,10 @@ function splitSentences(text){
   return String(text||'').match(/[^.!?]+[.!?]+|[^.!?]+$/g)?.map(x=>x.trim()).filter(Boolean) || [];
 }
 
-function speakSentenceList(sentences, rate=0.86){
+async function speakSentenceList(sentences, rate=0.86){
   if(!('speechSynthesis' in window)){ alert('Озвучка не поддерживается этим браузером.'); return; }
-  const voice=getSerbianVoice();
-  if(!voice){ alert('На этом устройстве не найден сербский голос. Включи сербский голос в настройках синтеза речи Android.'); return; }
+  const voice=await getSerbianVoiceReady();
+  if(!voice){ alert('На этом устройстве не найден сербский голос. Включи/установи сербский голос в настройках синтеза речи Android.'); return; }
   window.speechSynthesis.cancel(); let i=0;
   const next=()=>{ if(i>=sentences.length) return; const u=new SpeechSynthesisUtterance(sentences[i++]); u.voice=voice; u.lang=voice.lang||'sr-RS'; u.rate=rate; u.pitch=1; u.onend=()=>setTimeout(next,180); window.speechSynthesis.speak(u); }; next();
 }
@@ -6750,11 +6750,24 @@ function bindReaderWordInteractions(){
     btn.addEventListener('pointercancel',()=>cancelLongPress(btn));
     btn.addEventListener('touchstart',e=>{
       if(e.touches.length!==1)return;
+      const t=e.touches[0];
+      btn.__pressStartX=t.clientX;
+      btn.__pressStartY=t.clientY;
+      btn.__pressMoved=false;
       beginLongPress(btn);
     },{passive:true});
     btn.addEventListener('touchend',()=>cancelLongPress(btn),{passive:true});
     btn.addEventListener('touchcancel',()=>cancelLongPress(btn),{passive:true});
-    btn.addEventListener('touchmove',()=>cancelLongPress(btn),{passive:true});
+    btn.addEventListener('touchmove',e=>{
+      if(!e.touches.length)return;
+      const t=e.touches[0];
+      const dx=t.clientX-(btn.__pressStartX||t.clientX);
+      const dy=t.clientY-(btn.__pressStartY||t.clientY);
+      if(Math.hypot(dx,dy)>12){
+        btn.__pressMoved=true;
+        cancelLongPress(btn);
+      }
+    },{passive:true});
     btn.addEventListener('contextmenu',e=>e.preventDefault());
     btn.addEventListener('click',e=>{
       if(Date.now()<suppressWordClickUntil){e.preventDefault();e.stopPropagation();return;}
@@ -6767,22 +6780,42 @@ function bindReaderWordInteractions(){
   });
 }
 function getSerbianVoice(){
-  const voices=window.speechSynthesis.getVoices();
-  return voices.find(v=>/^sr(-|_)/i.test(v.lang)) || null;
+  if(!('speechSynthesis' in window)) return null;
+  const voices=window.speechSynthesis.getVoices()||[];
+  // Prefer Serbian (Latin) voices, then any Serbian voice. Never silently fall back to English.
+  return voices.find(v=>/^sr[-_]RS$/i.test(v.lang))
+      || voices.find(v=>/^sr[-_]Latn/i.test(v.lang))
+      || voices.find(v=>/^sr[-_]/i.test(v.lang))
+      || null;
+}
+function speechVoicesReady(){
+  return new Promise(resolve=>{
+    if(!('speechSynthesis' in window)){resolve([]);return;}
+    const ready=window.speechSynthesis.getVoices()||[];
+    if(ready.length){resolve(ready);return;}
+    let done=false;
+    const finish=()=>{if(done)return;done=true;window.speechSynthesis.removeEventListener?.('voiceschanged',finish);resolve(window.speechSynthesis.getVoices()||[]);};
+    window.speechSynthesis.addEventListener?.('voiceschanged',finish,{once:true});
+    setTimeout(finish,1200);
+  });
+}
+async function getSerbianVoiceReady(){
+  await speechVoicesReady();
+  return getSerbianVoice();
 }
 
-function speakWord(w){
+async function speakWord(w){
   if (!('speechSynthesis' in window)) {
     alert('Озвучка не поддерживается этим браузером.');
     return;
   }
-  window.speechSynthesis.cancel();
-  const voice=getSerbianVoice();
+  const voice=await getSerbianVoiceReady();
   if(!voice){
-    alert('На этом устройстве не найден сербский голос. Я не буду подставлять английский голос, чтобы не искажать произношение. Установи/включи сербский голос в настройках синтеза речи Android, после чего кнопка будет использовать именно его.');
+    alert('На этом устройстве не найден сербский голос. Включи/установи сербский голос в настройках синтеза речи Android. Английский голос использоваться не будет.');
     return;
   }
-  const u = new SpeechSynthesisUtterance(w);
+  window.speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(String(w||''));
   u.voice=voice;
   u.lang=voice.lang || 'sr-RS';
   u.rate=0.78;
@@ -6790,22 +6823,22 @@ function speakWord(w){
   window.speechSynthesis.speak(u);
 }
 
-function speakText(text){
+async function speakText(text){
   if (!('speechSynthesis' in window)) {
     alert('Озвучка не поддерживается этим браузером.');
     return;
   }
-  const voice=getSerbianVoice();
+  const voice=await getSerbianVoiceReady();
   if(!voice){
-    alert('На этом устройстве не найден сербский голос. Я не буду подставлять другой язык, чтобы не искажать произношение. Включи сербский голос в настройках синтеза речи Android.');
+    alert('На этом устройстве не найден сербский голос. Включи/установи сербский голос в настройках синтеза речи Android. Другой язык подставляться не будет.');
     return;
   }
   window.speechSynthesis.cancel();
-  const u = new SpeechSynthesisUtterance(text);
+  const u = new SpeechSynthesisUtterance(String(text||''));
   u.voice=voice;
-  u.lang = voice.lang || 'sr-RS';
-  u.rate = 0.88;
-  u.pitch = 1;
+  u.lang=voice.lang || 'sr-RS';
+  u.rate=0.88;
+  u.pitch=1;
   window.speechSynthesis.speak(u);
 }
 
