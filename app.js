@@ -5644,7 +5644,11 @@ function textSourceKey(text){
 function getTextLinkedWordsByKey(key){
   const k=normalize(String(key||''));
   if(!k) return [];
-  return Array.isArray(textWordLinks[k]) ? textWordLinks[k] : [];
+  const fromLinks=Array.isArray(textWordLinks[k]) ? textWordLinks[k] : [];
+  // Дублируем связь также внутри записи слова. Это делает привязку устойчивой
+  // даже если старое отдельное хранилище когда-нибудь будет очищено/повреждено.
+  const fromSaved=saved.filter(x=>Array.isArray(x?.textKeys) && x.textKeys.some(z=>normalize(String(z))===k)).map(x=>normalize(x.word)).filter(Boolean);
+  return [...new Set([...fromLinks,...fromSaved])];
 }
 function getTextLinkedWords(text){
   const key=textSourceKey(text);
@@ -5671,6 +5675,12 @@ function linkWordToTextKey(key, word){
     list.push(lemma);
     textWordLinks[k]=list;
     saveTextWordLinks();
+  }
+  // Постоянная связь записывается и в саму карточку слова.
+  const item=saved.find(x=>canonicalWord(x.word)===lemma || normalize(x.word)===lemma);
+  if(item){
+    item.textKeys=Array.isArray(item.textKeys)?item.textKeys.slice():[];
+    if(!item.textKeys.some(z=>normalize(String(z))===k)){ item.textKeys.push(k); save(); }
   }
   return true;
 }
@@ -5788,6 +5798,7 @@ function normalizeSavedWords(){
       prev.box=Math.max(Number(prev.box)||1,Number(y.box)||1);
       prev.nextReview=Math.min(Number(prev.nextReview)||Date.now(),Number(y.nextReview)||Date.now());
       prev.mistakes=Math.max(Number(prev.mistakes)||0,Number(y.mistakes)||0);
+      prev.textKeys=[...new Set([...(Array.isArray(prev.textKeys)?prev.textKeys:[]),...(Array.isArray(y.textKeys)?y.textKeys:[])])];
       changed=true;
     }
   });
@@ -6855,12 +6866,14 @@ function renderTextLinkedWords(text, open=false){
     const tr=item?.translation || getTranslation(w);
     return `<div class="text-word-row"><span><b>${escapeHtml(w)}</b><span class="muted"> — ${escapeHtml(tr||'Перевод пока не добавлен')}</span></span><button type="button" class="small text-word-speak" data-word="${escapeHtml(w)}">🔊</button></div>`;
   }).join('');
-  panel.innerHTML=`<div class="text-linked-head"><b>Слова этого текста: ${linked.length}</b><button type="button" id="repeat-text-words">🔁 Повторить эти слова</button></div><div class="text-word-list">${rows}</div><p class="muted small-note">Эта подборка хранится отдельно от интервального прогресса «Моих слов» и остаётся за текстом.</p>`;
+  panel.innerHTML=`<div class="text-linked-head"><b>Слова этого текста: ${linked.length}</b></div><div class="vocab-actions text-linked-training-actions"><button type="button" id="repeat-text-sr-ru">🎯 Сербский → русский</button><button type="button" id="repeat-text-ru-sr">🎯 Русский → сербский</button></div><div class="text-word-list">${rows}</div><p class="muted small-note">Эта подборка хранится отдельно от интервального прогресса «Моих слов» и остаётся за текстом.</p>`;
   panel.classList.toggle('hide', !open);
-  $('repeat-text-words')?.addEventListener('click',()=>startTextLinkedTraining(text));
+  $('repeat-text-sr-ru')?.addEventListener('click',()=>startTextLinkedTraining(text,'sr-ru'));
+  $('repeat-text-ru-sr')?.addEventListener('click',()=>startTextLinkedTraining(text,'ru-sr'));
   panel.querySelectorAll('.text-word-speak').forEach(b=>b.addEventListener('click',()=>speakWord(b.dataset.word)));
 }
 function startTextLinkedTraining(text, mode='sr-ru'){
+  window.__citajTextTrainingReturnText = text;
   const linked=getTextLinkedWords(text);
   const pool=linked.map(w=>{
     const item=saved.find(x=>canonicalWord(x.word)===canonicalWord(w));
@@ -7122,8 +7135,7 @@ async function word(w, context={} ){
     if(addButton && !(sourceText && linked)) addButton.addEventListener('click',async()=>{
       // Ключ текста фиксируем ДО любых сетевых операций. Связь должна
       // сохраняться даже если лемматизация или перевод недоступны.
-      if(sourceTextKey) linkWordToTextKey(sourceTextKey,w);
-      const lemma=await addWord(w);
+      const lemma=await addWord(w,sourceTextKey);
       if(sourceTextKey && lemma) linkWordToTextKey(sourceTextKey,lemma);
       addButton.textContent=sourceText?'✓ Добавлено к словам этого текста':'✓ Сохранено';
       if(sourceText){
@@ -7189,7 +7201,7 @@ function mergeSavedWord(oldWord,newWord){
     keep.box=Math.max(Number(keep.box)||1,Number(saved[i].box)||1); keep.nextReview=Math.min(Number(keep.nextReview)||Date.now(),Number(saved[i].nextReview)||Date.now()); keep.mistakes=Math.max(Number(keep.mistakes)||0,Number(saved[i].mistakes)||0); saved.splice(i,1);
   }}
 }
-async function addWord(w){
+async function addWord(w, textKey=''){
   const source=normalize(w);
   const localLemma=canonicalWord(source)||source;
   if(!localLemma) return '';
@@ -7198,10 +7210,18 @@ async function addWord(w){
   // Раньше ожидание remoteLemmaInfo() могло задерживать/ломать кнопку «Добавить
   // в мои слова» на телефоне, если внешний API отвечал медленно или не отвечал.
   let lemma=localLemma;
-  if(!saved.some(x=>canonicalWord(x.word)===lemma || normalize(x.word)===lemma)){
-    saved.push({word:lemma,translation:getTranslation(lemma),added:new Date().toISOString(),box:1,nextReview:Date.now(),mistakes:0,hard:false});
+  let item=saved.find(x=>canonicalWord(x.word)===lemma || normalize(x.word)===lemma);
+  if(!item){
+    item={word:lemma,translation:getTranslation(lemma),added:new Date().toISOString(),box:1,nextReview:Date.now(),mistakes:0,hard:false,textKeys:[]};
+    saved.push(item);
+  }
+  if(textKey){
+    item.textKeys=Array.isArray(item.textKeys)?item.textKeys.slice():[];
+    const k=normalize(String(textKey));
+    if(k && !item.textKeys.some(z=>normalize(String(z))===k)) item.textKeys.push(k);
   }
   save();
+  if(textKey) linkWordToTextKey(textKey, lemma);
 
   // Уточнение леммы выполняем после сохранения и не блокируем пользователя.
   // Если сеть недоступна, локально сохранённое слово всё равно остаётся.
@@ -7510,8 +7530,12 @@ function startExercise(type){
 
 function renderExercise(){
   if (exerciseIndex >= exerciseQueue.length) {
-    $('review-content').innerHTML = `<div class="card"><h2>Тренировка закончена 🎉</h2><p>Ты прошёл ${exerciseQueue.length} заданий.</p><button type="button" id="exercise-finish">Вернуться к моим словам</button></div>`;
-    $('exercise-finish').addEventListener('click', () => { exercisePool=null; words(); });
+    $('review-content').innerHTML = `<div class="card"><h2>Тренировка закончена 🎉</h2><p>Ты прошёл ${exerciseQueue.length} заданий.</p><button type="button" id="exercise-finish">📚 Вернуться к словам этого текста</button></div>`;
+    $('exercise-finish').addEventListener('click', () => {
+      exercisePool=null;
+      const t=window.__citajTextTrainingReturnText;
+      if(t){ view('reader'); renderTextLinkedWords(t,true); } else { words(); }
+    });
     return;
   }
   const item = (exercisePool || saved).find(x => x.word === exerciseQueue[exerciseIndex]);
