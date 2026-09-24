@@ -7723,11 +7723,10 @@ document.addEventListener("click", event => {
     return;
   }
 
-  const wordButton = event.target.closest(".word");
-  if (wordButton) {
-    word(wordButton.dataset.word);
-    return;
-  }
+  // Слова в читалке обрабатываются bindReaderWordInteractions().
+  // Не вызываем word() здесь повторно: второй вызов без context стирал
+  // sourceText/sourceTextKey и из-за этого слово сохранялось только в
+  // «Мои слова», без привязки к текущему тексту.
 
   const removeButton = event.target.closest(".remove-word");
   if (removeButton) {
