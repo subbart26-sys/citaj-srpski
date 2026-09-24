@@ -6564,7 +6564,7 @@ function tenses(){
     <p class="muted">Сначала выбери упражнение, затем режим глаголов. После этого можно переключать время: настоящее, прошедшее или будущее.</p>
     <div class="card"><h3>Выбор упражнения</h3><div class="training-buttons tense-levels"><button type="button" class="tense-level ${tenseLevel===1?'active':''}" data-level="1">1 · Форма / пропуск</button><button type="button" class="tense-level ${tenseLevel===2?'active':''}" data-level="2">2 · По словам</button></div></div>
     ${tenseVerbPicker()}
-    <div class="card tense-gender-picker"><h3>Род в Perfekt</h3><p class="muted">Для прошедшего времени выберите нужную форму причастия.</p><div class="training-buttons">${TENSE_GENDER_OPTIONS.map(g=>`<button type="button" class="tense-gender ${tenseGender===g.id?'active':''}" data-gender="${g.id}">${g.label}</button>`).join('')}</div></div>
+    ${tenseMode==='past'?`<div class="card tense-gender-picker"><h3>Род в Perfekt</h3><p class="muted">Выбор рода нужен только для Perfekt: он определяет форму причастия.</p><div class="training-buttons">${TENSE_GENDER_OPTIONS.map(g=>`<button type="button" class="tense-gender ${tenseGender===g.id?'active':''}" data-gender="${g.id}">${g.label}</button>`).join('')}</div></div>`:''}
     <button type="button" id="tense-mixed-toggle" class="tense-mixed-toggle card ${tenseMixed?'active':''}"><span class="tense-mixed-icon">🔀</span><span><b>Смешение глаголов</b><small>${tenseMixed?'Включено — глаголы будут чередоваться':'Выключено — работаем с одним выбранным глаголом'}</small></span><span>${tenseMixed?'✓':'○'}</span></button>
     <div class="training-buttons tense-tabs">${TENSE_MODES.map(m=>`<button type="button" class="tense-tab ${m.id===tenseMode?'active':''}" data-tense="${m.id}">${m.title.split(' — ')[0]}</button>`).join('')}</div>
     <div id="tense-instruction">${tenseInstruction(tenseMode)}</div>
@@ -6579,7 +6579,7 @@ function tenses(){
     document.querySelectorAll('.tense-gender').forEach(x=>x.classList.toggle('active',x.dataset.gender===tenseGender));
   }));
   document.querySelectorAll('.tense-verb').forEach(b=>b.addEventListener('click',()=>{tenseVerb=b.dataset.verb;tenseMixed=false;tenseVerbPickerOpen=false;tenseIndex=0;tenseScore=0;tenses();}));
-  document.querySelectorAll('.tense-tab').forEach(b=>b.addEventListener('click',()=>{tenseMode=b.dataset.tense;tenseIndex=0;tenseScore=0;$('tense-instruction').innerHTML=tenseInstruction(tenseMode);renderTenseExercise();}));
+  document.querySelectorAll('.tense-tab').forEach(b=>b.addEventListener('click',()=>{tenseMode=b.dataset.tense;tenseIndex=0;tenseScore=0;tenses();}));
   document.querySelectorAll('.tense-level').forEach(b=>b.addEventListener('click',()=>{tenseLevel=Number(b.dataset.level);tenseIndex=0;tenseScore=0;document.querySelectorAll('.tense-level').forEach(x=>x.classList.toggle('active',Number(x.dataset.level)===tenseLevel));renderTenseExercise();}));
 }
 function renderTenseExercise(){
@@ -6604,7 +6604,7 @@ function tenseConstruction(item){
   return {display:`<span class="tense-blank" data-slot="0">_____</span> ${escapeHtml(s.time)}.`,correct:[futureSimpleForm(v,p)],options:[allFutureSimpleOptions(v,p)]};
 }
 function allAuxOptions(mode,p){const answer=mode==='past'?TENSE_PERSONS[p].auxPast:TENSE_PERSONS[p].auxFuture;const pool=TENSE_PERSONS.map(x=>mode==='past'?x.auxPast:x.auxFuture);return uniqueTenseOptions(answer,pool,4)}
-function allParticipleOptions(v,p){const answer=v.past[p],pool=TENSE_PERSONS.map((_,i)=>v.past[i]);return uniqueTenseOptions(answer,pool,4)}
+function allParticipleOptions(v,p){const answer=tensePastForm(v,p),pool=TENSE_PERSONS.map((_,i)=>tensePastForm(v,i));return uniqueTenseOptions(answer,pool,4)}
 function futureSimpleForm(v,pi){
   const aux=TENSE_PERSONS[pi].auxFuture;
   const inf=v.futureInf;
@@ -6732,15 +6732,19 @@ function vocab(){
   }));
 }
 
-function texts(){
+function texts(filterLevel="all"){
   // Краеведческие материалы о Суботице находятся только в разделе «Краеведение».
   // В «Текстах» показываем учебную библиотеку A1/A2 и исторические оригиналы.
-  const local=TEXTS.filter(t=>!t.level.includes('Исторический') && t.category!=='subotica');
+  const allLocal=TEXTS.filter(t=>!t.level.includes('Исторический') && t.category!=='subotica');
   const historical=TEXTS.filter(t=>t.level.includes('Исторический'));
+  const local=filterLevel==='A1' ? allLocal.filter(t=>/^A1(?:\b|[ ·–-])/i.test(String(t.level)))
+    : filterLevel==='A2B1' ? allLocal.filter(t=>/A2|B1/i.test(String(t.level)))
+    : allLocal;
   const card=t=>{const i=TEXTS.indexOf(t),n=splitSentences(t.text).length;return `<div class="card"><div class="tag">${t.level}</div><h3>${t.title}</h3><p>${t.ru}</p><p class="muted">Большой учебный текст · ${n} предложений</p><button type="button" class="read-text" data-index="${i}">📖 Читать на сайте</button></div>`};
   const hcard=t=>{const i=TEXTS.indexOf(t),n=splitSentences(t.text).length;return `<div class="card real-source-card"><div class="tag">${t.level}</div><h3>${t.title}</h3><p>${t.ru}</p><p class="muted"><b>${n} предложений.</b> Полный оригинальный текст встроен в сайт.</p><p class="source">${t.source}</p><div class="vocab-actions"><button type="button" class="read-text" data-index="${i}">📖 Читать оригинал</button><a class="source-link" href="${t.url}" target="_blank" rel="noopener">Первоисточник ↗</a></div></div>`};
-  $('list').innerHTML=`<div class="card library-summary"><h3>Библиотека</h3><p>На сайте сейчас <b>${local.length} учебных текстов</b> и <b>${historical.length} исторических оригиналов</b>.</p><p class="muted">Материалы о Суботице находятся отдельно в разделе «🏙 Краеведение».</p><div class="library-filters"><button type="button" class="library-filter active" data-filter="all">Все</button><button type="button" class="library-filter" data-filter="A1">A1</button><button type="button" class="library-filter" data-filter="A2">A2</button><button type="button" class="library-filter" data-filter="Исторический">Исторические</button></div></div><h3 class="library-heading">📚 Учебные тексты A1/A2</h3><div id="library-local">${local.map(card).join('')}</div><h3 class="library-heading">📜 Исторические оригинальные тексты</h3><p class="muted">Эти произведения встроены локально и открываются прямо в режиме чтения.</p><div id="library-historical">${historical.map(hcard).join('')}</div>`;
-  document.querySelectorAll('.library-filter').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.library-filter').forEach(x=>x.classList.remove('active'));btn.classList.add('active');const f=btn.dataset.filter;document.querySelectorAll('#library-local .card').forEach(c=>c.style.display=(f==='all'||c.querySelector('.tag')?.textContent.includes(f))?'':'none');document.querySelector('#library-historical').style.display=(f==='all'||f==='Исторический')?'':'none';}));
+  const filterLabel=filterLevel==='A1'?'A1':filterLevel==='A2B1'?'A2–B1':'Все';
+  $('list').innerHTML=`<div class="card library-summary"><h3>Библиотека${filterLevel!=='all'?' — '+filterLabel:''}</h3><p>В этом представлении <b>${local.length} учебных текстов</b>${filterLevel==='all'?` и <b>${historical.length} исторических оригиналов</b>`:''}.</p><p class="muted">Материалы о Суботице находятся отдельно в разделе «🏙 Краеведение».</p><div class="library-filters"><button type="button" class="library-filter ${filterLevel==='all'?'active':''}" data-filter="all">Все</button><button type="button" class="library-filter ${filterLevel==='A1'?'active':''}" data-filter="A1">A1</button><button type="button" class="library-filter ${filterLevel==='A2B1'?'active':''}" data-filter="A2B1">A2–B1</button><button type="button" class="library-filter ${filterLevel==='Исторический'?'active':''}" data-filter="Исторический">Исторические</button></div></div><h3 class="library-heading">📚 Учебные тексты A1/A2–B1</h3><div id="library-local">${local.map(card).join('')}</div><h3 class="library-heading">📜 Исторические оригинальные тексты</h3><p class="muted">Эти произведения встроены локально и открываются прямо в режиме чтения.</p><div id="library-historical" style="${filterLevel==='all'?'':'display:none'}">${historical.map(hcard).join('')}</div>`;
+  document.querySelectorAll('.library-filter').forEach(btn=>btn.addEventListener('click',()=>{const f=btn.dataset.filter; if(f==='all') texts('all'); else if(f==='A1') texts('A1'); else if(f==='A2B1') texts('A2B1'); else { $('list').querySelectorAll('.library-filter').forEach(x=>x.classList.remove('active')); btn.classList.add('active'); document.querySelector('#library-local').innerHTML=''; document.querySelector('#library-historical').style.display=''; } }));
 }
 
 function openRealSource(i){
@@ -7563,7 +7567,7 @@ document.addEventListener("click", event => {
   const nav = event.target.closest("[data-v]");
   if (nav) {
     const v = nav.dataset.v;
-    if (v === "texts") texts();
+    if (v === "texts") texts(nav.dataset.textFilter || "all");
     if (v === "vocab") vocab();
     if (v === "words") words();
     if (v === "training") training(); if (v === "tenses") tenses(); if (v === "subotica") subotica();
