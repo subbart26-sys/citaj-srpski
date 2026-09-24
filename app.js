@@ -6798,13 +6798,10 @@ async function speakSentenceList(sentences, rate=0.86){
 
 function readerSentenceControls(text){
   return `<div class="reader-audio card">
-    <div class="vocab-actions">
-      <button type="button" id="speak-full-text">🔊 Озвучить весь текст</button>
-      <button type="button" id="speak-sentences">▶ Озвучить по предложениям</button>
-      <button type="button" id="speak-slow">🐢 Медленно</button>
-      <button type="button" id="stop-speech">⏹ Остановить</button>
-      <button type="button" id="text-training">🎯 Тренировать слова этого текста</button>
+    <div class="vocab-actions text-word-tools">
       <button type="button" id="text-linked-words">📚 Слова этого текста</button>
+      <button type="button" id="text-training-sr-ru">🎯 Сербский → русский</button>
+      <button type="button" id="text-training-ru-sr">🎯 Русский → сербский</button>
     </div>
     <div id="text-linked-words-panel" class="text-linked-words-panel"></div>
     <p class="muted small-note">Короткое нажатие на слово — перевод. Нажатие с удержанием на двух словах — словосочетание.</p>
@@ -6831,14 +6828,19 @@ function renderTextLinkedWords(text, open=false){
   $('repeat-text-words')?.addEventListener('click',()=>startTextLinkedTraining(text));
   panel.querySelectorAll('.text-word-speak').forEach(b=>b.addEventListener('click',()=>speakWord(b.dataset.word)));
 }
-function startTextLinkedTraining(text){
+function startTextLinkedTraining(text, mode='sr-ru'){
   const linked=getTextLinkedWords(text);
   const pool=linked.map(w=>{
     const item=saved.find(x=>canonicalWord(x.word)===canonicalWord(w));
     return item ? {...item} : {word:w,translation:getTranslation(w),box:1,nextReview:Date.now(),mistakes:0,hard:false};
   }).filter(x=>x.translation && x.translation!=='Перевод пока не добавлен' && x.translation!=='Перевод загружается…');
   if(pool.length<1){alert('В этом тексте пока нет слов с доступным переводом для повторения.');return;}
-  exerciseType='choice'; exercisePool=pool; exerciseQueue=shuffle(pool).slice(0,Math.min(20,pool.length)).map(x=>x.word); exerciseIndex=0; renderExercise(); view('review');
+  exerciseType=mode==='ru-sr'?'reverse':'choice';
+  exercisePool=pool;
+  exerciseQueue=shuffle(pool).slice(0,Math.min(20,pool.length)).map(x=>x.word);
+  exerciseIndex=0;
+  renderExercise();
+  view('review');
 }
 
 function renderText(text){
@@ -6880,11 +6882,8 @@ function openText(i){
   $("popup").classList.add("hide");
   $("text").closest('.card')?.insertAdjacentHTML('afterend', readerSentenceControls(t.text));
   $("popup").insertAdjacentHTML('afterend','<div id="phrase-help" class="phrase-help hide">Первое слово выбрано. Теперь нажми и удерживай второе слово в том же предложении.</div>');
-  $("speak-full-text").addEventListener("click",()=>speakText(t.text));
-  $("speak-sentences").addEventListener("click",()=>speakSentenceList(splitSentences(t.text),0.86));
-  $("speak-slow").addEventListener("click",()=>speakSentenceList(splitSentences(t.text),0.62));
-  $("stop-speech").addEventListener("click",()=>window.speechSynthesis?.cancel());
-  $("text-training").addEventListener("click",()=>startTextTraining(t.text));
+  $("text-training-sr-ru").addEventListener("click",()=>startTextLinkedTraining(t,'sr-ru'));
+  $("text-training-ru-sr").addEventListener("click",()=>startTextLinkedTraining(t,'ru-sr'));
   $("text-linked-words").addEventListener("click",()=>{
     const panel=$('text-linked-words-panel');
     const shouldOpen=panel.classList.contains('hide');
@@ -7147,22 +7146,29 @@ function mergeSavedWord(oldWord,newWord){
   }}
 }
 async function addWord(w){
-  const source=normalize(w), localLemma=canonicalWord(source);
-  // Сначала пытаемся получить настоящую лемму морфологическим анализом.
-  // Если сеть недоступна, безопасная локальная карта остаётся резервом.
+  const source=normalize(w);
+  const localLemma=canonicalWord(source)||source;
+  if(!localLemma) return '';
+
+  // Сохраняем слово СРАЗУ, не ставя добавление в зависимость от сети.
+  // Раньше ожидание remoteLemmaInfo() могло задерживать/ломать кнопку «Добавить
+  // в мои слова» на телефоне, если внешний API отвечал медленно или не отвечал.
   let lemma=localLemma;
-  try{
-    const remote=await remoteLemmaInfo(source);
-    if(remote?.lemma) lemma=normalize(remote.lemma);
-  }catch(e){}
-  if(!lemma) lemma=localLemma;
   if(!saved.some(x=>canonicalWord(x.word)===lemma || normalize(x.word)===lemma)){
     saved.push({word:lemma,translation:getTranslation(lemma),added:new Date().toISOString(),box:1,nextReview:Date.now(),mistakes:0,hard:false});
-  } else {
-    // Если такая лемма уже была сохранена под словоформой, приводим её к одной форме.
-    mergeSavedWord(source,lemma);
   }
   save();
+
+  // Уточнение леммы выполняем после сохранения и не блокируем пользователя.
+  // Если сеть недоступна, локально сохранённое слово всё равно остаётся.
+  remoteLemmaInfo(source).then(remote=>{
+    const remoteLemma=normalize(remote?.lemma||'');
+    if(remoteLemma && remoteLemma!==lemma){
+      mergeSavedWord(source,remoteLemma);
+      save();
+    }
+  }).catch(()=>{});
+
   return lemma;
 }
 
