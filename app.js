@@ -5628,7 +5628,12 @@ try {
   textWordLinks = parsedTextWords && typeof parsedTextWords === 'object' && !Array.isArray(parsedTextWords) ? parsedTextWords : {};
 } catch(e) { textWordLinks = {}; }
 function saveTextWordLinks(){ try{ localStorage.setItem(TEXT_WORDS_KEY, JSON.stringify(textWordLinks)); }catch(e){} }
-function textSourceKey(text){ return normalize(String(text?.title||'')); }
+function textSourceKey(text){
+  // Ключ всегда строится одинаково: из названия текста. Принимаем и объект
+  // текста, и строку с названием, чтобы привязка не зависела от места вызова.
+  if(typeof text==='string') return normalize(text);
+  return normalize(String(text?.title||''));
+}
 function getTextLinkedWords(text){
   const key=textSourceKey(text);
   return Array.isArray(textWordLinks[key]) ? textWordLinks[key] : [];
@@ -5640,8 +5645,12 @@ function isWordLinkedToText(text, word){
 function linkWordToText(text, word){
   const key=textSourceKey(text); if(!key)return;
   const lemma=canonicalWord(word)||normalize(word); if(!lemma)return;
-  const list=getTextLinkedWords(text);
-  if(!list.some(x=>canonicalWord(x)===canonicalWord(lemma))){ list.push(lemma); textWordLinks[key]=list; saveTextWordLinks(); }
+  const list=getTextLinkedWords(text).slice();
+  if(!list.some(x=>canonicalWord(x)===canonicalWord(lemma))){
+    list.push(lemma);
+    textWordLinks[key]=list;
+    saveTextWordLinks();
+  }
 }
 function unlinkWordFromText(text, word){
   const key=textSourceKey(text); const list=getTextLinkedWords(text);
@@ -7082,6 +7091,9 @@ async function word(w, context={} ){
     $('speak-word').addEventListener('click',()=>speakWord(w));
     const addButton=$('add-word-button');
     if(addButton && !(sourceText && linked)) addButton.addEventListener('click',async()=>{
+      // Сначала фиксируем связь именно с этим текстом. Она независима от
+      // общей базы и не должна зависеть от результата лемматизации.
+      if(sourceText) linkWordToText(sourceText,w);
       const lemma=await addWord(w);
       if(sourceText && lemma) linkWordToText(sourceText,lemma);
       addButton.textContent=sourceText?'✓ Добавлено к словам этого текста':'✓ Сохранено';
