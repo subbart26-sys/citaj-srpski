@@ -5629,31 +5629,40 @@ try {
 } catch(e) { textWordLinks = {}; }
 function saveTextWordLinks(){ try{ localStorage.setItem(TEXT_WORDS_KEY, JSON.stringify(textWordLinks)); }catch(e){} }
 function textSourceKey(text){
-  // Ключ всегда строится одинаково: из названия текста. Принимаем и объект
-  // текста, и строку с названием, чтобы привязка не зависела от места вызова.
+  // Один и тот же ключ используется во всех местах: при открытии текста,
+  // при клике по слову и при отображении списка. Это критично для постоянной
+  // привязки слов к конкретному тексту.
   if(typeof text==='string') return normalize(text);
+  const id=normalize(String(text?.id||''));
+  if(id) return `id:${id}`;
   return normalize(String(text?.title||''));
 }
 function getTextLinkedWords(text){
   const key=textSourceKey(text);
   return Array.isArray(textWordLinks[key]) ? textWordLinks[key] : [];
 }
+function getTextLinkedWordsByKey(key){
+  const k=normalize(String(key||''));
+  return Array.isArray(textWordLinks[k]) ? textWordLinks[k] : [];
+}
 function isWordLinkedToText(text, word){
   const n=normalize(word);
   return getTextLinkedWords(text).some(x=>normalize(x)===n || canonicalWord(x)===canonicalWord(n));
 }
 function linkWordToText(text, word){
-  const key=textSourceKey(text); if(!key)return;
-  const lemma=canonicalWord(word)||normalize(word); if(!lemma)return;
-  const list=getTextLinkedWords(text).slice();
-  if(!list.some(x=>canonicalWord(x)===canonicalWord(lemma))){
+  const key=textSourceKey(text); if(!key)return false;
+  const surface=normalize(word);
+  const lemma=canonicalWord(surface)||surface; if(!lemma)return false;
+  const list=getTextLinkedWordsByKey(key).slice();
+  if(!list.some(x=>normalize(x)===lemma || canonicalWord(x)===lemma)){
     list.push(lemma);
     textWordLinks[key]=list;
     saveTextWordLinks();
   }
+  return true;
 }
 function unlinkWordFromText(text, word){
-  const key=textSourceKey(text); const list=getTextLinkedWords(text);
+  const key=textSourceKey(text); const list=getTextLinkedWordsByKey(key);
   textWordLinks[key]=list.filter(x=>canonicalWord(x)!==canonicalWord(word)); saveTextWordLinks();
 }
 try {
@@ -6852,7 +6861,7 @@ function startTextLinkedTraining(text, mode='sr-ru'){
   view('review');
 }
 
-function renderText(text){
+function renderText(text,textKey=''){
   const raw=String(text||'');
   if(!raw) return '<p class="muted">Текст пока не найден.</p>';
   // Отдельно выделяем слова и пунктуацию. Знак препинания никогда не попадает
@@ -6864,7 +6873,7 @@ function renderText(text){
     if(/^\s+$/.test(part)) return part;
     if(/^[\p{L}\p{M}\p{N}]+(?:['’][\p{L}\p{M}\p{N}]+)?$/u.test(part)){
       const clean=normalize(part);
-      return `<button type="button" class="word" data-word="${escapeHtml(clean)}" data-word-index="${wordIndex++}" data-sentence-index="${sentenceIndex}">${escapeHtml(part)}</button>`;
+      return `<button type="button" class="word" data-word="${escapeHtml(clean)}" data-word-index="${wordIndex++}" data-sentence-index="${sentenceIndex}" data-text-key="${escapeHtml(textKey)}">${escapeHtml(part)}</button>`;
     }
     const punct=escapeHtml(part);
     const closesSentence=/[.!?]/.test(part);
@@ -6884,8 +6893,9 @@ function openText(i){
   // кликабельные элементы; если браузер встретит неожиданные данные,
   // чтение всё равно не пропадёт целиком.
   const plain=String(t.text||'');
+  const currentTextKey=textSourceKey(t);
   textEl.textContent=plain;
-  try{ textEl.innerHTML=renderText(plain); }
+  try{ textEl.innerHTML=renderText(plain,currentTextKey); }
   catch(err){ console.error('renderText error',err); textEl.textContent=plain; }
   document.querySelectorAll('.reader-audio').forEach(x=>x.remove());
   $("popup").classList.add("hide");
@@ -6981,7 +6991,8 @@ function bindReaderWordInteractions(){
         wordIndex:btn.dataset.wordIndex,
         sentenceIndex:btn.dataset.sentenceIndex,
         sentence:[...document.querySelectorAll('.word[data-sentence-index="'+btn.dataset.sentenceIndex+'"]')].map(x=>x.textContent.trim()).join(' '),
-        sourceText: window.__citajCurrentText || null
+        sourceText: window.__citajCurrentText || null,
+        textKey: btn.dataset.textKey || textSourceKey(window.__citajCurrentText || '')
       });
     });
   });
@@ -7079,7 +7090,8 @@ async function word(w, context={} ){
   const canonical=canonicalWord(w);
   const exists=saved.some(x=>canonicalWord(x.word)===canonical);
   const sourceText=context.sourceText || null;
-  const linked=sourceText ? isWordLinkedToText(sourceText,w) : false;
+  const sourceTextKey=context.textKey || (sourceText ? textSourceKey(sourceText) : '');
+  const linked=sourceTextKey ? getTextLinkedWordsByKey(sourceTextKey).some(x=>normalize(x)===normalize(w)||canonicalWord(x)===canonicalWord(w)) : false;
   let verb=findVerbInfo(w);
   const render=(tr,v=verb)=>{
     if(requestId!==translationRequestId)return;
@@ -7091,13 +7103,13 @@ async function word(w, context={} ){
     $('speak-word').addEventListener('click',()=>speakWord(w));
     const addButton=$('add-word-button');
     if(addButton && !(sourceText && linked)) addButton.addEventListener('click',async()=>{
-      // Сначала фиксируем связь именно с этим текстом. Она независима от
-      // общей базы и не должна зависеть от результата лемматизации.
-      if(sourceText) linkWordToText(sourceText,w);
+      // Ключ текста фиксируем ДО любых сетевых операций. Связь должна
+      // сохраняться даже если лемматизация или перевод недоступны.
+      if(sourceTextKey) linkWordToText(sourceTextKey,w);
       const lemma=await addWord(w);
-      if(sourceText && lemma) linkWordToText(sourceText,lemma);
+      if(sourceTextKey && lemma) linkWordToText(sourceTextKey,lemma);
       addButton.textContent=sourceText?'✓ Добавлено к словам этого текста':'✓ Сохранено';
-      if(sourceText) renderTextLinkedWords(sourceText,true);
+      if(sourceTextKey) renderTextLinkedWords(sourceTextKey,true);
     });
   };
   render(translation,verb);
@@ -7300,14 +7312,26 @@ let sentenceSessionStats={total:0,correct:0,wrong:0,hints:0,skipped:0};
 function loadSentenceSourceStats(){try{return JSON.parse(localStorage.getItem(SENTENCE_SOURCE_STATS_KEY)||'{}')||{};}catch(e){return {};}}
 let sentenceSourceStats=loadSentenceSourceStats();
 function saveSentenceSourceStats(){try{localStorage.setItem(SENTENCE_SOURCE_STATS_KEY,JSON.stringify(sentenceSourceStats));}catch(e){}}
-function sentenceTokens(sr){return String(sr||'').trim().split(/\s+/).filter(Boolean);}
-function sentenceCleanToken(token){return String(token||'').toLowerCase().replace(/^[^a-zčćđšž]+|[^a-zčćđšž]+$/gi,'');}
+function sentenceTokens(sr){
+  return String(sr||'').trim().split(/\s+/).map(sentenceCleanToken).filter(Boolean);
+}
+function sentenceCleanToken(token){
+  return String(token||'').toLowerCase().replace(/^[^a-zčćđšž]+|[^a-zčćđšž]+$/gi,'');
+}
+function sentenceForAssembly(sr){
+  return sentenceTokens(sr).join(' ');
+}
 function sourceSentenceItems(){
   const out=[];
   TEXTS.forEach((t,ti)=>{
     splitSentences(String(t.text||'')).forEach((sr,i)=>{
-      const clean=String(sr).trim();
-      if(!clean)return;
+      const raw=String(sr).trim();
+      if(!raw)return;
+      // Предложения с цифрами не подходят для сборки: они дают лишние
+      // элементы вроде «6.» и делают ответ угадываемым. Такие предложения
+      // полностью исключаем из этого тренажёра.
+      if(/\d/.test(raw))return;
+      const clean=sentenceForAssembly(raw);
       const wc=sentenceTokens(clean).length;
       if(wc<5 || wc>10)return;
       out.push({id:`src-${ti}-${i}`,source:t.title,sr:clean,number:i+1,level:t.level,wordCount:wc});
