@@ -64,3 +64,10 @@ v33: mobile-safe long-press phrase selection, punctuation outside word buttons, 
 - При выборе словосочетания конечная точка/запятая/вопросительный знак больше не должны попадать в сохраняемую фразу.
 - Исправлена пунктуационная ошибка в заголовке краеведческого текста о Суботицкой синагоге.
 - Основной рендер текста, навигация, личные слова, тематические блоки, тренировки и озвучка не переписывались.
+
+
+## v52
+- Added compact 🔀 Смешение глаголов mode to tense trainer.
+- Mixed mode uses all 20 trainer verbs once per round and random persons, while keeping the selected single-verb mode.
+- Level 2 future options are generated only from the current item's verb.
+- Save-word flow now asks the morphological lemma service before saving, with local safe lemma fallback.

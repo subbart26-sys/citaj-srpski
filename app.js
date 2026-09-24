@@ -5522,7 +5522,8 @@ const SAFE_LEMMA_MAP = {
   'stare':'stari','starih':'stari','starim':'stari','stara':'stari',
   'nove':'nov','novih':'nov','novim':'nov','nova':'nov',
   'svoje':'svoj','svoju':'svoj','svojim':'svoj','svojih':'svoj','svoja':'svoj',
-  'kuće':'kuća','kući':'kuća','kućom':'kuća','kuću':'kuća',
+  'kuće':'kuća','kući':'kuća','kućom':'kuća','kuću':'kuća','kućama':'kuća','kućama':'kuća',
+  'kuci':'kuća','kucu':'kuća','kucom':'kuća',
   'ljudi':'čovek','ljudima':'čovek','ljude':'čovek',
   'dana':'dan','dani':'dan','danom':'dan','dane':'dan',
   'putevi':'put','puteva':'put','putem':'put','putu':'put',
@@ -6317,7 +6318,7 @@ const TENSE_MODES = [
   {id:'past',title:'Прошедшее — Perfekt',short:'Что уже произошло.',formula:'sam / si / je / smo / ste / su + причастие',note:'Например: Ja sam radio. Mi smo radili. Пока используются мужские формы причастия.'},
   {id:'future',title:'Будущее — Futur I',short:'Что произойдёт позже.',formula:'ću / ćeš / će / ćemo / ćete / će + infinitiv',note:'Ja ću raditi. Ti ćeš raditi. Mi ćemo raditi.'}
 ];
-let tenseMode='present', tenseLevel=1, tenseVerb='raditi', tenseItems=[], tenseIndex=0, tenseScore=0;
+let tenseMode='present', tenseLevel=1, tenseVerb='raditi', tenseMixed=false, tenseItems=[], tenseIndex=0, tenseScore=0;
 function selectedTenseVerb(){return TENSE_VERBS.find(v=>v.inf===tenseVerb)||TENSE_VERBS[0]}
 function tenseOptionForm(v,pi,mode){
   const p=TENSE_PERSONS[pi];
@@ -6364,10 +6365,17 @@ function allFormOptions(v,pi,mode){
   return uniqueTenseOptions(answer,pool,4);
 }
 function tenseMakeItems(mode,level){
-  const v=selectedTenseVerb(), out=[];
-  TENSE_PERSONS.forEach((person,pi)=>{
-    const sentence=tenseSentenceData(v,pi,mode);
-    out.push({type:'form',prompt:`${person.p} + ${v.inf}`,answer:tenseOptionForm(v,pi,mode),ru:v.ru,verb:v.inf,pi,sentence});
+  const out=[];
+  // Обычный режим: шесть вопросов по одному выбранному глаголу.
+  // Смешение: 20 вопросов, по одному на каждый глагол базы, чтобы в раунде
+  // действительно чередовались разные глаголы, а не повторялся один и тот же.
+  const queue = tenseMixed ? shuffle(TENSE_VERBS.slice()) : [selectedTenseVerb()];
+  queue.forEach((v,vi)=>{
+    const persons = tenseMixed ? [Math.floor(Math.random()*TENSE_PERSONS.length)] : TENSE_PERSONS.map((_,i)=>i);
+    persons.forEach(pi=>{
+      const person=TENSE_PERSONS[pi], sentence=tenseSentenceData(v,pi,mode);
+      out.push({type:'form',prompt:`${person.p} + ${v.inf}`,answer:tenseOptionForm(v,pi,mode),ru:v.ru,verb:v.inf,pi,sentence,v});
+    });
   });
   return shuffle(out);
 }
@@ -6385,23 +6393,26 @@ function tenseVerbPicker(){
 }
 function tenses(){
   $('tenses-content').innerHTML=`<h2>⏱ Тренажёр времён</h2>
-    <p class="muted">Сначала выбери упражнение, затем глагол. После этого можно переключать время: настоящее, прошедшее или будущее.</p>
+    <p class="muted">Сначала выбери упражнение, затем режим глаголов. После этого можно переключать время: настоящее, прошедшее или будущее.</p>
     <div class="card"><h3>Выбор упражнения</h3><div class="training-buttons tense-levels"><button type="button" class="tense-level ${tenseLevel===1?'active':''}" data-level="1">1 · Форма / пропуск</button><button type="button" class="tense-level ${tenseLevel===2?'active':''}" data-level="2">2 · По словам</button></div></div>
     ${tenseVerbPicker()}
+    <button type="button" id="tense-mixed-toggle" class="tense-mixed-toggle card ${tenseMixed?'active':''}"><span class="tense-mixed-icon">🔀</span><span><b>Смешение глаголов</b><small>${tenseMixed?'Включено — глаголы будут чередоваться':'Выключено — работаем с одним выбранным глаголом'}</small></span><span>${tenseMixed?'✓':'○'}</span></button>
     <div class="training-buttons tense-tabs">${TENSE_MODES.map(m=>`<button type="button" class="tense-tab ${m.id===tenseMode?'active':''}" data-tense="${m.id}">${m.title.split(' — ')[0]}</button>`).join('')}</div>
     <div id="tense-instruction">${tenseInstruction(tenseMode)}</div>
     <div id="tense-exercise"></div>`;
   view('tenses'); renderTenseExercise();
   const open=$('tense-open-verbs');
   if(open) open.onclick=()=>{tenseVerbPickerOpen=!tenseVerbPickerOpen;tenses();};
-  document.querySelectorAll('.tense-verb').forEach(b=>b.addEventListener('click',()=>{tenseVerb=b.dataset.verb;tenseVerbPickerOpen=false;tenseIndex=0;tenseScore=0;tenses();}));
+  const mixed=$('tense-mixed-toggle');
+  if(mixed) mixed.onclick=()=>{tenseMixed=!tenseMixed;tenseVerbPickerOpen=false;tenseIndex=0;tenseScore=0;tenses();};
+  document.querySelectorAll('.tense-verb').forEach(b=>b.addEventListener('click',()=>{tenseVerb=b.dataset.verb;tenseMixed=false;tenseVerbPickerOpen=false;tenseIndex=0;tenseScore=0;tenses();}));
   document.querySelectorAll('.tense-tab').forEach(b=>b.addEventListener('click',()=>{tenseMode=b.dataset.tense;tenseIndex=0;tenseScore=0;$('tense-instruction').innerHTML=tenseInstruction(tenseMode);renderTenseExercise();}));
   document.querySelectorAll('.tense-level').forEach(b=>b.addEventListener('click',()=>{tenseLevel=Number(b.dataset.level);tenseIndex=0;tenseScore=0;document.querySelectorAll('.tense-level').forEach(x=>x.classList.toggle('active',Number(x.dataset.level)===tenseLevel));renderTenseExercise();}));
 }
 function renderTenseExercise(){
   tenseItems=tenseMakeItems(tenseMode,tenseLevel); const item=tenseItems[tenseIndex];
-  if(!item){$('tense-exercise').innerHTML=`<div class="card"><h3>Раунд закончен 🎉</h3><p>Глагол: <b>${escapeHtml(item?.verb||tenseVerb)}</b>. Результат: <b>${tenseScore} из ${tenseItems.length}</b>.</p><button type="button" id="tense-restart">Повторить раунд</button></div>`;$('tense-restart').onclick=()=>{tenseIndex=0;tenseScore=0;renderTenseExercise()};return;}
-  const v=selectedTenseVerb(); let html=`<div class="card review-card"><p class="muted">${tenseIndex+1} из ${tenseItems.length} · ${TENSE_MODES.find(m=>m.id===tenseMode).title} · <b>${escapeHtml(v.inf)}</b></p>`;
+  if(!item){$('tense-exercise').innerHTML=`<div class="card"><h3>Раунд закончен 🎉</h3><p>${tenseMixed?'Режим: <b>Смешение глаголов</b>.':'Глагол: <b>'+escapeHtml(tenseVerb)+'</b>.'} Результат: <b>${tenseScore} из ${tenseItems.length}</b>.</p><button type="button" id="tense-restart">Повторить раунд</button></div>`;$('tense-restart').onclick=()=>{tenseIndex=0;tenseScore=0;renderTenseExercise()};return;}
+  const v=item.v||selectedTenseVerb(); let html=`<div class="card review-card"><p class="muted">${tenseIndex+1} из ${tenseItems.length} · ${TENSE_MODES.find(m=>m.id===tenseMode).title} · <b>${escapeHtml(v.inf)}</b></p>`;
   if(tenseLevel===1){
     const gap=tenseIndex%2===1;
     if(!gap) html+=`<p class="muted">Выбери правильную форму:</p><h3>${escapeHtml(item.prompt)}</h3><p class="muted">${escapeHtml(item.ru)}</p><div class="options">${allFormOptions(v,item.pi,tenseMode).map(x=>`<button type="button" class="tense-option" data-answer="${escapeHtml(x)}">${escapeHtml(x)}</button>`).join('')}</div>`;
@@ -6414,14 +6425,31 @@ function renderTenseExercise(){
   else document.querySelectorAll('.tense-option').forEach(b=>b.onclick=()=>checkTenseAnswer(b.dataset.answer,item.answer));
 }
 function tenseConstruction(item){
-  const p=item.pi,v=selectedTenseVerb(),s=item.sentence;
+  const p=item.pi,v=item.v||selectedTenseVerb(),s=item.sentence;
   if(tenseMode==='present') return {display:`${escapeHtml(s.person.sr)} <span class="tense-blank" data-slot="0">_____</span> ${escapeHtml(s.time)}.`,correct:[v.present[p]],options:[allFormOptions(v,p,'present')]};
   if(tenseMode==='past') return {display:`${escapeHtml(s.person.sr)} <span class="tense-blank" data-slot="0">_____</span> <span class="tense-blank" data-slot="1">_____</span> ${escapeHtml(s.time)}.`,correct:[TENSE_PERSONS[p].auxPast,v.past[p]],options:[allAuxOptions('past',p),allParticipleOptions(v,p)]};
-  return {display:`${escapeHtml(s.person.sr)} <span class="tense-blank" data-slot="0">_____</span> <span class="tense-blank" data-slot="1">_____</span> ${escapeHtml(s.time)}.`,correct:[TENSE_PERSONS[p].auxFuture,v.futureInf],options:[allAuxOptions('future',p),allInfOptions(v)]};
+  return {display:`<span class="tense-blank" data-slot="0">_____</span> ${escapeHtml(s.time)}.`,correct:[futureSimpleForm(v,p)],options:[allFutureSimpleOptions(v,p)]};
 }
 function allAuxOptions(mode,p){const answer=mode==='past'?TENSE_PERSONS[p].auxPast:TENSE_PERSONS[p].auxFuture;const pool=TENSE_PERSONS.map(x=>mode==='past'?x.auxPast:x.auxFuture);return uniqueTenseOptions(answer,pool,4)}
 function allParticipleOptions(v,p){const answer=v.past[p],pool=TENSE_PERSONS.map((_,i)=>v.past[i]);return uniqueTenseOptions(answer,pool,4)}
-function allInfOptions(v){const answer=v.futureInf,pool=TENSE_VERBS.map(x=>x.futureInf);return uniqueTenseOptions(answer,pool,4)}
+function futureSimpleForm(v,pi){
+  const aux=TENSE_PERSONS[pi].auxFuture;
+  const inf=v.futureInf;
+  // Глаголы на -ћи не сливаются с вспомогательным глаголом: ићи ћу, ићи ћеш…
+  if(/ći$/.test(inf)) return `${inf} ${aux}`;
+  // Для -сти перед ћ происходит чередование st → šć: jesti → ješću.
+  if(inf==='jesti'){
+    const base=inf.slice(0,-3); // je
+    return `${base}š${aux}`;
+  }
+  // Обычные глаголы на -ти: raditi → radiću, kupovati → kupovaću.
+  return `${inf.slice(0,-2)}${aux}`;
+}
+function allFutureSimpleOptions(v,p){
+  const answer=futureSimpleForm(v,p);
+  const pool=TENSE_PERSONS.map((_,i)=>futureSimpleForm(v,i));
+  return uniqueTenseOptions(answer,pool,4);
+}
 function nextTenseQuestion(feedbackId){
   const fb=$(feedbackId);
   if(!fb)return;
@@ -6770,7 +6798,7 @@ async function word(w, context={}){
     $('popup').innerHTML=`<div class="popup-title">${escapeHtml(w)}</div><div class="popup-translation">${escapeHtml(tr)}</div>${formNote}${verbBlock}${contextBlock}<div class="popup-actions"><button type="button" id="speak-word">🔊 Слушать</button><button type="button" id="add-word-button">${exists?'✓ Уже в моих словах':'Добавить в мои слова'}</button></div>`;
     $('popup').classList.remove('hide');
     $('speak-word').addEventListener('click',()=>speakWord(w));
-    const addButton=$('add-word-button'); if(addButton&&!exists)addButton.addEventListener('click',()=>addWord(canonical));
+    const addButton=$('add-word-button'); if(addButton&&!exists)addButton.addEventListener('click',()=>addWord(w));
   };
   render(translation,verb);
   if(!verb){
@@ -6804,9 +6832,48 @@ async function finishPhraseSelection(firstBtn,secondBtn){
   $('save-phrase').addEventListener('click',()=>{const added=addPhrase(sr,tr,sourceTitle,sentence);$('save-phrase').textContent=added?'✓ Сохранено':'✓ Уже сохранено';});
 }
 
-function addWord(w){
-  const lemma=canonicalWord(w);
-  if(!saved.some(x=>canonicalWord(x.word)===lemma)){saved.push({word:lemma,translation:getTranslation(lemma),added:new Date().toISOString(),box:1,nextReview:Date.now(),mistakes:0,hard:false});save();}
+const REMOTE_LEMMA_CACHE = (()=>{try{return JSON.parse(localStorage.getItem('citajSrpskiLemmaCacheV1')||'{}')||{};}catch(e){return {};}})();
+function saveRemoteLemmaCache(){try{localStorage.setItem('citajSrpskiLemmaCacheV1',JSON.stringify(REMOTE_LEMMA_CACHE));}catch(e){}}
+async function remoteLemmaInfo(w){
+  const n=normalize(w); if(!n) return null;
+  if(REMOTE_LEMMA_CACHE[n]) return REMOTE_LEMMA_CACHE[n];
+  try{
+    const r=await fetch('https://saptac.online/api/word/'+encodeURIComponent(n),{headers:{Accept:'application/json'}});
+    if(!r.ok)return null;
+    const d=await r.json();
+    const lemma=normalize(d?.lemma||'');
+    if(!lemma)return null;
+    const info={lemma,pos:String(d?.pos||d?.pos_sr||'').toLowerCase()};
+    REMOTE_LEMMA_CACHE[n]=info; saveRemoteLemmaCache(); return info;
+  }catch(e){return null;}
+}
+function mergeSavedWord(oldWord,newWord){
+  const oldN=normalize(oldWord), newN=normalize(newWord); if(!newN)return;
+  const candidates=saved.filter(x=>normalize(x.word)===oldN || normalize(canonicalWord(x.word))===oldN || normalize(x.word)===newN || normalize(canonicalWord(x.word))===newN);
+  if(!candidates.length)return;
+  const keep=candidates[0]; keep.word=newN;
+  const tr=DICT[newN]||getTranslation(newN); if(tr&&tr!=='Перевод пока не добавлен'&&tr!=='Перевод загружается…')keep.translation=tr;
+  for(let i=saved.length-1;i>=0;i--){if(saved[i]!==keep && (normalize(saved[i].word)===oldN || normalize(canonicalWord(saved[i].word))===oldN || normalize(saved[i].word)===newN || normalize(canonicalWord(saved[i].word))===newN)){
+    keep.box=Math.max(Number(keep.box)||1,Number(saved[i].box)||1); keep.nextReview=Math.min(Number(keep.nextReview)||Date.now(),Number(saved[i].nextReview)||Date.now()); keep.mistakes=Math.max(Number(keep.mistakes)||0,Number(saved[i].mistakes)||0); saved.splice(i,1);
+  }}
+}
+async function addWord(w){
+  const source=normalize(w), localLemma=canonicalWord(source);
+  // Сначала пытаемся получить настоящую лемму морфологическим анализом.
+  // Если сеть недоступна, безопасная локальная карта остаётся резервом.
+  let lemma=localLemma;
+  try{
+    const remote=await remoteLemmaInfo(source);
+    if(remote?.lemma) lemma=normalize(remote.lemma);
+  }catch(e){}
+  if(!lemma) lemma=localLemma;
+  if(!saved.some(x=>canonicalWord(x.word)===lemma || normalize(x.word)===lemma)){
+    saved.push({word:lemma,translation:getTranslation(lemma),added:new Date().toISOString(),box:1,nextReview:Date.now(),mistakes:0,hard:false});
+  } else {
+    // Если такая лемма уже была сохранена под словоформой, приводим её к одной форме.
+    mergeSavedWord(source,lemma);
+  }
+  save();
   word(lemma);
 }
 
