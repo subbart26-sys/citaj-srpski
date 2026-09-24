@@ -5617,6 +5617,36 @@ Object.assign(DICT, Object.fromEntries(VOCAB_BLOCKS.flatMap(b => b.words.map(x =
 let saved = [];
 let savedPhrases = [];
 let vocabProgress = [];
+// Постоянная привязка личных слов к текстам. Она независима от SRS:
+// даже если слово когда-нибудь перестанет быть активным в общей тренировке,
+// оно остаётся закреплённым за текстом.
+const TEXT_WORDS_KEY = 'citajSrpskiTextWordsV1';
+let textWordLinks = {};
+try {
+  const rawTextWords = localStorage.getItem(TEXT_WORDS_KEY);
+  const parsedTextWords = rawTextWords ? JSON.parse(rawTextWords) : {};
+  textWordLinks = parsedTextWords && typeof parsedTextWords === 'object' && !Array.isArray(parsedTextWords) ? parsedTextWords : {};
+} catch(e) { textWordLinks = {}; }
+function saveTextWordLinks(){ try{ localStorage.setItem(TEXT_WORDS_KEY, JSON.stringify(textWordLinks)); }catch(e){} }
+function textSourceKey(text){ return normalize(String(text?.title||'')); }
+function getTextLinkedWords(text){
+  const key=textSourceKey(text);
+  return Array.isArray(textWordLinks[key]) ? textWordLinks[key] : [];
+}
+function isWordLinkedToText(text, word){
+  const n=normalize(word);
+  return getTextLinkedWords(text).some(x=>normalize(x)===n || canonicalWord(x)===canonicalWord(n));
+}
+function linkWordToText(text, word){
+  const key=textSourceKey(text); if(!key)return;
+  const lemma=canonicalWord(word)||normalize(word); if(!lemma)return;
+  const list=getTextLinkedWords(text);
+  if(!list.some(x=>canonicalWord(x)===canonicalWord(lemma))){ list.push(lemma); textWordLinks[key]=list; saveTextWordLinks(); }
+}
+function unlinkWordFromText(text, word){
+  const key=textSourceKey(text); const list=getTextLinkedWords(text);
+  textWordLinks[key]=list.filter(x=>canonicalWord(x)!==canonicalWord(word)); saveTextWordLinks();
+}
 try {
   const rawPersonal = localStorage.getItem("citajSrpskiWords");
   const parsedPersonal = rawPersonal ? JSON.parse(rawPersonal) : [];
@@ -6774,9 +6804,41 @@ function readerSentenceControls(text){
       <button type="button" id="speak-slow">🐢 Медленно</button>
       <button type="button" id="stop-speech">⏹ Остановить</button>
       <button type="button" id="text-training">🎯 Тренировать слова этого текста</button>
+      <button type="button" id="text-linked-words">📚 Слова этого текста</button>
     </div>
+    <div id="text-linked-words-panel" class="text-linked-words-panel"></div>
     <p class="muted small-note">Короткое нажатие на слово — перевод. Нажатие с удержанием на двух словах — словосочетание.</p>
   </div>`;
+}
+
+function renderTextLinkedWords(text, open=false){
+  const linked=getTextLinkedWords(text);
+  const panel=$('text-linked-words-panel');
+  const btn=$('text-linked-words');
+  if(!panel || !btn)return;
+  btn.textContent=`📚 Слова этого текста${linked.length ? ` (${linked.length})` : ''}`;
+  if(!linked.length){
+    panel.innerHTML='<div class="text-linked-empty">Пока здесь нет слов. Добавляй незнакомые слова через кнопку «Добавить в мои слова» — они останутся закреплены за этим текстом.</div>';
+    return;
+  }
+  const rows=linked.map((w,i)=>{
+    const item=saved.find(x=>canonicalWord(x.word)===canonicalWord(w));
+    const tr=item?.translation || getTranslation(w);
+    return `<div class="text-word-row"><span><b>${escapeHtml(w)}</b><span class="muted"> — ${escapeHtml(tr||'Перевод пока не добавлен')}</span></span><button type="button" class="small text-word-speak" data-word="${escapeHtml(w)}">🔊</button></div>`;
+  }).join('');
+  panel.innerHTML=`<div class="text-linked-head"><b>Слова этого текста: ${linked.length}</b><button type="button" id="repeat-text-words">🔁 Повторить эти слова</button></div><div class="text-word-list">${rows}</div><p class="muted small-note">Эта подборка хранится отдельно от интервального прогресса «Моих слов» и остаётся за текстом.</p>`;
+  panel.classList.toggle('hide', !open);
+  $('repeat-text-words')?.addEventListener('click',()=>startTextLinkedTraining(text));
+  panel.querySelectorAll('.text-word-speak').forEach(b=>b.addEventListener('click',()=>speakWord(b.dataset.word)));
+}
+function startTextLinkedTraining(text){
+  const linked=getTextLinkedWords(text);
+  const pool=linked.map(w=>{
+    const item=saved.find(x=>canonicalWord(x.word)===canonicalWord(w));
+    return item ? {...item} : {word:w,translation:getTranslation(w),box:1,nextReview:Date.now(),mistakes:0,hard:false};
+  }).filter(x=>x.translation && x.translation!=='Перевод пока не добавлен' && x.translation!=='Перевод загружается…');
+  if(pool.length<1){alert('В этом тексте пока нет слов с доступным переводом для повторения.');return;}
+  exerciseType='choice'; exercisePool=pool; exerciseQueue=shuffle(pool).slice(0,Math.min(20,pool.length)).map(x=>x.word); exerciseIndex=0; renderExercise(); view('review');
 }
 
 function renderText(text){
@@ -6801,6 +6863,7 @@ function renderText(text){
 }
 function openText(i){
   const t = TEXTS[i];
+  window.__citajCurrentText = t;
   $("title").textContent = t.title;
   $("level").textContent = `${t.level} · ${t.ru}`;
   // Не выводим техническое описание источника над учебным текстом.
@@ -6822,6 +6885,12 @@ function openText(i){
   $("speak-slow").addEventListener("click",()=>speakSentenceList(splitSentences(t.text),0.62));
   $("stop-speech").addEventListener("click",()=>window.speechSynthesis?.cancel());
   $("text-training").addEventListener("click",()=>startTextTraining(t.text));
+  $("text-linked-words").addEventListener("click",()=>{
+    const panel=$('text-linked-words-panel');
+    const shouldOpen=panel.classList.contains('hide');
+    renderTextLinkedWords(t,shouldOpen);
+  });
+  renderTextLinkedWords(t,false);
 
   bindReaderWordInteractions();
   view("reader");
@@ -6903,7 +6972,8 @@ function bindReaderWordInteractions(){
       word(btn.dataset.word,{
         wordIndex:btn.dataset.wordIndex,
         sentenceIndex:btn.dataset.sentenceIndex,
-        sentence:[...document.querySelectorAll('.word[data-sentence-index="'+btn.dataset.sentenceIndex+'"]')].map(x=>x.textContent.trim()).join(' ')
+        sentence:[...document.querySelectorAll('.word[data-sentence-index="'+btn.dataset.sentenceIndex+'"]')].map(x=>x.textContent.trim()).join(' '),
+        sourceText: window.__citajCurrentText || null
       });
     });
   });
@@ -6995,20 +7065,29 @@ async function remoteVerbInfo(surface){
   }catch(e){return null;}
 }
 
-async function word(w, context={}){
+async function word(w, context={} ){
   const requestId=++translationRequestId;
   const translation=getTranslation(w);
   const canonical=canonicalWord(w);
   const exists=saved.some(x=>canonicalWord(x.word)===canonical);
+  const sourceText=context.sourceText || null;
+  const linked=sourceText ? isWordLinkedToText(sourceText,w) : false;
   let verb=findVerbInfo(w);
   const render=(tr,v=verb)=>{
     if(requestId!==translationRequestId)return;
     const formNote=v&&normalize(w)!==normalize(v.lemma)?`<div class="word-form-note">Форма слова: <b>${escapeHtml(w)}</b> → начальная форма <b>${escapeHtml(v.lemma)}</b></div>`:''; const verbBlock=v?`<div class="verb-block"><div class="verb-title">Глагол: <b>${escapeHtml(v.lemma)}</b> · ${escapeHtml(v.translation||tr)}</div><div class="verb-grid"><div><span>Инфинитив</span><b>${escapeHtml(v.lemma)} <small>— ${escapeHtml(v.translation||tr)}</small></b></div><div><span>Прошедшее</span><b>${escapeHtml(v.past||'—')}</b></div><div><span>Настоящее</span><b>${escapeHtml(v.present||'—')}</b></div><div><span>Будущее</span><b>${escapeHtml(v.future||'—')}</b></div></div></div>`:'';
     const contextBlock=context.sentence?`<div class="word-context"><span>В предложении:</span> ${escapeHtml(context.sentence)}</div>`:'';
-    $('popup').innerHTML=`<div class="popup-title">${escapeHtml(w)}</div><div class="popup-translation">${escapeHtml(tr)}</div>${formNote}${verbBlock}${contextBlock}<div class="popup-actions"><button type="button" id="speak-word">🔊 Слушать</button><button type="button" id="add-word-button">${exists?'✓ Уже в моих словах':'Добавить в мои слова'}</button></div>`;
+    const addLabel = sourceText && linked ? '✓ Уже в словах этого текста' : (exists ? (sourceText ? 'Добавить к словам этого текста' : '✓ Уже в моих словах') : 'Добавить в мои слова');
+    $('popup').innerHTML=`<div class="popup-title">${escapeHtml(w)}</div><div class="popup-translation">${escapeHtml(tr)}</div>${formNote}${verbBlock}${contextBlock}<div class="popup-actions"><button type="button" id="speak-word">🔊 Слушать</button><button type="button" id="add-word-button">${addLabel}</button></div>`;
     $('popup').classList.remove('hide');
     $('speak-word').addEventListener('click',()=>speakWord(w));
-    const addButton=$('add-word-button'); if(addButton&&!exists)addButton.addEventListener('click',()=>addWord(w));
+    const addButton=$('add-word-button');
+    if(addButton && !(sourceText && linked)) addButton.addEventListener('click',async()=>{
+      const lemma=await addWord(w);
+      if(sourceText && lemma) linkWordToText(sourceText,lemma);
+      addButton.textContent=sourceText?'✓ Добавлено к словам этого текста':'✓ Сохранено';
+      if(sourceText) renderTextLinkedWords(sourceText,true);
+    });
   };
   render(translation,verb);
   if(!verb){
@@ -7084,7 +7163,7 @@ async function addWord(w){
     mergeSavedWord(source,lemma);
   }
   save();
-  word(lemma);
+  return lemma;
 }
 
 const PHRASE_PROGRESS_KEY='citajSrpskiPhraseProgressV2';
@@ -7509,7 +7588,7 @@ function answerReview(w, correct){
 }
 
 function exportWords(){
-  const blob = new Blob([JSON.stringify({words:saved,phrases:savedPhrases,phraseProgress,exportedAt:new Date().toISOString()}, null, 2)], {type:'application/json'});
+  const blob = new Blob([JSON.stringify({words:saved,phrases:savedPhrases,phraseProgress,textWordLinks,exportedAt:new Date().toISOString()}, null, 2)], {type:'application/json'});
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
@@ -7534,6 +7613,7 @@ function importWords(event){
       saved = clean;
       if(Array.isArray(imported.phrases)){ savedPhrases=imported.phrases; savePhrases(); }
       if(imported.phraseProgress && typeof imported.phraseProgress==='object'){ phraseProgress=imported.phraseProgress; savePhraseProgress(); }
+      if(imported.textWordLinks && typeof imported.textWordLinks==='object' && !Array.isArray(imported.textWordLinks)){ textWordLinks=imported.textWordLinks; saveTextWordLinks(); }
       save();
       words();
       alert('Слова и словосочетания загружены.');

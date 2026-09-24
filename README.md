@@ -113,3 +113,13 @@ v33: mobile-safe long-press phrase selection, punctuation outside word buttons, 
 - Mixed mode uses all 20 trainer verbs once per round and random persons, while keeping the selected single-verb mode.
 - Level 2 future options are generated only from the current item's verb.
 - Save-word flow now asks the morphological lemma service before saving, with local safe lemma fallback.
+
+
+## v58 — слова конкретного текста
+- Добавлена постоянная привязка личных слов к конкретному тексту.
+- Под открытым текстом есть кнопка «Слова этого текста».
+- В список попадают только слова, которые пользователь добавил из этого текста.
+- Эти слова одновременно остаются в общей базе «Моих слов» и имеют отдельную привязку к тексту.
+- Список сохраняется независимо от интервального прогресса, поэтому слово не исчезает из текста после закрепления в общей базе.
+- Добавлена тренировка только слов выбранного текста.
+- Привязки включены в экспорт/импорт резервной копии.
