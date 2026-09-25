@@ -5670,17 +5670,15 @@ function linkWordToTextKey(key, word){
   const surface=normalize(word);
   const lemma=canonicalWord(surface)||surface;
   if(!k || !lemma) return false;
-  const list=getTextLinkedWordsByKey(k).slice();
-  if(!list.some(x=>normalize(x)===lemma || canonicalWord(x)===lemma)){
+  // В этой функции больше НЕ сканируем весь список saved. Это было одной из
+  // причин заметной задержки на телефоне: canonicalWord() для каждого слова
+  // мог вызываться десятки/сотни раз при каждом добавлении.
+  const list=Array.isArray(textWordLinks[k]) ? textWordLinks[k].slice() : [];
+  const already=list.some(x=>normalize(x)===lemma);
+  if(!already){
     list.push(lemma);
     textWordLinks[k]=list;
     saveTextWordLinks();
-  }
-  // Постоянная связь записывается и в саму карточку слова.
-  const item=saved.find(x=>canonicalWord(x.word)===lemma || normalize(x.word)===lemma);
-  if(item){
-    item.textKeys=Array.isArray(item.textKeys)?item.textKeys.slice():[];
-    if(!item.textKeys.some(z=>normalize(String(z))===k)){ item.textKeys.push(k); save(); }
   }
   return true;
 }
@@ -6843,8 +6841,6 @@ function readerSentenceControls(text){
   return `<div class="reader-audio card">
     <div class="vocab-actions text-word-tools">
       <button type="button" id="text-linked-words">📚 Слова этого текста</button>
-      <button type="button" id="text-training-sr-ru">🎯 Сербский → русский</button>
-      <button type="button" id="text-training-ru-sr">🎯 Русский → сербский</button>
     </div>
     <div id="text-linked-words-panel" class="text-linked-words-panel"></div>
     <p class="muted small-note">Короткое нажатие на слово — перевод. Нажатие с удержанием на двух словах — словосочетание.</p>
@@ -6931,8 +6927,6 @@ function openText(i){
   $("popup").classList.add("hide");
   $("text").closest('.card')?.insertAdjacentHTML('afterend', readerSentenceControls(t.text));
   $("popup").insertAdjacentHTML('afterend','<div id="phrase-help" class="phrase-help hide">Первое слово выбрано. Теперь нажми и удерживай второе слово в том же предложении.</div>');
-  $("text-training-sr-ru").addEventListener("click",()=>startTextLinkedTraining(t,'sr-ru'));
-  $("text-training-ru-sr").addEventListener("click",()=>startTextLinkedTraining(t,'ru-sr'));
   $("text-linked-words").addEventListener("click",()=>{
     const panel=$('text-linked-words-panel');
     const shouldOpen=panel.classList.contains('hide');
@@ -7136,7 +7130,6 @@ async function word(w, context={} ){
       // Ключ текста фиксируем ДО любых сетевых операций. Связь должна
       // сохраняться даже если лемматизация или перевод недоступны.
       const lemma=await addWord(w,sourceTextKey);
-      if(sourceTextKey && lemma) linkWordToTextKey(sourceTextKey,lemma);
       addButton.textContent=sourceText?'✓ Добавлено к словам этого текста':'✓ Сохранено';
       if(sourceText){
         // Перечитываем именно по стабильному ключу, а не по заголовку объекта.
@@ -7215,13 +7208,23 @@ async function addWord(w, textKey=''){
     item={word:lemma,translation:getTranslation(lemma),added:new Date().toISOString(),box:1,nextReview:Date.now(),mistakes:0,hard:false,textKeys:[]};
     saved.push(item);
   }
+  let textLinksChanged=false;
   if(textKey){
     item.textKeys=Array.isArray(item.textKeys)?item.textKeys.slice():[];
     const k=normalize(String(textKey));
-    if(k && !item.textKeys.some(z=>normalize(String(z))===k)) item.textKeys.push(k);
+    if(k && !item.textKeys.some(z=>normalize(String(z))===k)){ item.textKeys.push(k); textLinksChanged=true; }
+    // Отдельная постоянная привязка к тексту. Записываем её напрямую, без
+    // повторного поиска по всей базе слов.
+    if(k){
+      const list=Array.isArray(textWordLinks[k]) ? textWordLinks[k].slice() : [];
+      if(!list.some(x=>normalize(x)===lemma)){ list.push(lemma); textWordLinks[k]=list; textLinksChanged=true; }
+    }
   }
+  // Теперь при добавлении из текста максимум одна запись общей базы и одна
+  // запись связей. Раньше здесь происходило до 4–5 синхронных localStorage
+  // операций и повторный поиск по saved.
   save();
-  if(textKey) linkWordToTextKey(textKey, lemma);
+  if(textKey && textLinksChanged) saveTextWordLinks();
 
   // Уточнение леммы выполняем после сохранения и не блокируем пользователя.
   // Если сеть недоступна, локально сохранённое слово всё равно остаётся.
@@ -7534,7 +7537,17 @@ function renderExercise(){
     $('exercise-finish').addEventListener('click', () => {
       exercisePool=null;
       const t=window.__citajTextTrainingReturnText;
-      if(t){ view('reader'); renderTextLinkedWords(t,true); } else { words(); }
+      if(t){
+        view('reader');
+        renderTextLinkedWords(t,true);
+        // Возвращаем пользователя сразу к выбору двух упражнений, а не в
+        // начало длинного текста.
+        requestAnimationFrame(()=>{
+          const panel=$('text-linked-words-panel');
+          const controls=$('text-linked-words');
+          (panel||controls)?.scrollIntoView({behavior:'smooth',block:'center'});
+        });
+      } else { words(); }
     });
     return;
   }
