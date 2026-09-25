@@ -5667,12 +5667,8 @@ function isWordLinkedToText(text, word){
 // data-text-key и localStorage.
 function linkWordToTextKey(key, word){
   const k=normalize(String(key||''));
-  const surface=normalize(word);
-  const lemma=canonicalWord(surface)||surface;
+  const lemma=normalize(word);
   if(!k || !lemma) return false;
-  // В этой функции больше НЕ сканируем весь список saved. Это было одной из
-  // причин заметной задержки на телефоне: canonicalWord() для каждого слова
-  // мог вызываться десятки/сотни раз при каждом добавлении.
   const list=Array.isArray(textWordLinks[k]) ? textWordLinks[k].slice() : [];
   const already=list.some(x=>normalize(x)===lemma);
   if(!already){
@@ -5763,14 +5759,50 @@ const SAFE_LEMMA_MAP = {
   'poželela':'poželeti','poželeo':'poželeti','poželeli':'poželeti','poželele':'poželeti',
   'pobeglo':'pobeći','pobegao':'pobeći','pobegla':'pobeći','pobegli':'pobeći'
 };
+// Быстрая локальная нормализация формы слова. ВАЖНО: не запускаем
+// полный перебор всех глагольных форм для каждого существительного. Такой
+// перебор происходил при каждом сохранении слова и на телефоне мог занимать
+// секунды. Для неизвестных форм лемма будет уточнена асинхронно через remoteLemmaInfo().
+const LOCAL_NOUN_LEMMA_MAP = {
+  'ulogu':'uloga','uloga':'uloga','uloge':'uloga','ulozi':'uloga','ulogom':'uloga',
+  'kupu':'kupa','kupom':'kupa','kupe':'kupa','kupa':'kupa',
+  'stolu':'sto','stola':'sto','stolom':'sto','stolu':'sto',
+  'sobi':'soba','sobu':'soba','sobe':'soba','sobom':'soba',
+  'knjizi':'knjiga','knjigu':'knjiga','knjige':'knjiga','knjigom':'knjiga',
+  'školi':'škola','školu':'škola','škole':'škola','školom':'škola',
+  'pijaci':'pijaca','pijacu':'pijaca','pijace':'pijaca','pijacom':'pijaca',
+  'parku':'park','parka':'park','parkom':'park',
+  'lekaru':'lekar','lekara':'lekar','lekarom':'lekar',
+  'poslu':'posao','posla':'posao','poslom':'posao',
+  'gradu':'grad','grada':'grad','gradom':'grad',
+  'ulici':'ulica','ulicu':'ulica','ulice':'ulica','ulicom':'ulica',
+  'zgradi':'zgrada','zgradu':'zgrada','zgrade':'zgrada','zgradom':'zgrada',
+  'kući':'kuća','kuću':'kuća','kuće':'kuća','kućom':'kuća','kućama':'kuća',
+  'vrata':'vrata','vratima':'vrata','vratima':'vrata',
+  'devojci':'devojka','devojku':'devojka','devojke':'devojka','devojkom':'devojka',
+  'ženi':'žena','ženu':'žena','žene':'žena','ženom':'žena',
+  'čoveku':'čovek','čoveka':'čovek','čovekom':'čovek','ljudi':'čovek','ljude':'čovek','ljudima':'čovek',
+  'detetu':'dete','dete':'dete','deteta':'dete','detetom':'dete',
+  'vremenu':'vreme','vremena':'vreme','vremenom':'vreme',
+  'danu':'dan','dana':'dan','danom':'dan','dane':'dan',
+  'mesecu':'mesec','meseca':'mesec','mesecom':'mesec',
+  'godini':'godina','godinu':'godina','godine':'godina','godinom':'godina',
+  'jutru':'jutro','jutra':'jutro','jutrom':'jutro',
+  'večeri':'veče','veče':'veče','večeri':'veče',
+  'noći':'noć','noć':'noć','noću':'noć','noći':'noć',
+  'stvari':'stvar','stvarima':'stvar','stvar':'stvar',
+  'reči':'reč','rečima':'reč','reč':'reč',
+  'godinama':'godina','mesecima':'mesec','danima':'dan','putevima':'put',
+};
 function canonicalWord(w){
   const n=normalize(w);
   if(!n) return n;
   if(SAFE_LEMMA_MAP[n]) return SAFE_LEMMA_MAP[n];
-  try{
-    const v=findVerbInfo(n);
-    if(v && v.lemma) return normalize(v.lemma);
-  }catch(e){}
+  if(LOCAL_NOUN_LEMMA_MAP[n]) return LOCAL_NOUN_LEMMA_MAP[n];
+  // Только O(1) проверки уже построенных индексов. Не вызываем findVerbInfo()
+  // для неизвестного существительного: внутри него есть дорогой полный перебор.
+  const direct = CANONICAL_VERBS[n] || VERB_INDEX[n] || VERB_FORMS[n];
+  if(direct && direct.lemma) return normalize(direct.lemma);
   return n;
 }
 
@@ -6269,7 +6301,7 @@ function getTranslation(w){
   if(CONTEXT_TRANSLATIONS[n]) return CONTEXT_TRANSLATIONS[n];
   if(LOCAL_TRANSLATION_FALLBACK[n]) return LOCAL_TRANSLATION_FALLBACK[n];
   if(DICT[n]) return DICT[n];
-  const verb=findVerbInfo(n);
+  const verb=(CANONICAL_VERBS[n] || VERB_INDEX[n] || VERB_FORMS[n]);
   if(verb && verb.translation) return verb.translation;
   if(REMOTE_TRANSLATION_CACHE[n]) return REMOTE_TRANSLATION_CACHE[n];
   const candidates=[];
@@ -7110,45 +7142,36 @@ async function remoteVerbInfo(surface){
 
 async function word(w, context={} ){
   const requestId=++translationRequestId;
+  // Всплывающее окно слова больше не строит/запрашивает карточку глагола.
+  // Формы глаголов изучаются отдельно в «Тренажёре времён». Это делает
+  // открытие слова и его сохранение лёгкими и предсказуемыми.
   const translation=getTranslation(w);
   const canonical=canonicalWord(w);
   const exists=saved.some(x=>canonicalWord(x.word)===canonical);
   const sourceText=context.sourceText || null;
   const sourceTextKey=window.__citajCurrentTextKey || context.textKey || (sourceText ? textSourceKey(sourceText) : '');
   const linked=sourceTextKey ? getTextLinkedWordsByKey(sourceTextKey).some(x=>normalize(x)===normalize(w)||canonicalWord(x)===canonicalWord(w)) : false;
-  let verb=findVerbInfo(w);
-  const render=(tr,v=verb)=>{
+  const render=(tr)=>{
     if(requestId!==translationRequestId)return;
-    const formNote=v&&normalize(w)!==normalize(v.lemma)?`<div class="word-form-note">Форма слова: <b>${escapeHtml(w)}</b> → начальная форма <b>${escapeHtml(v.lemma)}</b></div>`:''; const verbBlock=v?`<div class="verb-block"><div class="verb-title">Глагол: <b>${escapeHtml(v.lemma)}</b> · ${escapeHtml(v.translation||tr)}</div><div class="verb-grid"><div><span>Инфинитив</span><b>${escapeHtml(v.lemma)} <small>— ${escapeHtml(v.translation||tr)}</small></b></div><div><span>Прошедшее</span><b>${escapeHtml(v.past||'—')}</b></div><div><span>Настоящее</span><b>${escapeHtml(v.present||'—')}</b></div><div><span>Будущее</span><b>${escapeHtml(v.future||'—')}</b></div></div></div>`:'';
+    const formNote=normalize(w)!==canonical ? `<div class="word-form-note">Форма слова: <b>${escapeHtml(w)}</b> → начальная форма <b>${escapeHtml(canonical)}</b></div>` : '';
     const contextBlock=context.sentence?`<div class="word-context"><span>В предложении:</span> ${escapeHtml(context.sentence)}</div>`:'';
     const addLabel = sourceText && linked ? '✓ Уже в словах этого текста' : (exists ? (sourceText ? 'Добавить к словам этого текста' : '✓ Уже в моих словах') : 'Добавить в мои слова');
-    $('popup').innerHTML=`<div class="popup-title">${escapeHtml(w)}</div><div class="popup-translation">${escapeHtml(tr)}</div>${formNote}${verbBlock}${contextBlock}<div class="popup-actions"><button type="button" id="speak-word">🔊 Слушать</button><button type="button" id="add-word-button">${addLabel}</button></div>`;
+    $('popup').innerHTML=`<div class="popup-title">${escapeHtml(w)}</div><div class="popup-translation">${escapeHtml(tr)}</div>${formNote}${contextBlock}<div class="popup-actions"><button type="button" id="speak-word">🔊 Слушать</button><button type="button" id="add-word-button">${addLabel}</button></div>`;
     $('popup').classList.remove('hide');
     $('speak-word').addEventListener('click',()=>speakWord(w));
     const addButton=$('add-word-button');
     if(addButton && !(sourceText && linked)) addButton.addEventListener('click',async()=>{
-      // Ключ текста фиксируем ДО любых сетевых операций. Связь должна
-      // сохраняться даже если лемматизация или перевод недоступны.
       const lemma=await addWord(w,sourceTextKey);
       addButton.textContent=sourceText?'✓ Добавлено к словам этого текста':'✓ Сохранено';
-      if(sourceText){
-        // Перечитываем именно по стабильному ключу, а не по заголовку объекта.
-        renderTextLinkedWords(window.__citajCurrentText || sourceText,true);
-      }
+      if(sourceText){ renderTextLinkedWords(window.__citajCurrentText || sourceText,true); }
     });
   };
-  render(translation,verb);
-  if(!verb){
-    const remoteVerb=await remoteVerbInfo(w);
-    if(remoteVerb){
-      verb=remoteVerb;
-      const lemmaTr=await remoteTranslateWord(remoteVerb.lemma);
-      if(requestId===translationRequestId) render(lemmaTr||translation,verb);
-    }
-  }
+  render(translation);
+  // Словарное уточнение формы запускается в фоне. Оно больше не открывает
+  // карточку глагола и не задерживает сохранение слова.
   if(translation==='Перевод загружается…'){
     const tr=await remoteTranslateWord(w);
-    render(tr,verb);
+    render(tr);
   }
 }
 async function finishPhraseSelection(firstBtn,secondBtn){
@@ -7203,7 +7226,7 @@ async function addWord(w, textKey=''){
   // Раньше ожидание remoteLemmaInfo() могло задерживать/ломать кнопку «Добавить
   // в мои слова» на телефоне, если внешний API отвечал медленно или не отвечал.
   let lemma=localLemma;
-  let item=saved.find(x=>canonicalWord(x.word)===lemma || normalize(x.word)===lemma);
+  let item=saved.find(x=>normalize(x.word)===lemma);
   if(!item){
     item={word:lemma,translation:getTranslation(lemma),added:new Date().toISOString(),box:1,nextReview:Date.now(),mistakes:0,hard:false,textKeys:[]};
     saved.push(item);
@@ -7223,18 +7246,22 @@ async function addWord(w, textKey=''){
   // Теперь при добавлении из текста максимум одна запись общей базы и одна
   // запись связей. Раньше здесь происходило до 4–5 синхронных localStorage
   // операций и повторный поиск по saved.
-  save();
+  // Сохраняем обе структуры одним коротким синхронным проходом. Это быстрее,
+  // чем сначала stringify(saved), а затем отдельно stringify(textWordLinks).
+  localStorage.setItem("citajSrpskiWords", JSON.stringify(saved));
+  const count = $("count");
+  if (count) count.textContent = saved.length;
   if(textKey && textLinksChanged) saveTextWordLinks();
 
   // Уточнение леммы выполняем после сохранения и не блокируем пользователя.
   // Если сеть недоступна, локально сохранённое слово всё равно остаётся.
-  remoteLemmaInfo(source).then(remote=>{
+  setTimeout(()=>remoteLemmaInfo(source).then(remote=>{
     const remoteLemma=normalize(remote?.lemma||'');
     if(remoteLemma && remoteLemma!==lemma){
       mergeSavedWord(source,remoteLemma);
       save();
     }
-  }).catch(()=>{});
+  }).catch(()=>{}), 0);
 
   return lemma;
 }
