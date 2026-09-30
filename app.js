@@ -6548,7 +6548,57 @@ const TENSE_VERBS = [
   {inf:'sedeti',ru:'сидеть',present:['sedim','sediš','sedi','sedimo','sedite','sede'],past:['sedeo','sedeo','sedeo','sedeli','sedeli','sedeli'],futureInf:'sedeti'},
   {inf:'stajati',ru:'стоять',present:['stojim','stojiš','stoji','stojimo','stojite','stoje'],past:['stajao','stajao','stajao','stajali','stajali','stajali'],futureInf:'stajati'},
   {inf:'pričati',ru:'разговаривать / рассказывать',present:['pričam','pričaš','priča','pričamo','pričate','pričaju'],past:['pričao','pričao','pričao','pričali','pričali','pričali'],futureInf:'pričati'},
-  {inf:'misliti',ru:'думать',present:['mislim','misliš','misli','mislimo','mislite','misle'],past:['mislio','mislio','mislio','mislili','mislili','mislili'],futureInf:'misliti'}
+  {inf:'misliti',ru:'думать',present:['mislim','misliš','misli','mislimo','mislite','misle'],past:['mislio','mislio','mislio','mislili','mislili','mislili'],futureInf:'misliti'},
+  {inf:"biti",ru:"быть",present:["sam", "si", "je", "smo", "ste", "su"],past:["bio", "bio", "bio", "bili", "bili", "bili"],futureInf:"biti",ruPresentForms:["есть", "есть", "есть", "есть", "есть", "есть"],ruPast:"был",ruPastPlural:"были",ruFutureForms:["буду", "будешь", "будет", "будем", "будете", "будут"]},
+  {inf:"imati",ru:"иметь",present:["imam", "imaš", "ima", "imamo", "imate", "imaju"],past:["imao", "imao", "imao", "imali", "imali", "imali"],futureInf:"imati",ruPresentForms:["имею", "имеешь", "имеет", "имеем", "имеете", "имеют"],ruPast:"имел",ruPastPlural:"имели",ruFuture:"иметь"},
+  {inf:"hteti",ru:"хотеть",present:["hoću", "hoćeš", "hoće", "hoćemo", "hoćete", "hoće"],past:["hteo", "hteo", "hteo", "hteli", "hteli", "hteli"],futureInf:"hteti",ruPresentForms:["хочу", "хочешь", "хочет", "хотим", "хотите", "хотят"],ruPast:"хотел",ruPastPlural:"хотели",ruFuture:"хотеть"},
+  {inf:"moći",ru:"мочь",present:["mogu", "možeš", "može", "možemo", "možete", "mogu"],past:["mogao", "mogao", "mogao", "mogli", "mogli", "mogli"],futureInf:"moći",ruPresentForms:["могу", "можешь", "может", "можем", "можете", "могут"],ruPast:"мог",ruPastPlural:"могли",ruFutureForms:["смогу", "сможешь", "сможет", "сможем", "сможете", "смогут"]},
+  {inf:"morati",ru:"быть должным",present:["moram", "moraš", "mora", "moramo", "morate", "moraju"],past:["morao", "morao", "morao", "morali", "morali", "morali"],futureInf:"morati",ruPresentForms:["должен", "должен", "должен", "должны", "должны", "должны"],ruPast:"должен был",ruPastPlural:"должны были",ruFuture:"быть должным"},
+  {inf:"znati",ru:"знать",present:["znam", "znaš", "zna", "znamo", "znate", "znaju"],past:["znao", "znao", "znao", "znali", "znali", "znali"],futureInf:"znati",ruPresentForms:["знаю", "знаешь", "знает", "знаем", "знаете", "знают"],ruPast:"знал",ruPastPlural:"знали",ruFuture:"знать"},
+  {inf:"razumeti",ru:"понимать",present:["razumem", "razumeš", "razume", "razumemo", "razumete", "razumeju"],past:["razumeo", "razumeo", "razumeo", "razumeli", "razumeli", "razumeli"],futureInf:"razumeti",ruPresentForms:["понимаю", "понимаешь", "понимает", "понимаем", "понимаете", "понимают"],ruPast:"понимал",ruPastPlural:"понимали",ruFuture:"понимать"},
+  {inf:"želeti",ru:"желать / хотеть",present:["želim", "želiš", "želi", "želimo", "želite", "žele"],past:["želeo", "želeo", "želeo", "želeli", "želeli", "želeli"],futureInf:"želeti",ruPresentForms:["хочу", "хочешь", "хочет", "хотим", "хотите", "хотят"],ruPast:"хотел",ruPastPlural:"хотели",ruFuture:"желать"},
+  {inf:"trebati",ru:"нуждаться / быть нужным",present:["trebam", "trebaš", "treba", "trebamo", "trebate", "trebaju"],past:["trebao", "trebao", "trebao", "trebali", "trebali", "trebali"],futureInf:"trebati",ruPresentForms:["нуждаюсь", "нуждаешься", "нуждается", "нуждаемся", "нуждаетесь", "нуждаются"],ruPast:"нужно было",ruPastPlural:"нужно было",ruFuture:"нуждаться"},
+  {inf:"voleti",ru:"любить",present:["volim", "voliš", "voli", "volimo", "volite", "vole"],past:["voleo", "voleo", "voleo", "voleli", "voleli", "voleli"],futureInf:"voleti",ruPresentForms:["люблю", "любишь", "любит", "любим", "любите", "любят"],ruPast:"любил",ruPastPlural:"любили",ruFuture:"любить"},
+  {inf:"reći",ru:"сказать",present:["kažem", "kažeš", "kaže", "kažemo", "kažete", "kažu"],past:["rekao", "rekao", "rekao", "rekli", "rekli", "rekli"],futureInf:"reći",ruPresentForms:["говорю", "говоришь", "говорит", "говорим", "говорите", "говорят"],ruPast:"сказал",ruPastPlural:"сказали",ruFutureForms:["скажу", "скажешь", "скажет", "скажем", "скажете", "скажут"]},
+  {inf:"pitati",ru:"спрашивать",present:["pitam", "pitaš", "pita", "pitamo", "pitate", "pitaju"],past:["pitao", "pitao", "pitao", "pitali", "pitali", "pitali"],futureInf:"pitati",ruPresentForms:["спрашиваю", "спрашиваешь", "спрашивает", "спрашиваем", "спрашиваете", "спрашивают"],ruPast:"спрашивал",ruPastPlural:"спрашивали",ruFuture:"спрашивать"},
+  {inf:"odgovoriti",ru:"ответить",present:["odgovorim", "odgovoriš", "odgovori", "odgovorimo", "odgovorite", "odgovore"],past:["odgovorio", "odgovorio", "odgovorio", "odgovorili", "odgovorili", "odgovorili"],futureInf:"odgovoriti",ruPresentForms:["отвечаю", "отвечаешь", "отвечает", "отвечаем", "отвечаете", "отвечают"],ruPast:"ответил",ruPastPlural:"ответили",ruFuture:"ответить"},
+  {inf:"doći",ru:"прийти",present:["dođem", "dođeš", "dođe", "dođemo", "dođete", "dođu"],past:["došao", "došao", "došao", "došli", "došli", "došli"],futureInf:"doći",ruPresentForms:["прихожу", "приходишь", "приходит", "приходим", "приходите", "приходят"],ruPast:"пришёл",ruPastPlural:"пришли",ruFutureForms:["приду", "придёшь", "придёт", "придём", "придёте", "придут"]},
+  {inf:"otići",ru:"уйти / уехать",present:["odem", "odeš", "ode", "odemo", "odete", "odu"],past:["otišao", "otišao", "otišao", "otišli", "otišli", "otišli"],futureInf:"otići",ruPresentForms:["ухожу", "уходишь", "уходит", "уходим", "уходите", "уходят"],ruPast:"ушёл",ruPastPlural:"ушли",ruFutureForms:["уйду", "уйдёшь", "уйдёт", "уйдём", "уйдёте", "уйдут"]},
+  {inf:"vratiti se",ru:"вернуться",present:["vratim se", "vratiš se", "vrati se", "vratimo se", "vratite se", "vrate se"],past:["vratio se", "vratio se", "vratio se", "vratili se", "vratili se", "vratili se"],futureInf:"vratiti se",ruPresentForms:["возвращаюсь", "возвращаешься", "возвращается", "возвращаемся", "возвращаетесь", "возвращаются"],ruPast:"вернулся",ruPastPlural:"вернулись",ruFutureForms:["вернусь", "вернёшься", "вернётся", "вернёмся", "вернётесь", "вернутся"]},
+  {inf:"uzeti",ru:"взять",present:["uzmem", "uzmeš", "uzme", "uzmemo", "uzmete", "uzmu"],past:["uzeo", "uzeo", "uzeo", "uzeli", "uzeli", "uzeli"],futureInf:"uzeti",ruPresentForms:["беру", "берёшь", "берёт", "берём", "берёте", "берут"],ruPast:"взял",ruPastPlural:"взяли",ruFutureForms:["возьму", "возьмёшь", "возьмёт", "возьмём", "возьмёте", "возьмут"]},
+  {inf:"dati",ru:"дать",present:["dam", "daš", "da", "damo", "date", "daju"],past:["dao", "dao", "dao", "dali", "dali", "dali"],futureInf:"dati",ruPresentForms:["даю", "даёшь", "даёт", "даём", "даёте", "дают"],ruPast:"дал",ruPastPlural:"дали",ruFutureForms:["дам", "дашь", "даст", "дадим", "дадите", "дадут"]},
+  {inf:"naći",ru:"найти",present:["nađem", "nađeš", "nađe", "nađemo", "nađete", "nađu"],past:["našao", "našao", "našao", "našli", "našli", "našli"],futureInf:"naći",ruPresentForms:["нахожу", "находишь", "находит", "находим", "находите", "находят"],ruPast:"нашёл",ruPastPlural:"нашли",ruFutureForms:["найду", "найдёшь", "найдёт", "найдём", "найдёте", "найдут"]},
+  {inf:"čuti",ru:"слышать",present:["čujem", "čuješ", "čuje", "čujemo", "čujete", "čuju"],past:["čuo", "čuo", "čuo", "čuli", "čuli", "čuli"],futureInf:"čuti",ruPresentForms:["слышу", "слышишь", "слышит", "слышим", "слышите", "слышат"],ruPast:"слышал",ruPastPlural:"слышали",ruFuture:"слышать"},
+  {inf:"napisati",ru:"написать",present:["napišem", "napišeš", "napiše", "napišemo", "napišete", "napišu"],past:["napisao", "napisao", "napisao", "napisali", "napisali", "napisali"],futureInf:"napisati",ruPresentForms:["пишу", "пишешь", "пишет", "пишем", "пишете", "пишут"],ruPast:"написал",ruPastPlural:"написали",ruFutureForms:["напишу", "напишешь", "напишет", "напишем", "напишете", "напишут"]},
+  {inf:"pročitati",ru:"прочитать",present:["pročitam", "pročitaš", "pročita", "pročitamo", "pročitate", "pročitaju"],past:["pročitao", "pročitao", "pročitao", "pročitali", "pročitali", "pročitali"],futureInf:"pročitati",ruPresentForms:["читаю", "читаешь", "читает", "читаем", "читаете", "читают"],ruPast:"прочитал",ruPastPlural:"прочитали",ruFutureForms:["прочитаю", "прочитаешь", "прочитает", "прочитаем", "прочитаете", "прочитают"]},
+  {inf:"učiniti",ru:"сделать",present:["učinim", "učiniš", "učini", "učinimo", "učinite", "učine"],past:["učinio", "učinio", "učinio", "učinili", "učinili", "učinili"],futureInf:"učiniti",ruPresentForms:["делаю", "делаешь", "делает", "делаем", "делаете", "делают"],ruPast:"сделал",ruPastPlural:"сделали",ruFutureForms:["сделаю", "сделаешь", "сделает", "сделаем", "сделаете", "сделают"]},
+  {inf:"napraviti",ru:"сделать / изготовить",present:["napravim", "napraviš", "napravi", "napravimo", "napravite", "naprave"],past:["napravio", "napravio", "napravio", "napravili", "napravili", "napravili"],futureInf:"napraviti",ruPresentForms:["делаю", "делаешь", "делает", "делаем", "делаете", "делают"],ruPast:"сделал",ruPastPlural:"сделали",ruFutureForms:["сделаю", "сделаешь", "сделает", "сделаем", "сделаете", "сделают"]},
+  {inf:"početi",ru:"начать",present:["počnem", "počneš", "počne", "počnemo", "počnete", "počnu"],past:["počeo", "počeo", "počeo", "počeli", "počeli", "počeli"],futureInf:"početi",ruPresentForms:["начинаю", "начинаешь", "начинает", "начинаем", "начинаете", "начинают"],ruPast:"начал",ruPastPlural:"начали",ruFutureForms:["начну", "начнёшь", "начнёт", "начнём", "начнёте", "начнут"]},
+  {inf:"završiti",ru:"закончить",present:["završim", "završiš", "završi", "završimo", "završite", "završe"],past:["završio", "završio", "završio", "završili", "završili", "završili"],futureInf:"završiti",ruPresentForms:["заканчиваю", "заканчиваешь", "заканчивает", "заканчиваем", "заканчиваете", "заканчивают"],ruPast:"закончил",ruPastPlural:"закончили",ruFutureForms:["закончу", "закончишь", "закончит", "закончим", "закончите", "закончат"]},
+  {inf:"otvoriti",ru:"открыть",present:["otvorim", "otvoriš", "otvori", "otvorimo", "otvorite", "otvore"],past:["otvorio", "otvorio", "otvorio", "otvorili", "otvorili", "otvorili"],futureInf:"otvoriti",ruPresentForms:["открываю", "открываешь", "открывает", "открываем", "открываете", "открывают"],ruPast:"открыл",ruPastPlural:"открыли",ruFutureForms:["открою", "откроешь", "откроет", "откроем", "откроете", "откроют"]},
+  {inf:"zatvoriti",ru:"закрыть",present:["zatvorim", "zatvoriš", "zatvori", "zatvorimo", "zatvorite", "zatvore"],past:["zatvorio", "zatvorio", "zatvorio", "zatvorili", "zatvorili", "zatvorili"],futureInf:"zatvoriti",ruPresentForms:["закрываю", "закрываешь", "закрывает", "закрываем", "закрываете", "закрывают"],ruPast:"закрыл",ruPastPlural:"закрыли",ruFutureForms:["закрою", "закроешь", "закроет", "закроем", "закроете", "закроют"]},
+  {inf:"kupiti",ru:"купить",present:["kupim", "kupiš", "kupi", "kupimo", "kupite", "kupe"],past:["kupio", "kupio", "kupio", "kupili", "kupili", "kupili"],futureInf:"kupiti",ruPresentForms:["покупаю", "покупаешь", "покупает", "покупаем", "покупаете", "покупают"],ruPast:"купил",ruPastPlural:"купили",ruFutureForms:["куплю", "купишь", "купит", "купим", "купите", "купят"]},
+  {inf:"prodati",ru:"продать",present:["prodam", "prodaš", "proda", "prodamo", "prodate", "prodaju"],past:["prodao", "prodao", "prodao", "prodali", "prodali", "prodali"],futureInf:"prodati",ruPresentForms:["продаю", "продаёшь", "продаёт", "продаём", "продаёте", "продают"],ruPast:"продал",ruPastPlural:"продали",ruFutureForms:["продам", "продашь", "продаст", "продадим", "продадите", "продадут"]},
+  {inf:"tražiti",ru:"искать",present:["tražim", "tražiš", "traži", "tražimo", "tražite", "traže"],past:["tražio", "tražio", "tražio", "tražili", "tražili", "tražili"],futureInf:"tražiti",ruPresentForms:["ищу", "ищешь", "ищет", "ищем", "ищете", "ищут"],ruPast:"искал",ruPastPlural:"искали",ruFuture:"искать"},
+  {inf:"koristiti",ru:"использовать",present:["koristim", "koristiš", "koristi", "koristimo", "koristite", "koriste"],past:["koristio", "koristio", "koristio", "koristili", "koristili", "koristili"],futureInf:"koristiti",ruPresentForms:["использую", "используешь", "использует", "используем", "используете", "используют"],ruPast:"использовал",ruPastPlural:"использовали",ruFuture:"использовать"},
+  {inf:"pomoći",ru:"помочь",present:["pomognem", "pomogneš", "pomogne", "pomognemo", "pomognete", "pomognu"],past:["pomogao", "pomogao", "pomogao", "pomogli", "pomogli", "pomogli"],futureInf:"pomoći",ruPresentForms:["помогаю", "помогаешь", "помогает", "помогаем", "помогаете", "помогают"],ruPast:"помог",ruPastPlural:"помогли",ruFutureForms:["помогу", "поможешь", "поможет", "поможем", "поможете", "помогут"]},
+  {inf:"ostati",ru:"остаться",present:["ostanem", "ostaneš", "ostane", "ostanemo", "ostanete", "ostanu"],past:["ostao", "ostao", "ostao", "ostali", "ostali", "ostali"],futureInf:"ostati",ruPresentForms:["остаюсь", "остаёшься", "остаётся", "остаёмся", "остаётесь", "остаются"],ruPast:"остался",ruPastPlural:"остались",ruFutureForms:["останусь", "останешься", "останется", "останемся", "останетесь", "останутся"]},
+  {inf:"postati",ru:"стать",present:["postanem", "postaneš", "postane", "postanemo", "postanete", "postanu"],past:["postao", "postao", "postao", "postali", "postali", "postali"],futureInf:"postati",ruPresentForms:["становлюсь", "становишься", "становится", "становимся", "становитесь", "становятся"],ruPast:"стал",ruPastPlural:"стали",ruFutureForms:["стану", "станешь", "станет", "станем", "станете", "станут"]},
+  {inf:"prolaziti",ru:"проходить",present:["prolazim", "prolaziš", "prolazi", "prolazimo", "prolazite", "prolaze"],past:["prolazio", "prolazio", "prolazio", "prolazili", "prolazili", "prolazili"],futureInf:"prolaziti",ruPresentForms:["прохожу", "проходишь", "проходит", "проходим", "проходите", "проходят"],ruPast:"проходил",ruPastPlural:"проходили",ruFuture:"проходить"},
+  {inf:"putovati",ru:"путешествовать",present:["putujem", "putuješ", "putuje", "putujemo", "putujete", "putuju"],past:["putovao", "putovao", "putovao", "putovali", "putovali", "putovali"],futureInf:"putovati",ruPresentForms:["путешествую", "путешествуешь", "путешествует", "путешествуем", "путешествуете", "путешествуют"],ruPast:"путешествовал",ruPastPlural:"путешествовали",ruFuture:"путешествовать"},
+  {inf:"voziti",ru:"водить / возить",present:["vozim", "voziš", "vozi", "vozimo", "vozite", "voze"],past:["vozio", "vozio", "vozio", "vozili", "vozili", "vozili"],futureInf:"voziti",ruPresentForms:["вожу", "возишь", "возит", "возим", "возите", "возят"],ruPast:"водил",ruPastPlural:"водили",ruFuture:"водить"},
+  {inf:"voziti se",ru:"ехать на транспорте",present:["vozim se", "voziš se", "vozi se", "vozimo se", "vozite se", "voze se"],past:["vozio se", "vozio se", "vozio se", "vozili se", "vozili se", "vozili se"],futureInf:"voziti se",ruPresentForms:["еду", "едешь", "едет", "едем", "едете", "едут"],ruPast:"ехал",ruPastPlural:"ехали",ruFuture:"ехать"},
+  {inf:"hodati",ru:"ходить пешком",present:["hodam", "hodaš", "hoda", "hodamo", "hodate", "hodaju"],past:["hodao", "hodao", "hodao", "hodali", "hodali", "hodali"],futureInf:"hodati",ruPresentForms:["хожу", "ходишь", "ходит", "ходим", "ходите", "ходят"],ruPast:"ходил",ruPastPlural:"ходили",ruFuture:"ходить"},
+  {inf:"trčati",ru:"бегать",present:["trčim", "trčiš", "trči", "trčimo", "trčite", "trče"],past:["trčao", "trčao", "trčao", "trčali", "trčali", "trčali"],futureInf:"trčati",ruPresentForms:["бегаю", "бегаешь", "бегает", "бегаем", "бегаете", "бегают"],ruPast:"бегал",ruPastPlural:"бегали",ruFuture:"бегать"},
+  {inf:"nositi",ru:"носить",present:["nosim", "nosiš", "nosi", "nosimo", "nosite", "nose"],past:["nosio", "nosio", "nosio", "nosili", "nosili", "nosili"],futureInf:"nositi",ruPresentForms:["ношу", "носишь", "носит", "носим", "носите", "носят"],ruPast:"носил",ruPastPlural:"носили",ruFuture:"носить"},
+  {inf:"staviti",ru:"положить / поставить",present:["stavim", "staviš", "stavi", "stavimo", "stavite", "stave"],past:["stavio", "stavio", "stavio", "stavili", "stavili", "stavili"],futureInf:"staviti",ruPresentForms:["кладу", "кладёшь", "кладёт", "кладём", "кладёте", "кладут"],ruPast:"положил",ruPastPlural:"положили",ruFuture:"положить"},
+  {inf:"leći",ru:"лечь",present:["legnem", "legneš", "legne", "legnemo", "legnete", "legnu"],past:["legao", "legao", "legao", "legli", "legli", "legli"],futureInf:"leći",ruPresentForms:["ложусь", "ложишься", "ложится", "ложимся", "ложитесь", "ложатся"],ruPast:"лёг",ruPastPlural:"легли",ruFutureForms:["лягу", "ляжешь", "ляжет", "ляжем", "ляжете", "лягут"]},
+  {inf:"ustati",ru:"встать",present:["ustanem", "ustaneš", "ustane", "ustanemo", "ustanete", "ustanu"],past:["ustao", "ustao", "ustao", "ustali", "ustali", "ustali"],futureInf:"ustati",ruPresentForms:["встаю", "встаёшь", "встаёт", "встаём", "встаёте", "встают"],ruPast:"встал",ruPastPlural:"встали",ruFutureForms:["встану", "встанешь", "встанет", "встанем", "встанете", "встанут"]},
+  {inf:"spustiti",ru:"опустить / спустить",present:["spustim", "spustiš", "spusti", "spustimo", "spustite", "spuste"],past:["spustio", "spustio", "spustio", "spustili", "spustili", "spustili"],futureInf:"spustiti",ruPresentForms:["опускаю", "опускаешь", "опускает", "опускаем", "опускаете", "опускают"],ruPast:"опустил",ruPastPlural:"опустили",ruFutureForms:["опущу", "опустишь", "опустит", "опустим", "опустите", "опустят"]},
+  {inf:"slati",ru:"посылать",present:["šaljem", "šalješ", "šalje", "šaljemo", "šaljete", "šalju"],past:["slao", "slao", "slao", "slali", "slali", "slali"],futureInf:"slati",ruPresentForms:["посылаю", "посылаешь", "посылает", "посылаем", "посылаете", "посылают"],ruPast:"посылал",ruPastPlural:"посылали",ruFuture:"посылать"},
+  {inf:"primati",ru:"получать / принимать",present:["primam", "primaš", "prima", "primamo", "primate", "primaju"],past:["primao", "primao", "primao", "primali", "primali", "primali"],futureInf:"primati",ruPresentForms:["получаю", "получаешь", "получает", "получаем", "получаете", "получают"],ruPast:"получал",ruPastPlural:"получали",ruFuture:"получать"},
+  {inf:"birati",ru:"выбирать",present:["biram", "biraš", "bira", "biramo", "birate", "biraju"],past:["birao", "birao", "birao", "birali", "birali", "birali"],futureInf:"birati",ruPresentForms:["выбираю", "выбираешь", "выбирает", "выбираем", "выбираете", "выбирают"],ruPast:"выбирал",ruPastPlural:"выбирали",ruFuture:"выбирать"},
+  {inf:"zvati se",ru:"называться",present:["zovem se", "zoveš se", "zove se", "zovemo se", "zovete se", "zovu se"],past:["zvao se", "zvao se", "zvao se", "zvali se", "zvali se", "zvali se"],futureInf:"zvati se",ruPresentForms:["называюсь", "называешься", "называется", "называемся", "называетесь", "называются"],ruPast:"назывался",ruPastPlural:"назывались",ruFutureForms:["буду называться", "будешь называться", "будет называться", "будем называться", "будете называться", "будут называться"]}
 ];
 const TENSE_PERSONS = [
   {p:'ja',ru:'я',sr:'Ja',auxPast:'sam',auxFuture:'ću'},
@@ -6574,6 +6624,7 @@ const TENSE_GENDER_OPTIONS = [
   {id:'plural',label:'множественное',example:'Mi smo radili.'}
 ];
 function genderedPastParticiple(form, gender){
+  if(form.endsWith(' se')) return genderedPastParticiple(form.slice(0,-3),gender)+' se';
   if(gender==='masculine') return form;
   const irregular = {
     'rekao': {feminine:'rekla',neuter:'reklo',plural:'rekli'},
@@ -6615,9 +6666,9 @@ function tenseRuVerb(v,mode,pi){
   const present={raditi:'работает',učiti:'учится',čitati:'читает',govoriti:'говорит',živeti:'живёт',gledati:'смотрит',slušati:'слушает',pisati:'пишет',ići:'идёт',dolaziti:'приходит',čekati:'ждёт',kupovati:'покупает',plaćati:'платит',piti:'пьёт',jesti:'ест',spavati:'спит',sedeti:'сидит',stajati:'стоит',pričati:'разговаривает',misliti:'думает'};
   const pastM={raditi:'работал',učiti:'учился',čitati:'читал',govoriti:'говорил',živeti:'жил',gledati:'смотрел',slušati:'слушал',pisati:'писал',ići:'ходил',dolaziti:'приходил',čekati:'ждал',kupovati:'покупал',plaćati:'платил',piti:'пил',jesti:'ел',spavati:'спал',sedeti:'сидел',stajati:'стоял',pričati:'разговаривал',misliti:'думал'};
   const pastPl={raditi:'работали',učiti:'учились',čitati:'читали',govoriti:'говорили',živeti:'жили',gledati:'смотрели',slušati:'слушали',pisati:'писали',ići:'ходили',dolaziti:'приходили',čekati:'ждали',kupovati:'покупали',plaćati:'платили',piti:'пили',jesti:'ели',spavati:'спали',sedeti:'сидели',stajati:'стояли',pričati:'разговаривали',misliti:'думали'};
-  if(mode==='future') return `${['буду','будешь','будет','будем','будете','будут'][pi]} ${v.ru.split(' / ')[0]}`;
-  if(mode==='past') return (pi>=3?pastPl:pastM)[v.inf];
-  return present[v.inf];
+  if(mode==='future') return (v.ruFutureForms&&v.ruFutureForms[pi]) || `${['буду','будешь','будет','будем','будете','будут'][pi]} ${v.ruFuture||v.ru.split(' / ')[0]}`;
+  if(mode==='past') return pi>=3 ? (v.ruPastPlural || pastPl[v.inf] || v.ruPast || v.ru.split(' / ')[0]) : (v.ruPast || pastM[v.inf] || v.ru.split(' / ')[0]);
+  return (v.ruPresentForms&&v.ruPresentForms[pi]) || v.ruPresent || present[v.inf] || v.ru.split(' / ')[0];
 }
 function tenseSentenceData(v,pi,mode){
   const p=TENSE_PERSONS[pi], time=tenseTime(v,mode), ruTime=tenseRuTime(v,mode), form=tenseOptionForm(v,pi,mode);
@@ -6635,20 +6686,50 @@ function allFormOptions(v,pi,mode){
   const pool=TENSE_PERSONS.map((_,i)=>tenseOptionForm(v,i,mode));
   return uniqueTenseOptions(answer,pool,4);
 }
+const TENSE_PROGRESS_KEY='citajSrpskiTenseVerbProgressV1';
+let tenseVerbProgress=loadTenseVerbProgress();
+function loadTenseVerbProgress(){try{const x=JSON.parse(localStorage.getItem(TENSE_PROGRESS_KEY)||'{}');return x&&typeof x==='object'?x:{}}catch(e){return {}}}
+function saveTenseVerbProgress(){try{localStorage.setItem(TENSE_PROGRESS_KEY,JSON.stringify(tenseVerbProgress))}catch(e){}}
+function tenseProgressKey(verb,mode){return `${verb}|${mode}`}
+function tenseProgressFor(verb,mode){return tenseVerbProgress[tenseProgressKey(verb,mode)]||null}
+function recordTenseResult(item,correct){
+  if(!item||item._progressRecorded)return;
+  item._progressRecorded=true;
+  const verb=(item.v||selectedTenseVerb()).inf,key=tenseProgressKey(verb,tenseMode),now=Date.now();
+  const p=tenseVerbProgress[key]||{attempts:0,correct:0,errors:0,streak:0,dueAt:0,lastSeenAt:0,lastResult:'new'};
+  p.attempts++;p.lastSeenAt=now;
+  if(correct){
+    p.correct++;p.streak=(p.streak||0)+1;p.lastResult='correct';
+    const intervals=[10*60*1000,24*60*60*1000,3*24*60*60*1000,7*24*60*60*1000,14*24*60*60*1000,30*24*60*60*1000,60*24*60*60*1000];
+    p.intervalMs=intervals[Math.min(p.streak-1,intervals.length-1)];p.dueAt=now+p.intervalMs;
+  }else{
+    p.errors=(p.errors||0)+1;p.streak=0;p.lastResult='wrong';p.intervalMs=2*60*1000;p.dueAt=now+p.intervalMs;
+  }
+  tenseVerbProgress[key]=p;saveTenseVerbProgress();updateTenseProgressSummary();
+}
+function tenseProgressSummary(){
+  const now=Date.now();
+  if(!tenseMixed){const p=tenseProgressFor(tenseVerb,tenseMode);return `<b>Прогресс: ${escapeHtml(tenseVerb)}</b> · ${p?`попыток: ${p.attempts}, ошибок: ${p.errors||0}, серия: ${p.streak||0}; следующее повторение ${p.dueAt>now?'позже':'уже пора'}`:'ещё не изучался в этом времени'}.`}
+  let due=0,unseen=0,errors=0;
+  TENSE_VERBS.forEach(v=>{const p=tenseProgressFor(v.inf,tenseMode);if(!p||!p.attempts)unseen++;else if(p.lastResult==='wrong'||p.dueAt<=now)due++;if(p&&p.lastResult==='wrong')errors++});
+  return `<b>Очередь глаголов:</b> ${due} пора повторить · ${unseen} ещё не изучались · ${errors} требуют особого внимания. Прогресс хранится отдельно для каждого глагола и времени.`;
+}
+function updateTenseProgressSummary(){const el=$('tense-progress-summary');if(el)el.innerHTML=tenseProgressSummary()}
 function tenseMakeItems(mode,level){
   const out=[];
-  // Обычный режим: шесть вопросов по одному выбранному глаголу.
-  // Смешение: 20 вопросов, по одному на каждый глагол базы, чтобы в раунде
-  // действительно чередовались разные глаголы, а не повторялся один и тот же.
-  const queue = tenseMixed ? shuffle(TENSE_VERBS.slice()) : [selectedTenseVerb()];
+  let queue;
+  if(tenseMixed){
+    const now=Date.now();
+    const rank=v=>{const p=tenseProgressFor(v.inf,mode);if(!p||!p.attempts)return {bucket:1,due:0,last:0,rand:Math.random()};if(p.lastResult==='wrong')return {bucket:-1,due:p.dueAt||0,last:p.lastSeenAt||0,rand:Math.random()};if((p.dueAt||0)<=now)return {bucket:0,due:p.dueAt||0,last:p.lastSeenAt||0,rand:Math.random()};return {bucket:2,due:p.dueAt||0,last:p.lastSeenAt||0,rand:Math.random()}};
+    queue=TENSE_VERBS.map(v=>({v,r:rank(v)})).sort((a,b)=>a.r.bucket-b.r.bucket||a.r.due-b.r.due||a.r.last-b.r.last||a.r.rand-b.r.rand).slice(0,10).map(x=>x.v);
+  }else queue=[selectedTenseVerb()];
   queue.forEach((v,vi)=>{
-    const persons = tenseMixed ? [Math.floor(Math.random()*TENSE_PERSONS.length)] : TENSE_PERSONS.map((_,i)=>i);
-    persons.forEach(pi=>{
-      const person=TENSE_PERSONS[pi], sentence=tenseSentenceData(v,pi,mode);
-      out.push({type:'form',prompt:`${person.p} + ${v.inf}`,answer:tenseOptionForm(v,pi,mode),ru:v.ru,verb:v.inf,pi,sentence,v});
-    });
+    let persons;
+    if(tenseMixed) persons=[Math.floor(Math.random()*TENSE_PERSONS.length)];
+    else {persons=shuffle(TENSE_PERSONS.map((_,i)=>i));while(persons.length<10)persons.push(Math.floor(Math.random()*TENSE_PERSONS.length));persons=persons.slice(0,10)}
+    persons.forEach(pi=>{const person=TENSE_PERSONS[pi],sentence=tenseSentenceData(v,pi,mode);out.push({type:'form',prompt:`${person.p} + ${v.inf}`,answer:tenseOptionForm(v,pi,mode),ru:v.ru,verb:v.inf,pi,sentence,v});});
   });
-  return shuffle(out);
+  return tenseMixed?out:shuffle(out).slice(0,10);
 }
 function tenseInstruction(mode){
   const m=TENSE_MODES.find(x=>x.id===mode);
@@ -6668,7 +6749,8 @@ function tenses(){
     <div class="card"><h3>Выбор упражнения</h3><div class="training-buttons tense-levels"><button type="button" class="tense-level ${tenseLevel===1?'active':''}" data-level="1">1 · Форма / пропуск</button><button type="button" class="tense-level ${tenseLevel===2?'active':''}" data-level="2">2 · По словам</button></div></div>
     ${tenseVerbPicker()}
     ${tenseMode==='past'?`<div class="card tense-gender-picker"><h3>Род в Perfekt</h3><p class="muted">Выбор рода нужен только для Perfekt: он определяет форму причастия.</p><div class="training-buttons">${TENSE_GENDER_OPTIONS.map(g=>`<button type="button" class="tense-gender ${tenseGender===g.id?'active':''}" data-gender="${g.id}">${g.label}</button>`).join('')}</div></div>`:''}
-    <button type="button" id="tense-mixed-toggle" class="tense-mixed-toggle card ${tenseMixed?'active':''}"><span class="tense-mixed-icon">🔀</span><span><b>Смешение глаголов</b><small>${tenseMixed?'Включено — глаголы будут чередоваться':'Выключено — работаем с одним выбранным глаголом'}</small></span><span>${tenseMixed?'✓':'○'}</span></button>
+    <button type="button" id="tense-mixed-toggle" class="tense-mixed-toggle card ${tenseMixed?'active':''}"><span class="tense-mixed-icon">🔀</span><span><b>Смешение глаголов</b><small>${tenseMixed?'Включено — очередь выбирает глаголы по прогрессу и ошибкам':'Выключено — работаем с одним выбранным глаголом'}</small></span><span>${tenseMixed?'✓':'○'}</span></button>
+    <div id="tense-progress-summary" class="card muted tense-progress-summary">${tenseProgressSummary()}</div>
     <div class="training-buttons tense-tabs">${TENSE_MODES.map(m=>`<button type="button" class="tense-tab ${m.id===tenseMode?'active':''}" data-tense="${m.id}">${m.title.split(' — ')[0]}</button>`).join('')}</div>
     <div id="tense-instruction">${tenseInstruction(tenseMode)}</div>
     <div id="tense-exercise"></div>`;
@@ -6676,18 +6758,20 @@ function tenses(){
   const open=$('tense-open-verbs');
   if(open) open.onclick=()=>{tenseVerbPickerOpen=!tenseVerbPickerOpen;tenses();};
   const mixed=$('tense-mixed-toggle');
-  if(mixed) mixed.onclick=()=>{tenseMixed=!tenseMixed;tenseVerbPickerOpen=false;tenseIndex=0;tenseScore=0;tenses();};
+  if(mixed) mixed.onclick=()=>{tenseMixed=!tenseMixed;tenseVerbPickerOpen=false;tenseIndex=0;tenseScore=0;tenseItems=[];tenses();};
   document.querySelectorAll('.tense-gender').forEach(b=>b.addEventListener('click',()=>{
-    tenseGender=b.dataset.gender; tenseIndex=0; tenseScore=0; renderTenseExercise();
+    tenseGender=b.dataset.gender; tenseIndex=0; tenseScore=0; tenseItems=[]; renderTenseExercise();
     document.querySelectorAll('.tense-gender').forEach(x=>x.classList.toggle('active',x.dataset.gender===tenseGender));
   }));
-  document.querySelectorAll('.tense-verb').forEach(b=>b.addEventListener('click',()=>{tenseVerb=b.dataset.verb;tenseMixed=false;tenseVerbPickerOpen=false;tenseIndex=0;tenseScore=0;tenses();}));
-  document.querySelectorAll('.tense-tab').forEach(b=>b.addEventListener('click',()=>{tenseMode=b.dataset.tense;tenseIndex=0;tenseScore=0;tenses();}));
-  document.querySelectorAll('.tense-level').forEach(b=>b.addEventListener('click',()=>{tenseLevel=Number(b.dataset.level);tenseIndex=0;tenseScore=0;document.querySelectorAll('.tense-level').forEach(x=>x.classList.toggle('active',Number(x.dataset.level)===tenseLevel));renderTenseExercise();}));
+  document.querySelectorAll('.tense-verb').forEach(b=>b.addEventListener('click',()=>{tenseVerb=b.dataset.verb;tenseMixed=false;tenseVerbPickerOpen=false;tenseIndex=0;tenseScore=0;tenseItems=[];tenses();}));
+  document.querySelectorAll('.tense-tab').forEach(b=>b.addEventListener('click',()=>{tenseMode=b.dataset.tense;tenseIndex=0;tenseScore=0;tenseItems=[];tenses();}));
+  document.querySelectorAll('.tense-level').forEach(b=>b.addEventListener('click',()=>{tenseLevel=Number(b.dataset.level);tenseIndex=0;tenseScore=0;tenseItems=[];document.querySelectorAll('.tense-level').forEach(x=>x.classList.toggle('active',Number(x.dataset.level)===tenseLevel));renderTenseExercise();}));
 }
 function renderTenseExercise(){
-  tenseItems=tenseMakeItems(tenseMode,tenseLevel); const item=tenseItems[tenseIndex];
-  if(!item){$('tense-exercise').innerHTML=`<div class="card"><h3>Раунд закончен 🎉</h3><p>${tenseMixed?'Режим: <b>Смешение глаголов</b>.':'Глагол: <b>'+escapeHtml(tenseVerb)+'</b>.'} Результат: <b>${tenseScore} из ${tenseItems.length}</b>.</p><button type="button" id="tense-restart">Повторить раунд</button></div>`;$('tense-restart').onclick=()=>{tenseIndex=0;tenseScore=0;renderTenseExercise()};return;}
+  if(!tenseItems.length) tenseItems=tenseMakeItems(tenseMode,tenseLevel);
+  updateTenseProgressSummary();
+  const item=tenseItems[tenseIndex];
+  if(!item){$('tense-exercise').innerHTML=`<div class="card"><h3>Раунд закончен 🎉</h3><p>${tenseMixed?'Режим: <b>Смешение глаголов</b>.':'Глагол: <b>'+escapeHtml(tenseVerb)+'</b>.'} Результат: <b>${tenseScore} из ${tenseItems.length}</b>.</p><button type="button" id="tense-restart">Повторить раунд</button></div>`;$('tense-restart').onclick=()=>{tenseIndex=0;tenseScore=0;tenseItems=[];renderTenseExercise()};return;}
   const v=item.v||selectedTenseVerb(); let html=`<div class="card review-card"><p class="muted">${tenseIndex+1} из ${tenseItems.length} · ${TENSE_MODES.find(m=>m.id===tenseMode).title} · <b>${escapeHtml(v.inf)}</b></p>`;
   if(tenseLevel===1){
     const gap=tenseIndex%2===1;
@@ -6711,6 +6795,7 @@ function allParticipleOptions(v,p){const answer=tensePastForm(v,p),pool=TENSE_PE
 function futureSimpleForm(v,pi){
   const aux=TENSE_PERSONS[pi].auxFuture;
   const inf=v.futureInf;
+  if(inf.endsWith(' se')){const base=inf.slice(0,-3);return futureSimpleForm({...v,futureInf:base},pi)+' se';}
   // Глаголы на -ћи не сливаются с вспомогательным глаголом: ићи ћу, ићи ћеш…
   if(/ći$/.test(inf)) return `${inf} ${aux}`;
   // Для -сти перед ћ происходит чередование st → šć: jesti → ješću.
@@ -6734,10 +6819,10 @@ function nextTenseQuestion(feedbackId){
 }
 function bindTenseConstruction(item){
   const data=tenseConstruction(item),blanks=[...document.querySelectorAll('.tense-blank')];let slot=0;
-  const renderOptions=()=>{const box=$('tense-word-options');if(!box||slot>=data.correct.length)return;box.innerHTML=shuffle(data.options[slot]).map(x=>`<button type="button" class="tense-option tense-word-option" data-answer="${escapeHtml(x)}">${escapeHtml(x)}</button>`).join('');box.querySelectorAll('.tense-word-option').forEach(b=>b.onclick=()=>{const ok=normalizeTenseAnswer(b.dataset.answer)===normalizeTenseAnswer(data.correct[slot]),fb=$('tense-word-progress');if(!ok){fb.innerHTML=`<b>✗ Неправильно.</b> Правильный вариант: <b>${escapeHtml(data.correct[slot])}</b>`;document.querySelectorAll('.tense-word-option').forEach(x=>x.disabled=true);nextTenseQuestion('tense-word-progress');return;}blanks[slot].textContent=b.dataset.answer;blanks[slot].classList.add('filled');slot++;if(slot<data.correct.length){fb.innerHTML='<b>✓ Верно.</b> Теперь выбери следующий элемент.';renderOptions();}else{fb.innerHTML='<b>✓ Всё правильно!</b>';document.querySelectorAll('.tense-word-option').forEach(x=>x.disabled=true);tenseScore++;setTimeout(()=>{tenseIndex++;renderTenseExercise()},650)}})};renderOptions();
+  const renderOptions=()=>{const box=$('tense-word-options');if(!box||slot>=data.correct.length)return;box.innerHTML=shuffle(data.options[slot]).map(x=>`<button type="button" class="tense-option tense-word-option" data-answer="${escapeHtml(x)}">${escapeHtml(x)}</button>`).join('');box.querySelectorAll('.tense-word-option').forEach(b=>b.onclick=()=>{const ok=normalizeTenseAnswer(b.dataset.answer)===normalizeTenseAnswer(data.correct[slot]),fb=$('tense-word-progress');if(!ok){recordTenseResult(item,false);fb.innerHTML=`<b>✗ Неправильно.</b> Правильный вариант: <b>${escapeHtml(data.correct[slot])}</b>`;document.querySelectorAll('.tense-word-option').forEach(x=>x.disabled=true);nextTenseQuestion('tense-word-progress');return;}blanks[slot].textContent=b.dataset.answer;blanks[slot].classList.add('filled');slot++;if(slot<data.correct.length){fb.innerHTML='<b>✓ Верно.</b> Теперь выбери следующий элемент.';renderOptions();}else{recordTenseResult(item,true);fb.innerHTML='<b>✓ Всё правильно!</b>';document.querySelectorAll('.tense-word-option').forEach(x=>x.disabled=true);tenseScore++;setTimeout(()=>{tenseIndex++;renderTenseExercise()},650)}})};renderOptions();
 }
 function normalizeTenseAnswer(s){return String(s||'').trim().toLowerCase().replace(/[.!?]+$/,'').replace(/\s+/g,' ')}
-function checkTenseAnswer(value,expected){const raw=String(value||'').trim(),ok=normalizeTenseAnswer(raw)===normalizeTenseAnswer(expected),fb=$('tense-feedback');if(ok){tenseScore++;fb.innerHTML='<b>✓ Правильно!</b>';document.querySelectorAll('.tense-option').forEach(x=>x.disabled=true);setTimeout(()=>{tenseIndex++;renderTenseExercise()},650)}else{fb.innerHTML=`<b>✗ Неправильно.</b> Правильный ответ: <b>${escapeHtml(expected)}</b>`;document.querySelectorAll('.tense-option').forEach(x=>x.disabled=true);nextTenseQuestion('tense-feedback')}}
+function checkTenseAnswer(value,expected){const raw=String(value||'').trim(),ok=normalizeTenseAnswer(raw)===normalizeTenseAnswer(expected),fb=$('tense-feedback'),item=tenseItems[tenseIndex];if(ok){recordTenseResult(item,true);tenseScore++;fb.innerHTML='<b>✓ Правильно!</b>';document.querySelectorAll('.tense-option').forEach(x=>x.disabled=true);setTimeout(()=>{tenseIndex++;renderTenseExercise()},650)}else{recordTenseResult(item,false);fb.innerHTML=`<b>✗ Неправильно.</b> Правильный ответ: <b>${escapeHtml(expected)}</b>`;document.querySelectorAll('.tense-option').forEach(x=>x.disabled=true);nextTenseQuestion('tense-feedback')}}
 
 function training(){
   $('training-content').innerHTML = `

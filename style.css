@@ -133,3 +133,6 @@ nav button{position:relative;z-index:2}
 
 /* v58: слова, закреплённые за конкретным текстом */
 .text-linked-words-panel{margin:10px 0 4px;padding:14px;border:1px solid #ddd;border-radius:16px;background:#fafafa}.text-linked-head{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap}.text-word-list{display:flex;flex-direction:column;gap:6px;margin-top:12px}.text-word-row{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:8px 10px;background:#fff;border-radius:10px}.text-word-row>span{flex:1}.text-linked-empty{padding:8px 2px;color:#666;line-height:1.5}@media(max-width:600px){.text-linked-head button{width:100%}.text-linked-words-panel{padding:12px}}
+
+/* v69: compact progress summary for the tense-verb spaced-repetition queue */
+.tense-progress-summary{font-size:.94rem;line-height:1.5;margin:.6rem 0 1rem;padding:1rem}
